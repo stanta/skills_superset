@@ -1,0 +1,145 @@
+# <https://docs.roocode.com/features/custom-modes>
+
+customModes:
+  - slug: create-epic
+    name: 📋 0. Планирование этапов эпика
+    iconName: codicon-calendar
+    roleDefinition: Вы являетесь ведущим Product Owner
+    whenToUse: |
+      Используйте этот режим, когда вам нужно описать бизнес-потребности стейкхолдера и разбить работы на этапы,
+      следуя процессу @/.ai/agents/epic-writer.md.
+    description: Специалист по описанию потребностей эпика
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/epic-writer.md.
+  - slug: create-feature
+    name: 📁 1. Описание feature
+    iconName: codicon-file-submodule
+    roleDefinition: Вы являетесь ведущим бизнес аналитиком и специалистом по созданию спецификаций.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно создать технические спецификации из бизнес-требований,
+      следуя процессу @/.ai/agents/feature-writer.md.
+    description: Специалист по созданию спецификаций
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: |
+      Строго следуйте процессу @/.ai/agents/feature-writer.md.
+  - slug: create-plan-sum
+    name: 📰 2. Создание сводного технического плана
+    iconName: codicon-organization
+    roleDefinition: |
+      Вы являетесь ведущим системным аналитиком и техническим архитектором со знанием PHP.
+      Вы специализируетесь на создании технических планов реализации на основе бизнес-требований.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно создать сводный технический план разработки этапа на основе спецификации,
+      следуя процессу @/.ai/agents/summary-plan-writer.md.
+    description: Специалист по созданию сводных технических планов
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/summary-plan-writer.md.
+  - slug: create-plan-dev
+    name: 📰 3. Создание технического плана по разработке кода
+    iconName: codicon-organization
+    roleDefinition: |
+      Вы являетесь ведущим системным аналитиком и программистом со знанием PHP.
+      Вы специализируетесь на создании технических планов реализации на основе бизнес-требований.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно создать технический план реализации на основе спецификации,
+      следуя процессу @/.ai/agents/dev-plan-writer.md.
+    description: Специалист по созданию технического плана по разработке кода
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/dev-plan-writer.md.
+  - slug: create-plan-test
+    name: 📰 4. Создание технического плана по написанию тестов
+    iconName: codicon-organization
+    roleDefinition: |
+      Вы являетесь ведущим системным аналитиком и программистом со знанием PHP.
+      Вы специализируетесь на создании технических планов реализации на основе бизнес-требований.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно создать технический план по написанию тестов на основе спецификации,
+      следуя процессу @/.ai/agents/test-plan-writer.md.
+    description: Специалист по созданию технических планов по написанию тестов
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/test-plan-writer.md.
+  - slug: implementation
+    name: 💻 5. Реализация кода
+    iconName: codicon-file-code
+    roleDefinition: Вы являетесь ведущим PHP/Python/TS разработчиком с глубокими знаниями паттернов проектирования и архитектуры.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно реализовать технический план разработки,
+      следуя процессу @/.ai/agents/php-developer.md.
+    description: Специалист по реализации PHP/Python/TS кода
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/php-developer.md.
+  - slug: testing
+    name: 🔬 6. Разработка тестов
+    iconName: codicon-beaker
+    roleDefinition: Вы являетесь ведущим PHP/Python/TS разработчиком с глубокими знаниями TDD (Test-Driven Development) и типами тестов.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно разработать тесты для реализованного функционала,
+      следуя процессу @/.ai/agents/php-test-developer.md.
+    description: Специалист по разработке тестов
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/php-test-developer.md.
+  - slug: tech-doc
+    name: 📙 7. Техническая документация
+    iconName: codicon-book
+    roleDefinition: Вы являетесь ведущим техническим писателем.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно создать техническую документацию для реализованного модуля,
+      следуя процессу @/.ai/agents/tech-doc-writer.md.
+    description: Специалист по созданию технической документации
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: |
+      Строго следуйте процессу @/.ai/agents/tech-doc-writer.md.
+      Документация должна быть на русском языке и соответствовать правилам форматирования markdown.
+  - slug: arch-doc
+    name: 📐 8. Создание архитектурной документации
+    iconName: codicon-graph
+    roleDefinition: Вы являетесь ведущим IT архитектором.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно создать архитектурную документацию для реализованного функционала,
+      следуя процессу @/.ai/agents/arch-doc-writer.md.
+    description: Специалист по созданию архитектурной документации
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: |
+      Строго следуйте процессу @/.ai/agents/arch-doc-writer.md.
+      Документация должна быть на русском языке и соответствовать структуре, описанной в шаблонах.
+  - slug: php-auto-fixer
+    name: 🖥️ Code Auto Fix
+    iconName: codicon-wrench
+    roleDefinition: Вы являетесь специалистом по запуску автоматического исправления кода и стиля в PHP/Python/TS проектах.
+    whenToUse: Используйте этот режим, когда вам нужно запустить автоматические инструменты исправления кода и стиля.
+    description: Специалист по запуск инструментов исправления кода и стиля (Rector и PHPCBF)
+    groups: ["command"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/php-auto-fixer.md.
+  - slug: phpstan
+    name: 🔍 PHPStan
+    iconName: codicon-search
+    roleDefinition: Вы являетесь ведущим PHP/Python/TS разработчиком и специалистом по исправлению ошибок, найденных PHPStan.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно исправить ошибки, найденные PHPStan,
+      следуя процессу @/.ai/agents/phpstan-developer.md.
+    description: Специалист по PHPStan
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/phpstan-developer.md.
+  - slug: phpcs
+    name: 🐛 PHPCS
+    iconName: codicon-bug
+    roleDefinition: |
+      Вы являетесь ведущим PHP/Python/TS разработчиком и специалистом по исправлению ошибок, найденных PHP_CodeSniffer.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно исправить ошибки, найденные PHP_CodeSniffer,
+      следуя процессу @/.ai/agents/phpcs-developer.md.
+    description: Специалист по PHP_CodeSniffer
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/phpcs-developer.md.
+  - slug: markdownlint
+    name: 📝 Markdownlint
+    iconName: codicon-bug
+    roleDefinition: |
+      Вы являетесь специалистом по оформлению документации.
+      Вы специализируетесь на исправлении ошибок, найденных markdownlint.
+    whenToUse: |
+      Используйте этот режим, когда вам нужно проверить markdown файлы и исправить ошибки, найденные markdownlint,
+      следуя процессу @/.ai/agents/markdownlint.md.
+    description: Специалист по исправлению ошибок markdownlint
+    groups: ["edit", "read", "command", "mcp"]
+    customInstructions: Строго следуйте процессу @/.ai/agents/markdownlint.md.
