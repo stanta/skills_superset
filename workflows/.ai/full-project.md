@@ -228,7 +228,7 @@ Product Owner описывает **Цель** или что надо сдела�
 
 ### Правила и соглашения
 
-- **[Architecture.md](rules/Architecture.md)** - правила архитектуры: Clean Architecture, CQRS, модульный монолит
+- **[Architecture.md](rules/Architecture.md)** - правила архитектуры: Clean Architecture, CQRS, модульный монолит или микросервис
 - **[ArchitecturalCompromises.md](rules/ArchitecturalCompromises.md)** - осознанные компромиссы и их обоснование
 - **[CodeHints.md](rules/CodeHints.md)** - рекомендации по работе с PHP/Python/TS в проекте
 - **[CodeStyle.md](rules/CodeStyle.md)** - принятый стиль кода

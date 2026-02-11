@@ -7,7 +7,7 @@
 
 ## Общие архитектурные принципы
 
-- Clean Architecture, CQRS, модульный монолит, Laravel.
+- Clean Architecture, CQRS, модульный монолит или микросервис, Laravel.
 - Не смешивать ответственность слоёв (Domain/Application/Infrastructure/Presentation).
 - Стабильные контракты между слоями: интерфейсы, DTO, исключения.
 
