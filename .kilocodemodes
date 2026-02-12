@@ -1,4 +1,5 @@
-# <https://docs.roocode.com/features/custom-modes>
+# https://microsoft.github.io/vscode-codicons/dist/codicon.html
+# https://docs.roocode.com/features/custom-modes
 
 customModes:
   - slug: create-epic
@@ -10,6 +11,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/epic-writer.md.
     description: Специалист по описанию потребностей эпика
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - content-research-writer
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/epic-writer.md.
   - slug: create-feature
     name: 📁 1. Описание feature
@@ -20,6 +23,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/feature-writer.md.
     description: Специалист по созданию спецификаций
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - content-research-writer
     customInstructions: |
       Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/feature-writer.md.
   - slug: create-plan-sum
@@ -33,6 +38,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/summary-plan-writer.md.
     description: Специалист по созданию сводных технических планов
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - content-research-writer
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/summary-plan-writer.md.
   - slug: create-plan-dev
     name: 📰 3. Создание технического плана по разработке кода
@@ -45,6 +52,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/dev-plan-writer.md.
     description: Специалист по созданию технического плана по разработке кода
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - content-research-writer
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/dev-plan-writer.md.
   - slug: create-plan-test
     name: 📰 4. Создание технического плана по написанию тестов
@@ -57,6 +66,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/test-plan-writer.md.
     description: Специалист по созданию технических планов по написанию тестов
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - content-research-writer
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/test-plan-writer.md.
   - slug: implementation
     name: 💻 5. Реализация кода
@@ -67,6 +78,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/php-developer.md.
     description: Специалист по реализации PHP/Python/TS кода
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - python-dev
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/php-developer.md.
   - slug: testing
     name: 🔬 6. Разработка тестов
@@ -77,6 +90,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/php-test-developer.md.
     description: Специалист по разработке тестов
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - webapp-testing
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/php-test-developer.md.
   - slug: tech-doc
     name: 📙 7. Техническая документация
@@ -87,6 +102,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/tech-doc-writer.md.
     description: Специалист по созданию технической документации
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - content-research-writer
     customInstructions: |
       Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/tech-doc-writer.md.
       Документация должна быть на русском языке и соответствовать правилам форматирования markdown.
@@ -99,6 +116,8 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/arch-doc-writer.md.
     description: Специалист по созданию архитектурной документации
     groups: ["edit", "read", "command", "mcp"]
+    skills:
+      - content-research-writer
     customInstructions: |
       Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/arch-doc-writer.md.
       Документация должна быть на русском языке и соответствовать структуре, описанной в шаблонах.
@@ -119,7 +138,7 @@ customModes:
       следуя процессу @/~/.kilocode/workflows/.ai/agents/phpstan-developer.md.
     description: Специалист по PHPStan-mypy-lint
     groups: ["edit", "read", "command", "mcp"]
-    customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/phpstan-developer.md.
+    customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/PHPStan-mypy-lint-developer.md.
   - slug: phpcs
     name: 🐛 PHPCS
     iconName: codicon-bug

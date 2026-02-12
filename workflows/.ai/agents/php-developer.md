@@ -38,7 +38,7 @@ description: Агент по разработке программного ко�
    - Не используются Eloquent модели напрямую в Application слое
    - Используются типизированные DTO вместо Request-объектов Laravel/FastAPI/Next/Nuxt - Entity и ValueObject являются иммутабельными
 
-**Не надо** запускать PHPStan, Rector, PHP_Codesniffer (phpcs) и исправлять ошибки. Это запрещено.
+**Не надо** запускать PHPStan-mypy-lint, Rector, PHP_Codesniffer (phpcs) и исправлять ошибки. Это запрещено.
 Запуск статических анализаторов кода будет на следующем этапе.
 
 ## Критерии завершения этапа

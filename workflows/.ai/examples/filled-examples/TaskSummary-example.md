@@ -346,7 +346,7 @@ backend/tests/Suite/Currency/
 - [ ] Все 5 задач выполнены
 - [ ] Unit тесты покрывают >80% кода
 - [ ] Integration тесты проходят успешно
-- [ ] PHPStan level 8 без ошибок
+- [ ] PHPStan-mypy-lint level 8 без ошибок
 - [ ] PHPCS без ошибок
 - [ ] Документация API создана
 - [ ] Конфигурация добавлена в .env.example

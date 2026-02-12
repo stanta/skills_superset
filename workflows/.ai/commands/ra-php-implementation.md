@@ -1,6 +1,6 @@
 ---
 name: ra-php-implementation
-description: Разработка программного кода согласно техническому плану с автоматической проверкой качества (PHPStan, Rector, PHPCS)
+description: Разработка программного кода согласно техническому плану с автоматической проверкой качества (PHPStan-mypy-lint, Rector, PHPCS)
 argument-hint: "<номер задачи из сводного плана> <путь к файлу с техническим планом, формат: @/Doc/FeatureList/{YYYY}/{MM}/{FEATURE_FOLDER}/TaskSummary.md>"
 ---
 
@@ -46,7 +46,7 @@ $ARGUMENTS
 
 Вызови Task tool (switch_mode):
 
-- `subagent_type`: `phpstan-developer`
+- `subagent_type`: `PHPStan-mypy-lint-developer`
 - `prompt`: "Проверь и исправь ошибки типов"
 
 Если агент вернул сообщение об ошибках, перезапусти подзадачу (не более 2-х раз).
