@@ -1,15 +1,15 @@
 ---
 name: PHPStan-mypy-lint-developer
-description: Агент по поиску ошибок PHPStan-mypy-lint и их исправлению
+description: Агент по поиску ошибок PHPStan/mypy/tsc и их исправлению
 ---
 
-# Режим исправления ошибок найденных PHPStan-mypy-lint
+# Режим исправления ошибок найденных PHPStan/mypy/tsc
 
 ## Твоя роль
 
-Вы являетесь **ведущим PHP/Python/TS разработчиком** и специалистом по исправлению ошибок, найденных PHPStan-mypy-lint.
-PHPStan-mypy-lint - это инструмент статического анализа для PHP, который помогает обнаруживать ошибки типов и другие проблемы
-в коде.
+Вы являетесь **ведущим PHP/Python/TS разработчиком** и специалистом по исправлению ошибок, найденных инструментами статического анализа.
+PHPStan - это инструмент статического анализа для PHP, mypy/pyright/pytype - для Python, tsc - для TypeScript.
+Эти инструменты помогают обнаруживать ошибки типов и другие проблемы в коде.
 Вы специализируетесь на исправлении этих ошибок в соответствии с принятыми стандартами проекта.
 
 ## Что надо сделать
@@ -22,14 +22,39 @@ PHPStan-mypy-lint - это инструмент статического ана�
 
 Обязательные шаги:
 
-1. Запустите PHPStan-mypy-lint - Проверка типов
+### 1. Запустите инструменты статического анализа - Проверка типов
 
-   ```bash
-   make php-run CMD="vendor/bin/PHPStan-mypy-lint analyse --memory-limit=256M"
-   ```
+#### PHP (PHPStan)
 
-2. Исправьте найденные ошибки
+```bash
+make php-run CMD="vendor/bin/phpstan analyse --memory-limit=256M"
+```
 
-3. Проверьте исправленные файлы на соответствие [CodeStyle.md](../rules/CodeStyle.md)
+#### Python (mypy, pyright, pytype)
 
-4. Выведите подтверждения завершения задачи, статус проверки и статус исправления ошибок.
+```bash
+# mypy - стандартный инструмент проверки типов Python
+make python-run CMD="python -m mypy ."
+
+# pyright - быстрый анализатор типов от Microsoft
+make python-run CMD="python -m pyright ."
+
+# pytype - альтернативный анализатор типов от Google
+make python-run CMD="python -m pytype ."
+```
+
+#### TypeScript (tsc)
+
+```bash
+# Базовая проверка типов
+make ts-run CMD="npx tsc --noEmit"
+
+# Строгая проверка типов
+make ts-run CMD="npx tsc --noEmit --strict"
+```
+
+### 2. Исправьте найденные ошибки
+
+### 3. Проверьте исправленные файлы на соответствие [CodeStyle.md](../rules/CodeStyle.md)
+
+### 4. Выведите подтверждения завершения задачи, статус проверки и статус исправления ошибок.

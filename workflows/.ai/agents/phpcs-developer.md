@@ -18,8 +18,30 @@ PHP_CodeSniffer - это инструмент для проверки стиля
 
 1. Запустите проверку кодстиля PHP_CodeSniffer
 
+   ### PHP (PHPCS)
    ```bash
    make php-run CMD="vendor/bin/phpcs --colors"
+   ```
+
+   ### Python
+   ```bash
+   # Ruff - быстрый линтер и форматтер
+   make python-run CMD="python -m ruff check ."
+
+   # Flake8 - классический линтер Python
+   make python-run CMD="python -m flake8 ."
+
+   # Pylint - строгий статический анализатор
+   make python-run CMD="python -m pylint ."
+   ```
+
+   ### TypeScript
+   ```bash
+   # ESLint - линтер для TypeScript/JavaScript
+   make ts-run CMD="npx eslint ."
+
+   # TypeScript Compiler - проверка типов без компиляции
+   make ts-run CMD="npx tsc --noEmit"
    ```
 
 2. Исправьте найденные ошибки
@@ -34,7 +56,10 @@ PHP_CodeSniffer - это инструмент для проверки стиля
 
 **ЗАПРЕЩЕНО:**
 
-- ❌ Запускать ЛЮБЫЕ команды проверки, кроме: `make php-run CMD="vendor/bin/phpcs --colors"`
+- ❌ Запускать ЛЮБЫЕ команды проверки, кроме:
+  - PHP: `make php-run CMD="vendor/bin/phpcs --colors"`
+  - Python: `make python-run CMD="python -m ruff check ."`, `make python-run CMD="python -m flake8 ."`, `make python-run CMD="python -m pylint ."`
+  - TypeScript: `make ts-run CMD="npx eslint ."`, `make ts-run CMD="npx tsc --noEmit"`
 - ❌ Запускать автоматические фиксеры (phpcbf, rector, php-cs-fixer и т.д.)
 - ❌ Запускать PHPStan-mypy-lint или любые другие инструменты статического анализа
 - ❌ Запускать composer, npm, yarn или любые другие менеджеры пакетов
@@ -45,7 +70,10 @@ PHP_CodeSniffer - это инструмент для проверки стиля
 
 **РАЗРЕШЕНО:**
 
-- ✅ Запускать только команду: `make php-run CMD="vendor/bin/phpcs --colors"`
+- ✅ Запускать только команды:
+  - PHP: `make php-run CMD="vendor/bin/phpcs --colors"`
+  - Python: `make python-run CMD="python -m ruff check ."`, `make python-run CMD="python -m flake8 ."`, `make python-run CMD="python -m pylint ."`
+  - TypeScript: `make ts-run CMD="npx eslint ."`, `make ts-run CMD="npx tsc --noEmit"`
 - ✅ Читать файлы с ошибками для понимания контекста
 - ✅ Использовать инструменты Edit и Write для исправления ошибок
 - ✅ Читать файлы правил для проверки соответствия
@@ -53,7 +81,10 @@ PHP_CodeSniffer - это инструмент для проверки стиля
 
 ## Алгоритм работы
 
-1. Запустить PHPCS командой: `make php-run CMD="vendor/bin/phpcs --colors"`
+1. Запустить PHPCS командой:
+   - PHP: `make php-run CMD="vendor/bin/phpcs --colors"`
+   - Python: `make python-run CMD="python -m ruff check ."` (или flake8/pylint)
+   - TypeScript: `make ts-run CMD="npx eslint ."` (или tsc)
 2. Дождаться завершения и проанализировать вывод
 3. Для каждой найденной ошибки:
    - Прочитать файл с ошибкой

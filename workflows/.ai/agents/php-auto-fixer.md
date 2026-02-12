@@ -15,14 +15,44 @@ description: Режим автоматического исправления к
 
 1. Rector - Автоматическое улучшение кода (рефакторинг, модернизация)
 
+   **PHP:**
    ```bash
    make php-run CMD="vendor/bin/rector process"
    ```
 
+   **Python (альтернативы):**
+   ```bash
+   make python-run CMD="python -m black ."
+   # или
+   make python-run CMD="python -m ruff check . --fix"
+   ```
+
+   **TypeScript (альтернативы):**
+   ```bash
+   make ts-run CMD="npx eslint --fix ."
+   # или
+   make ts-run CMD="npx @eslint/migrate-config .eslintrc.json"
+   ```
+
 2. PHPCBF - Автоматическое исправление стиля кода
 
+   **PHP:**
    ```bash
    make php-run CMD="vendor/bin/phpcbf"
+   ```
+
+   **Python (альтернативы):**
+   ```bash
+   make python-run CMD="python -m ruff format ."
+   # или
+   make python-run CMD="python -m autopep8 --in-place --recursive ."
+   ```
+
+   **TypeScript (альтернативы):**
+   ```bash
+   make ts-run CMD="npx prettier --write ."
+   # или
+   make ts-run CMD="npx eslint --fix ."
    ```
 
 3. Выведите подтверждения завершения задачи, статус проверки и статус исправления ошибок.
@@ -32,7 +62,7 @@ description: Режим автоматического исправления к
 **ЗАПРЕЩЕНО:**
 
 - ❌ Запускать ЛЮБЫЕ команды, кроме двух указанных выше
-- ❌ Запускать PHPStan-mypy-lint, PHP/Python/TS CS Fixer, PHP-CS-Fixer или любые другие инструменты проверки/исправления
+- ❌ Запускать PHPStan-mypy-lint, PHPCS, PHP-CS-Fixer или любые другие инструменты проверки/исправления
 - ❌ Запускать composer, npm, yarn или любые другие менеджеры пакетов
 - ❌ Читать файлы кода для анализа
 - ❌ Предлагать ручные исправления кода
@@ -44,15 +74,32 @@ description: Режим автоматического исправления к
 
 **РАЗРЕШЕНО:**
 
-- ✅ Только две команды: `make php-run CMD="vendor/bin/rector process"` и `make php-run CMD="vendor/bin/phpcbf"`
+- ✅ PHP: `make php-run CMD="vendor/bin/rector process"` и `make php-run CMD="vendor/bin/phpcbf"`
+- ✅ Python: `make python-run CMD="python -m black ."` / `make python-run CMD="python -m ruff check . --fix"` и `make python-run CMD="python -m ruff format ."` / `make python-run CMD="python -m autopep8 --in-place --recursive ."`
+- ✅ TypeScript: `make ts-run CMD="npx eslint --fix ."` / `make ts-run CMD="npx @eslint/migrate-config .eslintrc.json"` и `make ts-run CMD="npx prettier --write ."`
 - ✅ Вывод результатов выполнения этих команд
 - ✅ Подтверждение завершения задачи
 
 ## Алгоритм работы
 
+### Для PHP:
 1. Запустить Rector командой: `make php-run CMD="vendor/bin/rector process"`
 2. Дождаться завершения
 3. Запустить PHPCBF командой: `make php-run CMD="vendor/bin/phpcbf"`
+4. Дождаться завершения
+5. Сообщить пользователю о результатах
+
+### Для Python:
+1. Запустить форматирование/рефакторинг: `make python-run CMD="python -m black ."` или `make python-run CMD="python -m ruff check . --fix"`
+2. Дождаться завершения
+3. Запустить исправление стиля: `make python-run CMD="python -m ruff format ."` или `make python-run CMD="python -m autopep8 --in-place --recursive ."`
+4. Дождаться завершения
+5. Сообщить пользователю о результатах
+
+### Для TypeScript:
+1. Запустить ESLint fix: `make ts-run CMD="npx eslint --fix ."` или `make ts-run CMD="npx @eslint/migrate-config .eslintrc.json"`
+2. Дождаться завершения
+3. Запустить форматирование: `make ts-run CMD="npx prettier --write ."` (или повторно `npx eslint --fix .`)
 4. Дождаться завершения
 5. Сообщить пользователю о результатах
 

@@ -29,14 +29,45 @@ description: Агент по написанию тестов согласно т
 2. Напиши тесты для нового функционала, следуя типам из [Testing.md](../rules/TestingHints.md) (Unit, Integration, E2E).
    Размести тесты в соответствующих директориях (backend/tests/Suite/{ModuleName}/).
 
-3. Запустите проверку PHPUnit
+3. Запустите проверку тестов в зависимости от языка:
 
+   **PHP (PHPUnit):**
    ```bash
    make php-run CMD="vendor/bin/phpunit --colors --coverage-text"
    ```
 
+   **Python (pytest):**
+   ```bash
+   make python-run CMD="python -m pytest -v --cov=."
+   ```
+
+   **Python (pytest с кратким traceback):**
+   ```bash
+   make python-run CMD="python -m pytest --tb=short"
+   ```
+
+   **Python (unittest):**
+   ```bash
+   make python-run CMD="python -m unittest discover -v"
+   ```
+
+   **TypeScript (npm test):**
+   ```bash
+   make ts-run CMD="npm test"
+   ```
+
+   **TypeScript (Jest с покрытием):**
+   ```bash
+   make ts-run CMD="npx jest --coverage"
+   ```
+
+   **TypeScript (Vitest):**
+   ```bash
+   make ts-run CMD="npx vitest run"
+   ```
+
    **Критерии успеха**:
-   - ✅ PHPUnit: **Все тесты PASSED**, код coverage ≥ 75%
+   - ✅ PHPUnit/pytest/unittest/Jest/Vitest: **Все тесты PASSED**, код coverage ≥ 75%
 
 4. Проверь тесты на соответствие чек-листу:
    - Покрыты ли все сценарии из Spec.md?
