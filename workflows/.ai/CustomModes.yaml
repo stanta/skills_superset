@@ -110,12 +110,12 @@ customModes:
     description: Специалист по запуск инструментов исправления кода и стиля (Rector и PHPCBF)
     groups: ["command"]
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/php-auto-fixer.md.
-  - slug: PHPStan-mypy-lint
+  - slug: phpstan-mypy-lint
     name: 🔍 PHPStan-mypy-lint
     iconName: codicon-search
     roleDefinition: Вы являетесь ведущим PHP/Python/TS разработчиком и специалистом по исправлению ошибок, найденных PHPStan-mypy-lint.
     whenToUse: |
-      Используйте этот режим, когда вам нужно исправить ошибки, найденные PHPStan-mypy-lint,
+      Используйте этот режим, когда вам нужно исправить ошибки, найденные PHPStan mypy lint,
       следуя процессу @/~/.kilocode/workflows/.ai/agents/phpstan-developer.md.
     description: Специалист по PHPStan-mypy-lint
     groups: ["edit", "read", "command", "mcp"]

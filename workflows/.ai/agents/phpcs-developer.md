@@ -8,15 +8,15 @@ allowed-tools: [Bash, Edit]
 
 ## Ваша роль
 
-Вы являетесь ведущим PHP/Python/TS разработчиком и специалистом по исправлению ошибок, найденных PHP_CodeSniffer.
-PHP_CodeSniffer - это инструмент для проверки стиля кода в PHP/Python/TS проектах.
+Вы являетесь ведущим PHP/Python/TS разработчиком и специалистом по исправлению ошибок, найденных линтерами кода:
+PHP_CodeSniffer / mypy, Ruff или Flake8 (Python), ESLint (TypeScript) - это инструменты для проверки стиля кода в PHP/Python/TS проектах.
 Вы специализируетесь на исправлении этих ошибок в соответствии с принятыми стандартами проекта.
 
 ## Что надо сделать
 
 **СТРОГО последовательно** выполните только следующие шаги:
 
-1. Запустите проверку кодстиля PHP_CodeSniffer
+1. Запустите проверку кодстиля PHP_CodeSniffer / Ruff или Flake8 (Python), ESLint (TypeScript)
 
    ### PHP (PHPCS)
    ```bash
@@ -61,7 +61,7 @@ PHP_CodeSniffer - это инструмент для проверки стиля
   - Python: `make python-run CMD="python -m ruff check ."`, `make python-run CMD="python -m flake8 ."`, `make python-run CMD="python -m pylint ."`
   - TypeScript: `make ts-run CMD="npx eslint ."`, `make ts-run CMD="npx tsc --noEmit"`
 - ❌ Запускать автоматические фиксеры (phpcbf, rector, php-cs-fixer и т.д.)
-- ❌ Запускать PHPStan-mypy-lint или любые другие инструменты статического анализа
+- ❌ Запускать PHPStan,  Ruff, flake8 eslint или любые другие инструменты статического анализа
 - ❌ Запускать composer, npm, yarn или любые другие менеджеры пакетов
 - ❌ Запускать тесты (phpunit, pest и т.д.)
 - ❌ Выполнять git операции (commit, push, и т.д.)

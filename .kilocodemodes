@@ -129,8 +129,8 @@ customModes:
     description: Специалист по запуск инструментов исправления кода и стиля (Rector и PHPCBF)
     groups: ["command"]
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/php-auto-fixer.md.
-  - slug: PHPStan-mypy-lint
-    name: 🔍 PHPStan-mypy-lint
+  - slug: fix-static-analysis
+    name: 🔍 Исправление ошибок статанализа
     iconName: codicon-search
     roleDefinition: Вы являетесь ведущим PHP/Python/TS разработчиком и специалистом по исправлению ошибок, найденных PHPStan-mypy-lint.
     whenToUse: |
@@ -139,8 +139,8 @@ customModes:
     description: Специалист по PHPStan-mypy-lint
     groups: ["edit", "read", "command", "mcp"]
     customInstructions: Строго следуйте процессу @/~/.kilocode/workflows/.ai/agents/PHPStan-mypy-lint-developer.md.
-  - slug: phpcs
-    name: 🐛 PHPCS
+  - slug: fix-code-style
+    name: 🐛 Исправление ошибок стиля кода
     iconName: codicon-bug
     roleDefinition: |
       Вы являетесь ведущим PHP/Python/TS разработчиком и специалистом по исправлению ошибок, найденных PHP_CodeSniffer.
