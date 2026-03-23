@@ -1,26 +1,5 @@
 # Тестирование
 
-**Особенности написания тестов**:
-
-- Методы в тестах должны начинаться со слова test, аннотация "@test" - не работает
-- Класс с тестами должен наследоваться от Tests\TestCase, а не PHPUnit\Framework\TestCase
-- Контроллеры надо тестировать только через E2E тесты
-- Для контроллеров, возвращающих View, проверять содержимое шаблона (render())
-- Для тестирования UseCase применяй Integration тесты, в конструктре могут быть зависимости `final class`
-- Не использовать Mockery
-- Вместо `app()` использовать `$this->service()` - метод определен в базовом `Tests\TestCase` как обертка над
-  контейнером зависимостей. Пример:
-
-  ```php
-  // Вместо:
-  $validator = app(ValidationFactoryInterface::class);
-
-  // Используй:
-  $validator = $this->service(ValidationFactoryInterface::class);
-  ```
-
-- Для Integration и E2E надо создавать записи в БД используя классы в папке [ModelFactory](../../backend/tests/Stub/ModelFactory)
-
 **Когда писать тесты**:
 
 - ✅ Все компоненты Application и Domain слоев **ОБЯЗАТЕЛЬНО** должны быть протестированы
@@ -43,7 +22,7 @@
 
 Тестирование отдельных компонентов в изоляции (без зависимостей).
 
-- **Расположение**: `backend/tests/Suite/{ModuleName}/Application`, `backend/tests/Suite/{ModuleName}/Domain`
+- **Расположение**: `tests/Suite/{ModuleName}/Application`, `tests/Suite/{ModuleName}/Domain`
 - **Охватывает**:
   - Бизнес-логика в Service
   - Валидация в Validation классах
@@ -54,15 +33,15 @@
 Тестирование отдельных компонентов при взаимодействии с БД.
 
 - **Расположение**:
-  - `backend/tests/Suite/{ModuleName}/Application/UseCase`,
-  - `backend/tests/Suite/{ModuleName}/Application/Query`,
-  - `backend/tests/Suite/{ModuleName}/Application/Command`
+  - `tests/Suite/{ModuleName}/Application/UseCase`,
+  - `tests/Suite/{ModuleName}/Application/Query`,
+  - `tests/Suite/{ModuleName}/Application/Command`
 - **Охватывает**:
   - Бизнес-логика в UseCase, Query, Command
 
 Тестирование взаимодействия компонентов с внешними системами.
 
-- **Расположение**: `backend/tests/Suite/{ModuleName}/Infrastructure`
+- **Расположение**: `tests/Suite/{ModuleName}/Infrastructure`
 - **Охватывает**:
   - Adapter (взаимодействие с внешними сервисами)
   - Anti-corruption layer между модулями
@@ -71,36 +50,55 @@
 
 Тестирование полного потока: от HTTP запроса до ответа, включая все слои.
 
-- **Расположение**: `backend/tests/Suite/{ModuleName}/Presentation`
+- **Расположение**: `tests/Suite/{ModuleName}/Presentation`
 - **Охватывает**:
   - HTTP контроллеры и маршруты
   - Middleware
   - Полный жизненный цикл запроса и данных
 
+## Особенности написания тестов
+
+### PHP
+
+- Методы в тестах должны начинаться со слова test, аннотация "@test" - не работает
+- Класс с тестами должен наследоваться от Tests\TestCase, а не PHPUnit\Framework\TestCase
+- Контроллеры надо тестировать только через E2E тесты
+- Для контроллеров, возвращающих View, проверять содержимое шаблона (render())
+- Для тестирования UseCase применяй Integration тесты, в конструктре могут быть зависимости `final class`
+- Не использовать Mockery
+- Вместо `app()` использовать `$this->service()` - метод определен в базовом `Tests\TestCase` как обертка над
+  контейнером зависимостей. Пример:
+
+  ```php
+  // Вместо:
+  $validator = app(ValidationFactoryInterface::class);
+
+  // Используй:
+  $validator = $this->service(ValidationFactoryInterface::class);
+  ```
+
+- Для Integration и E2E надо создавать записи в БД используя классы в папке [ModelFactory](../../backend/tests/Stub/ModelFactory)
+
+### Python
+
+- Используйте `pytest` в качестве основного фреймворка для тестирования.
+- Имена файлов с тестами должны начинаться с `test_` или заканчиваться на `_test.py`.
+- Имена тестовых функций и методов должны начинаться с `test_`.
+- Используйте фикстуры (`@pytest.fixture`) для настройки состояния и внедрения зависимостей вместо `setup`/`teardown` методов.
+- Для мокирования используйте `unittest.mock` (например, `patch`, `MagicMock`) или `pytest-mock`.
+- Асинхронный код тестируйте с помощью `pytest-asyncio`, помечая тесты декоратором `@pytest.mark.asyncio`.
+- Для Integration и E2E тестов с БД используйте тестовую базу данных и фикстуры для создания тестовых данных (например, `factory_boy`).
+- Контроллеры (например, FastAPI роутеры) тестируйте через `TestClient` или `AsyncClient` (E2E тесты).
+
+### TypeScript
+
+- Используйте `Jest` или `Vitest` для тестирования backend (Node.js) и `Testing Library` для frontend (React/Vue).
+- Файлы тестов должны иметь суффикс `.test.ts` или `.spec.ts` (или `.tsx` для компонентов).
+- Группируйте тесты с помощью `describe` и используйте `it` или `test` для конкретных проверок.
+- Для мокирования модулей и функций используйте встроенные возможности фреймворка (например, `jest.mock()`, `vi.mock()`).
+- Избегайте использования `any` в тестах, старайтесь типизировать моки и стабы.
+- Для тестирования асинхронного кода используйте `async/await` в функциях тестов.
+- При тестировании UI компонентов проверяйте поведение с точки зрения пользователя (используйте `getByRole`, `getByText` и т.д., а не селекторы по классам).
+- Для E2E тестов используйте `Playwright` или `Cypress`.
+
 ## Примеры-шаблоны файлов модуля
-
-### Application
-
-- Unit тест для Service - [`ExampleCalcServiceTest.php`](../../backend/tests/Suite/Example/Application/ExampleCalcServiceTest.php)
-- Integration тест для Command - [`ExampleOutboxCommandTest.php`](../../backend/tests/Suite/Example/Application/ExampleOutboxCommandTest.php)
-- Unit тест для Responder - [`ExampleReportResponderTest.php`](../../backend/tests/Suite/Example/Application/ExampleReportResponderTest.php)
-- Unit тест для Factory - [`ExampleRequestFactoryTest.php`](../../backend/tests/Suite/Example/Application/ExampleRequestFactoryTest.php)
-- Integration тест для UseCase - [`ExampleUseCaseTest.php`](../../backend/tests/Suite/Example/Application/ExampleUseCaseTest.php)
-- Integration тест для Query - [`GetExampleQueryTest.php`](../../backend/tests/Suite/Example/Application/GetExampleQueryTest.php)
-
-### Domain
-
-- Unit тест для исключения - [`ExampleNotFoundExceptionTest.php`](../../backend/tests/Suite/Example/Domain/ExampleNotFoundExceptionTest.php)
-- Unit тест для ValueObject с валидацией - [`SubtractNumbersVOTest.php`](../../backend/tests/Suite/Example/Domain/SubtractNumbersVOTest.php)
-
-### Infrastructure
-
-- Integration тест для адаптера - [`ClickhouseLoggerTest.php`](../../backend/tests/Suite/Example/Infrastructure/ClickhouseLoggerTest.php)
-- Integration тест для репозитория - [`EloquentExampleRepositoryTest.php`](../../backend/tests/Suite/Example/Infrastructure/EloquentExampleRepositoryTest.php)
-
-### Presentation
-
-- E2E тест для контроллера - [`ExampleControllerTest.php`](../../backend/tests/Suite/Example/Presentation/ExampleControllerTest.php)
-- E2E тест для слушателя события - [`ExampleCreatedListenerTest.php`](../../backend/tests/Suite/Example/Presentation/ExampleCreatedListenerTest.php)
-- E2E тест для middleware - [`ExampleMiddlewareTest.php`](../../backend/tests/Suite/Example/Presentation/ExampleMiddlewareTest.php)
-- E2E тест для консольной команды - [`SubtractExampleCommandTest.php`](../../backend/tests/Suite/Example/Presentation/SubtractExampleCommandTest.php)
