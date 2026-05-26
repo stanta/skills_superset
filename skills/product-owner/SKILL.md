@@ -10,6 +10,7 @@ Provides comprehensive product management guidance from vision setting through e
 ## When to Use This Skill
 
 Use this skill for:
+
 - **Backlog management** - Writing stories, prioritizing work, grooming backlog
 - **Market research** - Understanding users, competitors, and market opportunities
 - **Product strategy** - Defining vision, positioning, roadmap, and growth strategy
@@ -20,21 +21,31 @@ Use this skill for:
 - **Product ideas** - Brainstorming features, validating concepts
 - **Go-to-market** - Planning launches, positioning, and growth strategies
 
+## Related Requirements Skills
+
+- Use [`brd-developer`](../brd-developer/SKILL.md) when the main task is to define business-level change rationale, stakeholder governance, scope boundaries, and business outcomes before product decomposition.
+- Use [`prd-developer`](../prd-developer/SKILL.md) when the main task is to draft or review a product-facing requirements artifact with scope, personas, product behavior, success metrics, and release criteria.
+- Use [`trd-developer`](../trd-developer/SKILL.md) when the work has moved into technically actionable requirements such as interfaces, data contracts, non-functional requirements, and validation logic.
+
 ## Product Owner Workflow
 
 When working on product tasks, follow this process:
 
 ### 1. Understand Context
+
 Before making any product decision:
+
 - What's the product vision and strategy?
 - Who are the target users?
 - What stage is the product at (PMF, growth, scale)?
 - What are the current goals and metrics?
 
 ### 2. Consult Relevant Reference
+
 Load the appropriate reference based on the task:
 
 **For Backlog Tasks:**
+
 - Read `references/backlog-management.md` for:
   - Story writing templates and best practices
   - Prioritization frameworks (RICE, Value vs Effort)
@@ -44,6 +55,7 @@ Load the appropriate reference based on the task:
   - Sprint planning guidance
 
 **For Market Research:**
+
 - Read `references/market-research.md` for:
   - User research methods (interviews, surveys)
   - Competitive analysis frameworks
@@ -53,6 +65,7 @@ Load the appropriate reference based on the task:
   - Opportunity scoring
 
 **For Strategic Planning:**
+
 - Read `references/product-strategy.md` for:
   - Vision and positioning
   - North Star metrics
@@ -67,21 +80,25 @@ Load the appropriate reference based on the task:
 When making product decisions, consider:
 
 **User Value First:**
+
 - Does this solve a real user problem?
 - How do we know users want this?
 - What's the user's job-to-be-done?
 
 **Strategic Alignment:**
+
 - Does this support our product vision?
 - Does it move our North Star metric?
 - Is this the right thing for this stage?
 
 **Evidence-Based:**
+
 - What data supports this decision?
 - Have we validated with users?
 - What are the assumptions we're making?
 
 **Opportunity Cost:**
+
 - What are we NOT doing by doing this?
 - Is this the highest-value use of resources?
 - What's the ROI?
@@ -91,6 +108,7 @@ When making product decisions, consider:
 ### Task: Write User Stories
 
 **Approach:**
+
 1. Read `backlog-management.md` story format section
 2. Identify the user (persona), their goal, and benefit
 3. Write in "As a/I want/So that" format
@@ -99,9 +117,11 @@ When making product decisions, consider:
 6. Estimate story points with team
 
 **Example Request:**
+
 > "Help me write user stories for the task breakdown feature in my student planning app"
 
 **Expected Response:**
+
 - Multiple well-formed user stories
 - Acceptance criteria for each
 - Suggested story points
@@ -111,6 +131,7 @@ When making product decisions, consider:
 ### Task: Prioritize Backlog
 
 **Approach:**
+
 1. Read `backlog-management.md` prioritization section
 2. Choose appropriate framework (RICE, MoSCoW, etc.)
 3. Score each item
@@ -118,9 +139,11 @@ When making product decisions, consider:
 5. Recommend prioritized order with rationale
 
 **Example Request:**
+
 > "I have 20 features in my backlog. Help me prioritize them using RICE scoring"
 
 **Expected Response:**
+
 - RICE score calculation for each feature
 - Ranked list with justification
 - Quick wins identified
@@ -130,6 +153,7 @@ When making product decisions, consider:
 ### Task: Analyze Competitors
 
 **Approach:**
+
 1. Read `market-research.md` competitive analysis section
 2. Identify direct, indirect, and adjacent competitors
 3. Analyze features, positioning, and business model
@@ -137,9 +161,11 @@ When making product decisions, consider:
 5. Identify differentiation opportunities
 
 **Example Request:**
+
 > "Analyze competitors for my student planning app"
 
 **Expected Response:**
+
 - List of 5-10 competitors
 - Detailed analysis of top 3
 - Feature comparison matrix
@@ -149,6 +175,7 @@ When making product decisions, consider:
 ### Task: Define Product Strategy
 
 **Approach:**
+
 1. Read `product-strategy.md` vision and positioning sections
 2. Define target customer and problem
 3. Articulate unique value proposition
@@ -156,9 +183,11 @@ When making product decisions, consider:
 5. Outline roadmap horizons
 
 **Example Request:**
+
 > "Help me define the product strategy for my fitness coaching app"
 
 **Expected Response:**
+
 - Product vision statement
 - Positioning statement
 - North Star metric with rationale
@@ -168,6 +197,7 @@ When making product decisions, consider:
 ### Task: Plan User Research
 
 **Approach:**
+
 1. Read `market-research.md` user research section
 2. Identify research goals and questions
 3. Choose appropriate method (interviews, surveys, etc.)
@@ -175,9 +205,11 @@ When making product decisions, consider:
 5. Define success criteria
 
 **Example Request:**
+
 > "I need to validate if students actually want task breakdown. Help me plan user research"
 
 **Expected Response:**
+
 - Research objectives
 - Interview script or survey questions
 - Recruitment criteria
@@ -187,6 +219,7 @@ When making product decisions, consider:
 ### Task: Measure Success
 
 **Approach:**
+
 1. Read `product-strategy.md` metrics section
 2. Identify relevant metric tier (acquisition, activation, engagement, retention, revenue)
 3. Define specific metrics for the feature/goal
@@ -194,9 +227,11 @@ When making product decisions, consider:
 5. Plan measurement approach
 
 **Example Request:**
+
 > "What metrics should I track for my student planning app?"
 
 **Expected Response:**
+
 - North Star metric recommendation
 - Supporting metrics by category
 - Target benchmarks
@@ -206,6 +241,7 @@ When making product decisions, consider:
 ### Task: Generate Product Ideas
 
 **Approach:**
+
 1. Understand current product and users
 2. Consult all references for:
    - User pain points (market research)
@@ -215,9 +251,11 @@ When making product decisions, consider:
 4. Validate against product principles
 
 **Example Request:**
+
 > "What features should I add to my educational app to increase engagement?"
 
 **Expected Response:**
+
 - 5-10 feature ideas with rationale
 - Prioritized by impact potential
 - Each idea includes:
@@ -231,6 +269,7 @@ When making product decisions, consider:
 ### Writing Effective User Stories
 
 **Good Story Characteristics:**
+
 - ✅ Focused on user value (not technical tasks)
 - ✅ Testable (clear done criteria)
 - ✅ Small enough to complete in sprint
@@ -238,6 +277,7 @@ When making product decisions, consider:
 - ✅ Negotiable (details can be discussed)
 
 **Story Template:**
+
 ```
 Title: [User action in plain language]
 
@@ -260,6 +300,7 @@ Priority: [P0-P3]
 ### Effective Prioritization
 
 **Multi-Factor Approach:**
+
 1. **User Value:** How much does this help users?
 2. **Business Value:** Impact on key metrics?
 3. **Effort:** How long to build?
@@ -268,6 +309,7 @@ Priority: [P0-P3]
 6. **Strategic Fit:** Aligns with vision?
 
 **Red Flags:**
+
 - 🚩 "Everything is P0/high priority"
 - 🚩 Building features because competitors have them
 - 🚩 No user validation before building
@@ -277,6 +319,7 @@ Priority: [P0-P3]
 ### Conducting User Research
 
 **Interview Best Practices:**
+
 - ✅ Ask open-ended questions
 - ✅ Listen more than talk (80/20 rule)
 - ✅ Probe for specifics ("Tell me more about that")
@@ -284,6 +327,7 @@ Priority: [P0-P3]
 - ✅ Look for patterns across 5+ interviews
 
 **Survey Best Practices:**
+
 - ✅ Keep it short (<10 questions)
 - ✅ Mix question types
 - ✅ Avoid leading questions
@@ -293,6 +337,7 @@ Priority: [P0-P3]
 ### Managing Stakeholders
 
 **When stakeholders request features:**
+
 1. Understand the underlying problem
 2. Ask: "What user need does this serve?"
 3. Propose alternatives if needed
@@ -300,6 +345,7 @@ Priority: [P0-P3]
 5. Loop back with decisions and rationale
 
 **When stakeholders say everything is urgent:**
+
 1. Acknowledge their needs
 2. Show capacity constraints
 3. Force-rank together
@@ -312,6 +358,7 @@ Priority: [P0-P3]
 
 **Focus:** Validate problem and solution
 **Activities:**
+
 - Customer discovery interviews
 - Build minimal prototype
 - Test with early users
@@ -324,6 +371,7 @@ Priority: [P0-P3]
 
 **Focus:** Build something people love
 **Activities:**
+
 - Launch MVP to early adopters
 - Measure engagement and retention
 - Find repeatable acquisition
@@ -336,6 +384,7 @@ Priority: [P0-P3]
 
 **Focus:** Scale efficiently
 **Activities:**
+
 - Optimize conversion funnel
 - Expand to adjacent markets
 - Invest in infrastructure
@@ -348,6 +397,7 @@ Priority: [P0-P3]
 
 **Focus:** Defend position, explore new opportunities
 **Activities:**
+
 - Optimize for efficiency
 - Explore adjacent markets
 - Platform strategy
@@ -361,31 +411,37 @@ Priority: [P0-P3]
 When making product decisions, ask:
 
 **1. User Impact**
+
 - How many users does this affect?
 - How significantly does it improve their experience?
 - Have we validated this with users?
 
 **2. Business Impact**
+
 - Does this move our North Star metric?
 - What's the expected ROI?
 - Does it help with acquisition, retention, or monetization?
 
 **3. Strategic Fit**
+
 - Aligns with product vision?
 - Supports our differentiation?
 - Right for our current stage?
 
 **4. Feasibility**
+
 - Do we have the capability?
 - What's the effort required?
 - What are the risks?
 
 **5. Timing**
+
 - Is now the right time?
 - What's the opportunity cost?
 - Can this wait?
 
 **Make the call when:**
+
 - 4/5 factors are positive, or
 - Strategic fit + user impact are very strong
 
@@ -394,14 +450,17 @@ When making product decisions, ask:
 This Product Owner skill works alongside:
 
 **UX Designer Skill:**
+
 - Product Owner defines WHAT to build and WHY
 - UX Designer defines HOW it should work and look
 
 **Technical Architecture Skill:**
+
 - Product Owner defines requirements and priorities
 - Tech Architecture determines HOW to build it
 
 **Example Workflow:**
+
 ```
 1. Product Owner: "We need task breakdown feature for students" (this skill)
 2. Market research validates demand (this skill)
@@ -420,6 +479,7 @@ This Product Owner skill works alongside:
 **User:** "I have 10 feature ideas for my educational app. Help me decide what to build next."
 
 **Response Approach:**
+
 1. Load `backlog-management.md` and `product-strategy.md`
 2. Ask about current stage, users, and metrics
 3. Apply RICE scoring framework
@@ -431,6 +491,7 @@ This Product Owner skill works alongside:
 **User:** "Who are my competitors for my fitness coaching app?"
 
 **Response Approach:**
+
 1. Load `market-research.md` competitive analysis section
 2. Search for existing fitness coaching apps
 3. Categorize (direct, indirect, adjacent)
@@ -443,6 +504,7 @@ This Product Owner skill works alongside:
 **User:** "Turn this feature idea into properly written user stories: 'Students should be able to invite their parents to see their progress'"
 
 **Response Approach:**
+
 1. Load `backlog-management.md` story template
 2. Identify user types (student, guardian)
 3. Break into multiple stories (invite flow, guardian view, permissions)
@@ -452,18 +514,21 @@ This Product Owner skill works alongside:
 ## Getting Started as Product Owner
 
 **Week 1: Foundation**
+
 - Define product vision (use product-strategy.md)
 - Identify target users and their problems
 - Research competitors (use market-research.md)
 - Set North Star metric
 
 **Week 2-4: Build Backlog**
+
 - Write initial user stories (use backlog-management.md)
 - Prioritize with RICE or similar framework
 - Plan first 2-3 sprints
 - Set up metrics tracking
 
 **Ongoing:**
+
 - Weekly backlog grooming
 - Monthly user research
 - Quarterly strategy review

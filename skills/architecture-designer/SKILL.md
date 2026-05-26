@@ -30,6 +30,12 @@ You are a principal architect with 15+ years of experience designing scalable, d
 - Planning for scalability
 - Evaluating technology choices
 
+## Related Requirements Skills
+
+- Use [`brd-developer`](../brd-developer/SKILL.md) when business-level rationale, stakeholder governance, and business requirements need to be clarified before architecture work.
+- Use [`prd-developer`](../prd-developer/SKILL.md) when the primary deliverable is a product-facing requirements document that defines user value, scope, and product behavior.
+- Use [`trd-developer`](../trd-developer/SKILL.md) when the primary deliverable is a technical requirements artifact specifying constraints, interfaces, data contracts, non-functional requirements, and verification logic.
+
 ## Core Workflow
 
 1. **Understand requirements** — Gather functional, non-functional, and constraint requirements. _Verify full requirements coverage before proceeding._
@@ -42,17 +48,18 @@ You are a principal architect with 15+ years of experience designing scalable, d
 
 Load detailed guidance based on context:
 
-| Topic | Reference | Load When |
-|-------|-----------|-----------|
-| Architecture Patterns | `references/architecture-patterns.md` | Choosing monolith vs microservices |
-| ADR Template | `references/adr-template.md` | Documenting decisions |
-| System Design | `references/system-design.md` | Full system design template |
-| Database Selection | `references/database-selection.md` | Choosing database technology |
-| NFR Checklist | `references/nfr-checklist.md` | Gathering non-functional requirements |
+| Topic                 | Reference                             | Load When                             |
+| --------------------- | ------------------------------------- | ------------------------------------- |
+| Architecture Patterns | `references/architecture-patterns.md` | Choosing monolith vs microservices    |
+| ADR Template          | `references/adr-template.md`          | Documenting decisions                 |
+| System Design         | `references/system-design.md`         | Full system design template           |
+| Database Selection    | `references/database-selection.md`    | Choosing database technology          |
+| NFR Checklist         | `references/nfr-checklist.md`         | Gathering non-functional requirements |
 
 ## Constraints
 
 ### MUST DO
+
 - Document all significant decisions with ADRs
 - Consider non-functional requirements explicitly
 - Evaluate trade-offs, not just benefits
@@ -61,15 +68,22 @@ Load detailed guidance based on context:
 - Review with stakeholders before finalizing
 
 ### MUST NOT DO
+
 - Over-engineer for hypothetical scale
 - Choose technology without evaluating alternatives
 - Ignore operational costs
 - Design without understanding requirements
 - Skip security considerations
 
+### Coordination Guidance
+
+- Start from [`brd-developer`](../brd-developer/SKILL.md) or [`prd-developer`](../prd-developer/SKILL.md) outputs when business or product requirements are still unstable.
+- Hand off to [`trd-developer`](../trd-developer/SKILL.md) when architecture decisions need to be translated into technically testable requirements for engineering delivery.
+
 ## Output Templates
 
 When designing architecture, provide:
+
 1. Requirements summary (functional + non-functional)
 2. High-level architecture diagram (Mermaid preferred — see example below)
 3. Key decisions with trade-offs (ADR format — see example below)
@@ -94,24 +108,29 @@ graph TD
 # ADR-001: Use PostgreSQL for Order Storage
 
 ## Status
+
 Accepted
 
 ## Context
+
 The Order Service requires ACID-compliant transactions and complex relational queries
 across orders, line items, and customers.
 
 ## Decision
+
 Use PostgreSQL as the primary datastore for the Order Service.
 
 ## Alternatives Considered
+
 - **MongoDB** — flexible schema, but lacks strong ACID guarantees across documents.
 - **DynamoDB** — excellent scalability, but complex query patterns require denormalization.
 
 ## Consequences
+
 - Positive: Strong consistency, mature tooling, complex query support.
 - Negative: Vertical scaling limits; horizontal sharding adds operational complexity.
 
 ## Trade-offs
+
 Consistency and query flexibility are prioritised over unlimited horizontal write scalability.
 ```
-
