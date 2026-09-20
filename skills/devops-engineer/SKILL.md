@@ -60,6 +60,8 @@ Load detailed guidance based on context:
 | Release | `references/release-automation.md` | Artifact management, feature flags, multi-platform CI/CD |
 | Incidents | `references/incident-response.md` | Production outages, on-call, MTTR, postmortems, runbooks |
 
+For GitLab-specific CI/CD, runner isolation, protected production, OIDC, DevSecOps scanning, and GitOps delivery, pair this skill with `gitlab-cicd-devsecops`.
+
 ## Constraints
 
 ### MUST DO
