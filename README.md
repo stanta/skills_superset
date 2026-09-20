@@ -205,6 +205,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [legacy-modernizer](skills/legacy-modernizer/)             | Incremental modernization, strangler patterns, dependency mapping, and migration planning. |
 | [microservices-architect](skills/microservices-architect/) | Service decomposition, distributed systems, DDD, sagas, CQRS, and service boundaries.      |
 | [monitoring-expert](skills/monitoring-expert/)             | Metrics, logs, tracing, dashboards, alerts, profiling, and capacity planning.              |
+| [sentry-glitchtip-observability](skills/sentry-glitchtip-observability/) | Sentry/GlitchTip errors, tracing, releases, source maps, privacy, sampling, alerts, and self-hosting. |
 | [sre-engineer](skills/sre-engineer/)                       | SLOs, error budgets, incident response, toil reduction, and reliability engineering.       |
 | [terraform-engineer](skills/terraform-engineer/)           | Terraform modules, state management, provider configuration, and infrastructure testing.   |
 | [use-railway](skills/use-railway/)                         | Railway deployments, services, environments, variables, domains, and troubleshooting.      |
