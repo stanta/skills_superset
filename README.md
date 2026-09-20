@@ -348,6 +348,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [geo-marketologist](skills/geo-marketologist/)                             | Generative engine optimization strategy for AI search visibility and citations.                  |
 | [humanizer](skills/humanizer/)                                             | Editing AI-generated writing to sound more natural and human-written.                            |
 | [lead-research-assistant](skills/lead-research-assistant/)                 | Lead research, target company discovery, and contact strategy.                                   |
+| [marketing-superradar](skills/marketing-superradar/)                     | Market discovery across 13 signal radars, adversarial competitor checks, TAM/SAM/SOM, SAMconc, and low-cost entry vectors. |
 | [lecture-materials-improver](skills/lecture-materials-improver/)           | Improving existing teaching materials for clarity, pacing, engagement, and teachability.         |
 | [lecture-pack-generator](skills/lecture-pack-generator/)                   | Complete teachable session packages, slide outlines, activities, checks, and handouts.           |
 | [medical-marketologist](skills/medical-marketologist/)                     | Compliant medical marketing strategy, patient journeys, trust UX, CRO, and ads-safe messaging.   |
