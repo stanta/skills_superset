@@ -200,6 +200,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [cloud-architect](skills/cloud-architect/)                 | Cloud architecture, migration planning, disaster recovery, and cost optimization.          |
 | [devops](skills/devops/)                                   | CI/CD, infrastructure automation, secure delivery, and developer workflow optimization.    |
 | [devops-engineer](skills/devops-engineer/)                 | Docker, Kubernetes, Terraform, GitOps, deployment automation, and platform operations.     |
+| [gitlab-cicd-devsecops](skills/gitlab-cicd-devsecops/)     | GitLab CI/CD, runner isolation, protected production, OIDC, DevSecOps scanning, GitOps, and software supply-chain controls. |
 | [kubernetes-specialist](skills/kubernetes-specialist/)     | Kubernetes workloads, Helm, RBAC, NetworkPolicies, storage, and pod troubleshooting.       |
 | [legacy-modernizer](skills/legacy-modernizer/)             | Incremental modernization, strangler patterns, dependency mapping, and migration planning. |
 | [microservices-architect](skills/microservices-architect/) | Service decomposition, distributed systems, DDD, sagas, CQRS, and service boundaries.      |
