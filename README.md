@@ -208,6 +208,15 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [terraform-engineer](skills/terraform-engineer/)           | Terraform modules, state management, provider configuration, and infrastructure testing.   |
 | [use-railway](skills/use-railway/)                         | Railway deployments, services, environments, variables, domains, and troubleshooting.      |
 
+### Governance, Git, and smart-contract infrastructure
+
+| Skill | Use when you need |
+| ----- | ----------------- |
+| [gitlab-development](skills/gitlab-development/) | GitLab CE/Self-Managed core or UX changes, Gitaly-safe repository integration, governed branches, MR governance widgets, GraphQL/Vue/Pajamas, and feature-flagged rollout. |
+| [gosh-development](skills/gosh-development/) | GOSH smart-contract/version discipline, git-remote-gosh integration, exact Git-object verification, and separation of verifiable Git storage from external governance. |
+| [alligator-development](skills/alligator-development/) | Agora/Optimism Alligator-style partial delegation, re-delegation, authority paths, ballot-scoped delegation graphs, conservation invariants, and delegation indexing. |
+| [ballot-contracts](skills/ballot-contracts/) | Security-critical voting/ballot contracts, exact-Git-commit ballots, electorate snapshots, quorum/thresholds, signatures, timelocks, stale-parent protection, and CanonicalHeadRegistry execution. |
+
 ### Backend, full-stack, and API development
 
 | Skill                                                | Use when you need                                                                                 |
