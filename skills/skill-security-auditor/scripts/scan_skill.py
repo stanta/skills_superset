@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Conservative static admission lint for skill packages.
 
-This script is intentionally dependency-free and does not execute the skill.
-It is a first-line gate, not a substitute for sandboxed behavioral testing.
+Dependency-free first-line gate. It never executes the audited skill and does
+not replace sandboxed behavioral testing, malware tooling, or human review.
 """
 from __future__ import annotations
 
@@ -16,6 +16,15 @@ from pathlib import Path
 TEXT_EXT = {
     ".md", ".txt", ".py", ".js", ".ts", ".tsx", ".jsx", ".sh", ".bash",
     ".yml", ".yaml", ".json", ".toml", ".ini", ".cfg", ".xml", ".html",
+}
+
+# These files intentionally contain adversarial strings or the scanner's own
+# detection patterns. This is a narrow, path-specific self-test exemption, not
+# a user-controlled ignore mechanism.
+SELF_EXEMPT_SUFFIXES = {
+    "skill-security-auditor/datasets/redteam-cases.jsonl",
+    "skill-security-auditor/scripts/scan_skill.py",
+    "skill-security-auditor/references/harness-boundaries.md",
 }
 
 RULES = [
@@ -32,9 +41,13 @@ RULES = [
 
 INSTALL_HOOK_KEYS = {"preinstall", "install", "postinstall", "prepare"}
 
+def is_self_exempt(path: Path) -> bool:
+    normalized = path.as_posix()
+    return any(normalized.endswith(suffix) for suffix in SELF_EXEMPT_SUFFIXES)
+
 def iter_files(root: Path):
     for p in root.rglob("*"):
-        if p.is_file():
+        if p.is_file() and not is_self_exempt(p):
             yield p
 
 def scan_text(path: Path, text: str):
@@ -50,8 +63,7 @@ def scan_text(path: Path, text: str):
                 "match": m.group(0)[:200],
             })
     for i, ch in enumerate(text):
-        cat = unicodedata.category(ch)
-        if cat == "Cf" and ch not in {"\n", "\r", "\t"}:
+        if unicodedata.category(ch) == "Cf" and ch not in {"\n", "\r", "\t"}:
             line = text.count("\n", 0, i) + 1
             findings.append({
                 "rule": "format_control_unicode",
@@ -64,11 +76,11 @@ def scan_text(path: Path, text: str):
     return findings
 
 def scan_package_json(path: Path):
-    findings = []
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except Exception as e:
         return [{"rule":"invalid_package_json","severity":"MEDIUM","file":str(path),"line":1,"match":str(e)}]
+    findings = []
     scripts = data.get("scripts", {}) or {}
     for key in INSTALL_HOOK_KEYS:
         if key in scripts:
@@ -81,16 +93,7 @@ def scan_package_json(path: Path):
             })
     return findings
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("path", nargs="?", default="skills")
-    ap.add_argument("--json", action="store_true")
-    args = ap.parse_args()
-    root = Path(args.path)
-    if not root.exists():
-        print(f"Path not found: {root}", file=sys.stderr)
-        return 2
-
+def scan_root(root: Path):
     findings = []
     binaries = []
     for path in iter_files(root):
@@ -117,6 +120,21 @@ def main():
             "line": 1,
             "match": "Manual provenance/malware review required",
         })
+    return findings
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("path", nargs="+", help="One or more skill directories/files to scan")
+    ap.add_argument("--json", action="store_true")
+    args = ap.parse_args()
+
+    findings = []
+    for raw in args.path:
+        root = Path(raw)
+        if not root.exists():
+            print(f"Path not found: {root}", file=sys.stderr)
+            return 2
+        findings.extend(scan_root(root) if root.is_dir() else scan_text(root, root.read_text(encoding="utf-8")))
 
     rank = {"LOW":1, "MEDIUM":2, "HIGH":3, "CRITICAL":4}
     findings.sort(key=lambda f: (-rank[f["severity"]], f["file"], f["line"]))
