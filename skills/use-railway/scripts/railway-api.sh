@@ -15,17 +15,11 @@ if ! command -v jq &>/dev/null; then
   exit 1
 fi
 
-CONFIG_FILE="$HOME/.railway/config.json"
-
-if [[ ! -f "$CONFIG_FILE" ]]; then
-  echo '{"error": "Railway config not found. Run: railway login"}'
-  exit 1
-fi
-
-TOKEN=$(jq -r '.user.token' "$CONFIG_FILE")
-
-if [[ -z "$TOKEN" || "$TOKEN" == "null" ]]; then
-  echo '{"error": "No Railway token found. Run: railway login"}'
+# Never scrape credentials from Railway's on-disk CLI config. The caller/harness
+# must explicitly scope a token into this process when direct API fallback is needed.
+TOKEN="${RAILWAY_TOKEN:-}"
+if [[ -z "$TOKEN" ]]; then
+  echo '{"error": "RAILWAY_TOKEN is not set. Prefer Railway CLI; for direct API fallback, explicitly provide a task-scoped token."}'
   exit 1
 fi
 
