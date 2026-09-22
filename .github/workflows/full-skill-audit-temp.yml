@@ -121,8 +121,25 @@ jobs:
           find skills -type l -printf '%p -> %l\\n' || true
           echo "SYMLINKS_END"
 
+          echo "ALLOWED_TOOLS_BEGIN"
+          grep -R -n -E '^allowed-tools:' skills/*/SKILL.md || true
+          echo "ALLOWED_TOOLS_END"
+
+          echo "MUTABLE_ACTIONS_BEGIN"
+          grep -R -n -E 'uses:[[:space:]]+[^ @]+@(v[0-9]+|main|master|latest)([[:space:]#]|$)' skills || true
+          echo "MUTABLE_ACTIONS_END"
+
+          echo "MUTABLE_INSTALLS_BEGIN"
+          grep -R -n -E '(@latest|npx[[:space:]]+(-y|--yes)|pip3?[[:space:]]+install[[:space:]])' skills || true
+          echo "MUTABLE_INSTALLS_END"
+
           echo "ARCHIVE_LIST_BEGIN"
-          find skills -type f \\( -name '*.zip' -o -name '*.tar' -o -name '*.tar.gz' -o -name '*.tgz' \\) -print
+          python3 - <<'PY2'
+          from pathlib import Path
+          for p in Path("skills").rglob("*"):
+              if p.is_file() and (p.name.endswith(".zip") or p.name.endswith(".tar") or p.name.endswith(".tar.gz") or p.name.endswith(".tgz")):
+                  print(p)
+          PY2
           echo "ARCHIVE_LIST_END"
 
           exit 0
