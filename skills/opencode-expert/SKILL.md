@@ -43,7 +43,7 @@ brew install anomalyco/tap/opencode
 npm i -g opencode-ai@latest
 
 # One-liner
-curl -fsSL https://opencode.ai/install | bash
+Install OpenCode using a documented package-manager or verified release artifact. Do not pipe remote content directly into a shell.
 
 # Arch Linux
 sudo pacman -S opencode
@@ -362,7 +362,7 @@ large to summarize earlier messages.
 ### 6.1 Project Setup Checklist
 
 1. Create `opencode.json` at repo root with `$schema`.
-2. Write `AGENTS.md` with project-specific rules (tech stack, conventions, test commands).
+2. Draft project-specific repository rules (tech stack, conventions, test commands) for review. Save them to the repository only after explicit user approval.
 3. Configure permissions — whitelist safe bash commands explicitly.
 4. Add relevant MCP servers (context7 for docs, filesystem for assets).
 5. Define custom commands for repetitive tasks (`/test`, `/review`, `/deploy`).
