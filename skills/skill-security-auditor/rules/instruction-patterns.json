@@ -24,7 +24,7 @@
     "id": "ENV_DUMP",
     "severity": "high",
     "scope": "text",
-    "pattern": "(?i)(printenv|env\\s*\\||process\\.env|os\\.environ|set\\s*>\\s*env)",
+    "pattern": "(?i)(printenv(?:\\s|$)|(?:^|[;&|]\\s*)env\\s*(?:\\||>|$)|process\\.env(?!\\s*(?:\\.|\\[))|os\\.environ(?!\\s*(?:\\.|\\[|\\.get\\s*\\())|set\\s*>\\s*env)",
     "message": "Broad environment-variable access may expose secrets."
   },
   {
@@ -52,7 +52,7 @@
     "id": "DESTRUCTIVE_SHELL",
     "severity": "high",
     "scope": "text",
-    "pattern": "(?i)(rm\\s+-rf\\s+[/~]|mkfs\\b|dd\\s+if=.*of=/dev/|shutdown\\b|reboot\\b)",
+    "pattern": "(?im)(rm\\s+-rf\\s+[/~]|mkfs\\b|dd\\s+if=.*of=/dev/|(?:^|[;&|]\\s*|(?:sudo|doas)\\s+)(?:/sbin/|/usr/sbin/)?(?:shutdown|reboot)\\b)",
     "message": "Potentially destructive host command."
   },
   {
