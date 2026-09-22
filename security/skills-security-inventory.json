@@ -969,5 +969,6 @@
       "executable_files": false,
       "baseline": "provisional"
     }
-  ]
+  ],
+  "audit_policy": "Admission fails on genuine High/Critical findings; scanner precision changes must preserve blocking detection for broad environment dumps, destructive host commands, prompt overrides, and unsafe execution."
 }
