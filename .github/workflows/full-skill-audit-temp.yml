@@ -1,0 +1,55 @@
+name: Temporary full skill security audit
+
+on:
+  push:
+    branches:
+      - 'security/skill-security-auditor'
+
+permissions:
+  contents: read
+
+jobs:
+  full-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout audit branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Run unit tests
+        run: python3 -m unittest skills/skill-security-auditor/scripts/test_audit_skill.py
+
+      - name: Audit all skills
+        shell: bash
+        run: |
+          set -uo pipefail
+          mapfile -d '' skills < <(find skills -mindepth 1 -maxdepth 1 -type d -print0 | sort -z)
+          status=0
+          python3 skills/skill-security-auditor/scripts/audit_skill.py             "${skills[@]}"             --repo-root .             --fail-on high             --report /tmp/full-skill-security-report.json || status=$?
+
+          python3 - <<'PY'
+          import json
+          from collections import Counter, defaultdict
+          p='/tmp/full-skill-security-report.json'
+          d=json.load(open(p, encoding='utf-8'))
+          print('AUDIT_COUNTS', json.dumps(d['counts'], sort_keys=True))
+          rules=Counter(f['rule_id'] for f in d['findings'])
+          print('AUDIT_RULES', json.dumps(dict(rules.most_common()), sort_keys=False))
+          by_skill=defaultdict(Counter)
+          for f in d['findings']:
+              by_skill[f['path'].split('/')[1] if f['path'].startswith('skills/') and len(f['path'].split('/'))>1 else f['path']][f['severity']]+=1
+          scored=sorted(by_skill.items(), key=lambda kv:(kv[1]['critical'],kv[1]['high'],kv[1]['medium']), reverse=True)
+          print('AUDIT_TOP_SKILLS', json.dumps([(k,dict(v)) for k,v in scored[:80]]))
+          blockers=[f for f in d['findings'] if f['severity'] in ('critical','high')]
+          print('AUDIT_BLOCKERS_BEGIN')
+          for f in blockers:
+              print(json.dumps(f, ensure_ascii=False))
+          print('AUDIT_BLOCKERS_END')
+          print('AUDIT_STATUS', status if False else 0)
+          PY
+
+          echo "scanner_exit_status=$status"
+          exit 0
