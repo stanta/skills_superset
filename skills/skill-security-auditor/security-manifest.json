@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "risk_tier": "S1",
+  "capabilities": {
+    "filesystem_read": ["skills/**", ".github/workflows/**"],
+    "filesystem_write": ["security-report.json"],
+    "network_hosts": [],
+    "shell_commands": ["git", "python3"],
+    "tools": [],
+    "requires_human_approval": []
+  },
+  "prohibited": [
+    "secret.read",
+    "arbitrary_network",
+    "arbitrary_shell",
+    "system.modify",
+    "security_gate.self_approve"
+  ],
+  "notes": "The deterministic scanner is designed for local/CI read-only analysis. Runtime sandbox and external scanners remain separate controls."
+}
