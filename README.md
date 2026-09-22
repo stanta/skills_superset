@@ -298,6 +298,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [langfuse-backend-dev-guidelines](skills/langfuse-backend-dev-guidelines/) | Langfuse backend development conventions and implementation guidance.                                 |
 | [langfuse-skill-developer](skills/langfuse-skill-developer/)               | Langfuse-related skill development and maintenance.                                                   |
 | [langgraph-agent-runtime](skills/langgraph-agent-runtime/)                 | LangGraph state schemas, node contracts, routing, tool loops, checkpointing, and runtime diagnosis.   |
+| [long-horizon-context-management](skills/long-horizon-context-management/) | Lossless history, bounded task state, tool-result projection, retention, compaction, and rollout gates. |
 | [llm-observability-ops](skills/llm-observability-ops/)                     | LLM tracing, prompt observability, tool-call diagnostics, retrieval spans, and release analysis.      |
 | [mcp-builder](skills/mcp-builder/)                                         | Building high-quality MCP servers for external APIs and tool integrations.                            |
 | [mcp-developer](skills/mcp-developer/)                                     | MCP servers, clients, transports, schemas, tool handlers, resources, and protocol debugging.          |
