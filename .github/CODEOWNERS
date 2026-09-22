@@ -1,0 +1,5 @@
+# Security-control changes need independent review. Branch protection must require CODEOWNERS review
+# for this file to become an enforced gate rather than documentation only.
+/skills/skill-security-auditor/ @stanta
+/.github/workflows/skill-security-audit.yml @stanta
+/.github/CODEOWNERS @stanta
