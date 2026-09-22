@@ -52,4 +52,75 @@ jobs:
           PY
 
           echo "scanner_exit_status=$status"
+
+      - name: Supplemental execution and supply-chain inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re
+
+          root=Path("skills")
+          findings=[]
+
+          action_re=re.compile(r"uses:\\s*([^\\s@]+)@([^\\s#]+)", re.I)
+          mutable_action=re.compile(r"^(v?\\d+(?:\\.\\d+){0,2}|main|master|latest)$", re.I)
+          npx_re=re.compile(r"\\bnpx\\s+(?:-y|--yes)\\s+([^\\s]+)", re.I)
+          latest_re=re.compile(r"\\b(?:npm|pnpm|yarn|bun)\\b[^\\n]{0,80}@latest\\b", re.I)
+          pip_re=re.compile(r"\\bpip(?:3)?\\s+install\\s+([^\\n#]+)", re.I)
+          tool_re=re.compile(r"(?m)^allowed-tools:\\s*(.+)$")
+
+          for p in root.rglob("*"):
+              if not p.is_file():
+                  continue
+              try:
+                  if p.stat().st_size > 2_000_000: continue
+                  t=p.read_text(encoding="utf-8")
+              except Exception:
+                  continue
+
+              for i,line in enumerate(t.splitlines(),1):
+                  m=action_re.search(line)
+                  if m and mutable_action.match(m.group(2)):
+                      findings.append({"rule":"MUTABLE_GITHUB_ACTION_REF","path":str(p),"line":i,"evidence":m.group(0)[:180]})
+                  m=npx_re.search(line)
+                  if m:
+                      findings.append({"rule":"NPX_AUTO_INSTALL","path":str(p),"line":i,"evidence":m.group(0)[:180]})
+                  m=latest_re.search(line)
+                  if m:
+                      findings.append({"rule":"MUTABLE_LATEST_INSTALL","path":str(p),"line":i,"evidence":m.group(0)[:180]})
+                  m=pip_re.search(line)
+                  if m:
+                      spec=m.group(1).strip()
+                      if "==" not in spec and not spec.startswith("-r "):
+                          findings.append({"rule":"UNPINNED_PIP_INSTALL","path":str(p),"line":i,"evidence":line.strip()[:180]})
+
+              if p.name=="SKILL.md":
+                  m=tool_re.search(t)
+                  if m:
+                      tools=m.group(1)
+                      risky=[x for x in ["Bash","Shell","Terminal","Write","Edit","WebFetch","WebSearch","Browser","Task"] if re.search(rf"\\b{re.escape(x)}\\b", tools, re.I)]
+                      if risky:
+                          findings.append({"rule":"DECLARED_RISKY_TOOLS","path":str(p),"line":t[:m.start()].count("\\n")+1,"evidence":tools[:180],"tools":risky})
+
+              if p.suffix.lower() in {".py",".js",".mjs",".cjs",".ts",".tsx",".sh",".bash",".zsh",".ps1",".rb"}:
+                  for i,line in enumerate(t.splitlines(),1):
+                      if re.search(r"\\b(requests\\.|urllib\\.|httpx\\.|fetch\\s*\\(|axios\\.|socket\\.|subprocess\\.|os\\.system|child_process|execSync|spawn\\s*\\()", line):
+                          findings.append({"rule":"EXECUTION_NETWORK_SURFACE","path":str(p),"line":i,"evidence":line.strip()[:180]})
+
+          print("SUPPLEMENTAL_BEGIN")
+          for f in findings:
+              print(json.dumps(f, ensure_ascii=False))
+          print("SUPPLEMENTAL_END")
+          PY
+
+          echo "SYMLINKS_BEGIN"
+          find skills -type l -printf '%p -> %l\\n' || true
+          echo "SYMLINKS_END"
+
+          echo "ARCHIVE_LIST_BEGIN"
+          find skills -type f \\( -name '*.zip' -o -name '*.tar' -o -name '*.tar.gz' -o -name '*.tgz' \\) -print
+          echo "ARCHIVE_LIST_END"
+
           exit 0
