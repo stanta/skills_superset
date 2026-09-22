@@ -1,0 +1,86 @@
+[
+  {
+    "id": "PROMPT_OVERRIDE",
+    "severity": "high",
+    "scope": "text",
+    "pattern": "(?im)^\\s*(?:[-*>]\\s*)?[\"']?(ignore|disregard|override|bypass)\\b.{0,80}\\b(system|developer|previous|higher[- ]priority|safety|policy|guardrail|instruction)s?\\b",
+    "message": "Possible instruction-hierarchy or safety override."
+  },
+  {
+    "id": "HIDE_ACTION",
+    "severity": "high",
+    "scope": "text",
+    "pattern": "(?im)^\\s*(?:[-*>]\\s*)?[\"']?(do not|don't|never)\\b.{0,60}\\b(tell|inform|show|report|disclose|log)\\b.{0,60}\\b(user|reviewer|operator|audit)",
+    "message": "Instruction may conceal an action from the user or reviewer."
+  },
+  {
+    "id": "CREDENTIAL_PATH",
+    "severity": "medium",
+    "scope": "text",
+    "pattern": "(?i)(~/?\\.ssh|/etc/shadow|~/?\\.aws|~/?\\.config/gcloud|kubeconfig|wallet.{0,20}(seed|mnemonic)|private[_ -]?key)",
+    "message": "Sensitive credential path or material referenced. Verify necessity and harness denial."
+  },
+  {
+    "id": "ENV_DUMP",
+    "severity": "high",
+    "scope": "text",
+    "pattern": "(?i)(printenv|env\\s*\\||process\\.env|os\\.environ|set\\s*>\\s*env)",
+    "message": "Broad environment-variable access may expose secrets."
+  },
+  {
+    "id": "DOWNLOAD_EXECUTE",
+    "severity": "high",
+    "scope": "text",
+    "pattern": "(?i)(curl|wget).{0,160}(\\|\\s*(bash|sh)|chmod\\s+\\+x|python[0-9.]*\\s+-)",
+    "message": "Download-and-execute pattern."
+  },
+  {
+    "id": "METADATA_ENDPOINT",
+    "severity": "high",
+    "scope": "text",
+    "pattern": "(?i)(169\\.254\\.169\\.254|metadata\\.google\\.internal|metadata/identity/oauth2/token)",
+    "message": "Cloud metadata endpoint access can expose credentials."
+  },
+  {
+    "id": "PERSISTENCE_PATH",
+    "severity": "high",
+    "scope": "text",
+    "pattern": "(?i)\\b(write|append|modify|edit|create|install|add|persist)\\b.{0,80}(\\.bashrc|\\.zshrc|\\.profile|authorized_keys|/etc/cron|crontab|systemd|launchagents|\\.git/hooks|copilot-instructions|claude\\.md|agents\\.md|cursorrules|windsurfrules)",
+    "message": "Persistence or persistent agent-steering path referenced."
+  },
+  {
+    "id": "DESTRUCTIVE_SHELL",
+    "severity": "high",
+    "scope": "text",
+    "pattern": "(?i)(rm\\s+-rf\\s+[/~]|mkfs\\b|dd\\s+if=.*of=/dev/|shutdown\\b|reboot\\b)",
+    "message": "Potentially destructive host command."
+  },
+  {
+    "id": "PY_DYNAMIC_EXEC",
+    "severity": "high",
+    "scope": "python",
+    "pattern": "(?m)\\b(eval|exec)\\s*\\(",
+    "message": "Dynamic Python execution requires manual review."
+  },
+  {
+    "id": "PY_SHELL_TRUE",
+    "severity": "high",
+    "scope": "python",
+    "pattern": "(?s)subprocess\\.(run|Popen|call|check_call|check_output)\\s*\\([^)]*shell\\s*=\\s*True",
+    "message": "subprocess with shell=True expands command-injection risk."
+  },
+  {
+    "id": "PY_OS_SYSTEM",
+    "severity": "high",
+    "scope": "python",
+    "pattern": "\\bos\\.system\\s*\\(",
+    "message": "os.system executes through a shell."
+  },
+  {
+    "id": "ENCODED_PAYLOAD",
+    "severity": "medium",
+    "scope": "text",
+    "pattern": "(?i)(base64\\s+(-d|--decode)|frombase64string|b64decode\\s*\\(|xxd\\s+-r|openssl\\s+enc\\s+-d)",
+    "message": "Encoded payload decoding can hide executable or prompt content."
+  }
+]
