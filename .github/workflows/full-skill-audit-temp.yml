@@ -105,8 +105,10 @@ jobs:
                           findings.append({"rule":"DECLARED_RISKY_TOOLS","path":str(p),"line":t[:m.start()].count("\\n")+1,"evidence":tools[:180],"tools":risky})
 
               if p.suffix.lower() in {".py",".js",".mjs",".cjs",".ts",".tsx",".sh",".bash",".zsh",".ps1",".rb"}:
+                  needles=("requests.","urllib.","httpx.","fetch(","axios.","socket.","subprocess.","os.system","child_process","execSync","spawn(")
                   for i,line in enumerate(t.splitlines(),1):
-                      if re.search(r"\\b(requests\\.|urllib\\.|httpx\\.|fetch\\s*\\(|axios\\.|socket\\.|subprocess\\.|os\\.system|child_process|execSync|spawn\\s*\\()", line):
+                      compact=line.replace(" ", "")
+                      if any(n.replace(" ", "") in compact for n in needles):
                           findings.append({"rule":"EXECUTION_NETWORK_SURFACE","path":str(p),"line":i,"evidence":line.strip()[:180]})
 
           print("SUPPLEMENTAL_BEGIN")
