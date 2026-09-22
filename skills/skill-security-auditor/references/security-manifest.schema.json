@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/skill-security-manifest.schema.json",
+  "title": "Skill Security Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "risk_tier", "capabilities"],
+  "properties": {
+    "version": {"const": 1},
+    "risk_tier": {"enum": ["S0", "S1", "S2", "S3"]},
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "filesystem_read": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "filesystem_write": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "network_hosts": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "shell_commands": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "tools": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "requires_human_approval": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "prohibited": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "notes": {"type": "string"}
+  }
+}
