@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "risk_tier": "S1",
+  "capabilities": {
+    "filesystem_read": [
+      "workspace/**"
+    ],
+    "filesystem_write": [],
+    "network_hosts": [],
+    "shell_commands": [],
+    "tools": [],
+    "requires_human_approval": []
+  },
+  "prohibited": [
+    "filesystem.write",
+    "arbitrary_network",
+    "arbitrary_shell",
+    "secret.read",
+    "external_side_effect"
+  ],
+  "notes": "Conservative baseline generated during repository-wide security inventory. Capabilities are upper bounds, not grants. Narrow after manual attestation; harness/platform policy remains authoritative."
+}
