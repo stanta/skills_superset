@@ -333,6 +333,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [secure-code-guardian](skills/secure-code-guardian/)                                 | Authentication, authorization, input validation, encryption, OWASP prevention, and secure sessions. |
 | [security](skills/security/)                                                         | Security architecture, threat modeling, compliance, infrastructure security, and incident planning. |
 | [security-reviewer](skills/security-reviewer/)                                       | Security audits, vulnerability reports, dependency checks, secrets scanning, SAST, and remediation. |
+| [skill-security-auditor](skills/skill-security-auditor/)                             | Admission review for agent skills: malware, prompt injection, harness violations, excessive agency, and supply-chain risk. |
 | [test-master](skills/test-master/)                                                   | Unit, integration, E2E, regression, performance, security testing, coverage, and test strategy.     |
 | [webapp-testing](skills/webapp-testing/)                                             | Local web application testing with Playwright, screenshots, browser logs, and UI validation.        |
 
