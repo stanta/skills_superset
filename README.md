@@ -314,6 +314,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [opencode-expert](skills/opencode-expert/)                                 | OpenCode configuration, agents, permissions, providers, MCP, plugins, and TUI workflows.              |
 | [prompt-engineer](skills/prompt-engineer/)                                 | Prompt design, structured output schemas, evaluation rubrics, few-shot examples, and test suites.     |
 | [prompt-security-redteam](skills/prompt-security-redteam/)                 | Prompt injection, data exfiltration, unsafe tool execution, RAG attacks, and memory red teaming.      |
+| [skill-security-auditor](skills/skill-security-auditor/)                   | Security admission for skills: malware, supply chain, prompt injection, harness boundaries, and capabilities. |
 | [rag-architect](skills/rag-architect/)                                     | RAG systems, chunking, embeddings, vector stores, hybrid search, reranking, and retrieval evaluation. |
 | [telegram-ai-bot-runtime](skills/telegram-ai-bot-runtime/)                 | Telegram bots, async handlers, AI inference, media inputs, payments, queues, and user concurrency.    |
 | [tester-ai](skills/tester-ai/)                                             | Testing AI apps, chatbots, RAG systems, tool-using agents, red teaming, and eval governance.          |
