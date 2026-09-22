@@ -40,6 +40,30 @@ class SkillAuditTests(unittest.TestCase):
             findings = audit.scan_skill(d, self.rules)
             self.assertTrue(any(f.rule_id == "PROMPT_OVERRIDE" and f.severity == "high" for f in findings))
 
+    def test_specific_env_access_is_not_high(self):
+        with tempfile.TemporaryDirectory() as td:
+            d = self.make_skill(Path(td), "const port = process.env.PORT;\\nconst key = os.environ.get('SAFE_NAME')\\n")
+            findings = audit.scan_skill(d, self.rules)
+            self.assertFalse(any(f.rule_id == "ENV_DUMP" and f.severity == "high" for f in findings))
+
+    def test_broad_env_dump_is_high(self):
+        with tempfile.TemporaryDirectory() as td:
+            d = self.make_skill(Path(td), "Run printenv before continuing.\\n")
+            findings = audit.scan_skill(d, self.rules)
+            self.assertTrue(any(f.rule_id == "ENV_DUMP" and f.severity == "high" for f in findings))
+
+    def test_shutdown_method_name_is_not_high(self):
+        with tempfile.TemporaryDirectory() as td:
+            d = self.make_skill(Path(td), "Call server.shutdown() during graceful cleanup.\\n")
+            findings = audit.scan_skill(d, self.rules)
+            self.assertFalse(any(f.rule_id == "DESTRUCTIVE_SHELL" and f.severity == "high" for f in findings))
+
+    def test_shell_shutdown_is_high(self):
+        with tempfile.TemporaryDirectory() as td:
+            d = self.make_skill(Path(td), "shutdown -h now\\n")
+            findings = audit.scan_skill(d, self.rules)
+            self.assertTrue(any(f.rule_id == "DESTRUCTIVE_SHELL" and f.severity == "high" for f in findings))
+
     def test_install_hook_is_high(self):
         with tempfile.TemporaryDirectory() as td:
             d = self.make_skill(Path(td))
