@@ -1,0 +1,89 @@
+name: Skill Security Admission
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - ".github/workflows/skill-security-admission.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile scanner
+        run: python -m py_compile skills/skill-security-auditor/scripts/scan_skill.py
+
+      - name: Select changed skill packages
+        id: changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            base="${{ github.event.pull_request.base.sha }}"
+            head="${{ github.event.pull_request.head.sha }}"
+          else
+            base="HEAD^"
+            head="HEAD"
+          fi
+
+          git diff --name-only "$base" "$head"             | awk -F/ '$1=="skills" && NF>=2 {print $1"/"$2}'             | sort -u             | while read -r d; do
+                [[ -d "$d" ]] && echo "$d"
+              done > changed-skills.txt
+
+          echo "Changed skills:"
+          cat changed-skills.txt || true
+
+      - name: Static admission scan
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p skill-security-reports
+
+          if [[ ! -s changed-skills.txt ]]; then
+            echo '{"findings":[],"note":"No changed skill directories"}' > skill-security-reports/report.json
+            exit 0
+          fi
+
+          mapfile -t dirs < changed-skills.txt
+          set +e
+          python skills/skill-security-auditor/scripts/scan_skill.py "${dirs[@]}" --json             > skill-security-reports/report.json
+          rc=$?
+          set -e
+
+          cat skill-security-reports/report.json
+          exit "$rc"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: skill-security-report
+          path: skill-security-reports/
+          if-no-files-found: warn
+
+  policy-notice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository hardening reminder
+        run: |
+          cat <<'EOF'
+          Make this workflow a required pull-request check and protect main.
+          Disallow direct pushes for normal contributors.
+          Require review for changes under skills/** (prefer CODEOWNERS).
+          Keep workflow token permissions read-only unless explicitly required.
+          EOF
