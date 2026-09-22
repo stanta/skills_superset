@@ -1,0 +1,53 @@
+name: Skill Security Admission
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - ".github/workflows/skill-security-admission.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile scanner
+        run: python -m py_compile skills/skill-security-auditor/scripts/scan_skill.py
+
+      - name: Scan skill packages
+        run: |
+          python skills/skill-security-auditor/scripts/scan_skill.py skills --json | tee skill-security-report.json
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-security-report
+          path: skill-security-report.json
+          if-no-files-found: warn
+
+  policy-notice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Required repository hardening
+        run: |
+          cat <<'EOF'
+          SECURITY NOTE:
+          Make this workflow a required pull-request check and protect the main branch.
+          Disallow direct pushes for normal contributors.
+          Require review for changes under skills/**.
+          Keep workflow token permissions read-only unless a job explicitly needs more.
+          Pin third-party actions to immutable commit SHAs for higher assurance.
+          EOF
