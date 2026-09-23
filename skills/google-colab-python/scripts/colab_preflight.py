@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
+import multiprocessing
 import platform
 import shutil
 import subprocess
@@ -153,10 +153,9 @@ def main() -> int:
         },
         "runtime": {
             "workdir": str(workdir),
-            "cwd": os.getcwd(),
-            "cpu_count": os.cpu_count(),
-            "is_colab": "COLAB_RELEASE_TAG" in os.environ
-            or Path("/content").exists(),
+            "cwd": str(Path.cwd()),
+            "cpu_count": multiprocessing.cpu_count(),
+            "colab_layout_present": Path("/content").exists(),
             "drive_mounted": Path("/content/drive").exists(),
         },
         "memory": memory,
