@@ -1,5 +1,21 @@
 # Report template: Wishart graph-compression analysis
 
+## Contents
+- Experiment identity and integrity
+- Compression trajectory
+- Scalar parameter changes
+- Strong preservation diagnostics
+- Threshold and diffusion analysis
+- Traffic and relation-aware analysis
+- Wishart modes
+- Cross-metric and seed comparison
+- Null baselines
+- Scale plateau
+- Semantic inspection
+- Falsification and sources
+- Final conclusion format
+
+
 ## Executive summary
 
 State:
