@@ -38,9 +38,11 @@ class SkillAuditTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             d = Path(td) / "skills" / "demo"
             d.mkdir(parents=True)
-            (d / "SKILL.md").write_bytes(b"---\\r\\nname: demo\\r\\ndescription: Safe demo skill.\\r\\n---\\r\\nBody\\r\\n")
+            (d / "SKILL.md").write_bytes(b"---\r\nname: demo\r\ndescription: Safe demo skill.\r\n---\r\nBody\r\n")
+            raw = (d / "SKILL.md").read_bytes()
+            self.assertIn(b"\r\n", raw)
             findings = audit.scan_skill(d, self.rules)
-            self.assertFalse(any(f.rule_id == "FRONTMATTER_MISSING" for f in findings))
+            self.assertFalse(any(f.rule_id in {"FRONTMATTER_MISSING", "FRONTMATTER_BROKEN"} for f in findings))
 
     def test_prompt_override_is_high(self):
         with tempfile.TemporaryDirectory() as td:
@@ -50,7 +52,7 @@ class SkillAuditTests(unittest.TestCase):
 
     def test_specific_env_access_is_not_high(self):
         with tempfile.TemporaryDirectory() as td:
-            d = self.make_skill(Path(td), "const port = process.env.PORT;\\nconst key = os.environ.get('SAFE_NAME')\\n")
+            d = self.make_skill(Path(td), "const port = process.env.PORT;\nconst key = os.environ.get('SAFE_NAME')\n")
             findings = audit.scan_skill(d, self.rules)
             self.assertFalse(any(f.rule_id == "ENV_DUMP" and f.severity == "high" for f in findings))
 
