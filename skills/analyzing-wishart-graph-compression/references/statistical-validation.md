@@ -1,5 +1,20 @@
 # Statistical validation for recursive Wishart compression
 
+## Contents
+- Repeated-run and seed protocol
+- Matched-compression comparison
+- Robust summaries and paired design
+- Hyperparameter sensitivity
+- Null models and Haken baseline
+- Permutation tests
+- Scale plateau and change points
+- Figure-type attribution
+- Metric robustness
+- Bootstrap and Monte Carlo error
+- Recommended experimental matrix
+- Decision language
+
+
 ## 1. Why repeated runs are required
 
 A single recursive Wishart run mixes deterministic structure with several stochastic components:
