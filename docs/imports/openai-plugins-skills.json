@@ -1,0 +1,3024 @@
+{
+  "imported": [
+    {
+      "plugin": "adobe",
+      "reason": "unique",
+      "source_skill": "adobe-batch-edit-photos",
+      "target_skill": "adobe-batch-edit-photos"
+    },
+    {
+      "plugin": "adobe",
+      "reason": "unique",
+      "source_skill": "adobe-create-mockups",
+      "target_skill": "adobe-create-mockups"
+    },
+    {
+      "plugin": "adobe",
+      "reason": "unique",
+      "source_skill": "adobe-create-social-variations",
+      "target_skill": "adobe-create-social-variations"
+    },
+    {
+      "plugin": "adobe",
+      "reason": "unique",
+      "source_skill": "adobe-design-from-template",
+      "target_skill": "adobe-design-from-template"
+    },
+    {
+      "plugin": "adobe",
+      "reason": "unique",
+      "source_skill": "adobe-edit-quick-cut",
+      "target_skill": "adobe-edit-quick-cut"
+    },
+    {
+      "plugin": "adobe",
+      "reason": "unique",
+      "source_skill": "adobe-retouch-portraits",
+      "target_skill": "adobe-retouch-portraits"
+    },
+    {
+      "plugin": "airtable",
+      "reason": "unique",
+      "source_skill": "airtable-cli",
+      "target_skill": "airtable-cli"
+    },
+    {
+      "plugin": "airtable",
+      "reason": "unique",
+      "source_skill": "airtable-filters",
+      "target_skill": "airtable-filters"
+    },
+    {
+      "plugin": "airtable",
+      "reason": "unique",
+      "source_skill": "airtable-overview",
+      "target_skill": "airtable-overview"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-check-status",
+      "target_skill": "boltz-check-status"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-cli-setup",
+      "target_skill": "boltz-cli-setup"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-protein-design",
+      "target_skill": "boltz-protein-design"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-protein-screen",
+      "target_skill": "boltz-protein-screen"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-small-molecule-adme",
+      "target_skill": "boltz-small-molecule-adme"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-small-molecule-design",
+      "target_skill": "boltz-small-molecule-design"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-small-molecule-screen",
+      "target_skill": "boltz-small-molecule-screen"
+    },
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "source_skill": "boltz-structure-and-binding",
+      "target_skill": "boltz-structure-and-binding"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "ios-app-intents",
+      "target_skill": "ios-app-intents"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "ios-debugger-agent",
+      "target_skill": "ios-debugger-agent"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "ios-ettrace-performance",
+      "target_skill": "ios-ettrace-performance"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "ios-memgraph-leaks",
+      "target_skill": "ios-memgraph-leaks"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "ios-simulator-browser",
+      "target_skill": "ios-simulator-browser"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "swiftui-liquid-glass",
+      "target_skill": "swiftui-liquid-glass"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "swiftui-performance-audit",
+      "target_skill": "swiftui-performance-audit"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "swiftui-ui-patterns",
+      "target_skill": "swiftui-ui-patterns"
+    },
+    {
+      "plugin": "build-ios-apps",
+      "reason": "unique",
+      "source_skill": "swiftui-view-refactor",
+      "target_skill": "swiftui-view-refactor"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "appkit-interop",
+      "target_skill": "appkit-interop"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "build-run-debug",
+      "target_skill": "build-run-debug"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "liquid-glass",
+      "target_skill": "liquid-glass"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "packaging-notarization",
+      "target_skill": "packaging-notarization"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "signing-entitlements",
+      "target_skill": "signing-entitlements"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "swiftpm-macos",
+      "target_skill": "swiftpm-macos"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "swiftui-patterns",
+      "target_skill": "swiftui-patterns"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "telemetry",
+      "target_skill": "telemetry"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "test-triage",
+      "target_skill": "test-triage"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "view-refactor",
+      "target_skill": "view-refactor"
+    },
+    {
+      "plugin": "build-macos-apps",
+      "reason": "unique",
+      "source_skill": "window-management",
+      "target_skill": "window-management"
+    },
+    {
+      "plugin": "build-web-apps",
+      "reason": "unique",
+      "source_skill": "frontend-app-builder",
+      "target_skill": "frontend-app-builder"
+    },
+    {
+      "plugin": "build-web-apps",
+      "reason": "unique",
+      "source_skill": "frontend-testing-debugging",
+      "target_skill": "frontend-testing-debugging"
+    },
+    {
+      "plugin": "build-web-apps",
+      "reason": "source-duplicate",
+      "source_skill": "react-best-practices",
+      "target_skill": "build-web-apps-react-best-practices"
+    },
+    {
+      "plugin": "build-web-apps",
+      "reason": "unique",
+      "source_skill": "shadcn-best-practices",
+      "target_skill": "shadcn-best-practices"
+    },
+    {
+      "plugin": "build-web-apps",
+      "reason": "source-duplicate",
+      "source_skill": "stripe-best-practices",
+      "target_skill": "build-web-apps-stripe-best-practices"
+    },
+    {
+      "plugin": "build-web-apps",
+      "reason": "unique",
+      "source_skill": "supabase-best-practices",
+      "target_skill": "supabase-best-practices"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "accessibility-and-inclusive-visualization",
+      "target_skill": "accessibility-and-inclusive-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "canvas2d-data-visualization",
+      "target_skill": "canvas2d-data-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "d3-data-visualization",
+      "target_skill": "d3-data-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "dashboards-and-real-time-visualization",
+      "target_skill": "dashboards-and-real-time-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "data-visualization",
+      "target_skill": "data-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "gantt-chart-visualization",
+      "target_skill": "gantt-chart-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "geospatial-and-cartographic-visualization",
+      "target_skill": "geospatial-and-cartographic-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "grammar-of-graphics-and-declarative-visualization",
+      "target_skill": "grammar-of-graphics-and-declarative-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "node-link-and-diagram-layout",
+      "target_skill": "node-link-and-diagram-layout"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "react-and-nextjs-data-visualization",
+      "target_skill": "react-and-nextjs-data-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "reports-pdfs-and-slide-automation",
+      "target_skill": "reports-pdfs-and-slide-automation"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "scrollytelling-and-parallax-data-visualization",
+      "target_skill": "scrollytelling-and-parallax-data-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "statistical-and-uncertainty-visualization",
+      "target_skill": "statistical-and-uncertainty-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "testing-data-visualizations",
+      "target_skill": "testing-data-visualizations"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "threejs-data-visualization",
+      "target_skill": "threejs-data-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "typescript-data-visualization-engineering",
+      "target_skill": "typescript-data-visualization-engineering"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "uml-and-software-architecture-visualization",
+      "target_skill": "uml-and-software-architecture-visualization"
+    },
+    {
+      "plugin": "build-web-data-visualization",
+      "reason": "unique",
+      "source_skill": "visualization-strategy-and-critique",
+      "target_skill": "visualization-strategy-and-critique"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-brand-check",
+      "target_skill": "canva-brand-check"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-branded-presentation",
+      "target_skill": "canva-branded-presentation"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-bulk-create",
+      "target_skill": "canva-bulk-create"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-design-feedback",
+      "target_skill": "canva-design-feedback"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-edit-design",
+      "target_skill": "canva-edit-design"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-implement-feedback",
+      "target_skill": "canva-implement-feedback"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-resize-for-social-media",
+      "target_skill": "canva-resize-for-social-media"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "source_skill": "canva-translate-design",
+      "target_skill": "canva-translate-design"
+    },
+    {
+      "plugin": "chatcut",
+      "reason": "unique",
+      "source_skill": "connect-chatcut-desktop",
+      "target_skill": "connect-chatcut-desktop"
+    },
+    {
+      "plugin": "circleci",
+      "reason": "unique",
+      "source_skill": "builds",
+      "target_skill": "builds"
+    },
+    {
+      "plugin": "circleci",
+      "reason": "unique",
+      "source_skill": "chunk",
+      "target_skill": "chunk"
+    },
+    {
+      "plugin": "circleci",
+      "reason": "unique",
+      "source_skill": "cli",
+      "target_skill": "cli"
+    },
+    {
+      "plugin": "circleci",
+      "reason": "unique",
+      "source_skill": "config",
+      "target_skill": "config"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "source-duplicate",
+      "source_skill": "agents-sdk",
+      "target_skill": "cloudflare-agents-sdk"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "building-ai-agent-on-cloudflare",
+      "target_skill": "building-ai-agent-on-cloudflare"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "building-mcp-server-on-cloudflare",
+      "target_skill": "building-mcp-server-on-cloudflare"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "cloudflare",
+      "target_skill": "cloudflare"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "durable-objects",
+      "target_skill": "durable-objects"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "sandbox-sdk",
+      "target_skill": "sandbox-sdk"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "web-perf",
+      "target_skill": "web-perf"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "workers-best-practices",
+      "target_skill": "workers-best-practices"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "source_skill": "wrangler",
+      "target_skill": "wrangler"
+    },
+    {
+      "plugin": "coderabbit",
+      "reason": "unique",
+      "source_skill": "coderabbit-review",
+      "target_skill": "coderabbit-review"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "assess-patch-risk",
+      "target_skill": "assess-patch-risk"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "attack-path-analysis",
+      "target_skill": "attack-path-analysis"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "deep-security-scan",
+      "target_skill": "deep-security-scan"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "define-security-policy",
+      "target_skill": "define-security-policy"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "finding-discovery",
+      "target_skill": "finding-discovery"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "fix-finding",
+      "target_skill": "fix-finding"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "propose-security-hardening",
+      "target_skill": "propose-security-hardening"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "security-diff-scan",
+      "target_skill": "security-diff-scan"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "security-scan",
+      "target_skill": "security-scan"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "threat-model",
+      "target_skill": "threat-model"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "track-findings",
+      "target_skill": "track-findings"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "triage-finding",
+      "target_skill": "triage-finding"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "validation",
+      "target_skill": "validation"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "verify-fix",
+      "target_skill": "verify-fix"
+    },
+    {
+      "plugin": "codex-security",
+      "reason": "unique",
+      "source_skill": "vulnerability-writeup",
+      "target_skill": "vulnerability-writeup"
+    },
+    {
+      "plugin": "creative-production",
+      "reason": "unique",
+      "source_skill": "intake",
+      "target_skill": "intake"
+    },
+    {
+      "plugin": "creative-production",
+      "reason": "unique",
+      "source_skill": "produce",
+      "target_skill": "produce"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "analyze-data-quality",
+      "target_skill": "analyze-data-quality"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "build-dashboard",
+      "target_skill": "build-dashboard"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "build-report",
+      "target_skill": "build-report"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "create-data-context",
+      "target_skill": "create-data-context"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "design-kpis",
+      "target_skill": "design-kpis"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "gather-business-context",
+      "target_skill": "gather-business-context"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "source-duplicate",
+      "source_skill": "index",
+      "target_skill": "data-analytics-index"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "jupyter-notebooks",
+      "target_skill": "jupyter-notebooks"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "kpi-reporting",
+      "target_skill": "kpi-reporting"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "market-sizing",
+      "target_skill": "market-sizing"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "metric-diagnostics",
+      "target_skill": "metric-diagnostics"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "product-business-analysis",
+      "target_skill": "product-business-analysis"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "publish-artifact-to-sites",
+      "target_skill": "publish-artifact-to-sites"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "validate-data",
+      "target_skill": "validate-data"
+    },
+    {
+      "plugin": "data-analytics",
+      "reason": "unique",
+      "source_skill": "visualize-data",
+      "target_skill": "visualize-data"
+    },
+    {
+      "plugin": "dropbox",
+      "reason": "unique",
+      "source_skill": "clean-up-dropbox-content",
+      "target_skill": "clean-up-dropbox-content"
+    },
+    {
+      "plugin": "dropbox",
+      "reason": "unique",
+      "source_skill": "collect-files-with-request",
+      "target_skill": "collect-files-with-request"
+    },
+    {
+      "plugin": "dropbox",
+      "reason": "unique",
+      "source_skill": "find-dropbox-content",
+      "target_skill": "find-dropbox-content"
+    },
+    {
+      "plugin": "dropbox",
+      "reason": "unique",
+      "source_skill": "inspect-dropbox-file",
+      "target_skill": "inspect-dropbox-file"
+    },
+    {
+      "plugin": "dropbox",
+      "reason": "unique",
+      "source_skill": "organize-dropbox-folder",
+      "target_skill": "organize-dropbox-folder"
+    },
+    {
+      "plugin": "dropbox",
+      "reason": "unique",
+      "source_skill": "share-dropbox-content",
+      "target_skill": "share-dropbox-content"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "building-native-ui",
+      "target_skill": "building-native-ui"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "codex-expo-run-actions",
+      "target_skill": "codex-expo-run-actions"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-api-routes",
+      "target_skill": "expo-api-routes"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-cicd-workflows",
+      "target_skill": "expo-cicd-workflows"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-deployment",
+      "target_skill": "expo-deployment"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-dev-client",
+      "target_skill": "expo-dev-client"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-module",
+      "target_skill": "expo-module"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-tailwind-setup",
+      "target_skill": "expo-tailwind-setup"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-ui-jetpack-compose",
+      "target_skill": "expo-ui-jetpack-compose"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "expo-ui-swift-ui",
+      "target_skill": "expo-ui-swift-ui"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "native-data-fetching",
+      "target_skill": "native-data-fetching"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "upgrading-expo",
+      "target_skill": "upgrading-expo"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "source_skill": "use-dom",
+      "target_skill": "use-dom"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-code-connect",
+      "target_skill": "figma-code-connect"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-create-new-file",
+      "target_skill": "figma-create-new-file"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-design-to-code",
+      "target_skill": "figma-design-to-code"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-generate-design",
+      "target_skill": "figma-generate-design"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-generate-diagram",
+      "target_skill": "figma-generate-diagram"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-generate-library",
+      "target_skill": "figma-generate-library"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-implement-motion",
+      "target_skill": "figma-implement-motion"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-swiftui",
+      "target_skill": "figma-swiftui"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-use",
+      "target_skill": "figma-use"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-use-figjam",
+      "target_skill": "figma-use-figjam"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-use-motion",
+      "target_skill": "figma-use-motion"
+    },
+    {
+      "plugin": "figma",
+      "reason": "unique",
+      "source_skill": "figma-use-slides",
+      "target_skill": "figma-use-slides"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "game-playtest",
+      "target_skill": "game-playtest"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "game-studio",
+      "target_skill": "game-studio"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "game-ui-frontend",
+      "target_skill": "game-ui-frontend"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "phaser-2d-game",
+      "target_skill": "phaser-2d-game"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "react-three-fiber-game",
+      "target_skill": "react-three-fiber-game"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "sprite-pipeline",
+      "target_skill": "sprite-pipeline"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "three-webgl-game",
+      "target_skill": "three-webgl-game"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "web-3d-asset-pipeline",
+      "target_skill": "web-3d-asset-pipeline"
+    },
+    {
+      "plugin": "game-studio",
+      "reason": "unique",
+      "source_skill": "web-game-foundations",
+      "target_skill": "web-game-foundations"
+    },
+    {
+      "plugin": "google-drive",
+      "reason": "unique",
+      "source_skill": "google-docs",
+      "target_skill": "google-docs"
+    },
+    {
+      "plugin": "google-drive",
+      "reason": "unique",
+      "source_skill": "google-drive",
+      "target_skill": "google-drive"
+    },
+    {
+      "plugin": "google-drive",
+      "reason": "unique",
+      "source_skill": "google-drive-comments",
+      "target_skill": "google-drive-comments"
+    },
+    {
+      "plugin": "google-drive",
+      "reason": "unique",
+      "source_skill": "google-sheets",
+      "target_skill": "google-sheets"
+    },
+    {
+      "plugin": "google-drive",
+      "reason": "unique",
+      "source_skill": "google-slides",
+      "target_skill": "google-slides"
+    },
+    {
+      "plugin": "higgsfield",
+      "reason": "unique",
+      "source_skill": "faceless-channel",
+      "target_skill": "faceless-channel"
+    },
+    {
+      "plugin": "higgsfield",
+      "reason": "unique",
+      "source_skill": "narrator",
+      "target_skill": "narrator"
+    },
+    {
+      "plugin": "higgsfield",
+      "reason": "unique",
+      "source_skill": "subtitles",
+      "target_skill": "subtitles"
+    },
+    {
+      "plugin": "hyperframes",
+      "reason": "unique",
+      "source_skill": "gsap",
+      "target_skill": "gsap"
+    },
+    {
+      "plugin": "hyperframes",
+      "reason": "unique",
+      "source_skill": "hyperframes",
+      "target_skill": "hyperframes"
+    },
+    {
+      "plugin": "hyperframes",
+      "reason": "unique",
+      "source_skill": "hyperframes-cli",
+      "target_skill": "hyperframes-cli"
+    },
+    {
+      "plugin": "hyperframes",
+      "reason": "unique",
+      "source_skill": "hyperframes-registry",
+      "target_skill": "hyperframes-registry"
+    },
+    {
+      "plugin": "hyperframes",
+      "reason": "unique",
+      "source_skill": "website-to-hyperframes",
+      "target_skill": "website-to-hyperframes"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "alphafold-skill",
+      "target_skill": "alphafold-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "bgee-skill",
+      "target_skill": "bgee-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "bindingdb-skill",
+      "target_skill": "bindingdb-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "biobankjapan-phewas-skill",
+      "target_skill": "biobankjapan-phewas-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "biorxiv-skill",
+      "target_skill": "biorxiv-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "biostudies-arrayexpress-skill",
+      "target_skill": "biostudies-arrayexpress-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "cbioportal-skill",
+      "target_skill": "cbioportal-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "cellxgene-skill",
+      "target_skill": "cellxgene-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "chebi-skill",
+      "target_skill": "chebi-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "chembl-skill",
+      "target_skill": "chembl-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "civic-skill",
+      "target_skill": "civic-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "clinicaltrials-skill",
+      "target_skill": "clinicaltrials-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "clinvar-variation-skill",
+      "target_skill": "clinvar-variation-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "efo-ontology-skill",
+      "target_skill": "efo-ontology-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "encode-skill",
+      "target_skill": "encode-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ensembl-skill",
+      "target_skill": "ensembl-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "epigraphdb-skill",
+      "target_skill": "epigraphdb-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "eqtl-catalogue-skill",
+      "target_skill": "eqtl-catalogue-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "eva-skill",
+      "target_skill": "eva-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "finngen-phewas-skill",
+      "target_skill": "finngen-phewas-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "genebass-gene-burden-skill",
+      "target_skill": "genebass-gene-burden-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "gnomad-graphql-skill",
+      "target_skill": "gnomad-graphql-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "gtex-eqtl-skill",
+      "target_skill": "gtex-eqtl-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "gwas-catalog-skill",
+      "target_skill": "gwas-catalog-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "hmdb-skill",
+      "target_skill": "hmdb-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "human-protein-atlas-skill",
+      "target_skill": "human-protein-atlas-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ipd-skill",
+      "target_skill": "ipd-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "locus-to-gene-mapper-skill",
+      "target_skill": "locus-to-gene-mapper-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "metabolights-skill",
+      "target_skill": "metabolights-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "mgnify-skill",
+      "target_skill": "mgnify-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ncbi-blast-skill",
+      "target_skill": "ncbi-blast-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ncbi-clinicaltables-skill",
+      "target_skill": "ncbi-clinicaltables-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ncbi-datasets-skill",
+      "target_skill": "ncbi-datasets-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ncbi-entrez-skill",
+      "target_skill": "ncbi-entrez-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ncbi-pmc-skill",
+      "target_skill": "ncbi-pmc-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "opentargets-skill",
+      "target_skill": "opentargets-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "pharmgkb-skill",
+      "target_skill": "pharmgkb-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "pride-skill",
+      "target_skill": "pride-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "proteomexchange-skill",
+      "target_skill": "proteomexchange-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "pubchem-pug-skill",
+      "target_skill": "pubchem-pug-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "quickgo-skill",
+      "target_skill": "quickgo-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "rcsb-pdb-skill",
+      "target_skill": "rcsb-pdb-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "reactome-skill",
+      "target_skill": "reactome-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "research-router-skill",
+      "target_skill": "research-router-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "rhea-skill",
+      "target_skill": "rhea-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "rnacentral-skill",
+      "target_skill": "rnacentral-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "string-skill",
+      "target_skill": "string-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "tpmi-phewas-skill",
+      "target_skill": "tpmi-phewas-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "ukb-topmed-phewas-skill",
+      "target_skill": "ukb-topmed-phewas-skill"
+    },
+    {
+      "plugin": "life-science-research",
+      "reason": "unique",
+      "source_skill": "uniprot-skill",
+      "target_skill": "uniprot-skill"
+    },
+    {
+      "plugin": "magicpath",
+      "reason": "unique",
+      "source_skill": "magicpath",
+      "target_skill": "magicpath"
+    },
+    {
+      "plugin": "mixpanel-headless",
+      "reason": "unique",
+      "source_skill": "dashboard-expert",
+      "target_skill": "dashboard-expert"
+    },
+    {
+      "plugin": "mixpanel-headless",
+      "reason": "unique",
+      "source_skill": "mixpanel-auth",
+      "target_skill": "mixpanel-auth"
+    },
+    {
+      "plugin": "mixpanel-headless",
+      "reason": "unique",
+      "source_skill": "mixpanelyst",
+      "target_skill": "mixpanelyst"
+    },
+    {
+      "plugin": "mixpanel-headless",
+      "reason": "unique",
+      "source_skill": "setup",
+      "target_skill": "setup"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-amplicon-microbiome",
+      "target_skill": "ngs-amplicon-microbiome"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-analysis-router",
+      "target_skill": "ngs-analysis-router"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-atacseq-peaks-qc",
+      "target_skill": "ngs-atacseq-peaks-qc"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-bcl-to-fastq",
+      "target_skill": "ngs-bcl-to-fastq"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-bulk-rnaseq",
+      "target_skill": "ngs-bulk-rnaseq"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-bulk-rnaseq-counts-qc",
+      "target_skill": "ngs-bulk-rnaseq-counts-qc"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-bulk-rnaseq-differential-expression",
+      "target_skill": "ngs-bulk-rnaseq-differential-expression"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-chip-cutrun-peaks-qc",
+      "target_skill": "ngs-chip-cutrun-peaks-qc"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-dna-germline-variants",
+      "target_skill": "ngs-dna-germline-variants"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-dna-somatic-variants",
+      "target_skill": "ngs-dna-somatic-variants"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-dna-umi-panel-variants",
+      "target_skill": "ngs-dna-umi-panel-variants"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-dna-variant-calling",
+      "target_skill": "ngs-dna-variant-calling"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-epigenomics-peaks",
+      "target_skill": "ngs-epigenomics-peaks"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-fastq-qc",
+      "target_skill": "ngs-fastq-qc"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-runtime-env",
+      "target_skill": "ngs-runtime-env"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-scrna-seq",
+      "target_skill": "ngs-scrna-seq"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "ngs-shotgun-metagenomics",
+      "target_skill": "ngs-shotgun-metagenomics"
+    },
+    {
+      "plugin": "ngs-analysis",
+      "reason": "unique",
+      "source_skill": "scrna-seq-qc",
+      "target_skill": "scrna-seq-qc"
+    },
+    {
+      "plugin": "notion",
+      "reason": "unique",
+      "source_skill": "notion-knowledge-capture",
+      "target_skill": "notion-knowledge-capture"
+    },
+    {
+      "plugin": "notion",
+      "reason": "unique",
+      "source_skill": "notion-meeting-intelligence",
+      "target_skill": "notion-meeting-intelligence"
+    },
+    {
+      "plugin": "notion",
+      "reason": "unique",
+      "source_skill": "notion-research-documentation",
+      "target_skill": "notion-research-documentation"
+    },
+    {
+      "plugin": "notion",
+      "reason": "unique",
+      "source_skill": "notion-spec-to-implementation",
+      "target_skill": "notion-spec-to-implementation"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "aiq-deploy",
+      "target_skill": "aiq-deploy"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "aiq-research",
+      "target_skill": "aiq-research"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "cuopt-user-rules",
+      "target_skill": "cuopt-user-rules"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "dynamo-interconnect-check",
+      "target_skill": "dynamo-interconnect-check"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "dynamo-router-starter",
+      "target_skill": "dynamo-router-starter"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "nemoclaw-user-get-started",
+      "target_skill": "nemoclaw-user-get-started"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "nvidia-skill-finder",
+      "target_skill": "nvidia-skill-finder"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "omniverse-cad-to-simready",
+      "target_skill": "omniverse-cad-to-simready"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "omniverse-realtime-viewer",
+      "target_skill": "omniverse-realtime-viewer"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "omniverse-usd-performance-tuning",
+      "target_skill": "omniverse-usd-performance-tuning"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "physical-ai-infrastructure-setup-and-resilient-scaling",
+      "target_skill": "physical-ai-infrastructure-setup-and-resilient-scaling"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "source_skill": "physical-ai-neural-reconstruction",
+      "target_skill": "physical-ai-neural-reconstruction"
+    },
+    {
+      "plugin": "openai-ads-conversions",
+      "reason": "unique",
+      "source_skill": "openai-ads-conversions-setup",
+      "target_skill": "openai-ads-conversions-setup"
+    },
+    {
+      "plugin": "openai-developers",
+      "reason": "source-duplicate",
+      "source_skill": "agents-sdk",
+      "target_skill": "openai-developers-agents-sdk"
+    },
+    {
+      "plugin": "openai-developers",
+      "reason": "unique",
+      "source_skill": "build-chatgpt-app",
+      "target_skill": "build-chatgpt-app"
+    },
+    {
+      "plugin": "openai-developers",
+      "reason": "unique",
+      "source_skill": "chatgpt-app-submission",
+      "target_skill": "chatgpt-app-submission"
+    },
+    {
+      "plugin": "openai-developers",
+      "reason": "unique",
+      "source_skill": "openai-api-troubleshooting",
+      "target_skill": "openai-api-troubleshooting"
+    },
+    {
+      "plugin": "openai-developers",
+      "reason": "unique",
+      "source_skill": "openai-platform-api-key",
+      "target_skill": "openai-platform-api-key"
+    },
+    {
+      "plugin": "plugin-eval",
+      "reason": "unique",
+      "source_skill": "evaluate-plugin",
+      "target_skill": "evaluate-plugin"
+    },
+    {
+      "plugin": "plugin-eval",
+      "reason": "unique",
+      "source_skill": "evaluate-skill",
+      "target_skill": "evaluate-skill"
+    },
+    {
+      "plugin": "plugin-eval",
+      "reason": "unique",
+      "source_skill": "improve-skill",
+      "target_skill": "improve-skill"
+    },
+    {
+      "plugin": "plugin-eval",
+      "reason": "unique",
+      "source_skill": "metric-pack-designer",
+      "target_skill": "metric-pack-designer"
+    },
+    {
+      "plugin": "plugin-eval",
+      "reason": "unique",
+      "source_skill": "plugin-eval",
+      "target_skill": "plugin-eval"
+    },
+    {
+      "plugin": "posthog",
+      "reason": "unique",
+      "source_skill": "posthog",
+      "target_skill": "posthog"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "target-collision",
+      "source_skill": "audit",
+      "target_skill": "product-design-audit"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "unique",
+      "source_skill": "design-qa",
+      "target_skill": "design-qa"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "unique",
+      "source_skill": "get-context",
+      "target_skill": "get-context"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "unique",
+      "source_skill": "ideate",
+      "target_skill": "ideate"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "unique",
+      "source_skill": "image-to-code",
+      "target_skill": "image-to-code"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "source-duplicate",
+      "source_skill": "index",
+      "target_skill": "product-design-index"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "unique",
+      "source_skill": "research",
+      "target_skill": "research"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "unique",
+      "source_skill": "share",
+      "target_skill": "share"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "unique",
+      "source_skill": "url-to-code",
+      "target_skill": "url-to-code"
+    },
+    {
+      "plugin": "product-design",
+      "reason": "source-duplicate",
+      "source_skill": "user-context",
+      "target_skill": "product-design-user-context"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "catalyst-calendar",
+      "target_skill": "catalyst-calendar"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "company-tearsheet",
+      "target_skill": "company-tearsheet"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "comps-valuation",
+      "target_skill": "comps-valuation"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "dcf-model-builder",
+      "target_skill": "dcf-model-builder"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "deck-report-qc",
+      "target_skill": "deck-report-qc"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "earnings-deep-dive",
+      "target_skill": "earnings-deep-dive"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "earnings-preview",
+      "target_skill": "earnings-preview"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "economic-impact-report",
+      "target_skill": "economic-impact-report"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "equity-model-update",
+      "target_skill": "equity-model-update"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "event-driven-analyzer",
+      "target_skill": "event-driven-analyzer"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "financials-normalizer",
+      "target_skill": "financials-normalizer"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "idea-generation",
+      "target_skill": "idea-generation"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "initiating-coverage",
+      "target_skill": "initiating-coverage"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "long-short-pitch",
+      "target_skill": "long-short-pitch"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "meeting-prep",
+      "target_skill": "meeting-prep"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "memo-builder",
+      "target_skill": "memo-builder"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "model-audit-tieout",
+      "target_skill": "model-audit-tieout"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "portfolio-risk-management",
+      "target_skill": "portfolio-risk-management"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "public-equity-investing",
+      "target_skill": "public-equity-investing"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "scenario-sensitivity-generator",
+      "target_skill": "scenario-sensitivity-generator"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "thesis-tracker",
+      "target_skill": "thesis-tracker"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "source_skill": "three-statement-model-builder",
+      "target_skill": "three-statement-model-builder"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "source-duplicate",
+      "source_skill": "user-context",
+      "target_skill": "public-equity-investing-user-context"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-best-practices",
+      "target_skill": "remotion-best-practices"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-captions",
+      "target_skill": "remotion-captions"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-create",
+      "target_skill": "remotion-create"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-docs",
+      "target_skill": "remotion-docs"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-interactivity",
+      "target_skill": "remotion-interactivity"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-maps",
+      "target_skill": "remotion-maps"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-markup",
+      "target_skill": "remotion-markup"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-multimedia",
+      "target_skill": "remotion-multimedia"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-render",
+      "target_skill": "remotion-render"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-saas",
+      "target_skill": "remotion-saas"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-studio",
+      "target_skill": "remotion-studio"
+    },
+    {
+      "plugin": "remotion",
+      "reason": "unique",
+      "source_skill": "remotion-upgrade",
+      "target_skill": "remotion-upgrade"
+    },
+    {
+      "plugin": "sentry",
+      "reason": "unique",
+      "source_skill": "sentry",
+      "target_skill": "sentry"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-admin",
+      "target_skill": "shopify-admin"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-app-store-review",
+      "target_skill": "shopify-app-store-review"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-custom-data",
+      "target_skill": "shopify-custom-data"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-customer",
+      "target_skill": "shopify-customer"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-dev",
+      "target_skill": "shopify-dev"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-functions",
+      "target_skill": "shopify-functions"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-hydrogen",
+      "target_skill": "shopify-hydrogen"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-liquid",
+      "target_skill": "shopify-liquid"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-onboarding-dev",
+      "target_skill": "shopify-onboarding-dev"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-onboarding-merchant",
+      "target_skill": "shopify-onboarding-merchant"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-partner",
+      "target_skill": "shopify-partner"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-payments-apps",
+      "target_skill": "shopify-payments-apps"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-polaris-admin-extensions",
+      "target_skill": "shopify-polaris-admin-extensions"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-polaris-app-home",
+      "target_skill": "shopify-polaris-app-home"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-polaris-checkout-extensions",
+      "target_skill": "shopify-polaris-checkout-extensions"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-polaris-customer-account-extensions",
+      "target_skill": "shopify-polaris-customer-account-extensions"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-pos-ui",
+      "target_skill": "shopify-pos-ui"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-storefront-graphql",
+      "target_skill": "shopify-storefront-graphql"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "shopify-use-shopify-cli",
+      "target_skill": "shopify-use-shopify-cli"
+    },
+    {
+      "plugin": "shopify",
+      "reason": "unique",
+      "source_skill": "ucp",
+      "target_skill": "ucp"
+    },
+    {
+      "plugin": "stripe",
+      "reason": "unique",
+      "source_skill": "connect-recommend",
+      "target_skill": "connect-recommend"
+    },
+    {
+      "plugin": "stripe",
+      "reason": "unique",
+      "source_skill": "stripe-apps",
+      "target_skill": "stripe-apps"
+    },
+    {
+      "plugin": "stripe",
+      "reason": "source-duplicate",
+      "source_skill": "stripe-best-practices",
+      "target_skill": "stripe-stripe-best-practices"
+    },
+    {
+      "plugin": "stripe",
+      "reason": "unique",
+      "source_skill": "stripe-directory",
+      "target_skill": "stripe-directory"
+    },
+    {
+      "plugin": "stripe",
+      "reason": "unique",
+      "source_skill": "stripe-docs",
+      "target_skill": "stripe-docs"
+    },
+    {
+      "plugin": "stripe",
+      "reason": "unique",
+      "source_skill": "stripe-projects",
+      "target_skill": "stripe-projects"
+    },
+    {
+      "plugin": "stripe",
+      "reason": "unique",
+      "source_skill": "upgrade-stripe",
+      "target_skill": "upgrade-stripe"
+    },
+    {
+      "plugin": "supabase",
+      "reason": "unique",
+      "source_skill": "supabase",
+      "target_skill": "supabase"
+    },
+    {
+      "plugin": "supabase",
+      "reason": "unique",
+      "source_skill": "supabase-postgres-best-practices",
+      "target_skill": "supabase-postgres-best-practices"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "brainstorming",
+      "target_skill": "brainstorming"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "dispatching-parallel-agents",
+      "target_skill": "dispatching-parallel-agents"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "executing-plans",
+      "target_skill": "executing-plans"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "finishing-a-development-branch",
+      "target_skill": "finishing-a-development-branch"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "receiving-code-review",
+      "target_skill": "receiving-code-review"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "requesting-code-review",
+      "target_skill": "requesting-code-review"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "subagent-driven-development",
+      "target_skill": "subagent-driven-development"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "systematic-debugging",
+      "target_skill": "systematic-debugging"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "test-driven-development",
+      "target_skill": "test-driven-development"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "using-git-worktrees",
+      "target_skill": "using-git-worktrees"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "using-superpowers",
+      "target_skill": "using-superpowers"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "verification-before-completion",
+      "target_skill": "verification-before-completion"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "writing-plans",
+      "target_skill": "writing-plans"
+    },
+    {
+      "plugin": "superpowers",
+      "reason": "unique",
+      "source_skill": "writing-skills",
+      "target_skill": "writing-skills"
+    },
+    {
+      "plugin": "temporal",
+      "reason": "unique",
+      "source_skill": "temporal-cloud-setup",
+      "target_skill": "temporal-cloud-setup"
+    },
+    {
+      "plugin": "temporal",
+      "reason": "unique",
+      "source_skill": "temporal-developer",
+      "target_skill": "temporal-developer"
+    },
+    {
+      "plugin": "temporal",
+      "reason": "unique",
+      "source_skill": "temporal-ops",
+      "target_skill": "temporal-ops"
+    },
+    {
+      "plugin": "temporal",
+      "reason": "unique",
+      "source_skill": "temporal-serverless",
+      "target_skill": "temporal-serverless"
+    },
+    {
+      "plugin": "test-android-apps",
+      "reason": "unique",
+      "source_skill": "android-emulator-qa",
+      "target_skill": "android-emulator-qa"
+    },
+    {
+      "plugin": "test-android-apps",
+      "reason": "unique",
+      "source_skill": "android-performance",
+      "target_skill": "android-performance"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-account-setup",
+      "target_skill": "twilio-account-setup"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-agent-augmentation-architect",
+      "target_skill": "twilio-agent-augmentation-architect"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-agent-connect",
+      "target_skill": "twilio-agent-connect"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-ai-agent-architect",
+      "target_skill": "twilio-ai-agent-architect"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-call-recordings",
+      "target_skill": "twilio-call-recordings"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-cli-reference",
+      "target_skill": "twilio-cli-reference"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-compliance-onboarding",
+      "target_skill": "twilio-compliance-onboarding"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-compliance-traffic",
+      "target_skill": "twilio-compliance-traffic"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-conference-calls",
+      "target_skill": "twilio-conference-calls"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-content-template-builder",
+      "target_skill": "twilio-content-template-builder"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-conversation-intelligence",
+      "target_skill": "twilio-conversation-intelligence"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-conversation-orchestrator",
+      "target_skill": "twilio-conversation-orchestrator"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-conversations-classic-api",
+      "target_skill": "twilio-conversations-classic-api"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-customer-memory",
+      "target_skill": "twilio-customer-memory"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-customer-support-architect",
+      "target_skill": "twilio-customer-support-architect"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-debugging-observability",
+      "target_skill": "twilio-debugging-observability"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-email-deliverability-advisor",
+      "target_skill": "twilio-email-deliverability-advisor"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-email-send",
+      "target_skill": "twilio-email-send"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-enterprise-knowledge",
+      "target_skill": "twilio-enterprise-knowledge"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-iam-auth-setup",
+      "target_skill": "twilio-iam-auth-setup"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-identity-verification-advisor",
+      "target_skill": "twilio-identity-verification-advisor"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-lookup-phone-intelligence",
+      "target_skill": "twilio-lookup-phone-intelligence"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-marketing-promotions-advisor",
+      "target_skill": "twilio-marketing-promotions-advisor"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-messaging-channel-advisor",
+      "target_skill": "twilio-messaging-channel-advisor"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-messaging-overview",
+      "target_skill": "twilio-messaging-overview"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-messaging-services",
+      "target_skill": "twilio-messaging-services"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-messaging-webhooks",
+      "target_skill": "twilio-messaging-webhooks"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-notifications-alerts-advisor",
+      "target_skill": "twilio-notifications-alerts-advisor"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-numbers-senders",
+      "target_skill": "twilio-numbers-senders"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-organizations-setup",
+      "target_skill": "twilio-organizations-setup"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-rcs-messaging",
+      "target_skill": "twilio-rcs-messaging"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-regulatory-compliance-bundles",
+      "target_skill": "twilio-regulatory-compliance-bundles"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-reliability-patterns",
+      "target_skill": "twilio-reliability-patterns"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-security-api-auth",
+      "target_skill": "twilio-security-api-auth"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-security-compliance-hipaa",
+      "target_skill": "twilio-security-compliance-hipaa"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-security-hardening",
+      "target_skill": "twilio-security-hardening"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-send-message",
+      "target_skill": "twilio-send-message"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-account-setup",
+      "target_skill": "twilio-sendgrid-account-setup"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-deliverability-advisor",
+      "target_skill": "twilio-sendgrid-deliverability-advisor"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-email-send",
+      "target_skill": "twilio-sendgrid-email-send"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-email-settings",
+      "target_skill": "twilio-sendgrid-email-settings"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-engagement-quality",
+      "target_skill": "twilio-sendgrid-engagement-quality"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-inbound-parse",
+      "target_skill": "twilio-sendgrid-inbound-parse"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-suppressions",
+      "target_skill": "twilio-sendgrid-suppressions"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sendgrid-webhooks",
+      "target_skill": "twilio-sendgrid-webhooks"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sms-isv-setup",
+      "target_skill": "twilio-sms-isv-setup"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-sms-send-message",
+      "target_skill": "twilio-sms-send-message"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-taskrouter-routing",
+      "target_skill": "twilio-taskrouter-routing"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-verify-send-otp",
+      "target_skill": "twilio-verify-send-otp"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-voice-conversation-relay",
+      "target_skill": "twilio-voice-conversation-relay"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-voice-outbound-calls",
+      "target_skill": "twilio-voice-outbound-calls"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-voice-twiml",
+      "target_skill": "twilio-voice-twiml"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-webhook-architecture",
+      "target_skill": "twilio-webhook-architecture"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-whatsapp-manage-senders",
+      "target_skill": "twilio-whatsapp-manage-senders"
+    },
+    {
+      "plugin": "twilio-developer-kit",
+      "reason": "unique",
+      "source_skill": "twilio-whatsapp-send-message",
+      "target_skill": "twilio-whatsapp-send-message"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "agent-browser",
+      "target_skill": "agent-browser"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "agent-browser-verify",
+      "target_skill": "agent-browser-verify"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "ai-elements",
+      "target_skill": "ai-elements"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "ai-gateway",
+      "target_skill": "ai-gateway"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "ai-generation-persistence",
+      "target_skill": "ai-generation-persistence"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "ai-sdk",
+      "target_skill": "ai-sdk"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "auth",
+      "target_skill": "auth"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "bootstrap",
+      "target_skill": "bootstrap"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "cdn-caching",
+      "target_skill": "cdn-caching"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "chat-sdk",
+      "target_skill": "chat-sdk"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "cms",
+      "target_skill": "cms"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "cron-jobs",
+      "target_skill": "cron-jobs"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "deployments-cicd",
+      "target_skill": "deployments-cicd"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "email",
+      "target_skill": "email"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "env-vars",
+      "target_skill": "env-vars"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "eve",
+      "target_skill": "eve"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "geist",
+      "target_skill": "geist"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "geistdocs",
+      "target_skill": "geistdocs"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "investigation-mode",
+      "target_skill": "investigation-mode"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "json-render",
+      "target_skill": "json-render"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "knowledge-update",
+      "target_skill": "knowledge-update"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "marketplace",
+      "target_skill": "marketplace"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "micro",
+      "target_skill": "micro"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "microfrontends",
+      "target_skill": "microfrontends"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "ncc",
+      "target_skill": "ncc"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "next-cache-components",
+      "target_skill": "next-cache-components"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "next-forge",
+      "target_skill": "next-forge"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "next-upgrade",
+      "target_skill": "next-upgrade"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "nextjs",
+      "target_skill": "nextjs"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "observability",
+      "target_skill": "observability"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "payments",
+      "target_skill": "payments"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "routing-middleware",
+      "target_skill": "routing-middleware"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "runtime-cache",
+      "target_skill": "runtime-cache"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "satori",
+      "target_skill": "satori"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "shadcn",
+      "target_skill": "shadcn"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "sign-in-with-vercel",
+      "target_skill": "sign-in-with-vercel"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "swr",
+      "target_skill": "swr"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "turbopack",
+      "target_skill": "turbopack"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "turborepo",
+      "target_skill": "turborepo"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "v0-dev",
+      "target_skill": "v0-dev"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-agent",
+      "target_skill": "vercel-agent"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-api",
+      "target_skill": "vercel-api"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-cli",
+      "target_skill": "vercel-cli"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-connect",
+      "target_skill": "vercel-connect"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-firewall",
+      "target_skill": "vercel-firewall"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-flags",
+      "target_skill": "vercel-flags"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-functions",
+      "target_skill": "vercel-functions"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-queues",
+      "target_skill": "vercel-queues"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-sandbox",
+      "target_skill": "vercel-sandbox"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-services",
+      "target_skill": "vercel-services"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "vercel-storage",
+      "target_skill": "vercel-storage"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "verification",
+      "target_skill": "verification"
+    },
+    {
+      "plugin": "vercel",
+      "reason": "unique",
+      "source_skill": "workflow",
+      "target_skill": "workflow"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "build-zoom-bot",
+      "target_skill": "build-zoom-bot"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "build-zoom-meeting-app",
+      "target_skill": "build-zoom-meeting-app"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "choose-zoom-approach",
+      "target_skill": "choose-zoom-approach"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "cobrowse-sdk",
+      "target_skill": "cobrowse-sdk"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "contact-center",
+      "target_skill": "contact-center"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "debug-zoom",
+      "target_skill": "debug-zoom"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "debug-zoom-integration",
+      "target_skill": "debug-zoom-integration"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "general",
+      "target_skill": "general"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "meeting-sdk",
+      "target_skill": "meeting-sdk"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "oauth",
+      "target_skill": "oauth"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "phone",
+      "target_skill": "phone"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "plan-zoom-integration",
+      "target_skill": "plan-zoom-integration"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "plan-zoom-product",
+      "target_skill": "plan-zoom-product"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "probe-sdk",
+      "target_skill": "probe-sdk"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "rest-api",
+      "target_skill": "rest-api"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "rivet-sdk",
+      "target_skill": "rivet-sdk"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "rtms",
+      "target_skill": "rtms"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "scribe",
+      "target_skill": "scribe"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "setup-zoom-oauth",
+      "target_skill": "setup-zoom-oauth"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "start",
+      "target_skill": "start"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "team-chat",
+      "target_skill": "team-chat"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "ui-toolkit",
+      "target_skill": "ui-toolkit"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "video-sdk",
+      "target_skill": "video-sdk"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "virtual-agent",
+      "target_skill": "virtual-agent"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "webhooks",
+      "target_skill": "webhooks"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "websockets",
+      "target_skill": "websockets"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "source_skill": "zoom-apps-sdk",
+      "target_skill": "zoom-apps-sdk"
+    },
+    {
+      "plugin": "zotero",
+      "reason": "unique",
+      "source_skill": "zotero",
+      "target_skill": "zotero"
+    }
+  ],
+  "imported_count": 501,
+  "renamed_for_collision_count": 10,
+  "skipped_existing": [
+    {
+      "plugin": "vercel",
+      "reason": "source-duplicate",
+      "source_skill": "react-best-practices",
+      "target_skill": "vercel-react-best-practices"
+    }
+  ],
+  "skipped_existing_count": 1,
+  "source_commit": "1dc195897af4161d039b80d8471ec0a10c9bbc89",
+  "source_repository": "https://github.com/openai/plugins",
+  "source_skill_count": 502
+}
