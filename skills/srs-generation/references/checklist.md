@@ -1,0 +1,64 @@
+# SRS Quality Checklist
+
+Use this checklist to validate the Software Requirements Specification before finalizing. Every item must pass. If any item fails, revise the document and re-check.
+
+## 1. Completeness Check
+
+- [ ] All IEEE 830 sections are present: Introduction, Overall Description, Functional Requirements, Non-Functional Requirements, Data Requirements, External Interface Requirements, Requirements Traceability Matrix, Acceptance and Change Control, and Appendix
+- [ ] §3.2 Scope Boundaries has a populated **out-of-scope** table — each row names the exclusion, why it is excluded, and who owns it instead. An empty out-of-scope table fails this check; if genuinely nothing is excluded, that is stated explicitly with a justification
+- [ ] §3.2 states the interpretation precedence between this SRS, the PRD, the tech design, and verbal agreements
+- [ ] Every functional requirement that accepts input has an **Input Field Rules** table covering type, required, constraints, default, and boundary/rejection behavior for every field the actor can supply; requirements taking no input say so explicitly rather than omitting the heading silently
+- [ ] §5.4 State Machines is present for every entity with a lifecycle, with a diagram, a legal-transition table, and an **illegal-transition handling** table; if no entity has more than one state, that is stated explicitly
+- [ ] §5.5 Permission Matrix covers role × operation × data scope, defines each data scope as a concrete predicate, and states the denial behavior (403 vs 404) as a deliberate decision
+- [ ] §5.6 Error Catalogue enumerates every anticipated failure with a code, trigger, actor-visible message, recovery/degradation path, and originating requirement
+- [ ] §10 Acceptance and Change Control defines what acceptance means per requirement class, the acceptance environment and preconditions, the change-control procedure, and the change request log
+- [ ] All features and user stories from the upstream PRD are covered by at least one functional requirement (no PRD item left unaddressed without justification)
+- [ ] Both functional requirements (FR) and non-functional requirements (NFR) are defined -- neither category is missing
+- [ ] A data model is included with an entity-relationship diagram and a data dictionary describing all fields, types, and constraints
+- [ ] External interface requirements are listed for all relevant categories: user interfaces, hardware interfaces, software interfaces, and communication interfaces
+- [ ] The requirements traceability matrix is complete, mapping every PRD item to its corresponding SRS requirement(s) with a coverage status
+- [ ] The Definitions, Acronyms, and Abbreviations table is populated with all domain-specific and technical terms used in the document
+- [ ] The References table lists all documents cited in the SRS, including the upstream PRD, API specifications, regulatory standards, and design documents
+
+## 2. Quality Check
+
+- [ ] Every requirement is unambiguous -- each requirement has exactly one interpretation and does not use vague terms like "fast," "user-friendly," "efficient," or "robust" without quantitative targets
+- [ ] Every functional requirement has testable acceptance criteria written in a verifiable format (e.g., Given/When/Then or explicit pass/fail conditions)
+- [ ] Modal verbs are used correctly throughout: "shall" for mandatory requirements, "should" for recommended requirements, "may" for optional requirements
+- [ ] Requirements describe WHAT the system must do, not HOW it should be implemented -- no implementation details, specific algorithms, or technology choices appear in requirement descriptions unless they are genuine constraints
+- [ ] Boundary conditions are specified for all requirements involving numeric ranges, string lengths, file sizes, date ranges, or collection sizes
+- [ ] Error scenarios and alternative flows are documented for each functional requirement, covering invalid input, timeout, unauthorized access, and system failure cases
+- [ ] Every operation error reports the real, specific cause — each error flow's outcome names what actually failed (which field, which rule, which entity, which state), not a generic "operation failed" or "server error"
+- [ ] Every anticipated failure is a distinct, distinguishable error flow (e.g. invalid input, uniqueness violation, missing reference, invalid state transition, insufficient permission, not-found) so the downstream design can map each cause to its own specific error code rather than a generic 500
+- [ ] §4.3 User Characteristics includes a Consumer Type column (Human / AI Agent) and an Interaction Pattern column for each user class
+- [ ] If upstream PRD marks AI Agent as applicable (§10.1): at least one functional requirement has an AI Agent as primary actor with programmatic flows (API calls, not UI steps)
+- [ ] Agent-facing error responses include structured, machine-parseable fields (error_code, message, field, constraint) — not just human-readable text
+- [ ] Agent-facing acceptance criteria include relevant machine-verifiable conditions (idempotency, deterministic response schema, timeout behavior) where applicable
+- [ ] Every non-functional requirement includes a specific, measurable metric with a quantitative target value, a defined measurement method, a **Verification** method (Test / Demonstration / Inspection / Analysis, naming the environment and conditions), and a **Threshold Rationale** — the rationale must cite at least one concrete source (business SLA, production baseline, competitive benchmark, regulatory standard, or cost/complexity trade-off)
+- [ ] Input field rules state exact values, never categories — "max 254 characters" not "reasonable length", "1 <= n <= 999" not "a positive number"; every rejection behavior names a code from the §5.6 Error Catalogue
+- [ ] The Error Catalogue contains no generic catch-all entry (`INTERNAL_ERROR`, "operation failed") standing in for an anticipated condition — each distinct cause has its own diagnosable code
+- [ ] For every external dependency this feature relies on, the degradation behavior when it is unavailable is specified: fail closed, fail open, serve stale data (with the acceptable staleness), or queue for retry (with the retry window)
+- [ ] Every illegal state transition has a defined rejection behavior, stating whether it is idempotent-ignored or hard-rejected and whether any side effects fire on rejection — listing only the legal transitions fails this check
+- [ ] Every acceptance criterion can be objectively settled — a criterion whose pass/fail depends on reviewer judgement is a defect in the specification, not a matter to resolve at acceptance time
+
+## 3. Consistency Check
+
+- [ ] All requirement IDs follow the naming convention: FR-MODULE-NNN for functional requirements and NFR-CATEGORY-NNN for non-functional requirements, with zero-padded three-digit numbers
+- [ ] Terminology is consistent between the SRS and the upstream PRD -- the same concepts use the same names in both documents, and any differences are explained in the glossary
+- [ ] No two requirements conflict with each other -- there are no contradictions between functional requirements, between non-functional requirements, or between functional and non-functional requirements
+- [ ] All documents referenced in the body of the SRS are listed in the References table (Section 3.4) with version and date
+- [ ] Priority levels (P0, P1, P2) are assigned consistently and align with the priority scheme used in the upstream PRD
+- [ ] Every functional requirement includes a **Priority Rationale** field that justifies the assigned tier — the rationale must connect the priority to a concrete consequence (e.g., launch risk, user impact, availability of a workaround); a bare P0/P1/P2 label with no justification fails this check
+- [ ] Requirement IDs referenced in the CRUD matrix, the state machine tables, the permission matrix, the error catalogue, the traceability matrix, and cross-references within the document all correspond to defined requirements
+- [ ] Every error code referenced in an alternative flow or an input field rule is defined in the §5.6 Error Catalogue, and every catalogue entry is raised by at least one requirement — no orphans in either direction
+- [ ] Every role appearing in a requirement's Actors list appears in the §5.5 Permission Matrix, and vice versa
+- [ ] Every state named in a precondition, postcondition, or guard condition appears in the relevant §5.4 state machine
+
+## 4. Format Check
+
+- [ ] All functional requirement IDs follow the FR-XXX-NNN format, where XXX is an uppercase module abbreviation and NNN is a zero-padded three-digit number (e.g., FR-AUTH-001)
+- [ ] All non-functional requirement IDs follow the NFR-XXX-NNN format, where XXX is an uppercase category abbreviation (PERF, SEC, REL, AVL, MNT, PRT, USB) and NNN is a zero-padded three-digit number (e.g., NFR-PERF-001)
+- [ ] All tables are properly formatted with aligned columns, header rows, and separator rows -- no broken or misaligned table markup
+- [ ] Mermaid diagrams (entity-relationship, context, or other) use valid Mermaid syntax and render correctly without errors
+- [ ] The requirements traceability matrix includes all four columns (PRD ID, PRD Description, SRS ID(s), Coverage Status) and every row is populated
+- [ ] The document follows the section numbering from the template (Sections 1 through 11) with no missing or misnumbered sections
