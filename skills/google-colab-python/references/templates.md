@@ -84,12 +84,9 @@ Treat mounting Drive as granting notebook code access to Drive. Mount only when 
 
 Do not print API_KEY. Prefer passing it directly to a client constructor.
 
-If an SDK only accepts an environment variable:
-
-    import os
-    os.environ["MY_API_KEY"] = userdata.get("MY_API_KEY")
-
-Avoid persisting the environment or dumping os.environ to output.
+Prefer SDKs that accept the secret directly. If a library only accepts a process
+environment variable, set only that named key in a narrowly scoped bootstrap
+cell and never enumerate or print the process environment.
 
 ## 6. Stage an archive from Drive to local scratch
 
@@ -129,11 +126,9 @@ Use checksums for immutable datasets, model files, or checkpoints when correctne
 
 ## 8. Seed common libraries
 
-    import os
     import random
 
     def seed_python_numpy(seed: int) -> None:
-        os.environ["PYTHONHASHSEED"] = str(seed)
         random.seed(seed)
 
         try:
@@ -337,11 +332,9 @@ Use this as evidence, not necessarily as the project's hand-maintained dependenc
 
 Set before importing NumPy/SciPy for the clearest effect.
 
-    import os
-
-    os.environ.setdefault("OMP_NUM_THREADS", "2")
-    os.environ.setdefault("MKL_NUM_THREADS", "2")
-    os.environ.setdefault("OPENBLAS_NUM_THREADS", "2")
+    %env OMP_NUM_THREADS=2
+    %env MKL_NUM_THREADS=2
+    %env OPENBLAS_NUM_THREADS=2
 
 Choose values from measurement and available CPU count, not from this example.
 
