@@ -1,0 +1,67 @@
+# PRD Quality Checklist
+
+Use this checklist to validate every generated PRD before delivering it to the user. Each item must pass or be explicitly marked as intentionally skipped with a justification.
+
+**Adapt to the project profile — do not force irrelevant sections.** Items covering profile-dependent ceremony (market sizing, competitive landscape, feasibility GO/NO-GO verdict, Gantt timeline, risk matrix) are not hard-required for every PRD. When a section does not apply to the project profile — e.g., a small internal feature — mark it **N/A** with a one-line reason and the corresponding item passes. The evidence-count targets below (competitors, demand sources, personas) are aspirational, not floors: documenting the real evidence that exists — even a single competitor, source, or persona — passes; fabricating more to hit a number fails. Honestly flagging thin evidence and recommending a validation phase is always an acceptable, first-class outcome, never overridden by a count.
+
+---
+
+## 1. Completeness Check
+
+- [ ] Document Information section is fully filled in (PRD ID, version, author, reviewers, date, status)
+- [ ] Revision History table has at least one entry for the initial draft
+- [ ] Executive Summary is present and provides a concise overview of the problem, solution, and impact
+- [ ] Market Research section includes market sizing (TAM/SAM/SOM) with cited sources, or is marked N/A with a one-line reason when the project profile does not warrant it (e.g., a small internal feature)
+- [ ] Competitive Landscape documents every real competitor with strengths, weaknesses, and differentiation analysis — two or more where they exist, but a single genuine competitor or the status-quo alternative (doing nothing, a manual workaround) is acceptable when that is the honest picture; no invented competitors to hit a count, and N/A with a reason is acceptable when the profile does not warrant the section
+- [ ] Value Proposition is clearly stated with evidence of real demand (not a pseudo-requirement)
+- [ ] Evidence of Real Demand documents the validation evidence that actually exists (user research, surveys, support tickets, analytics, market validation, or revenue estimates) — three or more types where available; when evidence is thin, the section honestly flags it and recommends a validation phase (this escape hatch passes the check; fabricating evidence to reach a count fails it)
+- [ ] "What Happens If We Don't Build This?" section explicitly states the cost of inaction with specific numbers
+- [ ] Feasibility Analysis covers all three dimensions: technical, business, and resource feasibility
+- [ ] Feasibility Verdict provides a clear GO / CONDITIONAL GO / NO-GO recommendation
+- [ ] Consumer Types table (§10.1) is present with explicit Yes/No and justification for both Human User and AI Agent
+- [ ] Human Personas are defined with name, role, demographics, needs, and pain points — two or more where the evidence supports them, but a single evidence-grounded persona is acceptable rather than an invented second (if Human User is applicable)
+- [ ] If AI Agent is marked "Yes" in §10.1: at least one Agent Persona is defined with Agent Type, Integration Pattern, Context Constraints, Needs, and Failure Modes
+- [ ] If AI Agent is marked "No" in §10.1: the justification explains why agents are not a target consumer (not just left blank)
+- [ ] User Stories are written for every persona (human and agent), each with a one-sentence **Success signal** and a **Covered by** field listing the FR IDs that implement it (or `TBD (SRS pending)` when no SRS exists yet)
+- [ ] No user story carries Given/When/Then acceptance criteria — that precision belongs to the SRS; duplicating it here creates two sources of truth that drift on the first requirement change
+- [ ] Capability Scope table (§12) lists **business capabilities**, not system behaviors — no row needs more than two sentences to describe; rows specifying field rules, state transitions, or error handling belong in the SRS
+- [ ] Capability Scope table lists all identified capabilities with IDs, user-facing outcomes, priorities, **Priority Rationale**, and statuses — every row must include a rationale that answers "why this tier and not the one above or below"; rows with a bare P0/P1/P2 and no justification fail this check
+- [ ] §12.1 Out of Scope for This Release records capabilities that were considered and deferred, with a reason and a revisit trigger — distinct from §9.2 Non-Goals, which are things the product will never do
+- [ ] Success Metrics are defined with target values, measurement methods, and current baselines
+- [ ] Timeline and Milestones section includes a Gantt chart or equivalent schedule with key dates, or is marked N/A with a one-line reason when the project profile does not warrant a formal timeline (e.g., a small internal feature)
+- [ ] Risk Assessment Matrix is present with at least two identified risks and their mitigation strategies
+
+## 2. Quality Check
+
+- [ ] Market sizing data cites credible sources and uses realistic assumptions (not inflated vanity numbers)
+- [ ] Competitive analysis is honest and balanced (acknowledges competitor strengths, not just weaknesses)
+- [ ] Value proposition evidence comes from real data, not assumptions or hypothetical scenarios
+- [ ] Feasibility assessment is honest — a NO-GO is acceptable if the evidence doesn't support proceeding
+- [ ] Problem Statement clearly articulates the current situation, user pain points, and the opportunity
+- [ ] Goals are specific, measurable, achievable, relevant, and time-bound (SMART criteria)
+- [ ] Non-Goals explicitly define what is out of scope with rationale for each exclusion
+- [ ] Requirements are testable -- each can be verified with a clear pass/fail condition
+- [ ] User Stories follow the canonical format: "As a [user type], I want [action] so that [benefit]"
+- [ ] Success Metrics have specific numeric targets, not vague qualifiers (no "improve", "increase", or "better" without a number)
+- [ ] Mermaid diagrams are included for the user journey and the timeline (the timeline/Gantt diagram may be omitted when the Timeline section is marked N/A for the project profile)
+- [ ] The PRD contains **no** solution architecture diagram — components, services, data stores, and their data flows belong to the tech design (§6), not here
+- [ ] Document does not contain vague or ambiguous language ("good performance", "fast response", "user-friendly", "easy to use", "seamless", "intuitive")
+
+## 3. Consistency Check
+
+- [ ] Terminology is consistent throughout the document (same feature, concept, or component is always referred to by the same name)
+- [ ] Requirement IDs follow the PRD-MODULE-NNN naming convention without gaps or duplicates
+- [ ] Priority levels (P0/P1/P2) are applied consistently, every P0 item clearly ties to a stated goal, and every priority level (P0, P1, and P2) has a written rationale that distinguishes it from the adjacent tier
+- [ ] Every requirement traces back to at least one goal in the Goals section
+- [ ] All personas defined in Section 10 (both human and agent) are referenced in the User Stories in Section 11
+- [ ] Success Metrics in Section 14 align with and measure the Goals in Section 9
+- [ ] Every PRD-MODULE-NNN capability is traceable downstream: once the SRS exists, each capability maps to one or more FR-MODULE-NNN requirements (verify with `sf-trace.py matrix --upstream prd.md --downstream srs.md`)
+
+## 4. Format Check
+
+- [ ] All requirement IDs follow the PRD-XXX-NNN format (uppercase module code, zero-padded three-digit number)
+- [ ] Mermaid diagram code blocks use the ```mermaid fence and render without syntax errors
+- [ ] All tables are properly formatted with aligned columns and no missing cells
+- [ ] Document metadata (version, date, status) is complete and uses the correct date format (YYYY-MM-DD)
+- [ ] Revision History reflects the current version and all changes made during the drafting process
+- [ ] Headings follow the numbered section structure defined in the template (Section 1 through Section 19)
