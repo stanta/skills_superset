@@ -1,4 +1,175 @@
 {
+  "excluded_by_security_audit": [
+    {
+      "plugin": "boltz-api-cli",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "boltz-cli-setup",
+      "status": "excluded",
+      "target_skill": "boltz-cli-setup"
+    },
+    {
+      "plugin": "canva",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "canva-edit-design",
+      "status": "excluded",
+      "target_skill": "canva-edit-design"
+    },
+    {
+      "plugin": "circleci",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "chunk",
+      "status": "excluded",
+      "target_skill": "chunk"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "cloudflare",
+      "status": "excluded",
+      "target_skill": "cloudflare"
+    },
+    {
+      "plugin": "cloudflare",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "sandbox-sdk",
+      "status": "excluded",
+      "target_skill": "sandbox-sdk"
+    },
+    {
+      "plugin": "coderabbit",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "coderabbit-review",
+      "status": "excluded",
+      "target_skill": "coderabbit-review"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "expo-api-routes",
+      "status": "excluded",
+      "target_skill": "expo-api-routes"
+    },
+    {
+      "plugin": "expo",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "native-data-fetching",
+      "status": "excluded",
+      "target_skill": "native-data-fetching"
+    },
+    {
+      "plugin": "higgsfield",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "narrator",
+      "status": "excluded",
+      "target_skill": "narrator"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "aiq-deploy",
+      "status": "excluded",
+      "target_skill": "aiq-deploy"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "dynamo-router-starter",
+      "status": "excluded",
+      "target_skill": "dynamo-router-starter"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "nemoclaw-user-get-started",
+      "status": "excluded",
+      "target_skill": "nemoclaw-user-get-started"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "omniverse-cad-to-simready",
+      "status": "excluded",
+      "target_skill": "omniverse-cad-to-simready"
+    },
+    {
+      "plugin": "nvidia",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "omniverse-realtime-viewer",
+      "status": "excluded",
+      "target_skill": "omniverse-realtime-viewer"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "comps-valuation",
+      "status": "excluded",
+      "target_skill": "comps-valuation"
+    },
+    {
+      "plugin": "public-equity-investing",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "deck-report-qc",
+      "status": "excluded",
+      "target_skill": "deck-report-qc"
+    },
+    {
+      "plugin": "temporal",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "temporal-developer",
+      "status": "excluded",
+      "target_skill": "temporal-developer"
+    },
+    {
+      "plugin": "temporal",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "temporal-serverless",
+      "status": "excluded",
+      "target_skill": "temporal-serverless"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "meeting-sdk",
+      "status": "excluded",
+      "target_skill": "meeting-sdk"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "oauth",
+      "status": "excluded",
+      "target_skill": "oauth"
+    },
+    {
+      "plugin": "zoom",
+      "reason": "unique",
+      "security_gate": "high",
+      "source_skill": "rest-api",
+      "status": "excluded",
+      "target_skill": "rest-api"
+    }
+  ],
+  "excluded_by_security_audit_count": 21,
   "imported": [
     {
       "plugin": "adobe",
@@ -59,12 +230,6 @@
       "reason": "unique",
       "source_skill": "boltz-check-status",
       "target_skill": "boltz-check-status"
-    },
-    {
-      "plugin": "boltz-api-cli",
-      "reason": "unique",
-      "source_skill": "boltz-cli-setup",
-      "target_skill": "boltz-cli-setup"
     },
     {
       "plugin": "boltz-api-cli",
@@ -393,12 +558,6 @@
     {
       "plugin": "canva",
       "reason": "unique",
-      "source_skill": "canva-edit-design",
-      "target_skill": "canva-edit-design"
-    },
-    {
-      "plugin": "canva",
-      "reason": "unique",
       "source_skill": "canva-implement-feedback",
       "target_skill": "canva-implement-feedback"
     },
@@ -425,12 +584,6 @@
       "reason": "unique",
       "source_skill": "builds",
       "target_skill": "builds"
-    },
-    {
-      "plugin": "circleci",
-      "reason": "unique",
-      "source_skill": "chunk",
-      "target_skill": "chunk"
     },
     {
       "plugin": "circleci",
@@ -465,20 +618,8 @@
     {
       "plugin": "cloudflare",
       "reason": "unique",
-      "source_skill": "cloudflare",
-      "target_skill": "cloudflare"
-    },
-    {
-      "plugin": "cloudflare",
-      "reason": "unique",
       "source_skill": "durable-objects",
       "target_skill": "durable-objects"
-    },
-    {
-      "plugin": "cloudflare",
-      "reason": "unique",
-      "source_skill": "sandbox-sdk",
-      "target_skill": "sandbox-sdk"
     },
     {
       "plugin": "cloudflare",
@@ -497,12 +638,6 @@
       "reason": "unique",
       "source_skill": "wrangler",
       "target_skill": "wrangler"
-    },
-    {
-      "plugin": "coderabbit",
-      "reason": "unique",
-      "source_skill": "coderabbit-review",
-      "target_skill": "coderabbit-review"
     },
     {
       "plugin": "codex-security",
@@ -747,12 +882,6 @@
     {
       "plugin": "expo",
       "reason": "unique",
-      "source_skill": "expo-api-routes",
-      "target_skill": "expo-api-routes"
-    },
-    {
-      "plugin": "expo",
-      "reason": "unique",
       "source_skill": "expo-cicd-workflows",
       "target_skill": "expo-cicd-workflows"
     },
@@ -791,12 +920,6 @@
       "reason": "unique",
       "source_skill": "expo-ui-swift-ui",
       "target_skill": "expo-ui-swift-ui"
-    },
-    {
-      "plugin": "expo",
-      "reason": "unique",
-      "source_skill": "native-data-fetching",
-      "target_skill": "native-data-fetching"
     },
     {
       "plugin": "expo",
@@ -971,12 +1094,6 @@
       "reason": "unique",
       "source_skill": "faceless-channel",
       "target_skill": "faceless-channel"
-    },
-    {
-      "plugin": "higgsfield",
-      "reason": "unique",
-      "source_skill": "narrator",
-      "target_skill": "narrator"
     },
     {
       "plugin": "higgsfield",
@@ -1479,12 +1596,6 @@
     {
       "plugin": "nvidia",
       "reason": "unique",
-      "source_skill": "aiq-deploy",
-      "target_skill": "aiq-deploy"
-    },
-    {
-      "plugin": "nvidia",
-      "reason": "unique",
       "source_skill": "aiq-research",
       "target_skill": "aiq-research"
     },
@@ -1503,32 +1614,8 @@
     {
       "plugin": "nvidia",
       "reason": "unique",
-      "source_skill": "dynamo-router-starter",
-      "target_skill": "dynamo-router-starter"
-    },
-    {
-      "plugin": "nvidia",
-      "reason": "unique",
-      "source_skill": "nemoclaw-user-get-started",
-      "target_skill": "nemoclaw-user-get-started"
-    },
-    {
-      "plugin": "nvidia",
-      "reason": "unique",
       "source_skill": "nvidia-skill-finder",
       "target_skill": "nvidia-skill-finder"
-    },
-    {
-      "plugin": "nvidia",
-      "reason": "unique",
-      "source_skill": "omniverse-cad-to-simready",
-      "target_skill": "omniverse-cad-to-simready"
-    },
-    {
-      "plugin": "nvidia",
-      "reason": "unique",
-      "source_skill": "omniverse-realtime-viewer",
-      "target_skill": "omniverse-realtime-viewer"
     },
     {
       "plugin": "nvidia",
@@ -1695,20 +1782,8 @@
     {
       "plugin": "public-equity-investing",
       "reason": "unique",
-      "source_skill": "comps-valuation",
-      "target_skill": "comps-valuation"
-    },
-    {
-      "plugin": "public-equity-investing",
-      "reason": "unique",
       "source_skill": "dcf-model-builder",
       "target_skill": "dcf-model-builder"
-    },
-    {
-      "plugin": "public-equity-investing",
-      "reason": "unique",
-      "source_skill": "deck-report-qc",
-      "target_skill": "deck-report-qc"
     },
     {
       "plugin": "public-equity-investing",
@@ -2163,20 +2238,8 @@
     {
       "plugin": "temporal",
       "reason": "unique",
-      "source_skill": "temporal-developer",
-      "target_skill": "temporal-developer"
-    },
-    {
-      "plugin": "temporal",
-      "reason": "unique",
       "source_skill": "temporal-ops",
       "target_skill": "temporal-ops"
-    },
-    {
-      "plugin": "temporal",
-      "reason": "unique",
-      "source_skill": "temporal-serverless",
-      "target_skill": "temporal-serverless"
     },
     {
       "plugin": "test-android-apps",
@@ -2889,18 +2952,6 @@
     {
       "plugin": "zoom",
       "reason": "unique",
-      "source_skill": "meeting-sdk",
-      "target_skill": "meeting-sdk"
-    },
-    {
-      "plugin": "zoom",
-      "reason": "unique",
-      "source_skill": "oauth",
-      "target_skill": "oauth"
-    },
-    {
-      "plugin": "zoom",
-      "reason": "unique",
       "source_skill": "phone",
       "target_skill": "phone"
     },
@@ -2921,12 +2972,6 @@
       "reason": "unique",
       "source_skill": "probe-sdk",
       "target_skill": "probe-sdk"
-    },
-    {
-      "plugin": "zoom",
-      "reason": "unique",
-      "source_skill": "rest-api",
-      "target_skill": "rest-api"
     },
     {
       "plugin": "zoom",
@@ -3007,7 +3052,7 @@
       "target_skill": "zotero"
     }
   ],
-  "imported_count": 501,
+  "imported_count": 480,
   "renamed_for_collision_count": 10,
   "skipped_existing": [
     {
