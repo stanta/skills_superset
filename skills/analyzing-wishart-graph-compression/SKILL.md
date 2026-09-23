@@ -1,6 +1,6 @@
 ---
 name: analyzing-wishart-graph-compression
-description: Анализирует результаты recursive Wishart graph coarsening / compression для SemanticMap/semgraphex: сравнивает уровни level_XXX и transition_XXX_YYY, измеряет изменение динамических и структурных параметров при сжатии, сравнивает typed_wl, graphlet, relation_js, lowrank_gw и fgw при одинаковой степени сжатия, проверяет инварианты, устойчивость по seeds и null-baselines. Use for Wishart results, graph compression, coarsening, dynamical invariants, ConceptNet, semmap-wishart, hierarchy.json, dynamic_metrics.json, dynamic_vectors.npz, cluster_dynamics.jsonl.
+description: Анализирует результаты recursive Wishart graph coarsening / compression для SemanticMap/semgraphex: level_XXX, transition_XXX_YYY, hierarchy.json, dynamic_metrics.json, dynamic_vectors.npz, cluster_dynamics.jsonl. Сравнивает изменение параметров графа при сжатии, typed_wl, graphlet, relation_js, lowrank_gw и fgw при одинаковой степени сжатия, проверяет dynamical invariants, scale plateaus, seeds и null baselines.
 metadata:
   category: research-analysis
   project: SemanticMap/semgraphex
@@ -10,43 +10,44 @@ metadata:
 
 ## Назначение
 
-Используй этот skill для анализа результатов `semmap-wishart`, когда цель — понять **как изменяются свойства графа при рекурсивном сжатии**, какие характеристики приблизительно сохраняются, какие закономерно меняются, где возникают scale plateaus и какая метрика близости Wishart лучше сохраняет динамику при сопоставимой степени сжатия.
+Используй skill для исследования того, **как меняются свойства графа при рекурсивном Wishart-coarsening** и какие характеристики сохраняются при уменьшении числа узлов.
 
 Главный принцип:
 
-> Хорошее сжатие не обязано сохранять микроструктуру. Оно должно давать существенное уменьшение графа при контролируемом изменении выбранных макроскопических и динамических характеристик.
+> Хорошее сжатие не обязано сохранять микроструктуру; оно должно давать существенное уменьшение графа при контролируемом изменении выбранной макродинамики.
 
-Не своди анализ к одной цифре. Разделяй:
-1. структурное уменьшение;
-2. скалярные динамические показатели;
-3. распределения и векторы;
-4. спектральные подпространства;
-5. relation-aware потоки;
-6. устойчивость результата к метрике и случайности.
+Не своди результат к одной цифре. Разделяй:
+1. степень сжатия;
+2. scalar observables;
+3. distributions/vectors;
+4. slow spectral subspaces;
+5. relation-aware flows;
+6. Wishart mode structure;
+7. устойчивость к seed, metric и baseline.
 
-Подробные формулы: [references/metrics-and-formulas.md](references/metrics-and-formulas.md).  
-Статистическая валидация: [references/statistical-validation.md](references/statistical-validation.md).  
-Шаблон отчёта: [references/report-template.md](references/report-template.md).
+Подробности:
+- [Metrics and formulas](references/metrics-and-formulas.md)
+- [Statistical validation](references/statistical-validation.md)
+- [Report template](references/report-template.md)
 
 ---
 
 ## Когда применять
 
-Применяй skill, если пользователь просит:
+Применяй, если нужно:
 
-- проанализировать `tmp/runs/wishart-*`;
-- сравнить уровни `G_0 -> G_1 -> ...`;
-- понять, какие параметры сохраняются или разрушаются при coarsening;
+- анализировать `tmp/runs/wishart-*`;
+- сравнить (G_0	o G_1	odots);
+- понять, какие параметры сохраняются или ломаются;
 - сравнить `typed_wl`, `graphlet`, `relation_js`, `lowrank_gw`, `fgw`;
-- найти оптимальную глубину сжатия;
+- найти безопасную глубину сжатия;
 - обнаружить scale plateau;
-- сравнить Wishart с random/Haken/degree-matched baseline;
-- оценить dynamical invariance;
-- подготовить исследовательский отчёт по recursive compression.
+- сравнить Wishart с random, degree-matched или Haken coarsening;
+- подготовить исследовательский отчёт.
 
 ---
 
-# 1. Ожидаемый формат эксперимента
+# 1. Ожидаемые артефакты
 
 Ищи:
 
@@ -75,698 +76,466 @@ run/
   ...
 ```
 
-Если структура отличается, сначала зафиксируй фактический schema и адаптируй анализ. Не выдумывай отсутствующие показатели.
+Если schema отличается, сначала зафиксируй фактический формат. Не выдумывай отсутствующие данные.
 
 ---
 
-# 2. Сначала проверь целостность эксперимента
+# 2. Обязательный integrity check
 
-Перед интерпретацией:
+До интерпретации:
 
-1. Убедись, что есть `COMPLETED`.
+1. Проверь `COMPLETED`.
 2. Прочитай `hierarchy.json`.
-3. Сверь количество уровней и переходов с реальными каталогами.
-4. Для каждого уровня проверь согласованность:
-   - размер `adjacency.npz`;
-   - количество записей в `membership.json`;
-   - размер `stationary_mass`;
-   - размер betweenness;
-   - наличие relation layers.
-5. Для перехода проверь:
-   - длина `fine_to_coarse.npy == N_s`;
-   - значения отображения лежат в `[0,N_{s+1}-1]`;
-   - все исходные узлы входят ровно в один coarse node;
-   - число записей `cluster_dynamics.jsonl == N_{s+1}`.
-6. Если сравниваются разные метрики, убедись, что исходный `G_0` одинаков:
-   - лучше всего — SHA-256 `level_000/adjacency.npz`;
-   - дополнительно — одинаковые node IDs / membership;
-   - одинаковая подготовка ConceptNet.
-7. Сравни конфигурации. Если кроме `wishart.metric` менялись radius, k, significance, candidate_limit, aggregation или sampling-параметры — это уже не чистое сравнение метрик.
+3. Сверь число уровней и transitions.
+4. Для каждого level проверь:
+   - shape adjacency;
+   - число membership entries;
+   - длину stationary_mass;
+   - длину betweenness;
+   - relation layers.
+5. Для transition проверь:
+   - `len(fine_to_coarse) == N_s`;
+   - coarse IDs допустимы;
+   - каждый fine node имеет один coarse parent;
+   - `cluster_dynamics.jsonl` согласован с (N_{s+1}).
+6. При сравнении metrics проверь одинаковый (G_0), лучше SHA-256 `level_000/adjacency.npz`.
+7. Проверь, что кроме `wishart.metric` не менялись существенно radius, k, significance, candidate_limit, aggregation и sampling controls.
 
-Если integrity check не пройден, сначала сообщи проблему и не делай сильных выводов.
+Если integrity нарушен, сначала сообщи это и не делай сильных сравнительных выводов.
 
 ---
 
-# 3. Построй базовую таблицу траектории сжатия
+# 3. Построй master-table
 
-Для каждого уровня (s) собери одну строку:
+Одна строка = один metric × seed × level.
 
+Собери:
 - metric;
 - seed;
 - level;
 - (N_s);
 - adjacency_nnz;
-- число relation layers;
-- число Wishart clusters на предыдущем переходе;
-- noise fraction;
-- число accepted figure occurrences;
-- cumulative compression fraction;
+- compression fraction;
 - compression ratio;
-- все scalar dynamic metrics.
+- Wishart cluster count;
+- noise fraction;
+- accepted figure occurrences;
+- scalar dynamic metrics;
+- caveats.
 
-Определи:
-
-[
-c_s = 1-rac{N_s}{N_0}
-]
-
-как долю удалённых степеней свободы и
+Используй:
 
 [
-R_s=rac{N_0}{N_s}
-]
-
-как коэффициент сжатия.
-
-**Не сравнивай разные методы по номеру level.**  
-Сравнивай их при близком (c_s) или (R_s).
-
----
-
-# 4. Разделяй параметры на четыре класса
-
-## A. Контрольные/почти обязательные инварианты
-
-Проверяй в первую очередь:
-
-- агрегированную stationary mass;
-- relation-total weight при `aggregation=sum`;
-- external relation flow в пределах ожидаемой перенормировки;
-- slow eigenspace;
-- leading nontrivial eigenvalues.
-
-Если эти величины резко ломаются на ранних уровнях, coarsening динамически агрессивен.
-
-## B. Динамические показатели сохранности
-
-- normalized-adjacency spectral gap;
-- MFPT;
-- spreading-threshold proxy;
-- percolation-threshold proxy;
-- synchronizability proxy;
-- congestion-threshold proxy.
-
-Их не называй точными инвариантами без отдельного доказательства. Анализируй как **dynamical observables**.
-
-## C. Scale-dependent структурные характеристики
-
-Ожидаемо могут заметно меняться:
-
-- mean degree;
-- second moment of degree;
-- clustering;
-- betweenness;
-- mean/median/p95 shortest-path distance.
-
-Здесь интересен не только размер ошибки, но и **закономерность изменения с масштабом**.
-
-## D. Служебные показатели Wishart
-
-- cluster_count;
-- cluster_sizes;
-- cluster_peaks;
-- noise_count;
-- kth_radius;
-- accepted occurrences;
-- размер фигур;
-- вклад каждого figure_type в общее сокращение (N).
-
-Они объясняют, *почему* граф сжимается именно так.
-
----
-
-# 5. Для каждого scalar Q считай три разных изменения
-
-Не используй только соседний процент.
-
-### Шаговое изменение
-
-[
-Delta_s(Q)=rac{Q_{s+1}-Q_s}{|Q_s|+arepsilon}.
-]
-
-Показывает локальный скачок после конкретного coarsening.
-
-### Искажение относительно исходного графа
-
-[
-D_s(Q)=rac{|Q_s-Q_0|}{|Q_0|+arepsilon}.
-]
-
-Это основной показатель сохранности.
-
-### Scale elasticity
-
-Для положительных величин:
-
-[
-E_s(Q)=
-rac{log Q_{s+1}-log Q_s}
-{log N_{s+1}-log N_s}.
-]
-
-Если (E_s(Q)) стабилен на нескольких уровнях, это кандидат на scaling law.
-
-Не используй elasticity для нулей, знакопеременных параметров или нестабильных Monte-Carlo оценок.
-
----
-
-# 6. Stationary mass анализируй через отображение fine -> coarse
-
-Нельзя сравнивать (pi_s) и (pi_{s+1}) по индексам: размерности различны.
-
-Пусть (P_s) — membership matrix из `fine_to_coarse.npy`.
-
-Агрегируй fine stationary distribution:
-
-[
-pi_s^{agg}=P_s^Tpi_s.
-]
-
-Сравни с фактически вычисленной coarse distribution:
-
-[
-pi_{s+1}.
-]
-
-Основные ошибки:
-
-[
-E_pi^{L1}=|pi_s^{agg}-pi_{s+1}|_1
-]
-
-и total variation:
-
-[
-E_pi^{TV}=rac12 E_pi^{L1}.
-]
-
-Для undirected nonnegative graph + `aggregation=sum` stationary mass должна быть особенно хорошо сохранена. Большая ошибка здесь — прежде всего повод проверить реализацию и веса, а не делать физический вывод.
-
----
-
-# 7. Slow eigenmodes сравнивай как подпространства
-
-**Никогда не сравнивай eigenvectors покомпонентно.**
-
-Причины:
-- знак собственного вектора произволен;
-- внутри почти вырожденного спектрального блока базис может вращаться.
-
-Для (r) медленных мод:
-
-1. возьми (U_s);
-2. подними coarse modes на fine nodes через membership;
-3. ортонормируй;
-4. вычисли principal angles;
-5. вычисли projection/subspace distance.
-
-Дополнительно сравни eigenvalues по рангу:
-
-[
-E_lambda =
-rac{|lambda_s-lambda_{s+1}|_2}
-{|lambda_s|_2+arepsilon}.
-]
-
-Сильное сохранение slow subspace при большом уменьшении (N) — один из главных признаков динамически содержательного coarse-graining.
-
-Источник: Gfeller & De Los Rios формулируют цель spectral coarse graining как сохранение “**the slow modes of the walk**”.
-
----
-
-# 8. Spectral gap
-
-В текущем `semmap-wishart` spectral gap — разность двух крупнейших eigenvalues **normalized adjacency**, а не обязательно Laplacian (lambda_2).
-
-Анализируй:
-
-[
-D_s(gap)
-]
-
-и кривую gap versus compression.
-
-Не смешивай этот показатель с synchronizability ratio.
-
-Если gap резко меняется на одном переходе, проверь:
-- какие figure types были стянуты;
-- не исчез ли bottleneck/community boundary;
-- не стал ли граф почти disconnected.
-
----
-
-# 9. MFPT интерпретируй вместе с hit rate
-
-Текущий MFPT — Monte-Carlo estimate с конечным `mfpt_max_steps`.
-
-Поэтому всегда показывай пару:
-
-[
-(MFPT_s, hit_rate_s).
-]
-
-Запрещено делать вывод “MFPT улучшился”, если одновременно сильно упал hit rate: среднее может уменьшиться просто потому, что длинные ненайденные траектории были censored.
-
-Если hit rate нестабилен:
-- увеличь `mfpt_max_steps`;
-- увеличь число пар/траекторий;
-- повтори несколько seeds;
-- трактуй MFPT как ненадёжный.
-
----
-
-# 10. Degree moments и thresholds
-
-Текущая реализация считает topological degree, отдельно от weighted strength.
-
-Следи за:
-
-[
-langle kangle,qquad langle k^2angle.
-]
-
-Именно изменение второго момента часто объясняет изменение threshold proxies.
-
-В текущем коде:
-
-[
-T_{spread}approx
-rac{langle kangle}{langle k^2angle}
+c_s=1-rac{N_s}{N_0}
 ]
 
 и
 
 [
-T_{perc}approx
-rac{langle kangle}
-{langle k^2angle-langle kangle}.
+R_s=rac{N_0}{N_s}.
 ]
 
-Называй их **proxies**, а не универсальными истинными порогами ConceptNet.
-
-При каждом заметном изменении threshold сначала покажи, что произошло с (langle k^2angle/langle kangle).
-
-Barrat–Barthélemy–Vespignani: “**larger heterogeneity levels lead to smaller epidemic thresholds**”.
+**Главное правило: сравнивай разные методы при одинаковом (c_s), а не при одинаковом level.**
 
 ---
 
-# 11. Synchronizability
+# 4. Раздели показатели на классы
 
-Текущий показатель:
-
-[
-S=rac{lambda_{max}(L)}{lambda_2(L)}.
-]
-
-Для стандартного master-stability контекста меньший ratio обычно означает более благоприятную синхронизируемость.
-
-Но:
-- показатель имеет смысл прежде всего для connected undirected coupling graph;
-- при (lambda_2approx0) он становится огромным/неопределённым;
-- это topology proxy, а не симуляция конкретных осцилляторов.
-
-Не делай вывод о физической синхронизации семантического графа без явно заданной dynamical model.
+| Класс | Показатели | Как трактовать |
+|---|---|---|
+| Контрольные инварианты | stationary mass aggregation, relation total weight при sum | Большая ошибка часто означает bug/несогласованность |
+| Спектральная сохранность | slow eigenspace, slow eigenvalues, spectral gap | Главные признаки сохранения крупномасштабной динамики |
+| Dynamical observables | MFPT, spreading/percolation proxies, synchronizability, congestion | Сравнивать с оговорками модели и sampling |
+| Scale-dependent topology | degree moments, clustering, betweenness, path lengths | Могут закономерно меняться |
+| Wishart diagnostics | modes, peaks, noise, kth radius, occurrence sizes | Объясняют механизм coarsening |
+| Semantic flow | relation internalization, external flow by relation | Показывают, какие связи становятся внутриблочными |
 
 ---
 
-# 12. Congestion и betweenness
+# 5. Для каждого scalar Q считай минимум два вида ошибки
 
-Текущий proxy:
+### Шаговое изменение
 
 [
-R_c=rac{N-1}{b^*},
-qquad
-b^*=max_i b_i.
+Delta_s(Q)=
+rac{Q_{s+1}-Q_s}{|Q_s|+arepsilon}.
 ]
 
-Показывай одновременно:
-- (b^*);
-- (R_c);
-- (N).
+Ищи резкие переходы.
 
-Иначе изменение (R_c) трудно интерпретировать.
+### Искажение относительно исходного графа
 
-Если betweenness sampled, считай результат noisy diagnostic и требуй повторов по seed.
+[
+D_s(Q)=
+rac{|Q_s-Q_0|}{|Q_0|+arepsilon}.
+]
+
+Используй это как главный scalar preservation score.
+
+Опционально для положительных устойчивых величин считай log-elasticity по (N). Формулы — в metrics reference.
+
+---
+
+# 6. Stationary mass: сравнивай через fine-to-coarse map
+
+Нельзя сравнивать (pi_s) и (pi_{s+1}) по индексам.
+
+Построй membership matrix (P_s) из `fine_to_coarse.npy` и вычисли:
+
+[
+widehatpi_{s+1}=P_s^Tpi_s.
+]
+
+Сравни с coarse stationary mass через:
+- L1 error;
+- total variation.
+
+Для undirected nonnegative + `aggregation=sum` большая ошибка — сначала проверка реализации, потом научная интерпретация.
+
+---
+
+# 7. Slow modes: сравнивай подпространства, не raw eigenvectors
+
+Raw eigenvectors нельзя сопоставлять покомпонентно:
+- знак произволен;
+- внутри близких eigenvalues базис может вращаться.
+
+Используй:
+- principal angles;
+- projection/subspace distance;
+- relative slow-eigenvalue error.
+
+Сильное сохранение slow subspace при заметном уменьшении (N) — один из основных позитивных результатов.
+
+Источник Gfeller & De Los Rios: coarse graining “**preserves the slow modes of the walk**”.
+
+---
+
+# 8. Spectral gap
+
+В текущем `semmap-wishart` gap относится к **normalized adjacency**, не смешивай его с Laplacian (lambda_2).
+
+Строй:
+- gap vs compression;
+- baseline distortion of gap;
+- step jumps.
+
+При скачке проверь, какие figure types стягивались и не исчез ли bottleneck.
+
+---
+
+# 9. MFPT всегда анализируй с hit rate
+
+Текущий MFPT — Monte-Carlo estimate с finite step cap.
+
+Всегда показывай:
+
+[
+(MFPT_s, hit_rate_s).
+]
+
+Если MFPT уменьшается, но hit rate тоже падает, это может быть censoring artifact.
+
+При нестабильном hit rate:
+- увеличь max steps;
+- увеличь sampling;
+- повтори seeds;
+- ослабь вывод.
+
+---
+
+# 10. Degree moments объясняют threshold drift
+
+Показывай вместе:
+- (langle kangle);
+- (langle k^2angle);
+- (kappa=langle k^2angle/langle kangle);
+- spreading proxy;
+- percolation proxy.
+
+Текущие formulas — proxies, не универсальные физические пороги ConceptNet.
+
+Barrat et al.: “**larger heterogeneity levels lead to smaller epidemic thresholds**”.
+
+---
+
+# 11. Synchronizability и congestion трактуй осторожно
+
+Synchronizability proxy использует Laplacian eigenratio. Он имеет смысл прежде всего для connected undirected coupling graph и стандартного master-stability контекста.
+
+Congestion proxy анализируй вместе с:
+- (N);
+- max betweenness;
+- path lengths.
 
 Barrat et al.: “**The larger the maximal betweenness ... the smaller the traffic injection rate**”.
 
----
-
-# 13. Clustering и shortest-path distances
-
-Эти параметры обычно не являются инвариантами.
-
-Смотри:
-- monotonicity;
-- резкие structural transitions;
-- relation с размером фигур;
-- plateaus.
-
-Для distances желательно дополнительно пересчитать:
-- diameter;
-- global efficiency;
-- normalized mean distance.
-
-Если исходный граф disconnected, анализируй reachable pairs отдельно.
+Если betweenness sampled, требуй repeats.
 
 ---
 
-# 14. Relation-aware flow — обязательный SemanticMap-анализ
+# 12. Relation-aware analysis обязателен
 
-Для каждого relation (r) и уровня (s) загрузи `relations/*.npz`.
+Для каждого relation (r) загрузи `relations/*.npz`.
 
 Считай:
+- total relation weight;
+- diagonal/self-loop weight;
+- off-diagonal weight;
+- internalization fraction.
 
-[
-W_r(s)=sum_{ij}A^{(r)}_{ij},
-]
+При `aggregation=sum` total relation weight должен быть почти conserved.
 
-[
-W_r^{loop}(s)=mathrm{tr}(A^{(r)}),
-]
+Ключевой вопрос:
 
-[
-W_r^{off}(s)=W_r(s)-W_r^{loop}(s).
-]
+> Какие ConceptNet relations становятся внутренними для суперузлов раньше других?
 
-Для `aggregation=sum` общий (W_r) должен быть почти conserved.
-
-Рост
-
-[
-I_r(s)=rac{W_r^{loop}(s)}{W_r(s)}
-]
-
-показывает, какая доля relation (r) стала внутренней структурой суперузлов.
-
-Это один из наиболее содержательных параметров для ConceptNet: он показывает, **какие семантические отношения “схлопываются” раньше других**.
-
-Строй relation × level heatmap для (I_r(s)).
+Строй relation × compression heatmap.
 
 ---
 
-# 15. Анализ внешнего интерфейса фигур
+# 13. Анализируй внешний интерфейс фигур
 
-Из `cluster_dynamics.jsonl` для каждого нового coarse node анализируй:
-
+Из `cluster_dynamics.jsonl` используй:
 - external_flow;
 - external_flow_by_relation;
 - stationary_mass;
 - exit_probabilities;
 - figure_type;
-- original_concepts / concept_concat.
+- original_concepts;
+- concept_concat.
 
-Для cluster (C) полезно вычислить leakage:
-
-[
-ell_C=
-rac{F_{out}(C)}
-{F_{out}(C)+F_{internal}(C)}.
-]
-
-Низкая leakage означает более автономную фигуру.
-
-Сравни распределения leakage по figure_type.
-
----
-
-# 16. Wishart clusters не равны автоматически “хорошим фигурам сжатия”
-
-Для каждого `figure_type` посчитай:
-
-- occurrences;
-- median number of nodes;
-- total nodes removed;
-- median kth_radius;
-- within-type variation;
-- external-flow profile;
+Для figure type оцени:
+- occurrence count;
+- median size;
+- nodes removed;
+- kth-radius distribution;
+- leakage/external-flow distribution;
 - relation profile;
-- dynamic distortion после contraction.
+- associated dynamic distortion.
 
-Ищи типы, которые:
-1. часто повторяются;
-2. дают заметное сжатие;
-3. имеют стабильный внешний интерфейс;
-4. дают малую dynamical distortion.
-
-Именно они — лучшие кандидаты на устойчивые compression figures.
+Wishart mode — только **candidate compression type**, а не автоматически “хорошая фигура”.
 
 ---
 
-# 17. Сравнение разных Wishart metrics
+# 14. Cross-metric comparison
 
-Сравнивай:
-
+Сравни:
 - typed_wl;
 - graphlet;
 - relation_js;
 - lowrank_gw;
 - fgw.
 
-Главное правило:
+Правило:
 
 [
-oxed{	ext{compare at matched compression, not matched level}}
+oxed{	ext{matched compression, not matched level}}
 ]
 
-Например, если typed-WL достиг (c=0.50) на level 2, а FGW на level 4 — сравни эти точки.
+Если одинакового (c) нет:
+- используй ближайшую observed point;
+- либо интерполируй между соседними compression points;
+- не extrapolate без caveat.
 
-Если точных совпадений нет:
-- интерполируй metric-vs-compression curve;
-- либо используй ближайшую точку и явно укажи разницу в compression.
-
-Строй Pareto plot:
+Строй Pareto plots:
 
 [
-x=c_s,qquad y=D_s(Q).
+x=c,qquad y=D(Q).
 ]
 
-Лучший метод для данного (Q) даёт большее сжатие при меньшем искажении.
-
-Не объявляй одну метрику абсолютным победителем, если trade-offs различаются по параметрам.
+Не объявляй один global winner без заранее заданной функции полезности.
 
 ---
 
-# 18. Обязательно анализируй случайность
+# 15. Повторяй seeds
 
-Источники random variation:
-
-- sampling candidate centers;
+Источники randomness:
+- candidate subsampling;
 - graphlet sampling;
-- MFPT Monte Carlo;
-- sampled betweenness;
-- clustering samples;
+- MFPT;
+- betweenness;
+- clustering;
 - sampled distances;
-- transport solver initialization/approximations.
+- approximate transport.
 
-Для исследовательского вывода используй несколько seeds.
+Один seed = exploratory evidence.
 
-Минимум отчёта:
+Для серии repeats показывай:
 - median;
-- IQR или bootstrap 95% CI;
-- число repeats.
+- IQR;
+- 95% bootstrap CI, если repeats достаточно.
 
-Один seed — exploratory result, не устойчивый вывод.
-
----
-
-# 19. Null baselines
-
-Wishart должен сравниваться хотя бы с одним control coarsening при том же (N_s).
-
-Рекомендуемые baselines:
-
-1. random disjoint contraction с тем же распределением размеров блоков;
-2. degree-matched contraction;
-3. relation-shuffled graph;
-4. существующий Haken-coarsening semgraphex.
-
-Для каждого baseline сравни:
-
-[
-D_s^{Wishart}(Q)
-quad 	ext{vs} quad
-D_s^{baseline}(Q)
-]
-
-при одинаковой compression fraction.
-
-Если Wishart не лучше random contraction, нельзя утверждать, что найденные modes функционально значимы.
+Подробный протокол — statistical-validation reference.
 
 ---
 
-# 20. Поиск scale plateau
+# 16. Null baselines обязательны для сильного вывода
 
-Scale plateau — диапазон уровней/компрессии, где:
+Минимум:
+1. random disjoint contraction с теми же block sizes;
+2. degree-matched contraction.
 
-- (N) заметно уменьшается;
-- выбранные dynamical distortions остаются малы;
-- step changes не имеют крупных скачков;
-- slow eigenspace остаётся близким;
-- результаты воспроизводятся по seeds.
+Желательно:
+3. relation-label shuffle;
+4. Haken coarsening из semgraphex.
 
-Не определяй plateau “на глаз”.
+Сравни при одинаковой compression fraction.
 
-Задай набор observables (Q_j) и operational tolerances (t_j), затем требуй:
-
-[
-D_s(Q_j)le t_j
-]
-
-для всех обязательных (Q_j) на последовательном диапазоне compression.
-
-Tolerances должны быть:
-- заранее объявлены;
-- проверены sensitivity analysis;
-- не выбираться после просмотра результата.
+Если Wishart не лучше matched random contraction по выбранным observables, нельзя утверждать, что найденные modes функционально значимы.
 
 ---
 
-# 21. Опциональный composite preservation score
+# 17. Scale plateau
 
-Сначала всегда показывай отдельные показатели.
+Plateau — диапазон compression, где:
+- (N) продолжает уменьшаться;
+- обязательные distortions остаются ниже заранее заданных tolerances;
+- slow eigenspace стабилен;
+- нет крупных step jumps;
+- результат воспроизводится по seeds.
 
-Только затем можно вычислить:
+Не находи plateau “на глаз”.
 
-[
-D_{dyn}(s)=
-rac{sum_j w_j,D_s(Q_j)/t_j}
-{sum_j w_j}.
-]
-
-Где:
-- (w_j) — заранее заданная важность;
-- (t_j) — допустимая шкала изменения.
-
-Не подбирай (w_j) для получения желаемого победителя.
-
-Также показывай worst-case:
-
-[
-D_{max}(s)=max_j D_s(Q_j)/t_j.
-]
+Задай tolerances **до** выбора желаемого результата.
 
 ---
 
-# 22. Что считать сильным результатом
+# 18. Composite score — только вторично
 
-Сильное свидетельство в пользу полезного Wishart-coarsening:
+Сначала показывай отдельные observables.
 
-- существенное (N_0/N_s);
-- низкая stationary-mass aggregation error;
-- устойчивый slow eigenspace;
-- умеренные изменения spectral/dynamic observables;
-- Wishart превосходит matched random baseline;
-- результат воспроизводится по seeds;
-- несколько разных similarity metrics дают сходную качественную картину;
-- relation-aware структуры не разрушаются сразу;
-- существует интервал scale plateau.
+Затем допустим weighted normalized distortion и worst-case distortion.
+
+Не подбирай weights постфактум.
+
+Если разные metrics дают trade-offs, показывай Pareto frontier вместо одного рейтинга.
 
 ---
 
-# 23. Что считать отрицательным или фальсифицирующим результатом
+# 19. Сильный позитивный результат
 
-Не скрывай:
+Сильное свидетельство полезного Wishart-coarsening требует сочетания:
 
-- modes есть, но contraction разрушает slow dynamics;
-- фигуры зависят только от одного seed;
-- разные similarity metrics дают несовместимые результаты;
-- thresholds скачут из-за коллапса degree heterogeneity;
-- stationary mass не сохраняется даже там, где должна;
-- relation structure быстро превращается в self-loops;
-- Wishart не превосходит random baseline;
+- заметного compression ratio;
+- малой stationary-mass aggregation error;
+- устойчивого slow eigenspace;
+- умеренного drift выбранных dynamics metrics;
+- лучшего результата, чем matched random baseline;
+- повторяемости по seeds;
+- частичной устойчивости к choice of similarity metric;
+- relation-aware структуры, не уничтожаемой сразу;
+- при наличии — scale plateau.
+
+---
+
+# 20. Отрицательные результаты также обязательны
+
+Явно сообщай, если:
+
+- modes есть, но slow dynamics рушится;
+- result seed-sensitive;
+- different metrics дают несовместимые картины;
+- thresholds скачут из-за потери degree heterogeneity;
+- stationary mass не сохраняется там, где должна;
+- relations быстро уходят в self-loops;
+- Wishart не лучше random baseline;
 - plateau отсутствует.
 
-Это ценные результаты, а не “ошибка эксперимента”.
+Не маскируй это как “нужно больше оптимизации”.
 
 ---
 
-# 24. Обязательные визуализации
+# 21. Обязательные визуализации
 
-Минимальный набор:
+Минимум:
 
 1. (N_s/N_0) vs level.
-2. Все scalar observables vs compression fraction.
-3. Baseline distortion (D_s(Q)) vs compression.
-4. stationary-mass TV error vs compression.
-5. slow-eigenspace distance vs compression.
-6. slow eigenvalue trajectories.
-7. degree moments + spreading/percolation proxies.
-8. MFPT вместе с hit rate.
-9. max betweenness + congestion threshold.
-10. relation internalization heatmap.
-11. Wishart cluster count/noise/occurrences.
-12. cross-metric Pareto plots.
-13. seed uncertainty bands.
-14. baseline comparison.
+2. compression fraction vs level.
+3. scalar observables vs compression.
+4. baseline distortions vs compression.
+5. stationary-mass TV vs compression.
+6. slow-eigenspace distance vs compression.
+7. slow eigenvalue trajectories.
+8. degree moments + threshold proxies.
+9. MFPT + hit rate.
+10. max betweenness + congestion.
+11. relation internalization heatmap.
+12. Wishart modes/noise/occurrences.
+13. cross-metric Pareto curves.
+14. seed uncertainty bands.
+15. null/baseline comparison.
 
 ---
 
-# 25. Обязательные правила интерпретации
+# 22. Non-negotiable interpretation rules
 
 Никогда не:
 
-- называй Wishart cluster семантическим примитивом только из-за плотности;
-- сравнивай eigenvectors напрямую;
-- сравнивай разные metrics только по level index;
-- называй proxies точными физическими thresholds;
+- называй Wishart cluster семантическим примитивом только из-за density;
+- сравнивай raw eigenvectors;
+- сравнивай methods только по level;
+- называй threshold proxies точными физическими thresholds;
 - интерпретируй MFPT без hit rate;
-- делай вывод по одному seed;
-- смешивай topological degree и weighted strength;
+- делай publication-level вывод по одному seed;
+- смешивай degree и weighted strength;
 - считай ConceptNet weight эмпирической transition probability;
-- скрывай caveats из `dynamic_metrics.json`;
-- утверждай multifractality только по наличию рекурсивной иерархии.
+- игнорируй caveats в `dynamic_metrics.json`;
+- утверждай multifractality только из recursive hierarchy;
+- скрывай null result.
 
 ---
 
-# 26. Формат итогового ответа агента
+# 23. Формат результата агента
 
 Всегда выдай:
 
-1. **Integrity / comparability** — можно ли доверять сравнению.
-2. **Compression trajectory** — насколько граф уменьшился.
-3. **Parameter-by-parameter changes** — что изменилось и почему.
-4. **Preserved quantities** — только с численной ошибкой.
-5. **Broken quantities** — где и на каком масштабе.
-6. **Wishart-specific analysis** — modes, noise, figure types.
-7. **Cross-metric comparison** — на matched compression.
-8. **Seed robustness**.
-9. **Null/baseline comparison**, если доступен.
-10. **Scale plateau**, если он статистически поддерживается.
-11. **Semantic follow-up** по `concept_concat`, но отдельно от topology-only вывода.
-12. **Sources and short quotes**.
-13. **Limitations / falsification conditions**.
+1. **Integrity/comparability**.
+2. **Compression trajectory**.
+3. **Parameter-by-parameter changes**.
+4. **Preserved quantities** с численной ошибкой.
+5. **Broken quantities** и first breaking scale.
+6. **Wishart mode analysis**.
+7. **Relation-aware flow analysis**.
+8. **Cross-metric comparison at matched compression**.
+9. **Seed robustness**.
+10. **Null/baseline comparison**.
+11. **Scale plateau** или явное отсутствие.
+12. **Semantic follow-up** по concept_concat отдельно от topology-only вывода.
+13. **Sources + short quotes**.
+14. **Limitations and falsification conditions**.
+
+Используй [report template](references/report-template.md).
 
 ---
 
-# 27. Evidence basis
+# 24. Evidence basis
 
-Используй эти работы как методологическую опору, а не как доказательство результата конкретного эксперимента:
+Используй источники как методологическую опору, а не как доказательство конкретного результата.
 
 - Wishart, 1969, *Numerical Classification Method for deriving Natural Classes*.  
   https://doi.org/10.1038/221097a0  
-  Короткая цитата: “**clusters should correspond to data modes**”.
+  “**clusters should correspond to data modes**”.
 
 - Gfeller & De Los Rios, 2007, *Spectral Coarse Graining of Complex Networks*.  
   https://doi.org/10.1103/PhysRevLett.99.038701  
-  Короткая цитата: “**preserves the slow modes of the walk**”.
+  “**preserves the slow modes of the walk**”.
 
 - Barrat, Barthélemy & Vespignani, 2008, *Dynamical Processes on Complex Networks*.  
   https://doi.org/10.1017/CBO9780511791383  
-  Короткая цитата: “**the larger the degree ... the larger the probability of being visited**”.
+  “**the larger the degree ... the larger the probability of being visited**”.
 
 - Shervashidze et al., 2011, *Weisfeiler-Lehman Graph Kernels*.  
   https://www.jmlr.org/papers/v12/shervashidze11a.html  
-  Короткая цитата: “**runtime scales only linearly in the number of edges**”.
+  “**runtime scales only linearly in the number of edges**”.
 
 - Shervashidze et al., 2009, *Efficient Graphlet Kernels for Large Graph Comparison*.  
   https://proceedings.mlr.press/v5/shervashidze09a.html  
-  Короткая цитата: “**Exhaustive enumeration of all graphlets being prohibitively expensive**”.
+  “**Exhaustive enumeration of all graphlets being prohibitively expensive**”.
 
 - Vayer et al., 2019, *Optimal Transport for structured data with application on graphs*.  
   https://proceedings.mlr.press/v97/titouan19a.html
 
 - Scetbon, Peyré & Cuturi, 2022, *Linear-Time Gromov Wasserstein Distances using Low Rank Couplings and Costs*.  
   https://proceedings.mlr.press/v162/scetbon22b.html  
-  Короткая цитата: “**linear time O(n) GW approximation**”.
+  “**linear time O(n) GW approximation**”.
