@@ -102,12 +102,16 @@ def scan_frontmatter(skill_dir: Path, findings: list[Finding]) -> None:
     if text is None:
         add(findings, "SKILL_MD_UNREADABLE", "high", skill_md, "SKILL.md is not valid small UTF-8 text.")
         return
-    if not text.startswith("---\n"):
-        add(findings, "FRONTMATTER_MISSING", "high", skill_md, "SKILL.md must start with YAML frontmatter.")
+    if not re.match(r"^---\r?\n", text):
+        add(findings, "FRONTMATTER_MISSING", "high", skill_md,
+            "SKILL.md must start with YAML frontmatter.")
         return
-    end = text.find("\n---", 4)
+
+    end_match = re.search(r"\r?\n---(?=\r?\n|$)", text[4:])
+    end = (4 + end_match.start()) if end_match else -1
     if end < 0:
-        add(findings, "FRONTMATTER_BROKEN", "high", skill_md, "SKILL.md frontmatter is not terminated.")
+        add(findings, "FRONTMATTER_BROKEN", "high", skill_md,
+            "SKILL.md frontmatter is not terminated.")
         return
     frontmatter = text[4:end]
     if not re.search(r"(?m)^name:\s*\S+", frontmatter):
