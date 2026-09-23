@@ -1,5 +1,21 @@
 # Metrics and formulas for Wishart graph-compression analysis
 
+## Contents
+- Compression coordinates
+- Scalar change metrics
+- Stationary mass
+- Slow eigenvalues and eigenspace
+- Spectral gap and MFPT
+- Degree moments and threshold proxies
+- Synchronizability, betweenness and congestion
+- Clustering and path lengths
+- Relation-flow conservation and internalization
+- External flow and exit distributions
+- Wishart mode diagnostics
+- Composite distortion
+- Matched-compression comparison
+
+
 ## 1. Compression coordinates
 
 For level (s):
