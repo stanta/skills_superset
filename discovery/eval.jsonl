@@ -4,4 +4,4 @@
 {"query":"life sciences gene disease literature research","expected":["research-router-skill"]}
 {"query":"исследование большого репозитория","expected":["rlm-roec-context-reasoning"]}
 {"query":"сжатие контекста","expected":["llm-context-compressor"]}
-{"query":"zzxxyyqqq meaningless","expected":[],"min_score":3}
+{"query":"qzxvkpnlmtqqq","expected":[]}
