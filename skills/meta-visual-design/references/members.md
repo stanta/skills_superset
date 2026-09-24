@@ -1,6 +1,6 @@
 # Children of meta-visual-design
 
-39 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+40 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -36,6 +36,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **ideate** — Generate image-based alternatives, remixes, or new design directions from a Product Design brief. Use when the user asks for design variants, visual exploration, remixes, or image-gener — `atomic-skills/ideate/SKILL.md`
 - **image-to-code** — Implement a selected image, screenshot, mockup, or Image Gen reference as a faithful, responsive frontend. — `atomic-skills/image-to-code/SKILL.md`
 - **node-link-and-diagram-layout** — Choose and apply automatic layout strategies for node-link diagrams and connected-node visuals. Use when the user asks how to auto-arrange nodes, reduce line crossings, route edges, avo — `atomic-skills/node-link-and-diagram-layout/SKILL.md`
+- **omniverse-usd-performance-tuning** — Top-level workflow skill for USD performance diagnosis and optimization. Use for slow loading, high memory, low FPS, or 'optimize my scene' requests; delegates auth/runtime setup to Pha — `atomic-skills/omniverse-usd-performance-tuning/SKILL.md`
 - **product-design-audit** — Audit or critique a product flow, journey, workflow, funnel, onboarding path, checkout path, settings path, screen, or multi-step product experience by capturing screenshots first, then — `atomic-skills/product-design-audit/SKILL.md`
 - **product-design-index** — Use when Product Design is explicitly invoked, or when the user's main goal is to explore a design, research UX, audit or critique a flow, faithfully clone a visual source, check a buil — `atomic-skills/product-design-index/SKILL.md`
 - **product-design-user-context** — Load or manage Product Design's saved user context. Use when the user asks to set up Product Design, get started, onboard, save product or design sources, see what Product Design rememb — `atomic-skills/product-design-user-context/SKILL.md`

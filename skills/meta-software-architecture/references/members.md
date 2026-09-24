@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-54 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+55 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -35,6 +35,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **n8n-code-javascript** — Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, trou — `atomic-skills/n8n-code-javascript/SKILL.md`
 - **n8n-code-python** — Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code — `atomic-skills/n8n-code-python/SKILL.md`
 - **nextjs-developer** — Use when building Next.js 14+ applications with App Router, server components, or server actions. Invoke to configure route handlers, implement middleware, set up API routes, add stream — `atomic-skills/nextjs-developer/SKILL.md`
+- **odoo-extension-development** — Best-practice rules for designing, implementing, reviewing, testing and upgrading Odoo addons and ERP connectors, with an Orbitas integration profile. — `atomic-skills/odoo-extension-development/SKILL.md`
 - **php-pro** — Use when building PHP applications with modern PHP 8.3+ features, Laravel, or Symfony frameworks. Invokes strict typing, PHPStan level 9, async patterns with Swoole, and PSR standards.  — `atomic-skills/php-pro/SKILL.md`
 - **prd-developer** — This skill should be used when drafting, reviewing, restructuring, or quality-checking Product Requirements Documents (PRDs) for software development initiatives, especially when the wo — `atomic-skills/prd-developer/SKILL.md`
 - **python-dev** — Guide a senior-grade Python backend engineering assistant for architecture, refactoring, typing+validation, async cancellation safety, testing, packaging discipline, DB unit-of-work pat — `atomic-skills/python-dev/SKILL.md`

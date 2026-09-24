@@ -1,6 +1,6 @@
 # Children of meta-frontend-web
 
-47 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+48 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -17,6 +17,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **frontend-design** — Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications  — `atomic-skills/frontend-design/SKILL.md`
 - **frontend-react-dev** — This skill should be used when drafting, reviewing, or refactoring modern React frontends that require senior-level guidance across SPA, Next.js App Router, or component-library context — `atomic-skills/frontend-react-dev/SKILL.md`
 - **frontend-vue-developer** — This skill should be used when drafting, reviewing, or refactoring modern Vue 3 frontends that require senior-level guidance across SPA, Nuxt, or component-library contexts, with explic — `atomic-skills/frontend-vue-developer/SKILL.md`
+- **game-studio** — Route early browser-game work. Use when the user needs stack selection and workflow planning across design, implementation, assets, and playtesting before moving to a specialist skill. — `atomic-skills/game-studio/SKILL.md`
 - **game-ui-frontend** — Design UI surfaces for browser games. Use when the user asks for HUDs, menus, overlays, responsive layouts, or visual direction that must protect the playfield. — `atomic-skills/game-ui-frontend/SKILL.md`
 - **geist** — Expert guidance for Geist, Vercel's default typography system and font family for precise Next.js interfaces. Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up fon — `atomic-skills/geist/SKILL.md`
 - **geistdocs** — Expert guidance for Geistdocs, Vercel's documentation template built with Next.js and Fumadocs — MDX authoring, configuration, AI chat, i18n, feedback, deployment. Use when creating doc — `atomic-skills/geistdocs/SKILL.md`

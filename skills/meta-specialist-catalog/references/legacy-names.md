@@ -209,7 +209,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **fullstack-guardian** — meta-backend-services — `atomic-skills/fullstack-guardian/SKILL.md`
 - **game-developer** — meta-software-architecture — `atomic-skills/game-developer/SKILL.md`
 - **game-playtest** — meta-testing-quality — `atomic-skills/game-playtest/SKILL.md`
-- **game-studio** — meta-specialist-catalog — `atomic-skills/game-studio/SKILL.md`
+- **game-studio** — meta-frontend-web — `atomic-skills/game-studio/SKILL.md`
 - **game-ui-frontend** — meta-frontend-web — `atomic-skills/game-ui-frontend/SKILL.md`
 - **gantt-chart-visualization** — meta-data-analytics — `atomic-skills/gantt-chart-visualization/SKILL.md`
 - **gather-business-context** — meta-agent-systems, meta-product-business — `atomic-skills/gather-business-context/SKILL.md`
@@ -353,8 +353,8 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **notion-spec-to-implementation** — meta-workplace-integrations — `atomic-skills/notion-spec-to-implementation/SKILL.md`
 - **nvidia-skill-finder** — meta-agent-systems — `atomic-skills/nvidia-skill-finder/SKILL.md`
 - **observability** — meta-devops-cloud — `atomic-skills/observability/SKILL.md`
-- **odoo-extension-development** (orbitas-odoo-addon-development) — meta-specialist-catalog — `atomic-skills/odoo-extension-development/SKILL.md`
-- **omniverse-usd-performance-tuning** — meta-specialist-catalog — `atomic-skills/omniverse-usd-performance-tuning/SKILL.md`
+- **odoo-extension-development** (orbitas-odoo-addon-development) — meta-software-architecture — `atomic-skills/odoo-extension-development/SKILL.md`
+- **omniverse-usd-performance-tuning** — meta-visual-design — `atomic-skills/omniverse-usd-performance-tuning/SKILL.md`
 - **openai-ads-conversions-setup** — meta-marketing-growth — `atomic-skills/openai-ads-conversions-setup/SKILL.md`
 - **openai-api-troubleshooting** — meta-backend-services — `atomic-skills/openai-api-troubleshooting/SKILL.md`
 - **openai-developers-agents-sdk** (agents-sdk) — meta-agent-systems — `atomic-skills/openai-developers-agents-sdk/SKILL.md`
@@ -429,7 +429,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **requesting-code-review** — meta-software-architecture — `atomic-skills/requesting-code-review/SKILL.md`
 - **research** — meta-research-knowledge — `atomic-skills/research/SKILL.md`
 - **research-router-skill** — meta-research-knowledge, meta-genomics-omics — `atomic-skills/research-router-skill/SKILL.md`
-- **review** — meta-specialist-catalog — `atomic-skills/review/SKILL.md`
+- **review** — meta-product-business — `atomic-skills/review/SKILL.md`
 - **rhea-skill** — meta-molecular-discovery — `atomic-skills/rhea-skill/SKILL.md`
 - **rivet-sdk** — meta-specialist-catalog — `atomic-skills/rivet-sdk/SKILL.md`
 - **rlm-roec-context-reasoning** — meta-agent-systems, meta-research-knowledge — `atomic-skills/rlm-roec-context-reasoning/SKILL.md`
