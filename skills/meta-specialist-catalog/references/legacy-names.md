@@ -25,7 +25,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **airtable-cli** — meta-workplace-integrations — `atomic-skills/airtable-cli/SKILL.md`
 - **airtable-filters** — meta-workplace-integrations — `atomic-skills/airtable-filters/SKILL.md`
 - **airtable-overview** — meta-workplace-integrations — `atomic-skills/airtable-overview/SKILL.md`
-- **alligator-development** — meta-specialist-catalog — `atomic-skills/alligator-development/SKILL.md`
+- **alligator-development** — meta-web3-blockchain — `atomic-skills/alligator-development/SKILL.md`
 - **alphafold-skill** — meta-molecular-discovery — `atomic-skills/alphafold-skill/SKILL.md`
 - **analyze** — meta-research-knowledge — `atomic-skills/analyze/SKILL.md`
 - **analyze-data-quality** — meta-data-analytics, meta-testing-quality — `atomic-skills/analyze-data-quality/SKILL.md`
@@ -42,7 +42,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **attack-path-analysis** — meta-security-compliance — `atomic-skills/attack-path-analysis/SKILL.md`
 - **audit** — meta-security-compliance — `atomic-skills/audit/SKILL.md`
 - **auth** — meta-security-compliance — `atomic-skills/auth/SKILL.md`
-- **ballot-contracts** — meta-specialist-catalog — `atomic-skills/ballot-contracts/SKILL.md`
+- **ballot-contracts** — meta-web3-blockchain — `atomic-skills/ballot-contracts/SKILL.md`
 - **bgee-skill** — meta-genomics-omics — `atomic-skills/bgee-skill/SKILL.md`
 - **bindingdb-skill** — meta-molecular-discovery — `atomic-skills/bindingdb-skill/SKILL.md`
 - **biobankjapan-phewas-skill** — meta-genomics-omics — `atomic-skills/biobankjapan-phewas-skill/SKILL.md`
@@ -56,7 +56,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **boltz-small-molecule-screen** — meta-molecular-discovery — `atomic-skills/boltz-small-molecule-screen/SKILL.md`
 - **boltz-structure-and-binding** — meta-molecular-discovery — `atomic-skills/boltz-structure-and-binding/SKILL.md`
 - **bootstrap** — meta-devops-cloud — `atomic-skills/bootstrap/SKILL.md`
-- **brainstorming** — meta-specialist-catalog — `atomic-skills/brainstorming/SKILL.md`
+- **brainstorming** — meta-product-business — `atomic-skills/brainstorming/SKILL.md`
 - **brd-developer** — meta-product-business, meta-software-architecture — `atomic-skills/brd-developer/SKILL.md`
 - **build-chatgpt-app** — meta-software-architecture — `atomic-skills/build-chatgpt-app/SKILL.md`
 - **build-dashboard** — meta-data-analytics — `atomic-skills/build-dashboard/SKILL.md`
@@ -105,7 +105,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **code-review** — meta-software-architecture — `atomic-skills/code-review/SKILL.md`
 - **code-reviewer** — meta-software-architecture — `atomic-skills/code-reviewer/SKILL.md`
 - **codex-expo-run-actions** — meta-agent-systems, meta-mobile-desktop — `atomic-skills/codex-expo-run-actions/SKILL.md`
-- **collect-files-with-request** — meta-specialist-catalog — `atomic-skills/collect-files-with-request/SKILL.md`
+- **collect-files-with-request** — meta-workplace-integrations — `atomic-skills/collect-files-with-request/SKILL.md`
 - **company-tearsheet** — meta-finance-payments — `atomic-skills/company-tearsheet/SKILL.md`
 - **competitive-ads-extractor** — meta-marketing-growth — `atomic-skills/competitive-ads-extractor/SKILL.md`
 - **config** (circleci-config) — meta-devops-cloud — `atomic-skills/config/SKILL.md`
@@ -135,7 +135,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **debug-zoom** — meta-testing-quality, meta-customer-communications — `atomic-skills/debug-zoom/SKILL.md`
 - **debug-zoom-integration** — meta-customer-communications, meta-testing-quality — `atomic-skills/debug-zoom-integration/SKILL.md`
 - **debugging-wizard** — meta-testing-quality — `atomic-skills/debugging-wizard/SKILL.md`
-- **decompose** — meta-specialist-catalog — `atomic-skills/decompose/SKILL.md`
+- **decompose** — meta-product-business — `atomic-skills/decompose/SKILL.md`
 - **deep-security-scan** — meta-security-compliance — `atomic-skills/deep-security-scan/SKILL.md`
 - **define-security-policy** — meta-security-compliance — `atomic-skills/define-security-policy/SKILL.md`
 - **deployments-cicd** — meta-devops-cloud — `atomic-skills/deployments-cicd/SKILL.md`
@@ -145,7 +145,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **detect-code-development-antipatterns** — meta-software-architecture — `atomic-skills/detect-code-development-antipatterns/SKILL.md`
 - **devops** — meta-devops-cloud — `atomic-skills/devops/SKILL.md`
 - **devops-engineer** — meta-devops-cloud — `atomic-skills/devops-engineer/SKILL.md`
-- **digital-advertizer** — meta-specialist-catalog — `atomic-skills/digital-advertizer/SKILL.md`
+- **digital-advertizer** — meta-marketing-growth — `atomic-skills/digital-advertizer/SKILL.md`
 - **dispatching-parallel-agents** — meta-agent-systems — `atomic-skills/dispatching-parallel-agents/SKILL.md`
 - **django-expert** — meta-backend-services — `atomic-skills/django-expert/SKILL.md`
 - **dotnet-core-expert** — meta-software-architecture — `atomic-skills/dotnet-core-expert/SKILL.md`
@@ -157,7 +157,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **earnings-preview** — meta-finance-payments — `atomic-skills/earnings-preview/SKILL.md`
 - **economic-impact-report** — meta-office-documents — `atomic-skills/economic-impact-report/SKILL.md`
 - **efo-ontology-skill** — meta-genomics-omics — `atomic-skills/efo-ontology-skill/SKILL.md`
-- **email** — meta-specialist-catalog — `atomic-skills/email/SKILL.md`
+- **email** — meta-workplace-integrations — `atomic-skills/email/SKILL.md`
 - **embedded-systems** — meta-software-architecture — `atomic-skills/embedded-systems/SKILL.md`
 - **encode-skill** — meta-genomics-omics — `atomic-skills/encode-skill/SKILL.md`
 - **ensembl-skill** — meta-genomics-omics — `atomic-skills/ensembl-skill/SKILL.md`
@@ -170,7 +170,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **evaluate-skill** — meta-agent-systems — `atomic-skills/evaluate-skill/SKILL.md`
 - **eve** — meta-agent-systems — `atomic-skills/eve/SKILL.md`
 - **event-driven-analyzer** — meta-finance-payments — `atomic-skills/event-driven-analyzer/SKILL.md`
-- **executing-plans** — meta-specialist-catalog — `atomic-skills/executing-plans/SKILL.md`
+- **executing-plans** — meta-product-business — `atomic-skills/executing-plans/SKILL.md`
 - **expo-cicd-workflows** — meta-mobile-desktop — `atomic-skills/expo-cicd-workflows/SKILL.md`
 - **expo-deployment** — meta-mobile-desktop, meta-devops-cloud — `atomic-skills/expo-deployment/SKILL.md`
 - **expo-dev-client** — meta-mobile-desktop — `atomic-skills/expo-dev-client/SKILL.md`
@@ -178,9 +178,9 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **expo-tailwind-setup** — meta-frontend-web, meta-mobile-desktop — `atomic-skills/expo-tailwind-setup/SKILL.md`
 - **expo-ui-jetpack-compose** — meta-frontend-web, meta-mobile-desktop — `atomic-skills/expo-ui-jetpack-compose/SKILL.md`
 - **expo-ui-swift-ui** — meta-mobile-desktop — `atomic-skills/expo-ui-swift-ui/SKILL.md`
-- **faceless-channel** — meta-specialist-catalog — `atomic-skills/faceless-channel/SKILL.md`
+- **faceless-channel** — meta-media-production — `atomic-skills/faceless-channel/SKILL.md`
 - **fastapi-expert** — meta-backend-services — `atomic-skills/fastapi-expert/SKILL.md`
-- **feature-forge** — meta-specialist-catalog — `atomic-skills/feature-forge/SKILL.md`
+- **feature-forge** — meta-product-business — `atomic-skills/feature-forge/SKILL.md`
 - **figma-code-connect** — meta-visual-design, meta-software-architecture — `atomic-skills/figma-code-connect/SKILL.md`
 - **figma-create-new-file** — meta-visual-design — `atomic-skills/figma-create-new-file/SKILL.md`
 - **figma-design-to-code** — meta-visual-design — `atomic-skills/figma-design-to-code/SKILL.md`
@@ -217,7 +217,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **geistdocs** — meta-frontend-web — `atomic-skills/geistdocs/SKILL.md`
 - **genebass-gene-burden-skill** — meta-genomics-omics — `atomic-skills/genebass-gene-burden-skill/SKILL.md`
 - **general** (zoom-general) — meta-customer-communications — `atomic-skills/general/SKILL.md`
-- **geo-marketologist** — meta-specialist-catalog — `atomic-skills/geo-marketologist/SKILL.md`
+- **geo-marketologist** — meta-marketing-growth — `atomic-skills/geo-marketologist/SKILL.md`
 - **geospatial-and-cartographic-visualization** — meta-data-analytics — `atomic-skills/geospatial-and-cartographic-visualization/SKILL.md`
 - **get-context** — meta-agent-systems — `atomic-skills/get-context/SKILL.md`
 - **gitlab-cicd-devsecops** — meta-devops-cloud, meta-security-compliance — `atomic-skills/gitlab-cicd-devsecops/SKILL.md`
@@ -230,7 +230,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **google-drive-comments** — meta-workplace-integrations — `atomic-skills/google-drive-comments/SKILL.md`
 - **google-sheets** — meta-office-documents, meta-workplace-integrations — `atomic-skills/google-sheets/SKILL.md`
 - **google-slides** — meta-office-documents, meta-workplace-integrations — `atomic-skills/google-slides/SKILL.md`
-- **gosh-development** — meta-specialist-catalog — `atomic-skills/gosh-development/SKILL.md`
+- **gosh-development** — meta-web3-blockchain — `atomic-skills/gosh-development/SKILL.md`
 - **grammar-of-graphics-and-declarative-visualization** — meta-data-analytics — `atomic-skills/grammar-of-graphics-and-declarative-visualization/SKILL.md`
 - **graphql-architect** — meta-backend-services, meta-software-architecture — `atomic-skills/graphql-architect/SKILL.md`
 - **gsap** — meta-frontend-web — `atomic-skills/gsap/SKILL.md`
@@ -238,18 +238,18 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **gwas-catalog-skill** — meta-commerce-platforms, meta-genomics-omics — `atomic-skills/gwas-catalog-skill/SKILL.md`
 - **hmdb-skill** — meta-molecular-discovery — `atomic-skills/hmdb-skill/SKILL.md`
 - **human-protein-atlas-skill** — meta-molecular-discovery — `atomic-skills/human-protein-atlas-skill/SKILL.md`
-- **humanizer** — meta-specialist-catalog — `atomic-skills/humanizer/SKILL.md`
+- **humanizer** — meta-office-documents — `atomic-skills/humanizer/SKILL.md`
 - **hyperframes** — meta-browser-automation — `atomic-skills/hyperframes/SKILL.md`
 - **hyperframes-cli** — meta-browser-automation — `atomic-skills/hyperframes-cli/SKILL.md`
 - **hyperframes-registry** — meta-browser-automation — `atomic-skills/hyperframes-registry/SKILL.md`
-- **idea** — meta-specialist-catalog — `atomic-skills/idea/SKILL.md`
+- **idea** — meta-product-business — `atomic-skills/idea/SKILL.md`
 - **idea-generation** — meta-machine-learning — `atomic-skills/idea-generation/SKILL.md`
 - **ideate** — meta-visual-design — `atomic-skills/ideate/SKILL.md`
 - **image-to-code** — meta-visual-design, meta-software-architecture — `atomic-skills/image-to-code/SKILL.md`
 - **improve-skill** — meta-agent-systems — `atomic-skills/improve-skill/SKILL.md`
 - **initiating-coverage** — meta-finance-payments — `atomic-skills/initiating-coverage/SKILL.md`
 - **inspect-dropbox-file** — meta-workplace-integrations — `atomic-skills/inspect-dropbox-file/SKILL.md`
-- **intake** — meta-specialist-catalog — `atomic-skills/intake/SKILL.md`
+- **intake** — meta-media-production — `atomic-skills/intake/SKILL.md`
 - **investigation-mode** — meta-testing-quality — `atomic-skills/investigation-mode/SKILL.md`
 - **ios-app-intents** — meta-mobile-desktop — `atomic-skills/ios-app-intents/SKILL.md`
 - **ios-debugger-agent** — meta-mobile-desktop, meta-agent-systems — `atomic-skills/ios-debugger-agent/SKILL.md`
@@ -273,8 +273,8 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **langgraph-agent-runtime** — meta-agent-systems — `atomic-skills/langgraph-agent-runtime/SKILL.md`
 - **laravel-specialist** — meta-backend-services — `atomic-skills/laravel-specialist/SKILL.md`
 - **lead-research-assistant** — meta-marketing-growth, meta-research-knowledge — `atomic-skills/lead-research-assistant/SKILL.md`
-- **lecture-materials-improver** — meta-specialist-catalog — `atomic-skills/lecture-materials-improver/SKILL.md`
-- **lecture-pack-generator** — meta-specialist-catalog — `atomic-skills/lecture-pack-generator/SKILL.md`
+- **lecture-materials-improver** — meta-office-documents — `atomic-skills/lecture-materials-improver/SKILL.md`
+- **lecture-pack-generator** — meta-office-documents — `atomic-skills/lecture-pack-generator/SKILL.md`
 - **legacy-modernizer** — meta-software-architecture — `atomic-skills/legacy-modernizer/SKILL.md`
 - **liquid-glass** — meta-mobile-desktop — `atomic-skills/liquid-glass/SKILL.md`
 - **llm-context-compressor** — meta-agent-systems — `atomic-skills/llm-context-compressor/SKILL.md`
@@ -283,7 +283,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **long-horizon-context-management** — meta-agent-systems — `atomic-skills/long-horizon-context-management/SKILL.md`
 - **long-short-pitch** — meta-finance-payments — `atomic-skills/long-short-pitch/SKILL.md`
 - **magicpath** — meta-frontend-web — `atomic-skills/magicpath/SKILL.md`
-- **market-sizing** — meta-specialist-catalog — `atomic-skills/market-sizing/SKILL.md`
+- **market-sizing** — meta-product-business — `atomic-skills/market-sizing/SKILL.md`
 - **marketing-superradar** — meta-marketing-growth — `atomic-skills/marketing-superradar/SKILL.md`
 - **marketplace** — meta-devops-cloud — `atomic-skills/marketplace/SKILL.md`
 - **mcp-builder** — meta-agent-systems — `atomic-skills/mcp-builder/SKILL.md`
@@ -379,7 +379,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **portfolio-risk-management** — meta-security-compliance — `atomic-skills/portfolio-risk-management/SKILL.md`
 - **postgres-pro** — meta-backend-services — `atomic-skills/postgres-pro/SKILL.md`
 - **posthog** — meta-data-analytics — `atomic-skills/posthog/SKILL.md`
-- **practice-materials-generator** — meta-specialist-catalog — `atomic-skills/practice-materials-generator/SKILL.md`
+- **practice-materials-generator** — meta-office-documents — `atomic-skills/practice-materials-generator/SKILL.md`
 - **prd-developer** — meta-product-business, meta-software-architecture — `atomic-skills/prd-developer/SKILL.md`
 - **prd-generation** — meta-product-business — `atomic-skills/prd-generation/SKILL.md`
 - **pride-skill** — meta-genomics-omics — `atomic-skills/pride-skill/SKILL.md`
@@ -393,7 +393,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **project-manager** — meta-product-business — `atomic-skills/project-manager/SKILL.md`
 - **prompt-engineer** — meta-agent-systems — `atomic-skills/prompt-engineer/SKILL.md`
 - **prompt-security-redteam** — meta-agent-systems, meta-security-compliance — `atomic-skills/prompt-security-redteam/SKILL.md`
-- **propagate** — meta-specialist-catalog — `atomic-skills/propagate/SKILL.md`
+- **propagate** — meta-product-business — `atomic-skills/propagate/SKILL.md`
 - **propose-security-hardening** — meta-security-compliance — `atomic-skills/propose-security-hardening/SKILL.md`
 - **proteomexchange-skill** — meta-genomics-omics — `atomic-skills/proteomexchange-skill/SKILL.md`
 - **pubchem-pug-skill** — meta-molecular-discovery — `atomic-skills/pubchem-pug-skill/SKILL.md`
@@ -452,7 +452,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **security-diff-scan** — meta-security-compliance — `atomic-skills/security-diff-scan/SKILL.md`
 - **security-reviewer** — meta-security-compliance — `atomic-skills/security-reviewer/SKILL.md`
 - **security-scan** — meta-security-compliance — `atomic-skills/security-scan/SKILL.md`
-- **semester-module-planner** — meta-specialist-catalog — `atomic-skills/semester-module-planner/SKILL.md`
+- **semester-module-planner** — meta-office-documents — `atomic-skills/semester-module-planner/SKILL.md`
 - **sentry** — meta-devops-cloud — `atomic-skills/sentry/SKILL.md`
 - **sentry-glitchtip-observability** — meta-devops-cloud — `atomic-skills/sentry-glitchtip-observability/SKILL.md`
 - **setup** (mixpanel-headless-setup) — meta-data-analytics — `atomic-skills/setup/SKILL.md`
@@ -489,12 +489,12 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **spark-engineer** — meta-data-analytics — `atomic-skills/spark-engineer/SKILL.md`
 - **spec-miner** — meta-software-architecture — `atomic-skills/spec-miner/SKILL.md`
 - **spring-boot-engineer** — meta-backend-services — `atomic-skills/spring-boot-engineer/SKILL.md`
-- **sprite-pipeline** — meta-specialist-catalog — `atomic-skills/sprite-pipeline/SKILL.md`
+- **sprite-pipeline** — meta-media-production — `atomic-skills/sprite-pipeline/SKILL.md`
 - **sql-pro** — meta-data-analytics — `atomic-skills/sql-pro/SKILL.md`
 - **sqlalchemy-alembic-expert** — meta-software-architecture — `atomic-skills/sqlalchemy-alembic-expert/SKILL.md`
 - **sre-engineer** — meta-devops-cloud — `atomic-skills/sre-engineer/SKILL.md`
 - **srs-generation** — meta-machine-learning — `atomic-skills/srs-generation/SKILL.md`
-- **start** — meta-specialist-catalog — `atomic-skills/start/SKILL.md`
+- **start** — meta-customer-communications — `atomic-skills/start/SKILL.md`
 - **statistical-and-uncertainty-visualization** — meta-data-analytics — `atomic-skills/statistical-and-uncertainty-visualization/SKILL.md`
 - **string-skill** — meta-molecular-discovery — `atomic-skills/string-skill/SKILL.md`
 - **stripe-apps** — meta-finance-payments — `atomic-skills/stripe-apps/SKILL.md`
@@ -520,9 +520,9 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **tech-design-generation** — meta-visual-design, meta-machine-learning — `atomic-skills/tech-design-generation/SKILL.md`
 - **technical** — meta-backend-services, meta-devops-cloud — `atomic-skills/technical/SKILL.md`
 - **techwriter** — meta-software-architecture — `atomic-skills/techwriter/SKILL.md`
-- **telegram-ai-bot-runtime** — meta-specialist-catalog — `atomic-skills/telegram-ai-bot-runtime/SKILL.md`
+- **telegram-ai-bot-runtime** — meta-customer-communications — `atomic-skills/telegram-ai-bot-runtime/SKILL.md`
 - **telegram-bot-test-automation** — meta-testing-quality — `atomic-skills/telegram-bot-test-automation/SKILL.md`
-- **telegram-mini-apps-specialist** — meta-specialist-catalog — `atomic-skills/telegram-mini-apps-specialist/SKILL.md`
+- **telegram-mini-apps-specialist** — meta-customer-communications — `atomic-skills/telegram-mini-apps-specialist/SKILL.md`
 - **telemetry** — meta-mobile-desktop — `atomic-skills/telemetry/SKILL.md`
 - **temporal-cloud-setup** — meta-devops-cloud — `atomic-skills/temporal-cloud-setup/SKILL.md`
 - **temporal-ops** — meta-devops-cloud — `atomic-skills/temporal-ops/SKILL.md`
@@ -534,7 +534,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **test-triage** — meta-testing-quality — `atomic-skills/test-triage/SKILL.md`
 - **tester-ai** — meta-testing-quality — `atomic-skills/tester-ai/SKILL.md`
 - **testing-data-visualizations** — meta-testing-quality, meta-data-analytics — `atomic-skills/testing-data-visualizations/SKILL.md`
-- **the-fool** — meta-specialist-catalog — `atomic-skills/the-fool/SKILL.md`
+- **the-fool** — meta-product-business — `atomic-skills/the-fool/SKILL.md`
 - **thesis-tracker** — meta-finance-payments — `atomic-skills/thesis-tracker/SKILL.md`
 - **threat-model** — meta-security-compliance, meta-machine-learning — `atomic-skills/threat-model/SKILL.md`
 - **three-statement-model-builder** — meta-machine-learning — `atomic-skills/three-statement-model-builder/SKILL.md`
@@ -670,7 +670,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **wordpress-pro** — meta-frontend-web — `atomic-skills/wordpress-pro/SKILL.md`
 - **workers-best-practices** — meta-devops-cloud — `atomic-skills/workers-best-practices/SKILL.md`
 - **workflow** — meta-workplace-integrations — `atomic-skills/workflow/SKILL.md`
-- **working-lecture-notes-generator** — meta-specialist-catalog — `atomic-skills/working-lecture-notes-generator/SKILL.md`
+- **working-lecture-notes-generator** — meta-office-documents — `atomic-skills/working-lecture-notes-generator/SKILL.md`
 - **wrangler** — meta-devops-cloud — `atomic-skills/wrangler/SKILL.md`
 - **writing-plans** — meta-media-production — `atomic-skills/writing-plans/SKILL.md`
 - **writing-skills** — meta-media-production — `atomic-skills/writing-skills/SKILL.md`

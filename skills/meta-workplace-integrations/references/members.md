@@ -1,6 +1,6 @@
 # Children of meta-workplace-integrations
 
-30 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+32 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -11,6 +11,8 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **build-report/report-to-google-doc** — Narrow conversion skill. Invoke only when the user explicitly asks to convert an existing local or blob-hosted HTML analytics report into a Google Doc, DOCX, or shareable document. — `atomic-skills/build-report/report-to-google-doc/SKILL.md`
 - **catalyst-calendar** — Use when building public-equity-investing catalyst calendars. Do not use for full event underwriting; use event-driven-analyzer. — `atomic-skills/catalyst-calendar/SKILL.md`
 - **clean-up-dropbox-content** — Clean up Dropbox content by identifying obsolete, duplicate, temporary, or unwanted files and deleting only after explicit review. Use when the user explicitly asks to delete, remove, o — `atomic-skills/clean-up-dropbox-content/SKILL.md`
+- **collect-files-with-request** — Create, inspect, and manage Dropbox file requests for collecting uploads from other people. Use when the user asks to collect files, request uploads, create an upload portal, check a fi — `atomic-skills/collect-files-with-request/SKILL.md`
+- **email** — Email sending integration guidance — Resend (native Vercel Marketplace) with React Email templates. Covers API setup, transactional emails, domain verification, and template patterns. U — `atomic-skills/email/SKILL.md`
 - **find-dropbox-content** — Find Dropbox files and folders relevant to a user request. Use when the user asks to search Dropbox, find a document, locate recent files, browse a folder, identify likely source files, — `atomic-skills/find-dropbox-content/SKILL.md`
 - **google-colab-python** — This skill should be used when designing, implementing, reviewing, debugging, or optimizing Python notebooks and experiments for Google Colab, especially workflows involving ephemeral r — `atomic-skills/google-colab-python/SKILL.md`
 - **google-docs** — Prompt- and template-complete Google Docs creation and editing with explicit-instruction-authoritative structural preservation, including semantic roles, relationships, comparison dimen — `atomic-skills/google-docs/SKILL.md`

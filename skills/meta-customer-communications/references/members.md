@@ -1,6 +1,6 @@
 # Children of meta-customer-communications
 
-85 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+88 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -22,7 +22,10 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **plan-zoom-product** — Use when choosing products. — `atomic-skills/plan-zoom-product/SKILL.md`
 - **rtms** — Use when using RTMS. — `atomic-skills/rtms/SKILL.md`
 - **setup-zoom-oauth** — Use when setting up OAuth. — `atomic-skills/setup-zoom-oauth/SKILL.md`
+- **start** — Use when starting Zoom work. — `atomic-skills/start/SKILL.md`
 - **team-chat** — Use when building Team Chat. — `atomic-skills/team-chat/SKILL.md`
+- **telegram-ai-bot-runtime** — This skill should be used when building, debugging, or scaling Telegram bots that combine 'python-telegram-bot', async handlers, AI inference, queueing, media inputs, payment flows, and — `atomic-skills/telegram-ai-bot-runtime/SKILL.md`
+- **telegram-mini-apps-specialist** — Use when building, debugging, or reviewing Telegram Mini Apps that run on React/Vite and integrate with Telegram runtime APIs, TON Connect, and wallet-oriented user flows. — `atomic-skills/telegram-mini-apps-specialist/SKILL.md`
 - **twilio-account-setup** — Create and configure a Twilio account from scratch. Covers free trial signup, trial limitations, getting credentials (Account SID and Auth Token), buying a phone number, verifying recip — `atomic-skills/twilio-account-setup/SKILL.md`
 - **twilio-agent-connect** — Use when building or integrating Twilio Agent Connect (TAC) to connect third-party LLM agent runtimes with Twilio Voice, Messaging, ConversationRelay, Conversation Memory, Conversation  — `atomic-skills/twilio-agent-connect/SKILL.md`
 - **twilio-ai-agent-architect** — Planning skill for AI-powered conversational agents. Qualifies the developer's use case across outcome sophistication, entry point, and customer profile to recommend the right Twilio Co — `atomic-skills/twilio-ai-agent-architect/SKILL.md`

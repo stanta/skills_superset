@@ -1,6 +1,6 @@
 # Children of meta-marketing-growth
 
-12 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+14 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -9,6 +9,8 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **canva-brand-check** — Check a Canva design against a brand kit and report where it diverges — off-palette colors, non-brand fonts, logo misuse, and off-tone copy. Read-only; makes no changes. Use when the us — `atomic-skills/canva-brand-check/SKILL.md`
 - **canva-resize-for-social-media** — Resize a Canva design into multiple social media formats (Facebook post, Facebook story, Instagram post, Instagram story, LinkedIn post). Use this skill when users want to resize Canva  — `atomic-skills/canva-resize-for-social-media/SKILL.md`
 - **competitive-ads-extractor** — Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improv — `atomic-skills/competitive-ads-extractor/SKILL.md`
+- **digital-advertizer** — Run the end-to-end digital advertising lifecycle (strategy → build → launch → optimize → report) across Google Ads (Search/Shopping/Performance Max/YouTube), Google AdSense (publisher m — `atomic-skills/digital-advertizer/SKILL.md`
+- **geo-marketologist** — Build generative engine optimization (GEO) strategy for brands that need visibility and citations in AI search systems such as ChatGPT Search, Perplexity, Google AI Overviews/AI Mode, a — `atomic-skills/geo-marketologist/SKILL.md`
 - **lead-research-assistant** — Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, bus — `atomic-skills/lead-research-assistant/SKILL.md`
 - **marketing-superradar** — This skill should be used to discover, rank, and adversarially validate new market segments and startup opportunities. Trigger on requests such as "Суперрадар", "маркетинговый суперрада — `atomic-skills/marketing-superradar/SKILL.md`
 - **openai-ads-conversions-setup** — Guide Codex through instrumenting or extending repositories with OpenAI Ads Measurement Pixel and optional Conversions API (CAPI). Use when adding Ads conversion tracking, browser pixel — `atomic-skills/openai-ads-conversions-setup/SKILL.md`

@@ -1,12 +1,18 @@
 # Children of meta-product-business
 
-11 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+19 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
+- **brainstorming** — You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before im — `atomic-skills/brainstorming/SKILL.md`
 - **brd-developer** — This skill should be used when drafting, reviewing, restructuring, or quality-checking Business Requirements Documents (BRDs) for software development initiatives, especially when the w — `atomic-skills/brd-developer/SKILL.md`
 - **dashboard-product-architecture** — This skill should be used when defining, redesigning, or reviewing the product architecture and information hierarchy of operational dashboards, KPI dashboards, administration consoles, — `atomic-skills/dashboard-product-architecture/SKILL.md`
+- **decompose** — Lightweight project decomposition skill. Analyzes project scope through a brief interview and determines whether the project should be treated as a single feature or split into multiple — `atomic-skills/decompose/SKILL.md`
+- **executing-plans** — Use when you have a written implementation plan to execute in a separate session with review checkpoints — `atomic-skills/executing-plans/SKILL.md`
+- **feature-forge** — Conducts structured requirements workshops to produce feature specifications, user stories, EARS-format functional requirements, acceptance criteria, and implementation checklists. Use  — `atomic-skills/feature-forge/SKILL.md`
 - **gather-business-context** — Gather business context from connected or provided sources so downstream analysis starts with the right framing. Use when an analytical question depends on missing context, such as what — `atomic-skills/gather-business-context/SKILL.md`
+- **idea** — Use when exploring a new idea before writing formal specifications. Guides users through iterative discovery, research, and critical analysis to crystallize vague ideas into validated r — `atomic-skills/idea/SKILL.md`
+- **market-sizing** — Estimate market, segment, or opportunity size with transparent assumptions and uncertainty. Use for TAM/SAM/SOM, sizing scenarios, or comparing the scale of possible opportunities. — `atomic-skills/market-sizing/SKILL.md`
 - **plan-zoom-product** — Use when choosing products. — `atomic-skills/plan-zoom-product/SKILL.md`
 - **prd-developer** — This skill should be used when drafting, reviewing, restructuring, or quality-checking Product Requirements Documents (PRDs) for software development initiatives, especially when the wo — `atomic-skills/prd-developer/SKILL.md`
 - **prd-generation** — Generates professional Product Requirements Documents (PRDs) following industry-standard methodologies. This skill activates when the user asks to write PRD, create a product requiremen — `atomic-skills/prd-generation/SKILL.md`
@@ -15,3 +21,5 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **product-design-index** — Use when Product Design is explicitly invoked, or when the user's main goal is to explore a design, research UX, audit or critique a flow, faithfully clone a visual source, check a buil — `atomic-skills/product-design-index/SKILL.md`
 - **product-owner** — Comprehensive product management guidance for planning, prioritizing, and growing digital products. Use when managing product backlog, conducting market research, defining product strat — `atomic-skills/product-owner/SKILL.md`
 - **project-manager** — This skill should be used when managing IT/software projects, turning vague initiatives into measurable outcomes, creating project charters, roadmaps, milestones, iteration plans, work  — `atomic-skills/project-manager/SKILL.md`
+- **propagate** — Walk an upstream documentation change downstream — when a PRD, SRS, tech-design, or feature spec is edited, find every dependent document, identify which sections are now stale, and int — `atomic-skills/propagate/SKILL.md`
+- **the-fool** — Use when challenging ideas, plans, decisions, or proposals using structured critical reasoning. Invoke to play devil's advocate, run a pre-mortem, red team, or audit evidence and assump — `atomic-skills/the-fool/SKILL.md`

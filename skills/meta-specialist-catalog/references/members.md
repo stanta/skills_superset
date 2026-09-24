@@ -1,40 +1,13 @@
 # Children of meta-specialist-catalog
 
-34 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+7 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
-- **alligator-development** — This skill should be used when implementing, adapting, testing, or reviewing Agora/Optimism Alligator-style partial delegation, re-delegation, authority paths, allowances, ballot-scoped — `atomic-skills/alligator-development/SKILL.md`
-- **ballot-contracts** — This skill should be used when designing, implementing, auditing, or testing security-critical voting and ballot smart contracts, especially exact-Git-commit ballots, electorate snapsho — `atomic-skills/ballot-contracts/SKILL.md`
-- **brainstorming** — You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before im — `atomic-skills/brainstorming/SKILL.md`
-- **collect-files-with-request** — Create, inspect, and manage Dropbox file requests for collecting uploads from other people. Use when the user asks to collect files, request uploads, create an upload portal, check a fi — `atomic-skills/collect-files-with-request/SKILL.md`
-- **decompose** — Lightweight project decomposition skill. Analyzes project scope through a brief interview and determines whether the project should be treated as a single feature or split into multiple — `atomic-skills/decompose/SKILL.md`
-- **digital-advertizer** — Run the end-to-end digital advertising lifecycle (strategy → build → launch → optimize → report) across Google Ads (Search/Shopping/Performance Max/YouTube), Google AdSense (publisher m — `atomic-skills/digital-advertizer/SKILL.md`
-- **email** — Email sending integration guidance — Resend (native Vercel Marketplace) with React Email templates. Covers API setup, transactional emails, domain verification, and template patterns. U — `atomic-skills/email/SKILL.md`
-- **executing-plans** — Use when you have a written implementation plan to execute in a separate session with review checkpoints — `atomic-skills/executing-plans/SKILL.md`
-- **faceless-channel** — Use only when the user asks to produce a finished multi-scene narrator-led video and explicitly requests a faceless channel, YouTube automation, narrated explainer/story/education, docu — `atomic-skills/faceless-channel/SKILL.md`
-- **feature-forge** — Conducts structured requirements workshops to produce feature specifications, user stories, EARS-format functional requirements, acceptance criteria, and implementation checklists. Use  — `atomic-skills/feature-forge/SKILL.md`
 - **game-studio** — Route early browser-game work. Use when the user needs stack selection and workflow planning across design, implementation, assets, and playtesting before moving to a specialist skill. — `atomic-skills/game-studio/SKILL.md`
-- **geo-marketologist** — Build generative engine optimization (GEO) strategy for brands that need visibility and citations in AI search systems such as ChatGPT Search, Perplexity, Google AI Overviews/AI Mode, a — `atomic-skills/geo-marketologist/SKILL.md`
-- **gosh-development** — This skill should be used when developing or integrating GOSH as a verifiable on-chain Git/object layer, including git-remote-gosh, repository contracts, version pinning, object verific — `atomic-skills/gosh-development/SKILL.md`
-- **humanizer** — Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive "Signs of AI writi — `atomic-skills/humanizer/SKILL.md`
-- **idea** — Use when exploring a new idea before writing formal specifications. Guides users through iterative discovery, research, and critical analysis to crystallize vague ideas into validated r — `atomic-skills/idea/SKILL.md`
-- **intake** — Use when Creative Production is explicitly invoked or mentioned without a concrete request, when the user asks what Creative Production can do, or when the user wants help getting start — `atomic-skills/intake/SKILL.md`
-- **lecture-materials-improver** — This skill should be used when the user already has draft teaching materials and needs them reviewed, critiqued, restructured, and improved for clarity, pacing, engagement, and teachabi — `atomic-skills/lecture-materials-improver/SKILL.md`
-- **lecture-pack-generator** — This skill should be used when the task is to create a complete ready-to-teach session package from scratch for any domain, including a lecture plan, slide outline, activities, checks f — `atomic-skills/lecture-pack-generator/SKILL.md`
-- **market-sizing** — Estimate market, segment, or opportunity size with transparent assumptions and uncertainty. Use for TAM/SAM/SOM, sizing scenarios, or comparing the scale of possible opportunities. — `atomic-skills/market-sizing/SKILL.md`
 - **odoo-extension-development** — Best-practice rules for designing, implementing, reviewing, testing and upgrading Odoo addons and ERP connectors, with an Orbitas integration profile. — `atomic-skills/odoo-extension-development/SKILL.md`
 - **omniverse-usd-performance-tuning** — Top-level workflow skill for USD performance diagnosis and optimization. Use for slow loading, high memory, low FPS, or 'optimize my scene' requests; delegates auth/runtime setup to Pha — `atomic-skills/omniverse-usd-performance-tuning/SKILL.md`
-- **practice-materials-generator** — This skill should be used when the task is to create teaching practice materials—concept checks, problems, mini-cases, quizzes, and answer keys—for any academic, technical, business, or — `atomic-skills/practice-materials-generator/SKILL.md`
 - **probe-sdk** — Use when using Probe SDK. — `atomic-skills/probe-sdk/SKILL.md`
-- **propagate** — Walk an upstream documentation change downstream — when a PRD, SRS, tech-design, or feature spec is edited, find every dependent document, identify which sections are now stale, and int — `atomic-skills/propagate/SKILL.md`
 - **review** — Review spec-forge generated documents (SRS + tech-design + feature specs) for quality, completeness, and internal consistency. Finds issues like incomplete sections, contradictions, mis — `atomic-skills/review/SKILL.md`
 - **rivet-sdk** — Use when using Rivet SDK. — `atomic-skills/rivet-sdk/SKILL.md`
 - **scribe** — Use when using Scribe. — `atomic-skills/scribe/SKILL.md`
-- **semester-module-planner** — This skill should be used when the task is to design a coherent multi-week module, syllabus, or learning arc for any subject, including weekly goals, session structure, activities, home — `atomic-skills/semester-module-planner/SKILL.md`
-- **sprite-pipeline** — Generate and normalize 2D sprite animations. Use when the user asks for full-strip generation from approved source frames, consistent anchor and scale normalization, or preview assets f — `atomic-skills/sprite-pipeline/SKILL.md`
-- **start** — Use when starting Zoom work. — `atomic-skills/start/SKILL.md`
-- **telegram-ai-bot-runtime** — This skill should be used when building, debugging, or scaling Telegram bots that combine 'python-telegram-bot', async handlers, AI inference, queueing, media inputs, payment flows, and — `atomic-skills/telegram-ai-bot-runtime/SKILL.md`
-- **telegram-mini-apps-specialist** — Use when building, debugging, or reviewing Telegram Mini Apps that run on React/Vite and integrate with Telegram runtime APIs, TON Connect, and wallet-oriented user flows. — `atomic-skills/telegram-mini-apps-specialist/SKILL.md`
-- **the-fool** — Use when challenging ideas, plans, decisions, or proposals using structured critical reasoning. Invoke to play devil's advocate, run a pre-mortem, red team, or audit evidence and assump — `atomic-skills/the-fool/SKILL.md`
-- **working-lecture-notes-generator** — This skill should be used when the main deliverable is a teacher-facing working lecture script for a single class session, including speaking flow, board plan, timing, checks for unders — `atomic-skills/working-lecture-notes-generator/SKILL.md`

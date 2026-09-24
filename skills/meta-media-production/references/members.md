@@ -1,9 +1,11 @@
 # Children of meta-media-production
 
-23 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+26 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
+- **faceless-channel** — Use only when the user asks to produce a finished multi-scene narrator-led video and explicitly requests a faceless channel, YouTube automation, narrated explainer/story/education, docu — `atomic-skills/faceless-channel/SKILL.md`
+- **intake** — Use when Creative Production is explicitly invoked or mentioned without a concrete request, when the user asks what Creative Production can do, or when the user wants help getting start — `atomic-skills/intake/SKILL.md`
 - **remotion-best-practices** — Router for all Remotion skills — `atomic-skills/remotion-best-practices/SKILL.md`
 - **remotion-captions** — Transcribing, displaying and animating captions — `atomic-skills/remotion-captions/SKILL.md`
 - **remotion-create** — Create a new Remotion video — `atomic-skills/remotion-create/SKILL.md`
@@ -16,6 +18,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **remotion-saas** — Build an app with Remotion — `atomic-skills/remotion-saas/SKILL.md`
 - **remotion-studio** — Preview a Remotion video — `atomic-skills/remotion-studio/SKILL.md`
 - **remotion-upgrade** — Upgrade Remotion, and related packages — `atomic-skills/remotion-upgrade/SKILL.md`
+- **sprite-pipeline** — Generate and normalize 2D sprite animations. Use when the user asks for full-strip generation from approved source frames, consistent anchor and scale normalization, or preview assets f — `atomic-skills/sprite-pipeline/SKILL.md`
 - **subtitles** — Burn timed subtitles onto a finished video or configure Whisper-timed caption burning during faceless-video assembly. Takes video/audio generation jobs or a local finished video, option — `atomic-skills/subtitles/SKILL.md`
 - **video-sdk** — Use when using Video SDK. — `atomic-skills/video-sdk/SKILL.md`
 - **video-sdk/android** — Zoom Video SDK for Android native apps. Use when building custom Android video experiences with full UI control, session tokens, raw media options, and event-driven participant state. — `atomic-skills/video-sdk/android/SKILL.md`
