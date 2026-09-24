@@ -6,6 +6,9 @@ on:
       - "skills/**"
       - "atomic-skills/**"
       - "discovery/validate_metaskills.py"
+      - "discovery/test_relative_paths.py"
+      - "README.md"
+      - "docs/metaskills.md"
       - ".github/workflows/metaskills.yml"
   workflow_dispatch:
 permissions:
@@ -18,5 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Verify first-level isolation and static catalogs (CI only)
+      - name: Path resolution regression tests (CI only)
+        run: python -m unittest discover -s discovery -p 'test_*.py' -v
+      - name: Verify all meta catalog and legacy references (CI only)
         run: python discovery/validate_metaskills.py
