@@ -1,6 +1,6 @@
 # Children of meta-mobile-desktop
 
-35 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+40 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -24,7 +24,10 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **ios-memgraph-leaks** — Capture and inspect iOS leaks and memgraphs. Use when debugging leaked objects, retain cycles, memory growth, or before/after leak evidence. — `atomic-skills/ios-memgraph-leaks/SKILL.md`
 - **ios-simulator-browser** — Mirror an iOS Simulator into the Codex in-app browser and render SwiftUI previews from importable Swift packages in that simulator with hot reload. Use when a user wants to watch or int — `atomic-skills/ios-simulator-browser/SKILL.md`
 - **kotlin-specialist** — Provides idiomatic Kotlin implementation patterns including coroutine concurrency, Flow stream handling, multiplatform architecture, Compose UI construction, Ktor server setup, and type — `atomic-skills/kotlin-specialist/SKILL.md`
+- **liquid-glass** — Implement and review macOS SwiftUI Liquid Glass UI. Use when adopting system glass, removing conflicting custom chrome, or building glass surfaces. — `atomic-skills/liquid-glass/SKILL.md`
+- **packaging-notarization** — Prepare macOS packaging and notarization workflows. Use when archiving apps, validating bundles, or explaining distribution-only failures. — `atomic-skills/packaging-notarization/SKILL.md`
 - **react-native-expert** — Builds, optimizes, and debugs cross-platform mobile applications with React Native and Expo. Implements navigation hierarchies (tabs, stacks, drawers), configures native modules, optimi — `atomic-skills/react-native-expert/SKILL.md`
+- **signing-entitlements** — Inspect macOS signing, entitlements, and Gatekeeper issues. Use when diagnosing code signing, sandbox, hardened runtime, or trust failures. — `atomic-skills/signing-entitlements/SKILL.md`
 - **swift-expert** — Builds iOS/macOS/watchOS/tvOS applications, implements SwiftUI views and state management, designs protocol-oriented architectures, handles async/await concurrency, implements actors fo — `atomic-skills/swift-expert/SKILL.md`
 - **swiftpm-macos** — Build, run, and test SwiftPM macOS packages and executables. Use when the repo is package-first or has no Xcode project. — `atomic-skills/swiftpm-macos/SKILL.md`
 - **swiftui-liquid-glass** — Implement and review iOS 26+ SwiftUI Liquid Glass UI. Use when adopting Liquid Glass or checking its correctness, performance, and design fit. — `atomic-skills/swiftui-liquid-glass/SKILL.md`
@@ -32,7 +35,9 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **swiftui-performance-audit** — Audit SwiftUI runtime performance from code first. Use when diagnosing slow rendering, janky scrolling, expensive updates, or profiling needs. — `atomic-skills/swiftui-performance-audit/SKILL.md`
 - **swiftui-ui-patterns** — Build and refactor SwiftUI UI with component patterns and examples. Use when shaping navigation, state, layouts, controls, or screen composition. — `atomic-skills/swiftui-ui-patterns/SKILL.md`
 - **swiftui-view-refactor** — Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership. — `atomic-skills/swiftui-view-refactor/SKILL.md`
+- **telemetry** — Add and verify lightweight macOS runtime telemetry. Use when wiring Logger events or inspecting logs for windows, sidebars, menus, and actions. — `atomic-skills/telemetry/SKILL.md`
 - **upgrading-expo** — Guidelines for upgrading Expo SDK versions and fixing dependency issues — `atomic-skills/upgrading-expo/SKILL.md`
+- **use-dom** — Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally. — `atomic-skills/use-dom/SKILL.md`
 - **video-sdk/flutter** — Zoom Video SDK for Flutter. Use when building custom video session apps in Flutter with flutter_zoom_videosdk, event-driven architecture, session lifecycle handling, and mobile platform — `atomic-skills/video-sdk/flutter/SKILL.md`
 - **video-sdk/macos** — Zoom Video SDK for macOS native desktop apps. Use when building custom macOS video sessions with native UI control, tokenized join, and desktop-oriented media/device workflows. — `atomic-skills/video-sdk/macos/SKILL.md`
 - **video-sdk/react-native** — Zoom Video SDK for React Native. Use when building custom mobile video session experiences with @zoom/react-native-videosdk, event listeners, helper-based APIs, and backend JWT token fl — `atomic-skills/video-sdk/react-native/SKILL.md`

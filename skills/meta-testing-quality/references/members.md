@@ -1,6 +1,6 @@
 # Children of meta-testing-quality
 
-29 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+33 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -15,6 +15,8 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **design-qa** — Internal prototype QA helper. Use only after a Product Design prototype, URL-to-code build, or image-to-code build has a source visual target and a rendered implementation to compare be — `atomic-skills/design-qa/SKILL.md`
 - **drupal-11-best-practices** — This skill should be used when architecting, developing, reviewing, testing, securing, optimizing, deploying, upgrading, or maintaining Drupal 11 applications, custom modules, themes, r — `atomic-skills/drupal-11-best-practices/SKILL.md`
 - **frontend-testing-debugging** — Use when testing, debugging, or making targeted improvements to rendered frontend apps through the Build Web Apps or web dev plugin: local dev servers, UI regressions, interaction bugs, — `atomic-skills/frontend-testing-debugging/SKILL.md`
+- **game-playtest** — Run browser-game playtests and frontend QA. Use when the user asks for smoke tests, screenshot-based verification, browser automation, HUD or overlay review, or structured issue-finding — `atomic-skills/game-playtest/SKILL.md`
+- **investigation-mode** — Orchestrated debugging coordinator. Triggers on frustration signals (stuck, hung, broken, waiting) and systematically triages: runtime logs → workflow status → browser verify → deploy/e — `atomic-skills/investigation-mode/SKILL.md`
 - **n8n-validation-expert** — Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding v — `atomic-skills/n8n-validation-expert/SKILL.md`
 - **playwright-expert** — Use when writing E2E tests with Playwright, setting up test infrastructure, or debugging flaky browser tests. Invoke to write test scripts, create page objects, configure test fixtures, — `atomic-skills/playwright-expert/SKILL.md`
 - **playwright-skill** — Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, — `atomic-skills/playwright-skill/SKILL.md`
@@ -31,5 +33,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **twilio-debugging-observability** — Debug Twilio integrations and set up production observability. Covers the Console Debugger, Monitor Alerts API, Event Streams for error log streaming, status callback tracking, common e — `atomic-skills/twilio-debugging-observability/SKILL.md`
 - **twilio-verify-send-otp** — Send and verify one-time passcodes (OTPs) via Twilio Verify over SMS, RCS, voice, email, or WhatsApp. Covers creating a Verify Service, sending tokens, checking submitted codes, automat — `atomic-skills/twilio-verify-send-otp/SKILL.md`
 - **validation** — Use when Codex is already in the validation phase of a security scan or the user explicitly asks to determine whether one or more candidate security findings are valid. Do not use as th — `atomic-skills/validation/SKILL.md`
+- **verification** — Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → response. Triggers on dev server start and 'why isn't this — `atomic-skills/verification/SKILL.md`
+- **verification-before-completion** — Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success c — `atomic-skills/verification-before-completion/SKILL.md`
 - **verify-fix** — Use only when the user explicitly requests verification that a security fix remediates a reported vulnerability. Do not invoke automatically while implementing fixes, reviewing ordinary — `atomic-skills/verify-fix/SKILL.md`
 - **webapp-testing** — Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and vi — `atomic-skills/webapp-testing/SKILL.md`

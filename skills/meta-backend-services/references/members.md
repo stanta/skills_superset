@@ -1,6 +1,6 @@
 # Children of meta-backend-services
 
-26 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+32 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -14,15 +14,21 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **graphql-architect** — Use when designing GraphQL schemas, implementing Apollo Federation, or building real-time subscriptions. Invoke for schema design, resolvers with DataLoader, query optimization, federat — `atomic-skills/graphql-architect/SKILL.md`
 - **langfuse-backend-dev-guidelines** — Comprehensive backend development guide for Langfuse's Next.js 14/tRPC/Express/TypeScript monorepo. Use when creating tRPC routers, public API endpoints, BullMQ queue processors, servic — `atomic-skills/langfuse-backend-dev-guidelines/SKILL.md`
 - **laravel-specialist** — Build and configure Laravel 10+ applications, including creating Eloquent models and relationships, implementing Sanctum authentication, configuring Horizon queues, designing RESTful AP — `atomic-skills/laravel-specialist/SKILL.md`
+- **micro** — Expert guidance for micro — asynchronous HTTP microservices framework by Vercel. Use when building lightweight HTTP servers, API endpoints, or microservices using the micro library. — `atomic-skills/micro/SKILL.md`
+- **mongodb-atlas-local** — This skill should be used when setting up, debugging, or operating MongoDB Atlas Local environments for development, especially host-networked Docker setups, auth-enabled local instance — `atomic-skills/mongodb-atlas-local/SKILL.md`
+- **mongodb-operator** — This skill should be used when designing, reviewing, or troubleshooting MongoDB usage in application code, including schemas, indexes, query paths, collection growth, persistence failur — `atomic-skills/mongodb-operator/SKILL.md`
 - **n8n-node-configuration** — Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or le — `atomic-skills/n8n-node-configuration/SKILL.md`
+- **nats-jetstream** — This skill should be used when building, debugging, or operating async Python microservices that communicate via NATS JetStream — including consumer/producer patterns, durable subscript — `atomic-skills/nats-jetstream/SKILL.md`
 - **nestjs-expert** — Creates and configures NestJS modules, controllers, services, DTOs, guards, and interceptors for enterprise-grade TypeScript backend applications. Use when building NestJS REST APIs or  — `atomic-skills/nestjs-expert/SKILL.md`
 - **next-cache-components** — Next.js 16 Cache Components guidance — PPR, use cache directive, cacheLife, cacheTag, updateTag, and migration from unstable_cache. Use when implementing partial prerendering, caching s — `atomic-skills/next-cache-components/SKILL.md`
 - **node-link-and-diagram-layout** — Choose and apply automatic layout strategies for node-link diagrams and connected-node visuals. Use when the user asks how to auto-arrange nodes, reduce line crossings, route edges, avo — `atomic-skills/node-link-and-diagram-layout/SKILL.md`
 - **openai-api-troubleshooting** — Use when an OpenAI API request fails and Codex needs to classify the likely cause, explain the next step, and route to the right follow-up. Covers common runtime failures such as blocke — `atomic-skills/openai-api-troubleshooting/SKILL.md`
 - **openai-platform-api-key** — Use when Codex is asked to build, run, test, debug, or configure an OpenAI-backed or provider-unspecified AI app, UI, script, CLI, generator, or tool, especially requests phrased only a — `atomic-skills/openai-platform-api-key/SKILL.md`
 - **postgres-pro** — Use when optimizing PostgreSQL queries, configuring replication, or implementing advanced database features. Invoke for EXPLAIN analysis, JSONB operations, extension usage, VACUUM tunin — `atomic-skills/postgres-pro/SKILL.md`
+- **rails-expert** — Rails 7+ specialist that optimizes Active Record queries with includes/eager_load, implements Turbo Frames and Turbo Streams for partial page updates, configures Action Cable for WebSoc — `atomic-skills/rails-expert/SKILL.md`
 - **redis-n8n-ops** — This skill should be used when designing, implementing, reviewing, or operating Redis usage and Redis integrations with self-hosted n8n workflows, including cache design, queues, locks, — `atomic-skills/redis-n8n-ops/SKILL.md`
 - **runtime-cache** — Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing cach — `atomic-skills/runtime-cache/SKILL.md`
+- **spring-boot-engineer** — Generates Spring Boot 3.x configurations, creates REST controllers, implements Spring Security 6 authentication flows, sets up Spring Data JPA repositories, and configures reactive WebF — `atomic-skills/spring-boot-engineer/SKILL.md`
 - **supabase** — Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations — `atomic-skills/supabase/SKILL.md`
 - **supabase-best-practices** — Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations. — `atomic-skills/supabase-best-practices/SKILL.md`
 - **supabase-postgres-best-practices** — Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations. — `atomic-skills/supabase-postgres-best-practices/SKILL.md`
