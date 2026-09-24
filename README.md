@@ -1,3 +1,5 @@
+> **Experimental `metaskills` branch:** `skills/` now contains first-level meta-skills **only**. All original, unchanged skills and their resources have moved to `atomic-skills/`. First-level search never returns atomic skills; use the meta's scoped `resolve` or explicit `lookup <original-name>`. Old hard-coded `skills/<original-name>/...` paths must be migrated. [Architecture and usage](docs/metaskills.md).
+
 # KiloCode AI Workflow Repository
 
 This repository contains a structured, documentation-first workflow for AI-assisted software delivery. It combines:
