@@ -270,6 +270,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [database-optimizer](skills/database-optimizer/)                         | PostgreSQL or MySQL query optimization, indexes, execution plans, and lock contention.          |
 | [embedded-systems](skills/embedded-systems/)                             | STM32, ESP32, FreeRTOS, bare-metal firmware, interrupts, DMA, and power optimization.           |
 | [game-developer](skills/game-developer/)                                 | Unity, Unreal Engine, ECS, physics, multiplayer networking, shaders, and game optimization.     |
+| [google-colab-python](skills/google-colab-python/)                       | Reproducible, resource-aware Python workflows for Google Colab, Drive staging, checkpoints, GPU/RAM checks, and notebook hygiene. |
 | [javascript-pro](skills/javascript-pro/)                                 | JavaScript, ES modules, async flows, Node.js APIs, browser performance, and Web Workers.        |
 | [kotlin-specialist](skills/kotlin-specialist/)                           | Kotlin coroutines, Flow, multiplatform development, Compose, Ktor, and DSLs.                    |
 | [mongodb-atlas-local](skills/mongodb-atlas-local/)                       | MongoDB Atlas Local, Docker setup, auth-enabled local development, and vector search bootstrap. |
