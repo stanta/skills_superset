@@ -1,3 +1,4 @@
 lancedb/
 node_modules/
 cli/workspaces
+*.pyc
