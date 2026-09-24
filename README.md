@@ -4,6 +4,8 @@
 
 ## How a simple agent navigates
 
+**Path base is the containing file.** This root README correctly uses `atomic-skills/`. From any `skills/meta-*/SKILL.md`, use `../../atomic-skills/`; from its `references/members.md` (or the specialist `references/legacy-names.md`), use `../../../atomic-skills/`. Search/open each file relative to its own directory, even if the agent's initial skill search is restricted to `skills/`.
+
 1. Search only `skills/` and read a relevant `skills/meta-*/SKILL.md`.
 2. Decompose the request and search/read that meta-skill's static `references/members.md`.
 3. Read the selected `atomic-skills/<original-id>/SKILL.md` with normal file reading. Repeat for distinct subtasks; do not bulk-load atomic skills.

@@ -2,43 +2,60 @@
 
 ## Agent runtime (no scripts and no MCP required)
 
-The ordinary first-level skill scanner sees `skills/meta-*/SKILL.md` only.
-Every meta-skill is a standard `SKILL.md` with YAML `name`, `description`
-and Markdown instructions. The agent chooses a meta by the normal skill
-search, reads its `references/members.md` using normal text search or file
-reading, then reads only selected `atomic-skills/<original-path>/SKILL.md`.
-Repeat for other subtasks; 1–3 atomic skills per subtask is the default.
-Neither CLI nor Python nor a resident service is required by the agent.
+Only `skills/meta-*/SKILL.md` are visible to first-level skill discovery.
+Each is a standard Agent Skill with YAML `name` and `description`.
+Read the chosen meta `SKILL.md`, inspect its local `references/members.md`
+using ordinary file search, then open the selected atomic skill's full
+`SKILL.md`. Repeat for separate subtasks; load 1–3 atomic skills at a time.
+A search result excerpt or the one-line catalog entry is not sufficient.
 
-For an explicitly named old skill, first read
-`skills/meta-specialist-catalog/references/legacy-names.md` and search
-for the original exact ID or frontmatter name. This file maps all original
-skills to meta group(s) and exact target paths; direct reading of a known
-`atomic-skills/<original-path>/SKILL.md` also works without a script.
+**Resolve relative paths from the directory containing the file that
+mentions them**, not from the repository root, except for explicitly
+repository-root-relative paths shown in the root README.
+
+| File that contains the path | Correct relative atomic root |
+| --- | --- |
+| `README.md` or `README.legacy.md` (repository root) | `atomic-skills/` |
+| `docs/metaskills.md` (this file) | `../atomic-skills/` |
+| `skills/meta-*/SKILL.md` | `../../atomic-skills/` |
+| `skills/meta-*/references/members.md` | `../../../atomic-skills/` |
+| `skills/meta-specialist-catalog/references/legacy-names.md` | `../../../atomic-skills/` |
+
+For example, a meta instruction at
+`../skills/meta-agent-systems/SKILL.md` uses
+`../../atomic-skills/agent-evals-lab/SKILL.md`, while a child-catalog
+entry inside `../skills/meta-agent-systems/references/members.md` uses
+`../../../atomic-skills/agent-evals-lab/SKILL.md`. Both resolve to the
+same existing atomic file. A known atomic file can also be opened from
+this documentation directory as
+`../atomic-skills/agent-evals-lab/SKILL.md`.
+
+For an explicitly named old skill, search the static registry at
+`../skills/meta-specialist-catalog/references/legacy-names.md`.
+Its entries, like the ordinary child catalogs, are relative to the
+registry's own `references/` directory and begin with
+`../../../atomic-skills/`.
 
 ## Visibility and limits
 
-The entire original `skills/` subtree is preserved byte-for-byte under
-`atomic-skills/`. Initial discovery only scans `skills/`, containing
-26 meta-skills. A repository-global `**/SKILL.md` file search still sees
-atomic files; configure a client to use `skills/` as its *skill discovery
-root* and allow ordinary read access to `atomic-skills/` for second-level
-loading. A generic code-search UI is not an access-control boundary.
+All original atomic skills and their relative resources are preserved
+under the repository-root `atomic-skills/` directory. First-level
+discovery must enumerate only repository-root `skills/`. A global
+repository `**/SKILL.md` search will also find the atomic files;
+the directory convention is not an access-control mechanism.
+No agent-time CLI, Python, MCP server or embedding service is needed.
 
-File-path compatibility requires migrating hardcoded
-`skills/<original-path>/...` to `atomic-skills/<original-path>/...`.
-Preserving old paths while hiding them from a scanner of `skills/` is
-not possible. Original frontmatter names, ordinary SKILL.md bodies,
-relative bundled scripts, references and assets are unchanged.
+Moving old atomic directories changes hard-coded repository-root paths
+from `skills/<original-path>/...` to
+`atomic-skills/<original-path>/...`. Existing original frontmatter
+names, original skill bodies and relative bundled resources are intact.
 
 ## Taxonomy and maintenance
 
-Domains are curated topic groups with matching over existing skill names
-and descriptions, not neural embeddings. Some skills belong to two meta
-domains. The unmatched set is under `meta-specialist-catalog`. Catalogs
-and exact-name registry are static Markdown; they were generated at
-authoring time. A maintainer may regenerate them offline after additions.
-An optional GitHub Actions validation can check link targets, atomic
-coverage and the meta-only first-level root. No agent-time scripts or
-new discovery API are necessary. This branch does not claim measured
-routing accuracy, token savings, or perfect topic classification.
+Domain memberships and name registry are static Markdown. Some atomic
+skills appear in two meta domains. The unmatched set remains in
+`meta-specialist-catalog`. After any catalog change, the CI-only
+validator resolves **every** referenced child file from its containing
+catalog's directory and verifies the first-level visibility boundary.
+This is a filesystem-based semantic taxonomy, not a claim of measured
+token savings or perfect routing quality.
