@@ -146,8 +146,8 @@ def validate() -> dict:
         expected_id = target.parent.relative_to(ATOMIC.resolve()).as_posix()
         if identity != expected_id or target in registered:
             raise AssertionError("Duplicate or incorrect legacy ID: " + identity)
-        owners = line[id_end + 2:].strip().split(" — ")
-        if len(owners) != 3 or set(owners[1].split(", ")) != membership[target]:
+        owners = line.rsplit(" — ", 1)[0].split(" — ", 1)
+        if len(owners) != 2 or set(owners[1].split(", ")) != membership[target]:
             raise AssertionError("Wrong owning meta-skills in legacy registry: " + identity)
         registered.add(target)
         registry_links += 1
