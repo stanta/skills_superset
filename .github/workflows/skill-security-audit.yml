@@ -3,13 +3,13 @@ name: Skill security audit
 on:
   pull_request:
     paths:
-      - 'skills/**'
-      - '.github/workflows/skill-security-audit.yml'
+      - "skills/**"
+      - ".github/workflows/skill-security-audit.yml"
   push:
     branches: [main]
     paths:
-      - 'skills/**'
-      - '.github/workflows/skill-security-audit.yml'
+      - "skills/**"
+      - ".github/workflows/skill-security-audit.yml"
 
 permissions:
   contents: read
@@ -32,7 +32,7 @@ jobs:
 
       - name: Run auditor unit tests
         shell: bash
-        run: python3 -m unittest skills/skill-security-auditor/scripts/test_audit_skill.py
+        run: python3 -m unittest atomic-skills/skill-security-auditor/scripts/test_audit_skill.py
 
       - name: Select trusted auditor and audit changed skills (pull request)
         if: github.event_name == 'pull_request'
@@ -45,11 +45,11 @@ jobs:
           rm -rf /tmp/trusted-skill-auditor
           mkdir -p /tmp/trusted-skill-auditor
 
-          if git cat-file -e "${BASE_SHA}:skills/skill-security-auditor/scripts/audit_skill.py" 2>/dev/null; then
-            git archive "${BASE_SHA}" skills/skill-security-auditor | tar -x -C /tmp/trusted-skill-auditor
-            AUDITOR=/tmp/trusted-skill-auditor/skills/skill-security-auditor/scripts/audit_skill.py
+          if git cat-file -e "${BASE_SHA}:atomic-skills/skill-security-auditor/scripts/audit_skill.py" 2>/dev/null; then
+            git archive "${BASE_SHA}" atomic-skills/skill-security-auditor | tar -x -C /tmp/trusted-skill-auditor
+            AUDITOR=/tmp/trusted-skill-auditor/atomic-skills/skill-security-auditor/scripts/audit_skill.py
           else
-            AUDITOR=skills/skill-security-auditor/scripts/audit_skill.py
+            AUDITOR=atomic-skills/skill-security-auditor/scripts/audit_skill.py
             echo 'Bootstrap mode: base revision has no auditor yet; independent review is required.'
           fi
 
@@ -65,5 +65,5 @@ jobs:
           HEAD_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          python3 skills/skill-security-auditor/scripts/audit_skill.py             --repo-root .             --changed-from "${BASE_SHA}"             --changed-to "${HEAD_SHA}"             --fail-on high             --report /tmp/skill-security-report.json
+          python3 atomic-skills/skill-security-auditor/scripts/audit_skill.py             --repo-root .             --changed-from "${BASE_SHA}"             --changed-to "${HEAD_SHA}"             --fail-on high             --report /tmp/skill-security-report.json
           cat /tmp/skill-security-report.json
