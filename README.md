@@ -1,4 +1,4 @@
-> **Experimental `metaskills` branch:** `skills/` now contains first-level meta-skills **only**. All original, unchanged skills and their resources have moved to `atomic-skills/`. First-level search never returns atomic skills; use the meta's scoped `resolve` or explicit `lookup <original-name>`. Old hard-coded `skills/<original-name>/...` paths must be migrated. [Architecture and usage](docs/metaskills.md).
+> **Experimental `metaskills` branch:** first-level skill discovery scans **only `skills/`**, containing ordinary-format meta-skills. Original skills and their resources remain intact under `atomic-skills/`. Agents use normal file search/read: meta `SKILL.md` → `references/members.md` → selected atomic `SKILL.md`. **No scripts or MCP calls by the agent.** Exact old skill names are indexed in `skills/meta-specialist-catalog/references/legacy-names.md`. Old hardcoded `skills/<slug>/...` file paths now use `atomic-skills/<slug>/...`. [Architecture](docs/metaskills.md).
 
 # KiloCode AI Workflow Repository
 
