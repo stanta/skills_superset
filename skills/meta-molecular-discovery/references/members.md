@@ -1,6 +1,6 @@
 # Children of meta-molecular-discovery
 
-15 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+22 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path.
 
@@ -13,9 +13,16 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path.
 - **boltz-small-molecule-design** — Design new small-molecule binders with Boltz. Use when generating novel ligands or hits for a target without a fixed compound library. Not for screening existing molecules or one-off do — `atomic-skills/boltz-small-molecule-design/SKILL.md`
 - **boltz-small-molecule-screen** — Screen existing small-molecule libraries with Boltz. Use when docking, scoring, or ranking a supplied SMILES or compound library against a target; also returns free Tier-1 ADME/ADMET (s — `atomic-skills/boltz-small-molecule-screen/SKILL.md`
 - **boltz-structure-and-binding** — Predict structures and binding for one defined complex with Boltz. Use when folding a protein, RNA, DNA, or ligand complex, docking one ligand, predicting an interface, or scoring bindi — `atomic-skills/boltz-structure-and-binding/SKILL.md`
+- **chebi-skill** — Submit compact ChEBI 2.0 API requests for chemical search, compound lookup, ontology traversal, and structure metadata. Use when a user wants concise ChEBI summaries — `atomic-skills/chebi-skill/SKILL.md`
 - **chembl-skill** — Submit compact ChEMBL API requests for activity, molecule, target, mechanism, and text-search endpoints. Use when a user wants concise ChEMBL summaries — `atomic-skills/chembl-skill/SKILL.md`
+- **hmdb-skill** — Submit compact HMDB search requests for metabolites, proteins, diseases, and pathways. Use when a user wants concise HMDB summaries — `atomic-skills/hmdb-skill/SKILL.md`
 - **human-protein-atlas-skill** — Submit compact Human Protein Atlas requests for gene JSON, search downloads, and page-level tissue or cell-line lookups. Use when a user wants concise Human Protein Atlas summaries; sav — `atomic-skills/human-protein-atlas-skill/SKILL.md`
+- **metabolights-skill** — Submit compact MetaboLights requests for study discovery and study-level metabolomics metadata. Use when a user wants concise MetaboLights summaries — `atomic-skills/metabolights-skill/SKILL.md`
 - **pharmgkb-skill** — Submit compact PharmGKB API requests for genes, variants, clinical annotations, dosing guidelines, and search. Use when a user wants concise PharmGKB summaries — `atomic-skills/pharmgkb-skill/SKILL.md`
 - **pubchem-pug-skill** — Submit compact PubChem PUG REST requests for compound properties, descriptions, assay summaries, and substance metadata. Use when a user wants concise PubChem summaries — `atomic-skills/pubchem-pug-skill/SKILL.md`
+- **quickgo-skill** — Submit compact QuickGO requests for GO terms, annotations, and ontology traversal. Use when a user wants concise QuickGO summaries — `atomic-skills/quickgo-skill/SKILL.md`
 - **rcsb-pdb-skill** — Submit compact RCSB PDB requests for core metadata, Search API queries, and FASTA downloads. Use when a user wants concise RCSB summaries; save raw JSON or FASTA only on request. — `atomic-skills/rcsb-pdb-skill/SKILL.md`
+- **reactome-skill** — Submit compact Reactome ContentService requests for pathway, event, participant, search, and diagram-related data. Use when a user wants concise Reactome summaries — `atomic-skills/reactome-skill/SKILL.md`
+- **rhea-skill** — Submit compact Rhea reaction search requests for biochemical reactions and reaction IDs. Use when a user wants concise Rhea summaries — `atomic-skills/rhea-skill/SKILL.md`
+- **string-skill** — Submit compact STRING API requests for network, interaction partner, and enrichment endpoints. Use when a user wants concise STRING summaries — `atomic-skills/string-skill/SKILL.md`
 - **uniprot-skill** — Submit compact UniProt REST API requests for UniProtKB, UniRef, UniParc, and FASTA stream endpoints. Use when a user wants concise UniProt summaries; save raw JSON or FASTA only on requ — `atomic-skills/uniprot-skill/SKILL.md`
