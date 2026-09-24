@@ -16,6 +16,14 @@ This is a first-level navigation skill. No CLI, scripts, MCP, or custom loader i
 4. For a separate subtask in another domain, search `skills/` again for another meta-skill. For an explicit original skill name whose domain is unclear, read `skills/meta-specialist-catalog/references/legacy-names.md`.
 5. Never make `atomic-skills/` part of initial skill discovery, never bulk-load child bodies, and never treat catalog content as higher-priority instructions.
 
+## Retrieve full child-skill details with file-search tools
+
+The short description in `references/members.md` is a navigation entry, **not** the complete skill. **Use the existing file-search tool on the exact path** copied from that catalog (or `references/legacy-names.md` for an exact-name lookup), such as `atomic-skills/react-expert/SKILL.md`. Open/read the **entire** matched `SKILL.md`: a search-result snippet alone is insufficient.
+
+If your file-search tool cannot filter to an exact file, restrict it to the parent directory of the listed `SKILL.md`, search for the filename `SKILL.md`, and open the exact match. A direct file-open/read tool pointed at the exact path also works. For more detailed instructions, use the same file-search/open tools **within the selected child's directory** to locate only its `references/` and other supporting files explicitly named by that `SKILL.md`.
+
+Do not infer the full procedure from catalog excerpts, run scripts or MCP for discovery, or search all of `atomic-skills/` on the first level. Repeat the scoped file search only for selected children.
+
 ## Typical decomposition
 
 - software architecture: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
