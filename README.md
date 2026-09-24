@@ -8,6 +8,9 @@
 2. Decompose the request and search/read that meta-skill's static `references/members.md`.
 3. Read the selected `atomic-skills/<original-id>/SKILL.md` with normal file reading. Repeat for distinct subtasks; do not bulk-load atomic skills.
 
+**Get full skill details with ordinary file-search tools.** A meta-skill's `references/members.md` is an index, not the instructions. **Use the existing file-search tool on the exact path** given for the chosen child (for example, `atomic-skills/react-expert/SKILL.md`), then open/read the entire matching file. If exact-file filtering is unavailable, search the parent directory of that path for `SKILL.md` and open the exact match; an existing direct file-read tool also works. If the chosen `SKILL.md` points to `references/` or other documentation, search/read only those files under the chosen child's directory. Do not substitute a search snippet or catalog summary for the full skill body, and do not run scripts or MCP for skill discovery. Repeat this file-search step for each additional subtask; broad first-level discovery remains restricted to `skills/`.
+
+
 For a request naming a particular original skill, use [the exact-name registry](skills/meta-specialist-catalog/references/legacy-names.md), or read the known `atomic-skills/<original-id>/SKILL.md` directly. The registry contains all original skills and exact paths.
 
 **Configure initial skill discovery to scan `skills/`, not the repository root.** A repository-global `**/SKILL.md` search also sees atomic files; visibility applies to the configured skill root, not unrestricted code search.

@@ -11,6 +11,8 @@ ATOMIC = ROOT / "atomic-skills"
 
 
 def validate() -> dict:
+    if "Use the existing file-search tool on the exact path" not in (ROOT / "README.md").read_text(encoding="utf-8"):
+        raise AssertionError("Missing scoped file-search guidance in README")
     public = sorted(META.rglob("SKILL.md"))
     atoms = sorted(ATOMIC.rglob("SKILL.md"))
     if len(public) != 26 or not atoms:
@@ -28,6 +30,8 @@ def validate() -> dict:
         content = meta_file.read_text(encoding="utf-8")
         if not content.startswith("---\nname: " + name + "\ndescription:"):
             raise AssertionError("Invalid standard skill frontmatter: " + name)
+        if "Use the existing file-search tool on the exact path" not in content:
+            raise AssertionError("Missing scoped file-search guidance in meta skill: " + name)
         if "python discovery/" in content or "discovery/metaskill_cli.py" in content:
             raise AssertionError("Meta skill requires an agent-time script: " + name)
         catalog = meta_file.parent / "references" / "members.md"
