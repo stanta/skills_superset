@@ -1,0 +1,41 @@
+name: Skill Discovery
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "discovery/**"
+      - "skills-index.jsonl"
+      - ".github/workflows/skill-discovery.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build complete index
+        run: python discovery/skills_discovery.py index
+      - name: Unit tests
+        run: python -m unittest discover -s discovery -p 'test_*.py' -v
+      - name: Index consistency
+        run: python discovery/skills_discovery.py index --check
+      - name: Routing smoke evaluation
+        run: python discovery/skills_discovery.py eval
+      - name: Commit generated index to same-repository PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          TARGET_BRANCH: ${{ github.head_ref }}
+        run: |
+          if ! git diff --quiet -- skills-index.jsonl || ! git ls-files --error-unmatch skills-index.jsonl >/dev/null 2>&1; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add skills-index.jsonl
+            git commit -m "chore(discovery): refresh generated skill metadata index"
+            git push origin "HEAD:$TARGET_BRANCH"
+          fi

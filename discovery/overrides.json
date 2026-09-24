@@ -1,0 +1,32 @@
+{
+  "rlm-roec-context-reasoning": {
+    "aliases": [
+      "large repository reasoning",
+      "recursive context investigation",
+      "исследование большого репозитория"
+    ]
+  },
+  "llm-context-compressor": {
+    "aliases": [
+      "reduce prompt tokens",
+      "compress agent context",
+      "сжатие контекста"
+    ]
+  },
+  "agent-evals-lab": {
+    "aliases": [
+      "evaluate agent routing",
+      "skill routing benchmark",
+      "оценка качества агентов"
+    ]
+  },
+  "research-router-skill": {
+    "aliases": [
+      "life sciences research routing"
+    ],
+    "negative_intents": [
+      "software engineering",
+      "github skills"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{"query":"compress long LLM conversation history with citations","expected":["llm-context-compressor"]}
+{"query":"recursive investigation across many files and conflicting revisions","expected":["rlm-roec-context-reasoning"]}
+{"query":"evaluate agent skill routing and benchmark quality","expected":["agent-evals-lab"]}
+{"query":"life sciences gene disease literature research","expected":["research-router-skill"]}
+{"query":"исследование большого репозитория","expected":["rlm-roec-context-reasoning"]}
+{"query":"сжатие контекста","expected":["llm-context-compressor"]}
+{"query":"qzxvkpnlmtqqq","expected":[]}
