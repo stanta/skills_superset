@@ -1,167 +1,73 @@
 ---
 name: rust-engineer
-description: Writes, reviews, and debugs idiomatic Rust code with memory safety and zero-cost abstractions. Implements ownership patterns, manages lifetimes, designs trait hierarchies, builds async applications with tokio, and structures error handling with Result/Option. Use when building Rust applications, solving ownership or borrowing issues, designing trait-based APIs, implementing async/await concurrency, creating FFI bindings, or optimizing for performance and memory safety. Invoke for Rust, Cargo, ownership, borrowing, lifetimes, async Rust, tokio, zero-cost abstractions, memory safety, systems programming.
+description: >
+  This skill should be used when designing, implementing, reviewing, debugging, testing, securing,
+  or profiling Rust and Cargo projects: ownership and borrowing, lifetimes, traits and API design,
+  Rust 2021/2024 editions, async Tokio, WebSocket and distributed nodes, FFI and unsafe soundness,
+  dependency supply chain, performance, and production CI.
 license: MIT
 metadata:
   author: https://github.com/Jeffallan
-  version: "1.1.0"
+  version: "2.0.0"
+  updated: "2026-09-25"
   domain: language
-  triggers: Rust, Cargo, ownership, borrowing, lifetimes, async Rust, tokio, zero-cost abstractions, memory safety, systems programming
+  triggers: Rust, Cargo, rustc, rustfmt, Clippy, Rust 2024, ownership, borrowing, Tokio, async, WebSocket, FFI, unsafe, profiling
   role: specialist
-  scope: implementation
-  output-format: code
-  related-skills: test-master
+  scope: implementation-review
+  output-format: code-and-verification
+  related-skills: test-master, systematic-debugging, security-reviewer
 ---
 
-# Rust Engineer
+# Rust Engineer — production-grade workflow
 
-Senior Rust engineer with deep expertise in Rust 2021 edition, systems programming, memory safety, and zero-cost abstractions. Specializes in building reliable, high-performance software leveraging Rust's ownership system.
+Apply this skill to Rust code and design work. Prefer an existing project's documented constraints over generic defaults. **Never claim a command passed without seeing its output.** The detailed references are opt-in; load only those relevant to the request.
 
-## Core Workflow
+## Execution loop
 
-1. **Analyze ownership** — Design lifetime relationships and borrowing patterns; annotate lifetimes explicitly where inference is insufficient
-2. **Design traits** — Create trait hierarchies with generics and associated types
-3. **Implement safely** — Write idiomatic Rust with minimal unsafe code; document every `unsafe` block with its safety invariants
-4. **Handle errors** — Use `Result`/`Option` with `?` operator and custom error types via `thiserror`
-5. **Validate** — Run `cargo clippy --all-targets --all-features`, `cargo fmt --check`, and `cargo test`; fix all warnings before finalising
+1. **Inspect before changing.** Read `Cargo.toml`, workspace layout, `rust-toolchain.toml`, `rust-version`, edition, target triples, lockfile policy, feature matrix, CI, and nearby tests. Identify the actual runtime (Tokio, async-std, synchronous, no_std) rather than introducing one.
+2. **Write the contract.** State behavior and failure modes; data ownership; trait/API boundaries; thread-safety and `Send`/`Sync`; cancellation and shutdown; memory/CPU/queue limits; security-sensitive inputs; and measurable performance constraints. Distinguish requirements from assumptions.
+3. **Implement the smallest coherent change.** Start with a regression test for a bug or a failing behavior test for a new contract where practical. Make invalid states unrepresentable with enums/newtypes and narrow public interfaces. Prefer safe Rust and the standard library; add dependencies only with a reason.
+4. **Validate proportionally.** Run targeted tests first, then the applicable quality gates below. Test feature and platform combinations that the product actually supports; do not assume `--all-features` is valid when features are mutually exclusive. For networked/unsafe code, include failure, cancellation, and hostile-input tests.
+5. **Review and report evidence.** Inspect the final diff for panic paths, clones/allocations, lock scope, cancellation, exposed secrets, `unsafe` proof obligations, API compatibility, and missing tests. Report commands run, pass/fail, unrun checks, and residual risks.
 
-## Reference Guide
+## High-value Rust decisions
 
-Load detailed guidance based on context:
+- Borrow `&str`/`&[T]` when the callee only reads for the duration of the call; own `String`/`Vec<T>` when data must outlive the caller or cross spawned-task boundaries. Avoid clones by design, but do not contort lifetimes to avoid a cheap, justified clone.
+- Prefer simple concrete types; introduce generics/traits when they represent real variation. Use newtypes for IDs, units, validated state, and protocol versions. Expose library errors with useful variants (`thiserror` is optional); attach context at application boundaries (`anyhow` is optional). Use `?` for propagation.
+- Handle expected failure with `Result`/`Option`. Treat `unwrap` and `expect` alike as potential panics: reserve either for tests or invariants that are genuinely proven and explained. A custom message alone does not make a production panic safe.
+- Treat text as UTF-8: byte-index a `str` only at verified character boundaries. Avoid `s[..N]` for a character-count preview; use `s.chars().take(N).collect::<String>()` if character count is intended.
+- Use the repository's edition. Rust 2024 is available from Rust 1.85, but migration is a deliberate compatibility change; `edition` and minimum supported `rust-version` are separate decisions. For 2024, review `unsafe_op_in_unsafe_fn`, unsafe extern blocks, and unsafe attributes.
+- Keep `unsafe` inside a small, private boundary with documented invariants. A safe wrapper must remain sound for *all* safe callers; use FFI only with explicit ownership, ABI, alignment, lifetime, unwind, and error contracts.
+- For Tokio, bound tasks and queues, explicitly handle cancellation/shutdown, keep blocking work off async executor threads, and do not hold a blocking mutex guard across `.await`. Avoid assuming that timeouts stop `spawn_blocking` work.
 
-| Topic | Reference | Load When |
-|-------|-----------|-----------|
-| Ownership | `references/ownership.md` | Lifetimes, borrowing, smart pointers, Pin |
-| Traits | `references/traits.md` | Trait design, generics, associated types, derive |
-| Error Handling | `references/error-handling.md` | Result, Option, ?, custom errors, thiserror |
-| Async | `references/async.md` | async/await, tokio, futures, streams, concurrency |
-| Testing | `references/testing.md` | Unit/integration tests, proptest, benchmarks |
+## Reference routing
 
-## Key Patterns with Examples
+| Need | Read |
+| --- | --- |
+| Ownership, lifetimes, smart pointers, Pin | `references/ownership.md` |
+| Traits, generics and type-system trade-offs | `references/traits.md` |
+| Results, error taxonomies and propagation | `references/error-handling.md` |
+| Existing Tokio/async examples | `references/async.md` |
+| Existing unit/integration/benchmark examples | `references/testing.md` |
+| Edition, workspace, API boundaries, test pyramid, Cargo and CI gates | `references/production-workflow.md` |
+| Tokio cancellation/backpressure, WebSocket and distributed event processing; DANMA profile | `references/async-distributed.md` |
+| Unsafe, FFI, input limits, dependencies, fuzzing and audit | `references/security-unsafe-ffi.md` |
+| Profiling, allocations, latency budgets and observability | `references/performance-observability.md` |
 
-### Ownership & Lifetimes
-
-```rust
-// Explicit lifetime annotation — borrow lives as long as the input slice
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() { x } else { y }
-}
-
-// Prefer borrowing over cloning
-fn process(data: &[u8]) -> usize {   // &[u8] not Vec<u8>
-    data.iter().filter(|&&b| b != 0).count()
-}
-```
-
-### Trait-Based Design
-
-```rust
-use std::fmt;
-
-trait Summary {
-    fn summarise(&self) -> String;
-    fn preview(&self) -> String {          // default implementation
-        format!("{}...", &self.summarise()[..50])
-    }
-}
-
-#[derive(Debug)]
-struct Article { title: String, body: String }
-
-impl Summary for Article {
-    fn summarise(&self) -> String {
-        format!("{}: {}", self.title, self.body)
-    }
-}
-```
-
-### Error Handling with `thiserror`
-
-```rust
-use thiserror::Error;
-
-#[derive(Debug, Error)]
-pub enum AppError {
-    #[error("I/O error: {0}")]
-    Io(#[from] std::io::Error),
-    #[error("parse error for value `{value}`: {reason}")]
-    Parse { value: String, reason: String },
-}
-
-// ? propagates errors ergonomically
-fn read_config(path: &str) -> Result<String, AppError> {
-    let content = std::fs::read_to_string(path)?;  // Io variant via #[from]
-    Ok(content)
-}
-```
-
-### Async / Await with Tokio
-
-```rust
-use tokio::time::{sleep, Duration};
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let result = fetch_data("https://example.com").await?;
-    println!("{result}");
-    Ok(())
-}
-
-async fn fetch_data(url: &str) -> Result<String, reqwest::Error> {
-    let body = reqwest::get(url).await?.text().await?;
-    Ok(body)
-}
-
-// Spawn concurrent tasks — never mix blocking calls into async context
-async fn parallel_work() {
-    let (a, b) = tokio::join!(
-        sleep(Duration::from_millis(100)),
-        sleep(Duration::from_millis(100)),
-    );
-}
-```
-
-### Validation Commands
+## Baseline verification (adapt to this repository)
 
 ```bash
-cargo fmt --check                          # style check
-cargo clippy --all-targets --all-features  # lints
-cargo test                                 # unit + integration tests
-cargo test --doc                           # doctests
-cargo bench                                # criterion benchmarks (if present)
+cargo fmt --all -- --check
+cargo check --workspace --all-targets
+cargo clippy --workspace --all-targets -- -D warnings
+cargo test --workspace
+cargo doc --workspace --no-deps
 ```
 
-## Constraints
+Add `--locked` where a checked-in application lockfile is required. Add `--all-features` **only** when combinations are supported. Optional, separately installed tools: `cargo audit` or `cargo deny check` for dependency policy; `cargo +nightly miri test` for compatible unsafe code; `cargo fuzz` for parsers; `cargo bench`/Criterion for measured hot paths. `cargo clippy` is not a test or a soundness proof.
 
-### MUST DO
-- Use ownership and borrowing for memory safety
-- Minimize unsafe code (document all unsafe blocks with safety invariants)
-- Use type system for compile-time guarantees
-- Handle all errors explicitly (`Result`/`Option`)
-- Add comprehensive documentation with examples
-- Run `cargo clippy` and fix all warnings
-- Use `cargo fmt` for consistent formatting
-- Write tests including doctests
+## Completion format
 
-### MUST NOT DO
-- Use `unwrap()` in production code (prefer `expect()` with messages)
-- Create memory leaks or dangling pointers
-- Use `unsafe` without documenting safety invariants
-- Ignore clippy warnings
-- Mix blocking and async code incorrectly
-- Skip error handling
-- Use `String` when `&str` suffices
-- Clone unnecessarily (use borrowing)
+Return the changed paths and interface decisions; precise checks actually run (and results); how failures, cancellation, and security boundaries are handled; measured performance only if benchmarked; and known gaps. If the environment lacks Rust, network access, a target, or credentials, state what was not verified rather than inventing success.
 
-## Output Templates
-
-When implementing Rust features, provide:
-1. Type definitions (structs, enums, traits)
-2. Implementation with proper ownership
-3. Error handling with custom error types
-4. Tests (unit, integration, doctests)
-5. Brief explanation of design decisions
-
-## Knowledge Reference
-
-Rust 2021, Cargo, ownership/borrowing, lifetimes, traits, generics, async/await, tokio, Result/Option, thiserror/anyhow, serde, clippy, rustfmt, cargo-test, criterion benchmarks, MIRI, unsafe Rust
+Authoritative starting points: [Rust Edition Guide](https://doc.rust-lang.org/edition-guide/rust-2024/index.html), [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/), [Cargo CI guide](https://doc.rust-lang.org/cargo/guide/continuous-integration.html), [Tokio graceful shutdown](https://tokio.rs/tokio/topics/shutdown), and [Rustonomicon](https://doc.rust-lang.org/nomicon/).
