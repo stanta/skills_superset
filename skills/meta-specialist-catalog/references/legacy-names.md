@@ -437,7 +437,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **routing-middleware** — meta-frontend-web — `../../../atomic-skills/routing-middleware/SKILL.md`
 - **rtms** (zoom-rtms) — meta-customer-communications — `../../../atomic-skills/rtms/SKILL.md`
 - **runtime-cache** — meta-backend-services — `../../../atomic-skills/runtime-cache/SKILL.md`
-- **rust-engineer** — meta-software-architecture — `../../../atomic-skills/rust-engineer/SKILL.md`
+- **rust-engineer** — meta-software-architecture, meta-backend-services, meta-testing-quality, meta-security-compliance, meta-devops-cloud — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **salesforce-developer** — meta-software-architecture — `../../../atomic-skills/salesforce-developer/SKILL.md`
 - **satori** — meta-frontend-web — `../../../atomic-skills/satori/SKILL.md`
 - **scenario-sensitivity-generator** — meta-finance-payments — `../../../atomic-skills/scenario-sensitivity-generator/SKILL.md`
