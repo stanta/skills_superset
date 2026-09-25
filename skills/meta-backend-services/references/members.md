@@ -1,6 +1,6 @@
 # Children of meta-backend-services
 
-32 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+33 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -28,6 +28,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **rails-expert** — Rails 7+ specialist that optimizes Active Record queries with includes/eager_load, implements Turbo Frames and Turbo Streams for partial page updates, configures Action Cable for WebSoc — `../../../atomic-skills/rails-expert/SKILL.md`
 - **redis-n8n-ops** — This skill should be used when designing, implementing, reviewing, or operating Redis usage and Redis integrations with self-hosted n8n workflows, including cache design, queues, locks, — `../../../atomic-skills/redis-n8n-ops/SKILL.md`
 - **runtime-cache** — Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing cach — `../../../atomic-skills/runtime-cache/SKILL.md`
+- **rust-engineer** — Rust/Tokio backend, WebSocket services, cancellation and bounded event processing — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **spring-boot-engineer** — Generates Spring Boot 3.x configurations, creates REST controllers, implements Spring Security 6 authentication flows, sets up Spring Data JPA repositories, and configures reactive WebF — `../../../atomic-skills/spring-boot-engineer/SKILL.md`
 - **supabase** — Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations — `../../../atomic-skills/supabase/SKILL.md`
 - **supabase-best-practices** — Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations. — `../../../atomic-skills/supabase-best-practices/SKILL.md`
