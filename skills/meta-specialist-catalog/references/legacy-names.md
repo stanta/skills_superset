@@ -147,6 +147,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **devops-engineer** — meta-devops-cloud — `../../../atomic-skills/devops-engineer/SKILL.md`
 - **digital-advertizer** — meta-marketing-growth — `../../../atomic-skills/digital-advertizer/SKILL.md`
 - **dispatching-parallel-agents** — meta-agent-systems — `../../../atomic-skills/dispatching-parallel-agents/SKILL.md`
+- **distributed-dbms-architect** — meta-backend-services, meta-software-architecture — `../../../atomic-skills/distributed-dbms-architect/SKILL.md`
 - **django-expert** — meta-backend-services — `../../../atomic-skills/django-expert/SKILL.md`
 - **dotnet-core-expert** — meta-software-architecture — `../../../atomic-skills/dotnet-core-expert/SKILL.md`
 - **drupal-11-best-practices** — meta-testing-quality — `../../../atomic-skills/drupal-11-best-practices/SKILL.md`
