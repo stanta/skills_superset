@@ -1,7 +1,7 @@
 ---
 name: meta-software-architecture
 description: >
-  Use this normal Agent Skill first for software design, architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: software architecture, code review, refactor plan.
+  Use this normal Agent Skill first for software design, distributed computing and systems architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: software architecture, distributed systems design, distributed computation, code review, refactor plan.
 ---
 
 # meta-software-architecture
