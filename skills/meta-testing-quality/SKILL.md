@@ -1,7 +1,7 @@
 ---
 name: meta-testing-quality
 description: >
-  Use this normal Agent Skill first for testing, QA, agent evaluations, debugging and regression verification. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: unit testing, E2E QA, agent evaluation.
+  Use this normal Agent Skill first for testing, QA, agent evaluations, debugging and regression verification. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: unit testing, E2E QA, agent evaluation. Also covers Rust Cargo test, Clippy, Miri and fuzzing.
 ---
 
 # meta-testing-quality
@@ -31,5 +31,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - unit testing: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - E2E QA: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - agent evaluation: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+
+- Rust verification: select `rust-engineer` for Cargo test/Clippy, feature matrices, property tests and optional Miri/fuzzing; add the general verification skill for release evidence.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.

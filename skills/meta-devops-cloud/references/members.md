@@ -1,6 +1,6 @@
 # Children of meta-devops-cloud
 
-54 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+55 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -30,6 +30,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **nextjs15-vercel-ai-sdk** — This skill should be used when building Next.js 15 App Router applications with Vercel AI SDK, React Server Components, Server Actions, TanStack Query, Tailwind CSS, shadcn/ui (Radix UI — `../../../atomic-skills/nextjs15-vercel-ai-sdk/SKILL.md`
 - **observability** — Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and m — `../../../atomic-skills/observability/SKILL.md`
 - **physical-ai-infrastructure-setup-and-resilient-scaling** — Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kub — `../../../atomic-skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md`
+- **rust-engineer** — Rust Cargo CI, release toolchains, MSRV and production observability — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **sentry** — Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bu — `../../../atomic-skills/sentry/SKILL.md`
 - **sentry-glitchtip-observability** — Integrate, configure, review, and operate Sentry or GlitchTip application observability using Sentry-compatible SDKs, including error tracking, performance tracing, logs, releases and d — `../../../atomic-skills/sentry-glitchtip-observability/SKILL.md`
 - **share** — Share a runnable prototype using the user's preferred deployment tool. — `../../../atomic-skills/share/SKILL.md`

@@ -1,7 +1,7 @@
 ---
 name: meta-software-architecture
 description: >
-  Use this normal Agent Skill first for software design, architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: software architecture, code review, refactor plan.
+  Use this normal Agent Skill first for software design, architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: software architecture, code review, refactor plan. Also covers Rust 2024, Cargo, ownership, Tokio and Rust code review.
 ---
 
 # meta-software-architecture
@@ -31,5 +31,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - software architecture: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - code review: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - refactor plan: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+
+- Rust implementation or review: select `rust-engineer` for ownership, async, FFI and production-quality gates; add architecture or code-review specialists for distinct subtasks.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
