@@ -43,6 +43,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **audit** — meta-security-compliance — `../../../atomic-skills/audit/SKILL.md`
 - **auth** — meta-security-compliance — `../../../atomic-skills/auth/SKILL.md`
 - **ballot-contracts** — meta-web3-blockchain — `../../../atomic-skills/ballot-contracts/SKILL.md`
+- **blockchain-node-architect** — meta-web3-blockchain, meta-software-architecture — `../../../atomic-skills/blockchain-node-architect/SKILL.md`
 - **bgee-skill** — meta-genomics-omics — `../../../atomic-skills/bgee-skill/SKILL.md`
 - **bindingdb-skill** — meta-molecular-discovery — `../../../atomic-skills/bindingdb-skill/SKILL.md`
 - **biobankjapan-phewas-skill** — meta-genomics-omics — `../../../atomic-skills/biobankjapan-phewas-skill/SKILL.md`
