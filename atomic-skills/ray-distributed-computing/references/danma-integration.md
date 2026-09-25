@@ -35,4 +35,4 @@ Keep the same neuron/synapse model, dataset, TTL, dedup and checkpoint semantics
 
 Start with 3 CPU hosts, fixed graph and event stream; run baseline single-node Rust; run A/B (and C only if justified). Measure events/s, bytes/event, p50/p99 end-to-end forward/backward latency, CPU%, peak RSS, object-store/spill, recovery time, convergence/validation loss and result reproducibility. Add fork/join, duplicate feedback, delayed TTL expiry, hot shard, lost ack after effect and one-node failure. Record SLOs and pass/fail thresholds **before** observing results.
 
-Related project skill: `../distributed-computing-architecture/references/asynchronous-graph-computation.md`. Do not claim that Ray alone implements a PyTorch `PrivateUse1` backend or TensorFlow PluggableDevice; the DANMA device adapter is a separate project.
+Related project skill: `../../distributed-computing-architecture/references/asynchronous-graph-computation.md`. Do not claim that Ray alone implements a PyTorch `PrivateUse1` backend or TensorFlow PluggableDevice; the DANMA device adapter is a separate project.
