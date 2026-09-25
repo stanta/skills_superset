@@ -1,6 +1,6 @@
 # Children of meta-testing-quality
 
-34 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+33 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -21,7 +21,6 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **playwright-expert** — Use when writing E2E tests with Playwright, setting up test infrastructure, or debugging flaky browser tests. Invoke to write test scripts, create page objects, configure test fixtures, — `../../../atomic-skills/playwright-expert/SKILL.md`
 - **playwright-skill** — Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, — `../../../atomic-skills/playwright-skill/SKILL.md`
 - **plugin-eval** — Help engineers evaluate a local skill or plugin, explain why it scored that way, show what to fix first, measure real token usage, benchmark starter scenarios, or decide what to run nex — `../../../atomic-skills/plugin-eval/SKILL.md`
-- **rust-engineer** — Rust cargo test, Clippy, property tests, Miri, fuzzing and race-oriented checks — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **systematic-debugging** — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes — `../../../atomic-skills/systematic-debugging/SKILL.md`
 - **telegram-bot-test-automation** — This skill should be used when designing, implementing, reviewing, or operating automated test environments for Python Telegram bots, especially pytest-based unit, integration, and end- — `../../../atomic-skills/telegram-bot-test-automation/SKILL.md`
 - **test-cases-generation** — Generates structured test case sets with multi-dimensional coverage from project code analysis or specification documents. This skill activates when the user asks to write test cases, g — `../../../atomic-skills/test-cases-generation/SKILL.md`

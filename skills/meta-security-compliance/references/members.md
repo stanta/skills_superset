@@ -1,6 +1,6 @@
 # Children of meta-security-compliance
 
-32 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+31 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -18,7 +18,6 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **portfolio-risk-management** — Use when sizing Public Equity Investing positions, finding equity hedges, or building an integrated position-and-hedge risk plan from a listed-equity thesis. Do not use for thesis const — `../../../atomic-skills/portfolio-risk-management/SKILL.md`
 - **prompt-security-redteam** — This skill should be used when red-teaming prompts, memory pipelines, RAG contexts, and tool-using assistants for prompt injection, data exfiltration, unsafe tool execution, policy bypa — `../../../atomic-skills/prompt-security-redteam/SKILL.md`
 - **propose-security-hardening** — Develop evidence-backed structural and architectural security hardening proposals from vulnerability disclosures, supplied findings, incident or assessment documents, source code, or a  — `../../../atomic-skills/propose-security-hardening/SKILL.md`
-- **rust-engineer** — Rust unsafe/FFI soundness, dependency advisories, input limits and supply-chain review — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **secure-code-guardian** — Use when implementing authentication/authorization, securing user input, or preventing OWASP Top 10 vulnerabilities — including custom security implementations such as hashing passwords — `../../../atomic-skills/secure-code-guardian/SKILL.md`
 - **security** — Expert security architect providing comprehensive security guidance, architecture assessments, threat modeling, and compliance verification. Follows OWASP, NIS2, ISO 27001, NIST, and in — `../../../atomic-skills/security/SKILL.md`
 - **security-diff-scan** — Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities. — `../../../atomic-skills/security-diff-scan/SKILL.md`
