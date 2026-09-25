@@ -1,7 +1,7 @@
 ---
 name: meta-security-compliance
 description: >
-  Use this normal Agent Skill first for application security, authentication, vulnerability review and privacy. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: threat model, authentication, security audit.
+  Use this normal Agent Skill first for application security, authentication, vulnerability review and privacy. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: threat model, authentication, security audit. Also covers Rust unsafe, FFI, RustSec advisories and Cargo dependency policy.
 ---
 
 # meta-security-compliance
@@ -31,5 +31,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - threat model: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - authentication: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - security audit: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+
+- Rust security or unsafe review: select `rust-engineer` for unsafe/FFI invariants and RustSec/Cargo dependency checks; add a threat-model or security-review specialist for the wider attack surface.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
