@@ -43,7 +43,7 @@ For a request naming a particular original skill, use [the exact-name registry](
 - [`meta-customer-communications`](skills/meta-customer-communications/SKILL.md) — Twilio, Zoom, voice, email and messaging.
 - [`meta-commerce-platforms`](skills/meta-commerce-platforms/SKILL.md) — Shopify, ecommerce and checkout.
 - [`meta-browser-automation`](skills/meta-browser-automation/SKILL.md) — browser navigation, testing and scraping.
-- [`meta-web3-blockchain`](skills/meta-web3-blockchain/SKILL.md) — TON, smart contracts and Web3.
+- [`meta-web3-blockchain`](skills/meta-web3-blockchain/SKILL.md) — blockchain nodes and validators, TON, smart contracts and Web3.
 - [`meta-specialist-catalog`](skills/meta-specialist-catalog/SKILL.md) — rare domains and exact lookup of an original skill.
 
 ## Compatibility and maintenance
