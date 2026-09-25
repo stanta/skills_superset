@@ -287,7 +287,7 @@ The [skills/](skills/) directory contains reusable specialist capabilities. Use 
 | [postgres-pro](skills/postgres-pro/)                                     | PostgreSQL tuning, EXPLAIN analysis, JSONB, extensions, VACUUM, and replication.                |
 | [python-dev](skills/python-dev/)                                         | Senior Python backend design, refactoring, typing, validation, async safety, and testing.       |
 | [python-pro](skills/python-pro/)                                         | Python 3.14, type hints, async/await, dataclasses, pytest, black, ruff, and mypy.               |
-| [rust-engineer](skills/rust-engineer/)                                   | Rust ownership, borrowing, lifetimes, traits, async Rust, Tokio, and performance.               |
+| [rust-engineer](atomic-skills/rust-engineer/)                                   | Production Rust: 2024/2021, ownership, Tokio/WebSocket, CI, safety, FFI, and performance.               |
 | [salesforce-developer](skills/salesforce-developer/)                     | Apex, Lightning Web Components, SOQL, triggers, batch jobs, platform events, and Salesforce DX. |
 | [spark-engineer](skills/spark-engineer/)                                 | Apache Spark jobs, DataFrames, Spark SQL, RDDs, shuffle tuning, and structured streaming.       |
 | [sql-pro](skills/sql-pro/)                                               | SQL queries, joins, window functions, CTEs, indexing, EXPLAIN plans, and schema design.         |
