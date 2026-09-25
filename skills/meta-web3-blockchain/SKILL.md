@@ -1,7 +1,7 @@
 ---
 name: meta-web3-blockchain
 description: >
-  Use this normal Agent Skill first for TON, Web3, blockchain, wallets and smart contracts. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: TON contracts, wallets, Web3 apps. Russian queries: TON; смарт-контракт.
+  Use this normal Agent Skill first for blockchain nodes, validators, P2P, sync, TON, Web3, wallets and smart contracts. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: blockchain node architecture, validator safety, state synchronization, TON contracts, wallets, Web3 apps. Russian queries: блокчейн-нода; валидатор; синхронизация; TON; смарт-контракт.
 ---
 
 # meta-web3-blockchain
@@ -28,6 +28,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 
 ## Typical decomposition
 
+- Blockchain nodes/validators: select blockchain-node-architect from `references/members.md`; add Support or Check only if the task requires it.
 - TON contracts: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - wallets: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - Web3 apps: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
