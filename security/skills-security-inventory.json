@@ -1,0 +1,974 @@
+{
+  "version": 1,
+  "generated_from": "main@e53c4daf8921244afe9c656c8561cc549996d29b",
+  "policy": "Conservative static baseline; capabilities are upper bounds, not permissions.",
+  "counts": {
+    "S3": 49,
+    "S1": 35,
+    "S2": 75,
+    "S0": 1
+  },
+  "skills": [
+    {
+      "skill": "1c-enterprise-extension-development",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "agent-evals-lab",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "ai-agent-control-plane-dashboard",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "ai-seo",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "alligator-development",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "angular-architect",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "api-designer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "architecture-designer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "artifacts-builder",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "atlassian-mcp",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "ballot-contracts",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "brd-developer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "chaos-engineer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "cli-developer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "cloud-architect",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "code-documenter",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "code-review",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "code-reviewer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "competitive-ads-extractor",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "content-research-writer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "cpp-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "csharp-developer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "dashboard-data-visualization",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "dashboard-product-architecture",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "dashboard-quality-gates",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "dashboard-realtime-consistency",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "database-optimizer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "debugging-wizard",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "detect-architecture-antipatterns",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "detect-code-development-antipatterns",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "devops",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "devops-engineer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "digital-advertizer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "django-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "dotnet-core-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "drupal-11-best-practices",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "drupal-7-best-practices",
+      "risk_tier": "S3",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "embedded-systems",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "fastapi-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "feature-forge",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "fine-tuning-expert",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "flutter-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "frontend-design",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "frontend-react-dev",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "frontend-vue-developer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "fullstack-guardian",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "game-developer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "geo-marketologist",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "gitlab-cicd-devsecops",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "gitlab-development",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "golang-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "gosh-development",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "graphql-architect",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "humanizer",
+      "risk_tier": "S0",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "java-architect",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "javascript-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "kotlin-specialist",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "kubernetes-specialist",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "langchain-agent-engineering",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "langfuse",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "langfuse-add-model-price",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "langfuse-backend-dev-guidelines",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "langfuse-skill-developer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "langgraph-agent-runtime",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "laravel-specialist",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "lead-research-assistant",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "lecture-materials-improver",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "lecture-pack-generator",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "legacy-modernizer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "llm-context-compressor",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "llm-observability-ops",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "long-horizon-context-management",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "marketing-superradar",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "mcp-builder",
+      "risk_tier": "S3",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "mcp-builder.backup-20260914T0736Z",
+      "risk_tier": "S3",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "mcp-developer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "medical-marketologist",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "microservices-architect",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "milvus-vector-ops",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "ml-pipeline",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "mongodb-atlas-local",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "mongodb-operator",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "monitoring-expert",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-code-javascript",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-code-python",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-expression-syntax",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-mcp-tools-expert",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-node-configuration",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-validation-expert",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-workflow-best-practices",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "n8n-workflow-patterns",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "nats-jetstream",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "nestjs-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "nextjs-developer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "nextjs15-vercel-ai-sdk",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "odoo-extension-development",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "opencode-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "pandas-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "php-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "playwright-expert",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "playwright-skill",
+      "risk_tier": "S3",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "postgres-pro",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "practice-materials-generator",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "prd-developer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "product-owner",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "project-manager",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "prompt-engineer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "prompt-security-redteam",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "python-dev",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "python-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "rag-architect",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "rails-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "react-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "react-native-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "redis-n8n-ops",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "rlm-roec-context-reasoning",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "rust-engineer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "salesforce-developer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "sci-editor",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "sci-literature-reviewer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "sci-writer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "secure-code-guardian",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "security",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "security-reviewer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "semester-module-planner",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "sentry-glitchtip-observability",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "shopify-expert",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "skill-creator",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "slide-writer-teaching",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "spark-engineer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "spec-miner",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "spring-boot-engineer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "sql-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "sqlalchemy-alembic-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "sre-engineer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "swift-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "technical",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "techwriter",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "telegram-ai-bot-runtime",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "telegram-bot-test-automation",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "telegram-mini-apps-specialist",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "terraform-engineer",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "test-master",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "tester-ai",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "the-fool",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "ton-smart-contracts-specialist",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "trd-developer",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "typescript-pro",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "use-railway",
+      "risk_tier": "S3",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "ux",
+      "risk_tier": "S2",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "vercel-deploy",
+      "risk_tier": "S3",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "vue-expert",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "vue-expert-js",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "web-design-guidelines",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "webapp-testing",
+      "risk_tier": "S3",
+      "executable_files": true,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "webdesigner-in-medical-area",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "websocket-engineer",
+      "risk_tier": "S2",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "wordpress-pro",
+      "risk_tier": "S3",
+      "executable_files": false,
+      "baseline": "provisional"
+    },
+    {
+      "skill": "working-lecture-notes-generator",
+      "risk_tier": "S1",
+      "executable_files": false,
+      "baseline": "provisional"
+    }
+  ],
+  "audit_policy": "Admission fails on genuine High/Critical findings; scanner precision changes must preserve blocking detection for broad environment dumps, destructive host commands, prompt overrides, and unsafe execution."
+}

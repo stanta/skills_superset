@@ -148,7 +148,7 @@ spec:
 
 ```bash
 # Install subctl
-curl -Ls https://get.submariner.io | bash
+Download the Submariner installer from the documented release, verify its provenance/checksum, inspect it, then execute the verified local artifact.
 
 # Join clusters to broker
 subctl deploy-broker --kubeconfig kubeconfig-cluster1

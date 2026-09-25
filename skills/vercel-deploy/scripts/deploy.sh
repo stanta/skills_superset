@@ -8,6 +8,14 @@ set -e
 
 DEPLOY_ENDPOINT="https://claude-skills-deploy.vercel.com/api/deploy"
 
+# This helper uploads the project source bundle to an external deployment service.
+# Require an explicit approval signal so an agent cannot silently exfiltrate a workspace.
+if [[ "${VERCEL_DEPLOY_APPROVED_EXTERNAL_UPLOAD:-}" != "1" ]]; then
+    echo "Error: external source upload not approved." >&2
+    echo "Set VERCEL_DEPLOY_APPROVED_EXTERNAL_UPLOAD=1 only after the user explicitly approves uploading this project to $DEPLOY_ENDPOINT." >&2
+    exit 2
+fi
+
 # Detect framework from package.json
 detect_framework() {
     local pkg_json="$1"

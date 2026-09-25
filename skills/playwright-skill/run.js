@@ -33,17 +33,9 @@ function checkPlaywrightInstalled() {
  * Install Playwright if missing
  */
 function installPlaywright() {
-  console.log('📦 Playwright not found. Installing...');
-  try {
-    execSync('npm install', { stdio: 'inherit', cwd: __dirname });
-    execSync('npx playwright install chromium', { stdio: 'inherit', cwd: __dirname });
-    console.log('✅ Playwright installed successfully');
-    return true;
-  } catch (e) {
-    console.error('❌ Failed to install Playwright:', e.message);
-    console.error('Please run manually: cd', __dirname, '&& npm run setup');
-    return false;
-  }
+  console.error('❌ Playwright is not installed.');
+  console.error('Dependency installation is intentionally not automatic. Review package-lock/package.json and run npm run setup explicitly.');
+  return false;
 }
 
 /**
@@ -51,33 +43,21 @@ function installPlaywright() {
  */
 function getCodeToExecute() {
   const args = process.argv.slice(2);
-
-  // Case 1: File path provided
-  if (args.length > 0 && fs.existsSync(args[0])) {
-    const filePath = path.resolve(args[0]);
-    console.log(`📄 Executing file: ${filePath}`);
-    return fs.readFileSync(filePath, 'utf8');
+  if (args.length !== 1 || !fs.existsSync(args[0])) {
+    console.error('❌ Refusing inline/stdin JavaScript. Provide exactly one reviewed script file.');
+    console.error('Usage: node run.js /tmp/playwright-test-*.js');
+    process.exit(1);
   }
 
-  // Case 2: Inline code provided as argument
-  if (args.length > 0) {
-    console.log('⚡ Executing inline code');
-    return args.join(' ');
+  const filePath = path.resolve(args[0]);
+  const tmpRoot = path.resolve(process.env.TMPDIR || '/tmp');
+  if (filePath !== tmpRoot && !filePath.startsWith(tmpRoot + path.sep)) {
+    console.error(`❌ Refusing script outside temporary directory: ${filePath}`);
+    process.exit(1);
   }
 
-  // Case 3: Code from stdin
-  if (!process.stdin.isTTY) {
-    console.log('📥 Reading from stdin');
-    return fs.readFileSync(0, 'utf8');
-  }
-
-  // No input
-  console.error('❌ No code to execute');
-  console.error('Usage:');
-  console.error('  node run.js script.js          # Execute file');
-  console.error('  node run.js "code here"        # Execute inline');
-  console.error('  cat script.js | node run.js    # Execute from stdin');
-  process.exit(1);
+  console.log(`📄 Executing reviewed file: ${filePath}`);
+  return fs.readFileSync(filePath, 'utf8');
 }
 
 /**
@@ -181,6 +161,11 @@ function getContextOptionsWithHeaders(options = {}) {
  */
 async function main() {
   console.log('🎭 Playwright Skill - Universal Executor\n');
+
+  if (process.env.PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION !== '1') {
+    console.error('❌ Code execution not approved. Require explicit user approval, then set PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1 for this invocation.');
+    process.exit(2);
+  }
 
   // Clean up old temp files from previous runs
   cleanupOldTempFiles();

@@ -39,7 +39,7 @@ General-purpose browser automation skill. I'll write custom Playwright code for 
 1. You describe what you want to test/automate
 2. I auto-detect running dev servers (or ask for URL if testing external site)
 3. I write custom Playwright code in `/tmp/playwright-test-*.js` (won't clutter your project)
-4. I execute it via: `cd $SKILL_DIR && node run.js /tmp/playwright-test-*.js`
+4. I execute it via: `cd $SKILL_DIR && PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1 node run.js /tmp/playwright-test-*.js`
 5. Results displayed in real-time, browser window visible for debugging
 6. Test files auto-cleaned from /tmp by your OS
 
@@ -86,7 +86,7 @@ const TARGET_URL = 'http://localhost:3001'; // <-- Auto-detected or from user
 **Step 3: Execute from skill directory**
 
 ```bash
-cd $SKILL_DIR && node run.js /tmp/playwright-test-page.js
+cd $SKILL_DIR && PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1 node run.js /tmp/playwright-test-page.js
 ```
 
 ## Common Patterns
@@ -276,26 +276,11 @@ const TARGET_URL = 'http://localhost:3001'; // Auto-detected
 })();
 ```
 
-## Inline Execution (Simple Tasks)
+## Execution safety
 
-For quick one-off tasks, you can execute code inline without creating files:
+The universal executor intentionally refuses inline/stdin JavaScript and scripts outside the temporary directory. Before executing a generated script, show the intended browser actions and target host to the user and obtain explicit approval. Only then set `PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1` for that single invocation.
 
-```bash
-# Take a quick screenshot
-cd $SKILL_DIR && node run.js "
-const browser = await chromium.launch({ headless: false });
-const page = await browser.newPage();
-await page.goto('http://localhost:3001');
-await page.screenshot({ path: '/tmp/quick-screenshot.png', fullPage: true });
-console.log('Screenshot saved');
-await browser.close();
-"
-```
-
-**When to use inline vs files:**
-
-- **Inline**: Quick one-off tasks (screenshot, check if element exists, get page title)
-- **Files**: Complex tests, responsive design checks, anything user might want to re-run
+Dependency installation is also intentionally not automatic. If Playwright is missing, review the dependency manifest and run `npm run setup` explicitly.
 
 ## Available Helpers
 
@@ -340,14 +325,14 @@ Configure custom headers for all HTTP requests via environment variables. Useful
 
 ```bash
 PW_HEADER_NAME=X-Automated-By PW_HEADER_VALUE=playwright-skill \
-  cd $SKILL_DIR && node run.js /tmp/my-script.js
+  cd $SKILL_DIR && PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1 node run.js /tmp/my-script.js
 ```
 
 **Multiple headers (JSON format):**
 
 ```bash
 PW_EXTRA_HEADERS='{"X-Automated-By":"playwright-skill","X-Debug":"true"}' \
-  cd $SKILL_DIR && node run.js /tmp/my-script.js
+  cd $SKILL_DIR && PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1 node run.js /tmp/my-script.js
 ```
 
 ### How It Works
@@ -422,7 +407,7 @@ Claude: I'll test the marketing page across multiple viewports. Let me first det
 I found your dev server running on http://localhost:3001
 
 [Writes custom automation script to /tmp/playwright-test-marketing.js with URL parameterized]
-[Runs: cd $SKILL_DIR && node run.js /tmp/playwright-test-marketing.js]
+[Runs: cd $SKILL_DIR && PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1 node run.js /tmp/playwright-test-marketing.js]
 [Shows results with screenshots from /tmp/]
 ```
 
@@ -439,7 +424,7 @@ I found 2 dev servers. Which one should I test?
 User: "Use 3001"
 
 [Writes login automation to /tmp/playwright-test-login.js]
-[Runs: cd $SKILL_DIR && node run.js /tmp/playwright-test-login.js]
+[Runs: cd $SKILL_DIR && PLAYWRIGHT_SKILL_APPROVED_CODE_EXECUTION=1 node run.js /tmp/playwright-test-login.js]
 [Reports: ✅ Login successful, redirected to /dashboard]
 ```
 

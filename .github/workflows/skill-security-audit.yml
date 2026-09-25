@@ -34,6 +34,43 @@ jobs:
         shell: bash
         run: python3 -m unittest skills/skill-security-auditor/scripts/test_audit_skill.py
 
+      - name: Validate security capability manifests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          errors = []
+          valid_tiers = {"S0", "S1", "S2", "S3"}
+          for skill_md in sorted(Path("skills").glob("*/SKILL.md")):
+              manifest_path = skill_md.parent / "security-manifest.json"
+              if not manifest_path.exists():
+                  errors.append(f"{skill_md.parent}: missing security-manifest.json")
+                  continue
+              try:
+                  data = json.loads(manifest_path.read_text())
+              except Exception as exc:
+                  errors.append(f"{manifest_path}: invalid JSON: {exc}")
+                  continue
+              if data.get("version") != 1:
+                  errors.append(f"{manifest_path}: version must be 1")
+              if data.get("risk_tier") not in valid_tiers:
+                  errors.append(f"{manifest_path}: invalid risk_tier")
+              caps = data.get("capabilities")
+              if not isinstance(caps, dict):
+                  errors.append(f"{manifest_path}: capabilities must be an object")
+                  continue
+              for key in ("filesystem_read","filesystem_write","network_hosts","shell_commands","tools","requires_human_approval"):
+                  if key in caps and not isinstance(caps[key], list):
+                      errors.append(f"{manifest_path}: capabilities.{key} must be an array")
+
+          if errors:
+              raise SystemExit("\n".join(errors))
+          print("All skill security manifests are present and structurally valid.")
+          PY
+
       - name: Select trusted auditor and audit changed skills (pull request)
         if: github.event_name == 'pull_request'
         shell: bash
