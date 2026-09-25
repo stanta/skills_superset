@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-58 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+59 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
