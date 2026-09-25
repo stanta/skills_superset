@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-55 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+56 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -18,6 +18,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **csharp-developer** — Use when building C# applications with .NET 8+, ASP.NET Core APIs, or Blazor web apps. Builds REST APIs using minimal or controller-based routing, configures database access with Entity — `../../../atomic-skills/csharp-developer/SKILL.md`
 - **detect-architecture-antipatterns** — This skill should be used when auditing an existing system for software architecture anti-patterns, including Big Ball of Mud, God Object, Lava Flow, Distributed Monolith, Shared Databa — `../../../atomic-skills/detect-architecture-antipatterns/SKILL.md`
 - **detect-code-development-antipatterns** — This skill should be used when auditing a software project for code-level development anti-patterns across frontend, backend, databases, testing, and DevOps/CI/CD. Use when reviewing im — `../../../atomic-skills/detect-code-development-antipatterns/SKILL.md`
+- **distributed-dbms-architect** — Design and audit distributed DBMS architecture, consistency contracts, consensus, transaction protocols, shard placement and failover — `../../../atomic-skills/distributed-dbms-architect/SKILL.md`
 - **dotnet-core-expert** — Use when building .NET 8 applications with minimal APIs, clean architecture, or cloud-native microservices. Invoke for Entity Framework Core, CQRS with MediatR, JWT authentication, AOT  — `../../../atomic-skills/dotnet-core-expert/SKILL.md`
 - **embedded-systems** — Use when developing firmware for microcontrollers, implementing RTOS applications, or optimizing power consumption. Invoke for STM32, ESP32, FreeRTOS, bare-metal, power optimization, re — `../../../atomic-skills/embedded-systems/SKILL.md`
 - **figma-code-connect** — Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code tran — `../../../atomic-skills/figma-code-connect/SKILL.md`
