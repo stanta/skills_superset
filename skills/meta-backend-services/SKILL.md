@@ -1,7 +1,7 @@
 ---
 name: meta-backend-services
 description: >
-  Use this normal Agent Skill first for backend APIs, databases, cache, data services and server applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: REST and GraphQL APIs, database queries, server integration.
+  Use this normal Agent Skill first for backend APIs, databases, cache, data services and server applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: REST and GraphQL APIs, database queries, server integration. Also covers Rust/Tokio services, WebSocket backpressure and graceful shutdown.
 ---
 
 # meta-backend-services
@@ -31,5 +31,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - REST and GraphQL APIs: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - database queries: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - server integration: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+
+- Rust or Tokio backend: select `rust-engineer` for service implementation, cancellation, backpressure and WebSocket protocols; add an API or database specialist if required.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
