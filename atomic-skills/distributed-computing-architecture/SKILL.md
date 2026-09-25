@@ -19,7 +19,7 @@ Design distributed computations by making correctness, progress, resource limits
 - Specify an asynchronous computation graph whose nodes maintain local state and exchange forward signals and delayed feedback.
 - Produce an architecture decision record (ADR), protocol contract, failure matrix, capacity model, correctness argument, or test plan.
 
-For general component architecture use [architecture-designer](../architecture-designer/SKILL.md); for service boundaries use [microservices-architect](../microservices-architect/SKILL.md); for executable failure injection use [chaos-engineer](../chaos-engineer/SKILL.md). For large, conflicting repository evidence, apply [rlm-roec-context-reasoning](../rlm-roec-context-reasoning/SKILL.md): retrieve relevant slices, record source/revision, test counterexamples, and stop when the decision is supported.
+For distributed database engines and storage internals use [distributed-dbms-architect](../distributed-dbms-architect/SKILL.md). For general component architecture use [architecture-designer](../architecture-designer/SKILL.md); for service boundaries use [microservices-architect](../microservices-architect/SKILL.md); for executable failure injection use [chaos-engineer](../chaos-engineer/SKILL.md). For large, conflicting repository evidence, apply [rlm-roec-context-reasoning](../rlm-roec-context-reasoning/SKILL.md): retrieve relevant slices, record source/revision, test counterexamples, and stop when the decision is supported.
 
 ## Non-negotiable design principles
 

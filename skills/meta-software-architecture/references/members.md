@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-56 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+57 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -19,6 +19,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **detect-architecture-antipatterns** — This skill should be used when auditing an existing system for software architecture anti-patterns, including Big Ball of Mud, God Object, Lava Flow, Distributed Monolith, Shared Databa — `../../../atomic-skills/detect-architecture-antipatterns/SKILL.md`
 - **detect-code-development-antipatterns** — This skill should be used when auditing a software project for code-level development anti-patterns across frontend, backend, databases, testing, and DevOps/CI/CD. Use when reviewing im — `../../../atomic-skills/detect-code-development-antipatterns/SKILL.md`
 - **distributed-computing-architecture** — Designs and reviews distributed computation: consistency, consensus, partitioning, scheduling, messaging, gossip, asynchronous graphs, and fault-tolerant recovery. Use for distributed systems design and correctness. — `../../../atomic-skills/distributed-computing-architecture/SKILL.md`
+- **distributed-dbms-architect** — Design and audit distributed DBMS architecture, consistency contracts, consensus, transaction protocols, shard placement and failover — `../../../atomic-skills/distributed-dbms-architect/SKILL.md`
 - **dotnet-core-expert** — Use when building .NET 8 applications with minimal APIs, clean architecture, or cloud-native microservices. Invoke for Entity Framework Core, CQRS with MediatR, JWT authentication, AOT  — `../../../atomic-skills/dotnet-core-expert/SKILL.md`
 - **embedded-systems** — Use when developing firmware for microcontrollers, implementing RTOS applications, or optimizing power consumption. Invoke for STM32, ESP32, FreeRTOS, bare-metal, power optimization, re — `../../../atomic-skills/embedded-systems/SKILL.md`
 - **figma-code-connect** — Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code tran — `../../../atomic-skills/figma-code-connect/SKILL.md`
@@ -44,7 +45,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **rag-architect** — Designs and implements production-grade RAG systems by chunking documents, generating embeddings, configuring vector stores, building hybrid search pipelines, applying reranking, and ev — `../../../atomic-skills/rag-architect/SKILL.md`
 - **receiving-code-review** — Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, n — `../../../atomic-skills/receiving-code-review/SKILL.md`
 - **requesting-code-review** — Use when completing tasks, implementing major features, or before merging to verify work meets requirements — `../../../atomic-skills/requesting-code-review/SKILL.md`
-- **rust-engineer** — Writes, reviews, and debugs idiomatic Rust code with memory safety and zero-cost abstractions. Implements ownership patterns, manages lifetimes, designs trait hierarchies, builds async  — `../../../atomic-skills/rust-engineer/SKILL.md`
+- **rust-engineer** — Production Rust: ownership, Rust 2024, trait/API design, Tokio, FFI and profiling — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **salesforce-developer** — Writes and debugs Apex code, builds Lightning Web Components, optimizes SOQL queries, implements triggers, batch jobs, platform events, and integrations on the Salesforce platform. Use  — `../../../atomic-skills/salesforce-developer/SKILL.md`
 - **secure-code-guardian** — Use when implementing authentication/authorization, securing user input, or preventing OWASP Top 10 vulnerabilities — including custom security implementations such as hashing passwords — `../../../atomic-skills/secure-code-guardian/SKILL.md`
 - **spec-miner** — Reverse-engineering specialist that extracts specifications from existing codebases. Use when working with legacy or undocumented systems, inherited projects, or old codebases with no d — `../../../atomic-skills/spec-miner/SKILL.md`

@@ -1,12 +1,13 @@
 # Children of meta-backend-services
 
-32 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+34 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **api-designer** — Use when designing REST or GraphQL APIs, creating OpenAPI specifications, or planning API architecture. Invoke for resource modeling, versioning strategies, pagination patterns, error h — `../../../atomic-skills/api-designer/SKILL.md`
 - **building-mcp-server-on-cloudflare** — Builds remote MCP (Model Context Protocol) servers on Cloudflare Workers with tools, OAuth authentication, and production deployment. Generates server code, configures auth providers, a — `../../../atomic-skills/building-mcp-server-on-cloudflare/SKILL.md`
 - **database-optimizer** — Optimizes database queries and improves performance across PostgreSQL and MySQL systems. Use when investigating slow queries, analyzing execution plans, or optimizing database performan — `../../../atomic-skills/database-optimizer/SKILL.md`
+- **distributed-dbms-architect** — Design, review, and validate distributed database management systems: control plane, sharding, replication, transactions, fault tolerance and recovery — `../../../atomic-skills/distributed-dbms-architect/SKILL.md`
 - **django-expert** — Use when building Django web applications or REST APIs with Django REST Framework. Invoke when working with settings.py, models.py, manage.py, or any Django project file. Creates Django — `../../../atomic-skills/django-expert/SKILL.md`
 - **fastapi-expert** — Use when building high-performance async Python APIs with FastAPI and Pydantic V2. Invoke to create REST endpoints, define Pydantic models, implement authentication flows, set up async  — `../../../atomic-skills/fastapi-expert/SKILL.md`
 - **fullstack-guardian** — Builds security-focused full-stack web applications by implementing integrated frontend and backend components with layered security at every level. Covers the complete stack from datab — `../../../atomic-skills/fullstack-guardian/SKILL.md`
@@ -28,6 +29,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **rails-expert** — Rails 7+ specialist that optimizes Active Record queries with includes/eager_load, implements Turbo Frames and Turbo Streams for partial page updates, configures Action Cable for WebSoc — `../../../atomic-skills/rails-expert/SKILL.md`
 - **redis-n8n-ops** — This skill should be used when designing, implementing, reviewing, or operating Redis usage and Redis integrations with self-hosted n8n workflows, including cache design, queues, locks, — `../../../atomic-skills/redis-n8n-ops/SKILL.md`
 - **runtime-cache** — Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing cach — `../../../atomic-skills/runtime-cache/SKILL.md`
+- **rust-engineer** — Rust/Tokio backend, WebSocket services, cancellation and bounded event processing — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **spring-boot-engineer** — Generates Spring Boot 3.x configurations, creates REST controllers, implements Spring Security 6 authentication flows, sets up Spring Data JPA repositories, and configures reactive WebF — `../../../atomic-skills/spring-boot-engineer/SKILL.md`
 - **supabase** — Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations — `../../../atomic-skills/supabase/SKILL.md`
 - **supabase-best-practices** — Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations. — `../../../atomic-skills/supabase-best-practices/SKILL.md`

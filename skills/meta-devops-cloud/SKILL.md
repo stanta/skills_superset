@@ -1,7 +1,7 @@
 ---
 name: meta-devops-cloud
 description: >
-  Use this normal Agent Skill first for deployment, cloud, CI/CD, infrastructure and observability. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: GitLab CI/CD, production monitoring, cloud deployment. Russian queries: GitLab CI; деплой; мониторинг GlitchTip.
+  Use this normal Agent Skill first for deployment, cloud, CI/CD, infrastructure and observability. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: GitLab CI/CD, production monitoring, cloud deployment. Russian queries: GitLab CI; деплой; мониторинг GlitchTip. Also covers Rust Cargo CI, MSRV and Tokio runtime observability.
 ---
 
 # meta-devops-cloud
@@ -31,5 +31,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - GitLab CI/CD: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - production monitoring: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - cloud deployment: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+
+- Rust CI or runtime operations: select `rust-engineer` for Cargo gates, pinned toolchains, MSRV, performance and runtime shutdown; add a deployment/observability specialist when needed.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.

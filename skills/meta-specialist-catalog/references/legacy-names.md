@@ -148,6 +148,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **digital-advertizer** — meta-marketing-growth — `../../../atomic-skills/digital-advertizer/SKILL.md`
 - **dispatching-parallel-agents** — meta-agent-systems — `../../../atomic-skills/dispatching-parallel-agents/SKILL.md`
 - **distributed-computing-architecture** — meta-software-architecture — `../../../atomic-skills/distributed-computing-architecture/SKILL.md`
+- **distributed-dbms-architect** — meta-backend-services, meta-software-architecture — `../../../atomic-skills/distributed-dbms-architect/SKILL.md`
 - **django-expert** — meta-backend-services — `../../../atomic-skills/django-expert/SKILL.md`
 - **dotnet-core-expert** — meta-software-architecture — `../../../atomic-skills/dotnet-core-expert/SKILL.md`
 - **drupal-11-best-practices** — meta-testing-quality — `../../../atomic-skills/drupal-11-best-practices/SKILL.md`
@@ -438,7 +439,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **routing-middleware** — meta-frontend-web — `../../../atomic-skills/routing-middleware/SKILL.md`
 - **rtms** (zoom-rtms) — meta-customer-communications — `../../../atomic-skills/rtms/SKILL.md`
 - **runtime-cache** — meta-backend-services — `../../../atomic-skills/runtime-cache/SKILL.md`
-- **rust-engineer** — meta-software-architecture — `../../../atomic-skills/rust-engineer/SKILL.md`
+- **rust-engineer** — meta-software-architecture, meta-backend-services, meta-testing-quality, meta-security-compliance, meta-devops-cloud — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **salesforce-developer** — meta-software-architecture — `../../../atomic-skills/salesforce-developer/SKILL.md`
 - **satori** — meta-frontend-web — `../../../atomic-skills/satori/SKILL.md`
 - **scenario-sensitivity-generator** — meta-finance-payments — `../../../atomic-skills/scenario-sensitivity-generator/SKILL.md`
