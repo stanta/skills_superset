@@ -1,6 +1,6 @@
 # Children of meta-machine-learning
 
-16 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+17 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -15,6 +15,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **ml-pipeline** — Designs and implements production-grade ML pipeline infrastructure: configures experiment tracking with MLflow or Weights & Biases, creates Kubeflow or Airflow DAGs for training orchest — `../../../atomic-skills/ml-pipeline/SKILL.md`
 - **model-audit-tieout** — Use when auditing existing Public Equity Investing models or spreadsheets. Do not use to build a new model from scratch. — `../../../atomic-skills/model-audit-tieout/SKILL.md`
 - **physical-ai-neural-reconstruction** — Router for NVIDIA NuRec/NRE: USDZ rendering, NCore conversion, 3DGS, gRPC sensor sim, PhysicalAI HF datasets. Do NOT use for SimReady or infra setup. — `../../../atomic-skills/physical-ai-neural-reconstruction/SKILL.md`
+- **ray-distributed-computing** — Designs and operates Ray Core tasks, actors, ObjectRefs, placement groups, bounded scheduling, fault tolerance, Ray Data/Train/Tune/Serve, KubeRay and hybrid Rust/DANMA sharded compute. — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
 - **srs-generation** — Generates professional Software Requirements Specification (SRS) documents based on IEEE 830, ISO/IEC/IEEE 29148, and Amazon technical specification standards. This skill activates when — `../../../atomic-skills/srs-generation/SKILL.md`
 - **tech-design-generation** — Generates professional Technical Design Documents following industry-standard engineering practices. This skill activates when the user asks to write a technical design, create an archi — `../../../atomic-skills/tech-design-generation/SKILL.md`
 - **test-cases-generation** — Generates structured test case sets with multi-dimensional coverage from project code analysis or specification documents. This skill activates when the user asks to write test cases, g — `../../../atomic-skills/test-cases-generation/SKILL.md`

@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-57 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+58 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -44,6 +44,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **python-dev** — Guide a senior-grade Python backend engineering assistant for architecture, refactoring, typing+validation, async cancellation safety, testing, packaging discipline, DB unit-of-work pat — `../../../atomic-skills/python-dev/SKILL.md`
 - **python-pro** — Use when building Python 3.14 applications requiring type safety, async programming, or robust error handling. Generates type-annotated Python code, configures mypy in strict mode, writ — `../../../atomic-skills/python-pro/SKILL.md`
 - **rag-architect** — Designs and implements production-grade RAG systems by chunking documents, generating embeddings, configuring vector stores, building hybrid search pipelines, applying reranking, and ev — `../../../atomic-skills/rag-architect/SKILL.md`
+- **ray-distributed-computing** — Designs and operates Ray Core tasks, actors, ObjectRefs, placement groups, bounded scheduling, fault tolerance, Ray Data/Train/Tune/Serve, KubeRay and hybrid Rust/DANMA sharded compute. — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
 - **receiving-code-review** — Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, n — `../../../atomic-skills/receiving-code-review/SKILL.md`
 - **requesting-code-review** — Use when completing tasks, implementing major features, or before merging to verify work meets requirements — `../../../atomic-skills/requesting-code-review/SKILL.md`
 - **rust-engineer** — Production Rust: ownership, Rust 2024, trait/API design, Tokio, FFI and profiling — `../../../atomic-skills/rust-engineer/SKILL.md`

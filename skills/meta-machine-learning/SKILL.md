@@ -1,7 +1,7 @@
 ---
 name: meta-machine-learning
 description: >
-  Use this normal Agent Skill first for machine learning, embeddings, model inference and generative AI. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: train models, vector embeddings, ML inference.
+  Use this normal Agent Skill first for machine learning, embeddings, model inference and generative AI. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray Data/Train/Tune/Serve and distributed ML;  train models, vector embeddings, ML inference.
 ---
 
 # meta-machine-learning
