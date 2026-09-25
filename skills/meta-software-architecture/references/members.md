@@ -1,12 +1,13 @@
 # Children of meta-software-architecture
 
-55 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+56 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **1c-enterprise-extension-development** — Production-oriented guidance for designing, implementing, reviewing, testing, packaging, upgrading, and operating 1C:Enterprise configuration extensions (.cfe), with an additional integ — `../../../atomic-skills/1c-enterprise-extension-development/SKILL.md`
 - **angular-architect** — Generates Angular 17+ standalone components, configures advanced routing with lazy loading and guards, implements NgRx state management, applies RxJS patterns, and optimizes bundle perf — `../../../atomic-skills/angular-architect/SKILL.md`
 - **architecture-designer** — Use when designing new high-level system architecture, reviewing existing designs, or making architectural decisions. Invoke to create architecture diagrams, write Architecture Decision — `../../../atomic-skills/architecture-designer/SKILL.md`
+- **blockchain-node-architect** — Blockchain node architecture, protocol-correct execution and consensus boundaries, P2P, state/storage, synchronization, reorg and validator safety — `../../../atomic-skills/blockchain-node-architect/SKILL.md`
 - **brd-developer** — This skill should be used when drafting, reviewing, restructuring, or quality-checking Business Requirements Documents (BRDs) for software development initiatives, especially when the w — `../../../atomic-skills/brd-developer/SKILL.md`
 - **build-chatgpt-app** — Build, scaffold, refactor, and troubleshoot ChatGPT Apps SDK applications that combine an MCP server and widget UI. Use when Codex needs to design tools, register UI resources, wire the — `../../../atomic-skills/build-chatgpt-app/SKILL.md`
 - **cli-developer** — Use when building CLI tools, implementing argument parsing, or adding interactive prompts. Invoke for parsing flags and subcommands, displaying progress bars and spinners, generating ba — `../../../atomic-skills/cli-developer/SKILL.md`
