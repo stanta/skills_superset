@@ -1,7 +1,16 @@
 name: Validate meta-only skill discovery
 on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "atomic-skills/**"
+      - "discovery/validate_metaskills.py"
+      - "discovery/test_relative_paths.py"
+      - "README.md"
+      - "docs/metaskills.md"
+      - ".github/workflows/metaskills.yml"
   push:
-    branches: [metaskills]
+    branches: [main, metaskills]
     paths:
       - "skills/**"
       - "atomic-skills/**"
