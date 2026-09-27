@@ -21,9 +21,9 @@ Do not copy an upstream vendor-only command into the portable main workflow as i
 
 ## Source selection and licensing
 
-Source: [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) at pinned commit `fa59bc9037741ecfa131aa27938272605710d7b2`. The 27 useful missing skills have been **rewritten** for cross-agent workflows, not copied verbatim. Each imported directory includes an Apache 2.0 license and provenance in YAML frontmatter. Original vendor-specific commands and bundled executable scripts are intentionally **not** imported; use the pinned upstream source only when a matching adapter is actually available.
+Source: [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) at pinned commit `fa59bc9037741ecfa131aa27938272605710d7b2`. The 26 Apache-licensed useful missing skills have been **rewritten** for cross-agent workflows, not copied verbatim. Each imported directory includes an Apache 2.0 license and provenance in YAML frontmatter. Original vendor-specific commands and bundled executable scripts are intentionally **not** imported; use the pinned upstream source only when a matching adapter is actually available.
 
-Two existing atomic skills (`frontend-design`, `skill-creator`) are preserved. Two demonstration examples are not imported. Exact source-to-target mapping, exclusions and owner meta-catalogs: [anthropic-portable-skills.json](imports/anthropic-portable-skills.json).
+Two existing atomic skills (`frontend-design`, `skill-creator`) are preserved. Two demonstration examples and one proprietary security plugin are not imported. Existing security-review and security-audit skills cover the latter's generic tasks. Exact source-to-target mapping, exclusions and owner meta-catalogs: [anthropic-portable-skills.json](imports/anthropic-portable-skills.json).
 
 ## Maintenance and acceptance
 
