@@ -1,6 +1,6 @@
 # Children of meta-devops-cloud
 
-65 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+68 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -29,8 +29,10 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **github-pull-request-workflows** — Use when working with GitHub issues, pull requests, reviews, CODEOWNERS, branch rules and releases. — `../../../atomic-skills/github-pull-request-workflows/SKILL.md`
 - **gitlab-cicd-devsecops** — Design, implement, review, and harden GitLab CI/CD delivery systems, including .gitlab-ci.yml, CI/CD Components, runners, protected environments, deployment approvals, GitOps, OIDC, sec — `../../../atomic-skills/gitlab-cicd-devsecops/SKILL.md`
 - **gitlab-development** — This skill should be used when designing, implementing, reviewing, or refactoring GitLab CE/Self-Managed core or UX changes, especially merge-request governance, Gitaly boundaries, serv — `../../../atomic-skills/gitlab-development/SKILL.md`
+- **helm-release-engineering** — Build, validate, secure, release and roll back Helm charts on Kubernetes/OpenShift; versions, schemas, CRDs and GitOps ownership. — `../../../atomic-skills/helm-release-engineering/SKILL.md`
 - **imessage-channel-configure** — Set up an iMessage agent-channel bridge with secure host permissions and runtime-neutral operational checks. — `../../../atomic-skills/imessage-channel-configure/SKILL.md`
 - **kubernetes-specialist** — Use when deploying or managing Kubernetes workloads. Invoke to create deployment manifests, configure pod security policies, set up service accounts, define network isolation rules, deb — `../../../atomic-skills/kubernetes-specialist/SKILL.md`
+- **lens-kubernetes-ide** — Safely use Lens IDE for kubeconfig/context management, diagnostics, RBAC-aware access, logs and controlled port forwarding. — `../../../atomic-skills/lens-kubernetes-ide/SKILL.md`
 - **llm-observability-ops** — This skill should be used when instrumenting, reviewing, or operating observability for LLM applications, especially traces, prompts, tool calls, retrieval spans, model comparisons, and — `../../../atomic-skills/llm-observability-ops/SKILL.md`
 - **marketplace** — Vercel Marketplace expert guidance — discovering, installing, and managing third-party integrations via the 'vercel integration' CLI. Use when building any app that needs an external ca — `../../../atomic-skills/marketplace/SKILL.md`
 - **mcp-local-bundle-packager** — Package portable local MCP servers with explicit runtime dependencies, signed artifacts and least-privilege installation guidance. — `../../../atomic-skills/mcp-local-bundle-packager/SKILL.md`
@@ -38,6 +40,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **ncc** — Expert guidance for @vercel/ncc — a simple CLI for compiling Node.js modules into a single file with all dependencies included. Use when bundling serverless functions, CLI tools, or any — `../../../atomic-skills/ncc/SKILL.md`
 - **nextjs15-vercel-ai-sdk** — This skill should be used when building Next.js 15 App Router applications with Vercel AI SDK, React Server Components, Server Actions, TanStack Query, Tailwind CSS, shadcn/ui (Radix UI — `../../../atomic-skills/nextjs15-vercel-ai-sdk/SKILL.md`
 - **observability** — Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and m — `../../../atomic-skills/observability/SKILL.md`
+- **openshift-operations** — Operate OpenShift projects, SCC/restricted-v2, Routes, Operators, upgrades and OpenShift-specific Helm deployment. — `../../../atomic-skills/openshift-operations/SKILL.md`
 - **physical-ai-infrastructure-setup-and-resilient-scaling** — Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kub — `../../../atomic-skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md`
 - **ray-distributed-computing** — Designs and operates Ray Core tasks, actors, ObjectRefs, placement groups, bounded scheduling, fault tolerance, Ray Data/Train/Tune/Serve, KubeRay and hybrid Rust/DANMA sharded compute. — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
 - **sentry** — Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bu — `../../../atomic-skills/sentry/SKILL.md`

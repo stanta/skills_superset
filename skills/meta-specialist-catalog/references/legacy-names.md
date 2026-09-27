@@ -258,6 +258,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **gsap** — meta-frontend-web — `../../../atomic-skills/gsap/SKILL.md`
 - **gtex-eqtl-skill** — meta-genomics-omics — `../../../atomic-skills/gtex-eqtl-skill/SKILL.md`
 - **gwas-catalog-skill** — meta-commerce-platforms, meta-genomics-omics — `../../../atomic-skills/gwas-catalog-skill/SKILL.md`
+- **helm-release-engineering** — meta-devops-cloud — `../../../atomic-skills/helm-release-engineering/SKILL.md`
 - **hmdb-skill** — meta-molecular-discovery — `../../../atomic-skills/hmdb-skill/SKILL.md`
 - **human-protein-atlas-skill** — meta-molecular-discovery — `../../../atomic-skills/human-protein-atlas-skill/SKILL.md`
 - **humanizer** — meta-office-documents — `../../../atomic-skills/humanizer/SKILL.md`
@@ -301,6 +302,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **lecture-materials-improver** — meta-office-documents — `../../../atomic-skills/lecture-materials-improver/SKILL.md`
 - **lecture-pack-generator** — meta-office-documents — `../../../atomic-skills/lecture-pack-generator/SKILL.md`
 - **legacy-modernizer** — meta-software-architecture — `../../../atomic-skills/legacy-modernizer/SKILL.md`
+- **lens-kubernetes-ide** — meta-devops-cloud — `../../../atomic-skills/lens-kubernetes-ide/SKILL.md`
 - **liquid-glass** — meta-mobile-desktop — `../../../atomic-skills/liquid-glass/SKILL.md`
 - **llm-context-compressor** — meta-agent-systems — `../../../atomic-skills/llm-context-compressor/SKILL.md`
 - **llm-observability-ops** — meta-agent-systems, meta-devops-cloud — `../../../atomic-skills/llm-observability-ops/SKILL.md`
@@ -390,6 +392,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **openai-developers-agents-sdk** (agents-sdk) — meta-agent-systems — `../../../atomic-skills/openai-developers-agents-sdk/SKILL.md`
 - **openai-platform-api-key** — meta-backend-services — `../../../atomic-skills/openai-platform-api-key/SKILL.md`
 - **opencode-expert** — meta-agent-systems — `../../../atomic-skills/opencode-expert/SKILL.md`
+- **openshift-operations** — meta-devops-cloud — `../../../atomic-skills/openshift-operations/SKILL.md`
 - **opentargets-skill** — meta-clinical-health — `../../../atomic-skills/opentargets-skill/SKILL.md`
 - **organize-dropbox-folder** — meta-workplace-integrations — `../../../atomic-skills/organize-dropbox-folder/SKILL.md`
 - **packaging-notarization** — meta-mobile-desktop — `../../../atomic-skills/packaging-notarization/SKILL.md`
