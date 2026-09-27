@@ -66,3 +66,5 @@ jobs:
           git push origin HEAD:feat/portable-anthropic-agent-skills-20260927
 
 # Import only source packages with compatible redistribution rights.
+
+# Repair the pre-existing Ray over-assignment before validating new catalogs.
