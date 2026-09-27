@@ -126,6 +126,35 @@ def add_entries(specs: list[dict]) -> None:
     )
 
 
+META_SCOPE = {
+    "meta-agent-systems": "portable agent skills, runtime adapters, MCP apps, lifecycle hooks, subagents, instruction files and session telemetry",
+    "meta-devops-cloud": "agent command automation, channel deployment and MCP bundle packaging",
+    "meta-security-compliance": "channel access policy, agent security orchestration and hook enforcement",
+    "meta-customer-communications": "Discord, Telegram and iMessage agent channel access and setup",
+    "meta-mobile-desktop": "Cardputer and M5Stack device development and onboarding",
+    "meta-research-knowledge": "olympiad mathematics proof search and verification",
+    "meta-testing-quality": "agent skill evaluations and formal proof verification",
+    "meta-frontend-web": "interactive MCP apps and portable visual playgrounds",
+    "meta-software-architecture": "portable agent roles, extension packages, instructions and MCP server architecture",
+    "meta-visual-design": "interactive explainer and configuration playgrounds",
+    "meta-office-documents": "evidence-linked project status artifacts and exports",
+    "meta-product-business": "project status artifacts, risks and decision refreshes",
+    "meta-data-analytics": "privacy-preserving agent session usage and impact analytics",
+    "meta-workplace-integrations": "cross-runtime MCP connections to workplace tools",
+}
+
+
+def update_meta_descriptions() -> None:
+    for name, scope in META_SCOPE.items():
+        path = REPO / "skills" / name / "SKILL.md"
+        body = path.read_text(encoding="utf-8")
+        first, sep, rest = body.partition("\n---\n")
+        if not sep or "description: >\n" not in first or "Additional scope:" in first:
+            raise ValueError("Unexpected or already changed meta frontmatter: " + name)
+        first += "\n  Additional scope: " + scope + "."
+        path.write_text(first + sep + rest, encoding="utf-8")
+
+
 def main() -> None:
     if SOURCE is None or not (SOURCE / ".git").is_dir():
         raise SystemExit("Pass a locally checked-out, pinned Anthropic plugins repository")
@@ -170,6 +199,7 @@ def main() -> None:
             "license": "Apache-2.0",
         })
     add_entries(SPECS)
+    update_meta_descriptions()
     manifest = {
         "source": UPSTREAM_REPO,
         "pinned_commit": UPSTREAM_SHA,
