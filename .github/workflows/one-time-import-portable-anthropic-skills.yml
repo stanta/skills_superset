@@ -1,0 +1,54 @@
+name: One-time portable Anthropic skill import
+on:
+  push:
+    branches:
+      - feat/portable-anthropic-agent-skills-20260927
+    paths:
+      - '.github/workflows/one-time-import-portable-anthropic-skills.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          ref: feat/portable-anthropic-agent-skills-20260927
+
+      - name: Checkout pinned Anthropic source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --no-checkout https://github.com/anthropics/claude-plugins-official.git /tmp/anthropic-plugins
+          git -C /tmp/anthropic-plugins checkout fa59bc9037741ecfa131aa27938272605710d7b2
+          test "$(git -C /tmp/anthropic-plugins rev-parse HEAD)" = "fa59bc9037741ecfa131aa27938272605710d7b2"
+
+      - name: Adapt missing atomic skills and update meta catalogs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 discovery/import_anthropic_agent_skills.py /tmp/anthropic-plugins
+
+      - name: Validate every meta path and portable skill
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s discovery -p 'test_*.py' -v
+          python3 discovery/validate_metaskills.py
+
+      - name: Commit verified changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/one-time-import-portable-anthropic-skills.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "feat(skills): add portable Anthropic adaptations and refresh meta catalogs"
+          git push origin HEAD:feat/portable-anthropic-agent-skills-20260927
