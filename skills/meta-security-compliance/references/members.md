@@ -1,6 +1,6 @@
 # Children of meta-security-compliance
 
-36 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+37 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -15,6 +15,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **discord-channel-access** — Control authorized Discord agent-channel access, pairing, allowlists and group policies on any agent runtime with an approved Discord adapter. — `../../../atomic-skills/discord-channel-access/SKILL.md`
 - **finding-discovery** — Use when Codex is already in the finding-discovery phase of a security scan or the user explicitly asks to discover candidate security findings in a repository or code change. Do not us — `../../../atomic-skills/finding-discovery/SKILL.md`
 - **fix-finding** — Use when the user explicitly asks to fix and verify a validated or plausible security finding. Do not use as the primary trigger for full PR, commit, branch, patch, or repository scans. — `../../../atomic-skills/fix-finding/SKILL.md`
+- **github-actions-devsecops** — Use when designing, reviewing or hardening GitHub Actions CI/CD, runners, releases and supply-chain security. — `../../../atomic-skills/github-actions-devsecops/SKILL.md`
 - **gitlab-cicd-devsecops** — Design, implement, review, and harden GitLab CI/CD delivery systems, including .gitlab-ci.yml, CI/CD Components, runners, protected environments, deployment approvals, GitOps, OIDC, sec — `../../../atomic-skills/gitlab-cicd-devsecops/SKILL.md`
 - **imessage-channel-access** — Manage iMessage-based agent access and sender authorization using provider-neutral policy and an approved host adapter. — `../../../atomic-skills/imessage-channel-access/SKILL.md`
 - **mixpanel-auth** — Manage Mixpanel Headless authentication: check session state, list/add/use accounts, run OAuth login, switch projects/workspaces, manage targets, and check bridge credentials. — `../../../atomic-skills/mixpanel-auth/SKILL.md`

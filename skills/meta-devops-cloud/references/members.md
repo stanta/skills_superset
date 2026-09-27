@@ -1,6 +1,6 @@
 # Children of meta-devops-cloud
 
-61 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+65 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -23,6 +23,10 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **env-vars** — Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration. — `../../../atomic-skills/env-vars/SKILL.md`
 - **expo-deployment** — Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes — `../../../atomic-skills/expo-deployment/SKILL.md`
 - **finishing-a-development-branch** — Use when implementation is complete, all tests pass, and you need to decide how to integrate the work — `../../../atomic-skills/finishing-a-development-branch/SKILL.md`
+- **git-core-workflows** — Use when starting, organizing or synchronizing Git branches, staging, commits, merges and rebases. — `../../../atomic-skills/git-core-workflows/SKILL.md`
+- **git-history-recovery** — Use when recovering lost Git changes, undoing commits, resolving failed operations or handling a sensitive-history incident. — `../../../atomic-skills/git-history-recovery/SKILL.md`
+- **github-actions-devsecops** — Use when designing, reviewing or hardening GitHub Actions CI/CD, runners, releases and supply-chain security. — `../../../atomic-skills/github-actions-devsecops/SKILL.md`
+- **github-pull-request-workflows** — Use when working with GitHub issues, pull requests, reviews, CODEOWNERS, branch rules and releases. — `../../../atomic-skills/github-pull-request-workflows/SKILL.md`
 - **gitlab-cicd-devsecops** — Design, implement, review, and harden GitLab CI/CD delivery systems, including .gitlab-ci.yml, CI/CD Components, runners, protected environments, deployment approvals, GitOps, OIDC, sec — `../../../atomic-skills/gitlab-cicd-devsecops/SKILL.md`
 - **gitlab-development** — This skill should be used when designing, implementing, reviewing, or refactoring GitLab CE/Self-Managed core or UX changes, especially merge-request governance, Gitaly boundaries, serv — `../../../atomic-skills/gitlab-development/SKILL.md`
 - **imessage-channel-configure** — Set up an iMessage agent-channel bridge with secure host permissions and runtime-neutral operational checks. — `../../../atomic-skills/imessage-channel-configure/SKILL.md`

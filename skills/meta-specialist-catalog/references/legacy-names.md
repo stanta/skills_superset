@@ -55,12 +55,12 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **audit** — meta-security-compliance — `../../../atomic-skills/audit/SKILL.md`
 - **auth** — meta-security-compliance — `../../../atomic-skills/auth/SKILL.md`
 - **ballot-contracts** — meta-web3-blockchain — `../../../atomic-skills/ballot-contracts/SKILL.md`
-- **blockchain-node-architect** — meta-web3-blockchain, meta-software-architecture — `../../../atomic-skills/blockchain-node-architect/SKILL.md`
 - **bgee-skill** — meta-genomics-omics — `../../../atomic-skills/bgee-skill/SKILL.md`
 - **bindingdb-skill** — meta-molecular-discovery — `../../../atomic-skills/bindingdb-skill/SKILL.md`
 - **biobankjapan-phewas-skill** — meta-genomics-omics — `../../../atomic-skills/biobankjapan-phewas-skill/SKILL.md`
 - **biorxiv-skill** — meta-research-knowledge — `../../../atomic-skills/biorxiv-skill/SKILL.md`
 - **biostudies-arrayexpress-skill** — meta-genomics-omics — `../../../atomic-skills/biostudies-arrayexpress-skill/SKILL.md`
+- **blockchain-node-architect** — meta-web3-blockchain, meta-software-architecture — `../../../atomic-skills/blockchain-node-architect/SKILL.md`
 - **boltz-check-status** — meta-molecular-discovery — `../../../atomic-skills/boltz-check-status/SKILL.md`
 - **boltz-protein-design** — meta-molecular-discovery — `../../../atomic-skills/boltz-protein-design/SKILL.md`
 - **boltz-protein-screen** — meta-molecular-discovery — `../../../atomic-skills/boltz-protein-screen/SKILL.md`
@@ -238,6 +238,10 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **geo-marketologist** — meta-marketing-growth — `../../../atomic-skills/geo-marketologist/SKILL.md`
 - **geospatial-and-cartographic-visualization** — meta-data-analytics — `../../../atomic-skills/geospatial-and-cartographic-visualization/SKILL.md`
 - **get-context** — meta-agent-systems — `../../../atomic-skills/get-context/SKILL.md`
+- **git-core-workflows** — meta-devops-cloud, meta-software-architecture — `../../../atomic-skills/git-core-workflows/SKILL.md`
+- **git-history-recovery** — meta-devops-cloud, meta-software-architecture — `../../../atomic-skills/git-history-recovery/SKILL.md`
+- **github-actions-devsecops** — meta-devops-cloud, meta-security-compliance — `../../../atomic-skills/github-actions-devsecops/SKILL.md`
+- **github-pull-request-workflows** — meta-devops-cloud, meta-software-architecture — `../../../atomic-skills/github-pull-request-workflows/SKILL.md`
 - **gitlab-cicd-devsecops** — meta-devops-cloud, meta-security-compliance — `../../../atomic-skills/gitlab-cicd-devsecops/SKILL.md`
 - **gitlab-development** — meta-devops-cloud — `../../../atomic-skills/gitlab-development/SKILL.md`
 - **gnomad-graphql-skill** — meta-backend-services — `../../../atomic-skills/gnomad-graphql-skill/SKILL.md`
