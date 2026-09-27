@@ -52,3 +52,5 @@ jobs:
           git diff --cached --check
           git commit -m "feat(skills): add portable Anthropic adaptations and refresh meta catalogs"
           git push origin HEAD:feat/portable-anthropic-agent-skills-20260927
+
+# Import only source packages with compatible redistribution rights.
