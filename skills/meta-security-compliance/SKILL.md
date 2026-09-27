@@ -2,7 +2,7 @@
 name: meta-security-compliance
 description: >
   Use this normal Agent Skill first for application security, authentication, vulnerability review and privacy. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: threat model, authentication, security audit. Also covers Rust unsafe, FFI, RustSec advisories and Cargo dependency policy.
-  Additional scope: channel access policy, agent security orchestration and hook enforcement.
+  Additional scope: GitHub Actions supply-chain and workflow security; channel access policy, agent security orchestration and hook enforcement.
 ---
 
 # meta-security-compliance
@@ -32,6 +32,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - threat model: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - authentication: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - security audit: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+- GitHub Actions or CI supply-chain security: select `github-actions-devsecops`; add a threat-model or code-scanning specialist only for relevant findings.
 
 - Rust security or unsafe review: select `rust-engineer` for unsafe/FFI invariants and RustSec/Cargo dependency checks; add a threat-model or security-review specialist for the wider attack surface.
 

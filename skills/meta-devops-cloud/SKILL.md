@@ -2,7 +2,7 @@
 name: meta-devops-cloud
 description: >
   Use this normal Agent Skill first for deployment, cloud, CI/CD, infrastructure and observability. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray clusters and KubeRay deployment;  GitLab CI/CD, production monitoring, cloud deployment. Russian queries: GitLab CI; деплой; мониторинг GlitchTip. Also covers Rust Cargo CI, MSRV and Tokio runtime observability.
-  Additional scope: agent command automation, channel deployment and MCP bundle packaging.
+  Additional scope: Git branching and safe history, GitHub pull requests and Actions security; agent command automation, channel deployment and MCP bundle packaging.
 ---
 
 # meta-devops-cloud
@@ -30,6 +30,8 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 ## Typical decomposition
 
 - GitLab CI/CD: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+- Git branch/commit/recovery: select `git-core-workflows` or `git-history-recovery`; add `using-git-worktrees` only if isolated work is needed.
+- GitHub PR governance and review: select `github-pull-request-workflows`; for Actions, trusted CI and deployment select `github-actions-devsecops`. For code review, select `code-review` via `meta-software-architecture`.
 - production monitoring: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - cloud deployment: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 

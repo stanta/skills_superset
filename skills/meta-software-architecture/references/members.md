@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-64 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+67 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -29,6 +29,9 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **embedded-systems** — Use when developing firmware for microcontrollers, implementing RTOS applications, or optimizing power consumption. Invoke for STM32, ESP32, FreeRTOS, bare-metal, power optimization, re — `../../../atomic-skills/embedded-systems/SKILL.md`
 - **figma-code-connect** — Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code tran — `../../../atomic-skills/figma-code-connect/SKILL.md`
 - **game-developer** — Use when building game systems, implementing Unity/Unreal Engine features, or optimizing game performance. Invoke to implement ECS architecture, configure physics systems and colliders, — `../../../atomic-skills/game-developer/SKILL.md`
+- **git-core-workflows** — Use when starting, organizing or synchronizing Git branches, staging, commits, merges and rebases. — `../../../atomic-skills/git-core-workflows/SKILL.md`
+- **git-history-recovery** — Use when recovering lost Git changes, undoing commits, resolving failed operations or handling a sensitive-history incident. — `../../../atomic-skills/git-history-recovery/SKILL.md`
+- **github-pull-request-workflows** — Use when working with GitHub issues, pull requests, reviews, CODEOWNERS, branch rules and releases. — `../../../atomic-skills/github-pull-request-workflows/SKILL.md`
 - **golang-pro** — Implements concurrent Go patterns using goroutines and channels, designs and builds microservices with gRPC or REST, optimizes Go application performance with pprof, and enforces idioma — `../../../atomic-skills/golang-pro/SKILL.md`
 - **google-colab-python** — This skill should be used when designing, implementing, reviewing, debugging, or optimizing Python notebooks and experiments for Google Colab, especially workflows involving ephemeral r — `../../../atomic-skills/google-colab-python/SKILL.md`
 - **graphql-architect** — Use when designing GraphQL schemas, implementing Apollo Federation, or building real-time subscriptions. Invoke for schema design, resolvers with DataLoader, query optimization, federat — `../../../atomic-skills/graphql-architect/SKILL.md`

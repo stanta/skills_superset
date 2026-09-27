@@ -46,6 +46,10 @@ For a request naming a particular original skill, use [the exact-name registry](
 - [`meta-web3-blockchain`](skills/meta-web3-blockchain/SKILL.md) — blockchain nodes and validators, TON, smart contracts and Web3.
 - [`meta-specialist-catalog`](skills/meta-specialist-catalog/SKILL.md) — rare domains and exact lookup of an original skill.
 
+## Git and GitHub: task routing
+
+For everyday Git changes, read [git-core-workflows](atomic-skills/git-core-workflows/SKILL.md); for safe undo, reflog recovery and history incidents, read [git-history-recovery](atomic-skills/git-history-recovery/SKILL.md). GitHub contributions, PR reviews, CODEOWNERS and branch protection belong to [github-pull-request-workflows](atomic-skills/github-pull-request-workflows/SKILL.md); GitHub Actions, runner trust and release security belong to [github-actions-devsecops](atomic-skills/github-actions-devsecops/SKILL.md). These atomic skills are discoverable through `meta-devops-cloud`, `meta-software-architecture` and, for Actions security, `meta-security-compliance`. See the [Russian-language practical guide](docs/guides/git-github-best-practices.md) for a human checklist and command examples.
+
 ## Compatibility and maintenance
 
 All original atomic skill bodies and bundled resources are preserved under `atomic-skills/`; their internal relative references remain valid. Old hardcoded `skills/<original-id>/...` file paths become `atomic-skills/<original-id>/...`. Preserving old paths while hiding them from directory scanners is not possible.
