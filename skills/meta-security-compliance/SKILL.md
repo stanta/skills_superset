@@ -2,6 +2,7 @@
 name: meta-security-compliance
 description: >
   Use this normal Agent Skill first for application security, authentication, vulnerability review and privacy. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: threat model, authentication, security audit. Also covers Rust unsafe, FFI, RustSec advisories and Cargo dependency policy.
+  Additional scope: channel access policy, agent security orchestration and hook enforcement.
 ---
 
 # meta-security-compliance

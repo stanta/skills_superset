@@ -2,6 +2,7 @@
 name: meta-product-business
 description: >
   Use this normal Agent Skill first for product strategy, requirements, planning and business operations. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: product roadmap, PRD, business planning.
+  Additional scope: project status artifacts, risks and decision refreshes.
 ---
 
 # meta-product-business

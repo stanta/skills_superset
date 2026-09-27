@@ -2,6 +2,7 @@
 name: meta-office-documents
 description: >
   Use this normal Agent Skill first for documents, PDFs, spreadsheets, presentations and reports. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: PDF editing, spreadsheets, slide decks. Russian queries: документы; таблицы; PDF; презентации.
+  Additional scope: evidence-linked project status artifacts and exports.
 ---
 
 # meta-office-documents

@@ -2,6 +2,7 @@
 name: meta-workplace-integrations
 description: >
   Use this normal Agent Skill first for Google, Slack, Notion, collaboration tools and business integrations. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: workspace apps, project collaboration, automation.
+  Additional scope: cross-runtime MCP connections to workplace tools.
 ---
 
 # meta-workplace-integrations

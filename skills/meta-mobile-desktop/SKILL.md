@@ -2,6 +2,7 @@
 name: meta-mobile-desktop
 description: >
   Use this normal Agent Skill first for iOS, Android, Flutter, native and desktop applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: iOS development, Android QA, desktop integration.
+  Additional scope: Cardputer and M5Stack device development and onboarding.
 ---
 
 # meta-mobile-desktop

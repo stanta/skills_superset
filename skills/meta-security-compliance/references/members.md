@@ -1,18 +1,22 @@
 # Children of meta-security-compliance
 
-31 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+36 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
+- **agent-lifecycle-hook-development** — Build lifecycle hooks for agent sessions and tool events with portable policy contracts and runtime-specific event adapters. — `../../../atomic-skills/agent-lifecycle-hook-development/SKILL.md`
+- **agent-policy-hook-rules** — Write portable event-driven agent policy rules and map them to supported runtime hooks, CI gates or tool permission checks. — `../../../atomic-skills/agent-policy-hook-rules/SKILL.md`
 - **assess-patch-risk** — Assess an immutable patch artifact's program impact, regression risk, and auto-merge eligibility. Use for generated patch files, provider pull-request diffs, or commit ranges when revie — `../../../atomic-skills/assess-patch-risk/SKILL.md`
 - **attack-path-analysis** — Use when Codex is already in the attack-path-analysis phase of a security scan or the user explicitly asks to trace a security finding from source to sink and calibrate severity. Do not — `../../../atomic-skills/attack-path-analysis/SKILL.md`
 - **audit** — Audit existing project documentation for quality, completeness, consistency, and code alignment. Scans docs against the actual codebase to find stale references, missing coverage, inter — `../../../atomic-skills/audit/SKILL.md`
 - **auth** — Authentication integration guidance — Clerk (native Vercel Marketplace), Descope, and Auth0 setup for Next.js applications. Covers middleware auth patterns, sign-in/sign-up flows, and M — `../../../atomic-skills/auth/SKILL.md`
 - **deep-security-scan** — Use when the user asks for a deep, exhaustive, multi-pass, or variance-reducing repository-wide or scoped-path Codex Security scan. Run repeated complete independent Standard scans with — `../../../atomic-skills/deep-security-scan/SKILL.md`
 - **define-security-policy** — Define, review, or update SECURITY.md guidance for a repository or component. Use when the user wants to clarify what Codex Security should review, what is out of scope, which security  — `../../../atomic-skills/define-security-policy/SKILL.md`
+- **discord-channel-access** — Control authorized Discord agent-channel access, pairing, allowlists and group policies on any agent runtime with an approved Discord adapter. — `../../../atomic-skills/discord-channel-access/SKILL.md`
 - **finding-discovery** — Use when Codex is already in the finding-discovery phase of a security scan or the user explicitly asks to discover candidate security findings in a repository or code change. Do not us — `../../../atomic-skills/finding-discovery/SKILL.md`
 - **fix-finding** — Use when the user explicitly asks to fix and verify a validated or plausible security finding. Do not use as the primary trigger for full PR, commit, branch, patch, or repository scans. — `../../../atomic-skills/fix-finding/SKILL.md`
 - **gitlab-cicd-devsecops** — Design, implement, review, and harden GitLab CI/CD delivery systems, including .gitlab-ci.yml, CI/CD Components, runners, protected environments, deployment approvals, GitOps, OIDC, sec — `../../../atomic-skills/gitlab-cicd-devsecops/SKILL.md`
+- **imessage-channel-access** — Manage iMessage-based agent access and sender authorization using provider-neutral policy and an approved host adapter. — `../../../atomic-skills/imessage-channel-access/SKILL.md`
 - **mixpanel-auth** — Manage Mixpanel Headless authentication: check session state, list/add/use accounts, run OAuth login, switch projects/workspaces, manage targets, and check bridge credentials. — `../../../atomic-skills/mixpanel-auth/SKILL.md`
 - **model-audit-tieout** — Use when auditing existing Public Equity Investing models or spreadsheets. Do not use to build a new model from scratch. — `../../../atomic-skills/model-audit-tieout/SKILL.md`
 - **portfolio-risk-management** — Use when sizing Public Equity Investing positions, finding equity hedges, or building an integrated position-and-hedge risk plan from a listed-equity thesis. Do not use for thesis const — `../../../atomic-skills/portfolio-risk-management/SKILL.md`
@@ -26,6 +30,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **setup-zoom-oauth** — Use when setting up OAuth. — `../../../atomic-skills/setup-zoom-oauth/SKILL.md`
 - **skill-security-auditor** — This skill should be used when reviewing, importing, creating, or changing agent skills and related instruction packages for malware, prompt injection, jailbreaks, harness violations, e — `../../../atomic-skills/skill-security-auditor/SKILL.md`
 - **swiftui-performance-audit** — Audit SwiftUI runtime performance from code first. Use when diagnosing slow rendering, janky scrolling, expensive updates, or profiling needs. — `../../../atomic-skills/swiftui-performance-audit/SKILL.md`
+- **telegram-channel-access** — Manage Telegram bot access, pairing, allowlists and group policy safely across different agent runtimes. — `../../../atomic-skills/telegram-channel-access/SKILL.md`
 - **threat-model** — Use when Codex is already in the threat-modeling phase of a security scan, the user explicitly invokes $threat-model, or the user explicitly asks to create, update, or persist a reposit — `../../../atomic-skills/threat-model/SKILL.md`
 - **track-findings** — Track validated Codex Security findings in Linear, Jira, GitHub issues, or draft GitHub security advisories. Use it for one finding or an explicitly selected batch of up to 25 findings  — `../../../atomic-skills/track-findings/SKILL.md`
 - **triage-finding** — Use when the user supplies or imports existing security findings, vulnerability reports, or security/vulnerability Jira/Linear tickets from scanners, advisories, GitHub, Atlassian Rovo, — `../../../atomic-skills/triage-finding/SKILL.md`

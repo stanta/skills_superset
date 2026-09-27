@@ -1,6 +1,6 @@
 # Children of meta-customer-communications
 
-88 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+94 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -16,7 +16,11 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **contact-center/web** — Zoom Contact Center SDK for Web. Use for web chat/video/campaign embeds, engagement event handling, app-context integrations, and Smart Embed postMessage workflows. — `../../../atomic-skills/contact-center/web/SKILL.md`
 - **debug-zoom** — Use when debugging issues. — `../../../atomic-skills/debug-zoom/SKILL.md`
 - **debug-zoom-integration** — Use when isolating failures. — `../../../atomic-skills/debug-zoom-integration/SKILL.md`
+- **discord-channel-access** — Control authorized Discord agent-channel access, pairing, allowlists and group policies on any agent runtime with an approved Discord adapter. — `../../../atomic-skills/discord-channel-access/SKILL.md`
+- **discord-channel-configure** — Configure a Discord channel adapter for any tool-using agent with secret-safe token storage, channel permissions and connectivity checks. — `../../../atomic-skills/discord-channel-configure/SKILL.md`
 - **general** — Use when comparing products. — `../../../atomic-skills/general/SKILL.md`
+- **imessage-channel-access** — Manage iMessage-based agent access and sender authorization using provider-neutral policy and an approved host adapter. — `../../../atomic-skills/imessage-channel-access/SKILL.md`
+- **imessage-channel-configure** — Set up an iMessage agent-channel bridge with secure host permissions and runtime-neutral operational checks. — `../../../atomic-skills/imessage-channel-configure/SKILL.md`
 - **phone** — Use when building Phone. — `../../../atomic-skills/phone/SKILL.md`
 - **plan-zoom-integration** — Use when planning Zoom integrations. — `../../../atomic-skills/plan-zoom-integration/SKILL.md`
 - **plan-zoom-product** — Use when choosing products. — `../../../atomic-skills/plan-zoom-product/SKILL.md`
@@ -25,6 +29,8 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **start** — Use when starting Zoom work. — `../../../atomic-skills/start/SKILL.md`
 - **team-chat** — Use when building Team Chat. — `../../../atomic-skills/team-chat/SKILL.md`
 - **telegram-ai-bot-runtime** — This skill should be used when building, debugging, or scaling Telegram bots that combine 'python-telegram-bot', async handlers, AI inference, queueing, media inputs, payment flows, and — `../../../atomic-skills/telegram-ai-bot-runtime/SKILL.md`
+- **telegram-channel-access** — Manage Telegram bot access, pairing, allowlists and group policy safely across different agent runtimes. — `../../../atomic-skills/telegram-channel-access/SKILL.md`
+- **telegram-channel-configure** — Configure Telegram bot channels for any agent host with secure tokens, scoped access and adapter-aware validation. — `../../../atomic-skills/telegram-channel-configure/SKILL.md`
 - **telegram-mini-apps-specialist** — Use when building, debugging, or reviewing Telegram Mini Apps that run on React/Vite and integrate with Telegram runtime APIs, TON Connect, and wallet-oriented user flows. — `../../../atomic-skills/telegram-mini-apps-specialist/SKILL.md`
 - **twilio-account-setup** — Create and configure a Twilio account from scratch. Covers free trial signup, trial limitations, getting credentials (Account SID and Auth Token), buying a phone number, verifying recip — `../../../atomic-skills/twilio-account-setup/SKILL.md`
 - **twilio-agent-connect** — Use when building or integrating Twilio Agent Connect (TAC) to connect third-party LLM agent runtimes with Twilio Voice, Messaging, ConversationRelay, Conversation Memory, Conversation  — `../../../atomic-skills/twilio-agent-connect/SKILL.md`

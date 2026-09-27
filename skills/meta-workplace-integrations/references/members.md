@@ -1,9 +1,10 @@
 # Children of meta-workplace-integrations
 
-32 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+33 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
+- **agent-mcp-integration** — Integrate MCP servers into heterogeneous agent hosts with compatible transport, authentication, scoped tools and observable failures. — `../../../atomic-skills/agent-mcp-integration/SKILL.md`
 - **airtable-cli** — Lists bases, reads and writes records, manages tables and fields, filters and searches data in Airtable via the 'airtable-mcp' CLI. Use when the task involves Airtable data or the user  — `../../../atomic-skills/airtable-cli/SKILL.md`
 - **airtable-filters** — Use this skill when the user wants to find, filter, or narrow down Airtable records by field values, even when they don't explicitly say "filter. — `../../../atomic-skills/airtable-filters/SKILL.md`
 - **airtable-overview** — Explains what Airtable is and how data is structured — bases, tables, fields, records, views, automations, and interfaces. Use when you need context about the Airtable data model. — `../../../atomic-skills/airtable-overview/SKILL.md`

@@ -1,10 +1,12 @@
 # Children of meta-data-analytics
 
-40 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+42 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **accessibility-and-inclusive-visualization** — Make data visualizations accessible and inclusive. Use when the user needs chart or diagram accessibility guidance, text alternatives for complex visuals, color and contrast review, key — `../../../atomic-skills/accessibility-and-inclusive-visualization/SKILL.md`
+- **agent-session-telemetry** — Analyze heterogeneous agent session logs for token use, tool calls, caching, delegation and costly loops with local-first privacy protections. — `../../../atomic-skills/agent-session-telemetry/SKILL.md`
+- **agent-work-impact-report** — Measure agent-assisted development impact using consented local session metadata and version-control evidence without uploading raw transcripts. — `../../../atomic-skills/agent-work-impact-report/SKILL.md`
 - **ai-agent-control-plane-dashboard** — This skill should be used when designing, reviewing, or extending dashboards and operator consoles for AI agents, LLM applications, autonomous workflows, and multi-agent systems. Apply  — `../../../atomic-skills/ai-agent-control-plane-dashboard/SKILL.md`
 - **analyze-data-quality** — Assess whether structured data, query results, dashboards, or analytical evidence are trustworthy enough to use. Use when the task is to check data quality, reconcile conflicting source — `../../../atomic-skills/analyze-data-quality/SKILL.md`
 - **analyzing-wishart-graph-compression** — Анализирует результаты recursive Wishart graph coarsening / compression для SemanticMap/semgraphex: level_XXX, transition_XXX_YYY, hierarchy.json, dynamic_metrics.json, dynamic_vectors. — `../../../atomic-skills/analyzing-wishart-graph-compression/SKILL.md`

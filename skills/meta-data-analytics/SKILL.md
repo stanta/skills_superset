@@ -2,6 +2,7 @@
 name: meta-data-analytics
 description: >
   Use this normal Agent Skill first for analytics, visualization, data pipelines, SQL and quantitative work. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: SQL analytics, visual dashboard, data pipeline.
+  Additional scope: privacy-preserving agent session usage and impact analytics.
 ---
 
 # meta-data-analytics

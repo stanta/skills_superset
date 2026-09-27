@@ -2,6 +2,7 @@
 name: meta-agent-systems
 description: >
   Use this normal Agent Skill first for LLM agents, context, MCP, prompting and agent orchestration. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: agent memory and context, agent skill routing, MCP tool orchestration. Russian queries: LLM агенты; маршрутизация скиллов; оптимизация контекста.
+  Additional scope: portable agent skills, runtime adapters, MCP apps, lifecycle hooks, subagents, instruction files and session telemetry.
 ---
 
 # meta-agent-systems
