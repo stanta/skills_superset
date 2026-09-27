@@ -15,11 +15,11 @@ class PortableSkillImportTests(unittest.TestCase):
 
     def test_all_31_source_packages_accounted_for(self):
         self.assertEqual(self.manifest["source_packages"], 31)
-        self.assertEqual(self.manifest["imported_portable_skills"], 27)
-        self.assertEqual(len(self.manifest["excluded_existing_or_examples"]), 4)
-        self.assertEqual(len(self.manifest["imported"]), 27)
+        self.assertEqual(self.manifest["imported_portable_skills"], 26)
+        self.assertEqual(len(self.manifest["excluded_existing_or_examples"]), 5)
+        self.assertEqual(len(self.manifest["imported"]), 26)
         self.assertEqual(
-            len({s["target"] for s in self.manifest["imported"]}), 27
+            len({s["target"] for s in self.manifest["imported"]}), 26
         )
 
     def test_skills_are_portable_and_licensed(self):
