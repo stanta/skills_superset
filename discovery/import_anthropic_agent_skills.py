@@ -65,7 +65,7 @@ def render_skill(spec: dict) -> str:
         "",
         "## Provenance and adaptation",
         "",
-        f"Adapted from [Anthropic's {spec['source'].split('/')[-1]} skill]({link}) at pinned revision \`{UPSTREAM_SHA}\`. This is a rewritten, cross-agent procedure, not a verbatim copy or a claim that proprietary vendor tools are installed.",
+        f"Adapted from [Anthropic's {spec['source'].split('/')[-1]} skill]({link}) at pinned revision `{UPSTREAM_SHA}`. This is a rewritten, cross-agent procedure, not a verbatim copy or a claim that proprietary vendor tools are installed.",
         "For vendor-specific details, consult the pinned upstream source and the actual host documentation only when its corresponding adapter is available.",
         "",
     ]
@@ -93,7 +93,7 @@ def add_entries(specs: list[dict]) -> None:
             description = spec["description"].replace(" — ", " - ")
             existing[name] = (
                 f"- **{name}** — {description} — "
-                f"\`../../../atomic-skills/{name}/SKILL.md\`"
+                f"`../../../atomic-skills/{name}/SKILL.md`"
             )
         for i, line in enumerate(header):
             if re.match(r"^\d+ atomic skills\.", line):
@@ -117,7 +117,7 @@ def add_entries(specs: list[dict]) -> None:
         owners = ", ".join(spec["metas"])
         existing[name] = (
             f"- **{name}** — {owners} — "
-            f"\`../../../atomic-skills/{name}/SKILL.md\`"
+            f"`../../../atomic-skills/{name}/SKILL.md`"
         )
     registry.write_text(
         "\n".join(header).rstrip() + "\n\n"
