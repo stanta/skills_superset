@@ -156,6 +156,59 @@ def update_meta_descriptions() -> None:
         path.write_text(first + sep + rest, encoding="utf-8")
 
 
+def reconcile_preexisting_taxonomy() -> dict:
+    """Repair an existing three-owner Ray entry and sync the exact-name registry."""
+    ml = REPO / "skills/meta-machine-learning/references/members.md"
+    lines = ml.read_text(encoding="utf-8").splitlines()
+    kept = [line for line in lines if not line.startswith("- **ray-distributed-computing** — ")]
+    removed = len(lines) - len(kept)
+    if removed != 1:
+        raise ValueError("Expected exactly one preexisting Ray ML catalog entry")
+    count = sum(line.startswith("- **") for line in kept)
+    kept = [re.sub(r"^\d+(?= atomic skills\.)", str(count), line)
+            for line in kept]
+    ml.write_text("\n".join(kept).rstrip() + "\n", encoding="utf-8")
+
+    owners: dict[str, set[str]] = defaultdict(set)
+    for catalog in (REPO / "skills").glob("meta-*/references/members.md"):
+        name = catalog.parent.parent.name
+        for line in catalog.read_text(encoding="utf-8").splitlines():
+            if line.startswith("- **"):
+                identity = line.split("**", 2)[1]
+                owners[identity].add(name)
+    over = {k: sorted(v) for k, v in owners.items() if len(v) > 2}
+    if over:
+        raise ValueError("Unresolved >2 meta owners: " + repr(over))
+
+    registry = REPO / "skills/meta-specialist-catalog/references/legacy-names.md"
+    lines = registry.read_text(encoding="utf-8").splitlines()
+    first = next(i for i, line in enumerate(lines) if line.startswith("- **"))
+    head = lines[:first]
+    current = {line.split("**", 2)[1]: line for line in lines[first:]
+               if line.startswith("- **")}
+    added = []
+    modified = []
+    for identity, membership in owners.items():
+        owned = ", ".join(sorted(membership))
+        desired = (
+            f"- **{identity}** — {owned} — "
+            + chr(96) + f"../../../atomic-skills/{identity}/SKILL.md" + chr(96)
+        )
+        if identity not in current:
+            added.append(identity)
+            current[identity] = desired
+        elif current[identity] != desired:
+            modified.append(identity)
+            current[identity] = desired
+    registry.write_text(
+        "\n".join(head).rstrip() + "\n\n"
+        + "\n".join(current[k] for k in sorted(current))
+        + "\n", encoding="utf-8"
+    )
+    return {"ray_removed_from_meta_machine_learning": removed,
+            "legacy_entries_added": added, "legacy_entries_updated": modified}
+
+
 def main() -> None:
     if SOURCE is None or not (SOURCE / ".git").is_dir():
         raise SystemExit("Pass a locally checked-out, pinned Anthropic plugins repository")
@@ -200,9 +253,11 @@ def main() -> None:
             "license": "Apache-2.0",
         })
     add_entries(SPECS)
+    baseline_fixes = reconcile_preexisting_taxonomy()
     update_meta_descriptions()
     manifest = {
         "source": UPSTREAM_REPO,
+        "preexisting_taxonomy_repairs": baseline_fixes,
         "pinned_commit": UPSTREAM_SHA,
         "source_packages": 31,
         "imported_portable_skills": len(imported),
