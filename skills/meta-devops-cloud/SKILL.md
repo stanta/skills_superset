@@ -29,6 +29,8 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 
 ## Typical decomposition
 
+- Kubernetes/OpenShift/Helm/Lens: choose `kubernetes-specialist` for generic workload design; `openshift-operations` for SCC, Routes, Operators and cluster upgrades; `helm-release-engineering` for chart lifecycle and safe rollback; `lens-kubernetes-ide` for RBAC-aware interactive diagnosis. Combine only the children required by the subtask.
+
 - GitLab CI/CD: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - Git branch/commit/recovery: select `git-core-workflows` or `git-history-recovery`; add `using-git-worktrees` only if isolated work is needed.
 - GitHub PR governance and review: select `github-pull-request-workflows`; for Actions, trusted CI and deployment select `github-actions-devsecops`. For code review, select `code-review` via `meta-software-architecture`.
