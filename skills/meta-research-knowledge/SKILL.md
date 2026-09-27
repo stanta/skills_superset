@@ -2,6 +2,7 @@
 name: meta-research-knowledge
 description: >
   Use this normal Agent Skill first for research literature, scientific sources, citations and knowledge synthesis. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: literature review, source reconciliation, knowledge research.
+  Additional scope: olympiad mathematics proof search and verification.
 ---
 
 # meta-research-knowledge

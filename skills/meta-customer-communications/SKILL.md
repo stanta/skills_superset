@@ -2,6 +2,7 @@
 name: meta-customer-communications
 description: >
   Use this normal Agent Skill first for Twilio, Zoom, SendGrid, messaging, voice, video and contact centers. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Twilio messaging, Zoom SDK, voice calls.
+  Additional scope: Discord, Telegram and iMessage agent channel access and setup.
 ---
 
 # meta-customer-communications

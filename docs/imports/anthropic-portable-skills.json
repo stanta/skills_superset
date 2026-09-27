@@ -1,0 +1,286 @@
+{
+  "source": "https://github.com/anthropics/claude-plugins-official",
+  "preexisting_taxonomy_repairs": {
+    "ray_removed_from_meta_machine_learning": 1,
+    "legacy_entries_added": [
+      "ray-distributed-computing"
+    ],
+    "legacy_entries_updated": []
+  },
+  "pinned_commit": "fa59bc9037741ecfa131aa27938272605710d7b2",
+  "source_packages": 31,
+  "imported_portable_skills": 26,
+  "excluded_existing_or_examples": {
+    "plugins/frontend-design/skills/frontend-design": "existing atomic-skills/frontend-design",
+    "plugins/skill-creator/skills/skill-creator": "existing atomic-skills/skill-creator",
+    "plugins/claude-security/skills/claude-security": "restricted proprietary license; not imported (use existing security skills)",
+    "plugins/example-plugin/skills/example-command": "demo-only; no production workflow",
+    "plugins/example-plugin/skills/example-skill": "demo-only; no production workflow"
+  },
+  "imported": [
+    {
+      "source": "external_plugins/discord/skills/access",
+      "target": "atomic-skills/discord-channel-access",
+      "metas": [
+        "meta-customer-communications",
+        "meta-security-compliance"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "external_plugins/discord/skills/configure",
+      "target": "atomic-skills/discord-channel-configure",
+      "metas": [
+        "meta-customer-communications",
+        "meta-devops-cloud"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "external_plugins/imessage/skills/access",
+      "target": "atomic-skills/imessage-channel-access",
+      "metas": [
+        "meta-customer-communications",
+        "meta-security-compliance"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "external_plugins/imessage/skills/configure",
+      "target": "atomic-skills/imessage-channel-configure",
+      "metas": [
+        "meta-customer-communications",
+        "meta-devops-cloud"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "external_plugins/telegram/skills/access",
+      "target": "atomic-skills/telegram-channel-access",
+      "metas": [
+        "meta-customer-communications",
+        "meta-security-compliance"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "external_plugins/telegram/skills/configure",
+      "target": "atomic-skills/telegram-channel-configure",
+      "metas": [
+        "meta-customer-communications",
+        "meta-devops-cloud"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/claude-code-setup/skills/claude-automation-recommender",
+      "target": "atomic-skills/agent-automation-recommender",
+      "metas": [
+        "meta-agent-systems",
+        "meta-devops-cloud"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/claude-md-management/skills/claude-md-improver",
+      "target": "atomic-skills/agent-instructions-maintainer",
+      "metas": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/cwc-makers/skills/cardputer-buddy",
+      "target": "atomic-skills/cardputer-buddy",
+      "metas": [
+        "meta-mobile-desktop"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/cwc-makers/skills/m5-onboard",
+      "target": "atomic-skills/m5-onboard",
+      "metas": [
+        "meta-mobile-desktop"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/hookify/skills/writing-rules",
+      "target": "atomic-skills/agent-policy-hook-rules",
+      "metas": [
+        "meta-agent-systems",
+        "meta-security-compliance"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/math-olympiad/skills/math-olympiad",
+      "target": "atomic-skills/math-olympiad",
+      "metas": [
+        "meta-research-knowledge",
+        "meta-testing-quality"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/mcp-server-dev/skills/build-mcp-app",
+      "target": "atomic-skills/mcp-interactive-app-builder",
+      "metas": [
+        "meta-agent-systems",
+        "meta-frontend-web"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/mcp-server-dev/skills/build-mcp-server",
+      "target": "atomic-skills/mcp-server-design-router",
+      "metas": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/mcp-server-dev/skills/build-mcpb",
+      "target": "atomic-skills/mcp-local-bundle-packager",
+      "metas": [
+        "meta-agent-systems",
+        "meta-devops-cloud"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/playground/skills/playground",
+      "target": "atomic-skills/interactive-explainer-builder",
+      "metas": [
+        "meta-visual-design",
+        "meta-frontend-web"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/plugin-dev/skills/agent-development",
+      "target": "atomic-skills/agent-role-development",
+      "metas": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/plugin-dev/skills/command-development",
+      "target": "atomic-skills/agent-command-development",
+      "metas": [
+        "meta-agent-systems",
+        "meta-devops-cloud"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/plugin-dev/skills/hook-development",
+      "target": "atomic-skills/agent-lifecycle-hook-development",
+      "metas": [
+        "meta-agent-systems",
+        "meta-security-compliance"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/plugin-dev/skills/mcp-integration",
+      "target": "atomic-skills/agent-mcp-integration",
+      "metas": [
+        "meta-agent-systems",
+        "meta-workplace-integrations"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/plugin-dev/skills/plugin-settings",
+      "target": "atomic-skills/agent-extension-settings",
+      "metas": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/plugin-dev/skills/plugin-structure",
+      "target": "atomic-skills/agent-extension-packaging",
+      "metas": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/plugin-dev/skills/skill-development",
+      "target": "atomic-skills/agent-skill-development",
+      "metas": [
+        "meta-agent-systems",
+        "meta-testing-quality"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/project-artifact/skills/project-artifact",
+      "target": "atomic-skills/project-status-artifact",
+      "metas": [
+        "meta-product-business",
+        "meta-office-documents"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/receipts/skills/receipts",
+      "target": "atomic-skills/agent-work-impact-report",
+      "metas": [
+        "meta-agent-systems",
+        "meta-data-analytics"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    },
+    {
+      "source": "plugins/session-report/skills/session-report",
+      "target": "atomic-skills/agent-session-telemetry",
+      "metas": [
+        "meta-agent-systems",
+        "meta-data-analytics"
+      ],
+      "adaptation": "rewritten provider-neutral procedure; upstream vendor-specific resources linked, not bundled",
+      "license": "Apache-2.0"
+    }
+  ],
+  "design_rules": [
+    "Only meta-skills are visible at first-level discovery",
+    "No proprietary agent operation is a required portable prerequisite",
+    "No upstream executable scripts or transcribed secrets are bundled",
+    "Existing atomic skills remain unchanged"
+  ]
+}

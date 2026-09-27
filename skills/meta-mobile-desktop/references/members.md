@@ -1,12 +1,13 @@
 # Children of meta-mobile-desktop
 
-40 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+42 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **android-emulator-qa** — Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture. — `../../../atomic-skills/android-emulator-qa/SKILL.md`
 - **android-performance** — Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, gfxinfo frame data, dumpsys meminfo snapshots, Java heap du — `../../../atomic-skills/android-performance/SKILL.md`
 - **appkit-interop** — Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain. — `../../../atomic-skills/appkit-interop/SKILL.md`
+- **cardputer-buddy** — Guide any coding agent through scoped Cardputer/M5Stack hardware development using detected toolchains and physical-device safety checks. — `../../../atomic-skills/cardputer-buddy/SKILL.md`
 - **codex-expo-run-actions** — Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run action — `../../../atomic-skills/codex-expo-run-actions/SKILL.md`
 - **connect-chatcut-desktop** — Install, open, connect, or repair ChatCut Desktop when the chatcut_desktop MCP tools are missing or unavailable. Do not use from a managed agent already running inside ChatCut Desktop,  — `../../../atomic-skills/connect-chatcut-desktop/SKILL.md`
 - **expo-cicd-workflows** — Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or  — `../../../atomic-skills/expo-cicd-workflows/SKILL.md`
@@ -25,6 +26,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **ios-simulator-browser** — Mirror an iOS Simulator into the Codex in-app browser and render SwiftUI previews from importable Swift packages in that simulator with hot reload. Use when a user wants to watch or int — `../../../atomic-skills/ios-simulator-browser/SKILL.md`
 - **kotlin-specialist** — Provides idiomatic Kotlin implementation patterns including coroutine concurrency, Flow stream handling, multiplatform architecture, Compose UI construction, Ktor server setup, and type — `../../../atomic-skills/kotlin-specialist/SKILL.md`
 - **liquid-glass** — Implement and review macOS SwiftUI Liquid Glass UI. Use when adopting system glass, removing conflicting custom chrome, or building glass surfaces. — `../../../atomic-skills/liquid-glass/SKILL.md`
+- **m5-onboard** — Onboard any AI coding agent to M5Stack hardware projects with board detection, SDK setup, safe flashing and reproducible smoke tests. — `../../../atomic-skills/m5-onboard/SKILL.md`
 - **packaging-notarization** — Prepare macOS packaging and notarization workflows. Use when archiving apps, validating bundles, or explaining distribution-only failures. — `../../../atomic-skills/packaging-notarization/SKILL.md`
 - **react-native-expert** — Builds, optimizes, and debugs cross-platform mobile applications with React Native and Expo. Implements navigation hierarchies (tabs, stacks, drawers), configures native modules, optimi — `../../../atomic-skills/react-native-expert/SKILL.md`
 - **signing-entitlements** — Inspect macOS signing, entitlements, and Gatekeeper issues. Use when diagnosing code signing, sandbox, hardened runtime, or trust failures. — `../../../atomic-skills/signing-entitlements/SKILL.md`

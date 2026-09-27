@@ -2,6 +2,7 @@
 name: meta-testing-quality
 description: >
   Use this normal Agent Skill first for testing, QA, agent evaluations, debugging and regression verification. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: unit testing, E2E QA, agent evaluation. Also covers Rust Cargo test, Clippy, Miri and fuzzing.
+  Additional scope: agent skill evaluations and formal proof verification.
 ---
 
 # meta-testing-quality

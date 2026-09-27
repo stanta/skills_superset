@@ -1,6 +1,6 @@
 # Children of meta-frontend-web
 
-48 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+50 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -22,7 +22,9 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **geist** — Expert guidance for Geist, Vercel's default typography system and font family for precise Next.js interfaces. Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up fon — `../../../atomic-skills/geist/SKILL.md`
 - **geistdocs** — Expert guidance for Geistdocs, Vercel's documentation template built with Next.js and Fumadocs — MDX authoring, configuration, AI chat, i18n, feedback, deployment. Use when creating doc — `../../../atomic-skills/geistdocs/SKILL.md`
 - **gsap** — GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and  — `../../../atomic-skills/gsap/SKILL.md`
+- **interactive-explainer-builder** — Create self-contained interactive explainers and configuration playgrounds for any AI agent with accessible controls and copyable reproducible outputs. — `../../../atomic-skills/interactive-explainer-builder/SKILL.md`
 - **magicpath** — Use when the user mentions MagicPath, designs, UI components, themes, canvas selections, or repo-to-canvas UI work; run magicpath-ai to search, inspect, install, or author components. — `../../../atomic-skills/magicpath/SKILL.md`
+- **mcp-interactive-app-builder** — Build secure interactive MCP applications with in-chat widgets, accessible UI and transport-specific adapters for any compatible host. — `../../../atomic-skills/mcp-interactive-app-builder/SKILL.md`
 - **microfrontends** — Guide for building, configuring, and deploying microfrontends on Vercel. Use this skill when the user mentions microfrontends, multi-zones, splitting an app across teams, independent de — `../../../atomic-skills/microfrontends/SKILL.md`
 - **next-cache-components** — Next.js 16 Cache Components guidance — PPR, use cache directive, cacheLife, cacheTag, updateTag, and migration from unstable_cache. Use when implementing partial prerendering, caching s — `../../../atomic-skills/next-cache-components/SKILL.md`
 - **next-forge** — next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with 'npx next-forge init', or editing @re — `../../../atomic-skills/next-forge/SKILL.md`

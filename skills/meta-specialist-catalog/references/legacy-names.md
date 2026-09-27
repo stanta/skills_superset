@@ -12,9 +12,21 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **adobe-design-from-template** — meta-visual-design — `../../../atomic-skills/adobe-design-from-template/SKILL.md`
 - **adobe-edit-quick-cut** — meta-visual-design — `../../../atomic-skills/adobe-edit-quick-cut/SKILL.md`
 - **adobe-retouch-portraits** — meta-visual-design — `../../../atomic-skills/adobe-retouch-portraits/SKILL.md`
+- **agent-automation-recommender** — meta-agent-systems, meta-devops-cloud — `../../../atomic-skills/agent-automation-recommender/SKILL.md`
 - **agent-browser** — meta-browser-automation, meta-agent-systems — `../../../atomic-skills/agent-browser/SKILL.md`
 - **agent-browser-verify** — meta-agent-systems, meta-browser-automation — `../../../atomic-skills/agent-browser-verify/SKILL.md`
+- **agent-command-development** — meta-agent-systems, meta-devops-cloud — `../../../atomic-skills/agent-command-development/SKILL.md`
 - **agent-evals-lab** — meta-agent-systems, meta-testing-quality — `../../../atomic-skills/agent-evals-lab/SKILL.md`
+- **agent-extension-packaging** — meta-agent-systems, meta-software-architecture — `../../../atomic-skills/agent-extension-packaging/SKILL.md`
+- **agent-extension-settings** — meta-agent-systems, meta-software-architecture — `../../../atomic-skills/agent-extension-settings/SKILL.md`
+- **agent-instructions-maintainer** — meta-agent-systems, meta-software-architecture — `../../../atomic-skills/agent-instructions-maintainer/SKILL.md`
+- **agent-lifecycle-hook-development** — meta-agent-systems, meta-security-compliance — `../../../atomic-skills/agent-lifecycle-hook-development/SKILL.md`
+- **agent-mcp-integration** — meta-agent-systems, meta-workplace-integrations — `../../../atomic-skills/agent-mcp-integration/SKILL.md`
+- **agent-policy-hook-rules** — meta-agent-systems, meta-security-compliance — `../../../atomic-skills/agent-policy-hook-rules/SKILL.md`
+- **agent-role-development** — meta-agent-systems, meta-software-architecture — `../../../atomic-skills/agent-role-development/SKILL.md`
+- **agent-session-telemetry** — meta-agent-systems, meta-data-analytics — `../../../atomic-skills/agent-session-telemetry/SKILL.md`
+- **agent-skill-development** — meta-agent-systems, meta-testing-quality — `../../../atomic-skills/agent-skill-development/SKILL.md`
+- **agent-work-impact-report** — meta-agent-systems, meta-data-analytics — `../../../atomic-skills/agent-work-impact-report/SKILL.md`
 - **ai-agent-control-plane-dashboard** — meta-agent-systems, meta-data-analytics — `../../../atomic-skills/ai-agent-control-plane-dashboard/SKILL.md`
 - **ai-elements** — meta-customer-communications, meta-frontend-web — `../../../atomic-skills/ai-elements/SKILL.md`
 - **ai-gateway** — meta-agent-systems — `../../../atomic-skills/ai-gateway/SKILL.md`
@@ -82,6 +94,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **canva-resize-for-social-media** — meta-visual-design, meta-marketing-growth — `../../../atomic-skills/canva-resize-for-social-media/SKILL.md`
 - **canva-translate-design** — meta-visual-design — `../../../atomic-skills/canva-translate-design/SKILL.md`
 - **canvas2d-data-visualization** — meta-data-analytics — `../../../atomic-skills/canvas2d-data-visualization/SKILL.md`
+- **cardputer-buddy** — meta-mobile-desktop — `../../../atomic-skills/cardputer-buddy/SKILL.md`
 - **catalyst-calendar** — meta-workplace-integrations — `../../../atomic-skills/catalyst-calendar/SKILL.md`
 - **cbioportal-skill** — meta-clinical-health — `../../../atomic-skills/cbioportal-skill/SKILL.md`
 - **cdn-caching** — meta-devops-cloud — `../../../atomic-skills/cdn-caching/SKILL.md`
@@ -147,6 +160,8 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **devops** — meta-devops-cloud — `../../../atomic-skills/devops/SKILL.md`
 - **devops-engineer** — meta-devops-cloud — `../../../atomic-skills/devops-engineer/SKILL.md`
 - **digital-advertizer** — meta-marketing-growth — `../../../atomic-skills/digital-advertizer/SKILL.md`
+- **discord-channel-access** — meta-customer-communications, meta-security-compliance — `../../../atomic-skills/discord-channel-access/SKILL.md`
+- **discord-channel-configure** — meta-customer-communications, meta-devops-cloud — `../../../atomic-skills/discord-channel-configure/SKILL.md`
 - **dispatching-parallel-agents** — meta-agent-systems — `../../../atomic-skills/dispatching-parallel-agents/SKILL.md`
 - **distributed-computing-architecture** — meta-software-architecture — `../../../atomic-skills/distributed-computing-architecture/SKILL.md`
 - **distributed-dbms-architect** — meta-backend-services, meta-software-architecture — `../../../atomic-skills/distributed-dbms-architect/SKILL.md`
@@ -249,10 +264,13 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **idea-generation** — meta-machine-learning — `../../../atomic-skills/idea-generation/SKILL.md`
 - **ideate** — meta-visual-design — `../../../atomic-skills/ideate/SKILL.md`
 - **image-to-code** — meta-visual-design, meta-software-architecture — `../../../atomic-skills/image-to-code/SKILL.md`
+- **imessage-channel-access** — meta-customer-communications, meta-security-compliance — `../../../atomic-skills/imessage-channel-access/SKILL.md`
+- **imessage-channel-configure** — meta-customer-communications, meta-devops-cloud — `../../../atomic-skills/imessage-channel-configure/SKILL.md`
 - **improve-skill** — meta-agent-systems — `../../../atomic-skills/improve-skill/SKILL.md`
 - **initiating-coverage** — meta-finance-payments — `../../../atomic-skills/initiating-coverage/SKILL.md`
 - **inspect-dropbox-file** — meta-workplace-integrations — `../../../atomic-skills/inspect-dropbox-file/SKILL.md`
 - **intake** — meta-media-production — `../../../atomic-skills/intake/SKILL.md`
+- **interactive-explainer-builder** — meta-frontend-web, meta-visual-design — `../../../atomic-skills/interactive-explainer-builder/SKILL.md`
 - **investigation-mode** — meta-testing-quality — `../../../atomic-skills/investigation-mode/SKILL.md`
 - **ios-app-intents** — meta-mobile-desktop — `../../../atomic-skills/ios-app-intents/SKILL.md`
 - **ios-debugger-agent** — meta-mobile-desktop, meta-agent-systems — `../../../atomic-skills/ios-debugger-agent/SKILL.md`
@@ -285,13 +303,18 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **locus-to-gene-mapper-skill** — meta-genomics-omics — `../../../atomic-skills/locus-to-gene-mapper-skill/SKILL.md`
 - **long-horizon-context-management** — meta-agent-systems — `../../../atomic-skills/long-horizon-context-management/SKILL.md`
 - **long-short-pitch** — meta-finance-payments — `../../../atomic-skills/long-short-pitch/SKILL.md`
+- **m5-onboard** — meta-mobile-desktop — `../../../atomic-skills/m5-onboard/SKILL.md`
 - **magicpath** — meta-frontend-web — `../../../atomic-skills/magicpath/SKILL.md`
 - **market-sizing** — meta-product-business — `../../../atomic-skills/market-sizing/SKILL.md`
 - **marketing-superradar** — meta-marketing-growth — `../../../atomic-skills/marketing-superradar/SKILL.md`
 - **marketplace** — meta-devops-cloud — `../../../atomic-skills/marketplace/SKILL.md`
+- **math-olympiad** — meta-research-knowledge, meta-testing-quality — `../../../atomic-skills/math-olympiad/SKILL.md`
 - **mcp-builder** — meta-agent-systems — `../../../atomic-skills/mcp-builder/SKILL.md`
 - **mcp-builder.backup-20260914T0736Z** (mcp-builder) — meta-agent-systems — `../../../atomic-skills/mcp-builder.backup-20260914T0736Z/SKILL.md`
 - **mcp-developer** — meta-software-architecture, meta-agent-systems — `../../../atomic-skills/mcp-developer/SKILL.md`
+- **mcp-interactive-app-builder** — meta-agent-systems, meta-frontend-web — `../../../atomic-skills/mcp-interactive-app-builder/SKILL.md`
+- **mcp-local-bundle-packager** — meta-agent-systems, meta-devops-cloud — `../../../atomic-skills/mcp-local-bundle-packager/SKILL.md`
+- **mcp-server-design-router** — meta-agent-systems, meta-software-architecture — `../../../atomic-skills/mcp-server-design-router/SKILL.md`
 - **medical-marketologist** — meta-clinical-health — `../../../atomic-skills/medical-marketologist/SKILL.md`
 - **meeting-prep** — meta-finance-payments — `../../../atomic-skills/meeting-prep/SKILL.md`
 - **memo-builder** — meta-finance-payments — `../../../atomic-skills/memo-builder/SKILL.md`
@@ -394,6 +417,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **product-design-user-context** (user-context) — meta-visual-design, meta-agent-systems — `../../../atomic-skills/product-design-user-context/SKILL.md`
 - **product-owner** — meta-product-business — `../../../atomic-skills/product-owner/SKILL.md`
 - **project-manager** — meta-product-business — `../../../atomic-skills/project-manager/SKILL.md`
+- **project-status-artifact** — meta-office-documents, meta-product-business — `../../../atomic-skills/project-status-artifact/SKILL.md`
 - **prompt-engineer** — meta-agent-systems — `../../../atomic-skills/prompt-engineer/SKILL.md`
 - **prompt-security-redteam** — meta-agent-systems, meta-security-compliance — `../../../atomic-skills/prompt-security-redteam/SKILL.md`
 - **propagate** — meta-product-business — `../../../atomic-skills/propagate/SKILL.md`
@@ -408,6 +432,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **quickgo-skill** — meta-molecular-discovery — `../../../atomic-skills/quickgo-skill/SKILL.md`
 - **rag-architect** — meta-agent-systems, meta-software-architecture — `../../../atomic-skills/rag-architect/SKILL.md`
 - **rails-expert** — meta-backend-services — `../../../atomic-skills/rails-expert/SKILL.md`
+- **ray-distributed-computing** — meta-devops-cloud, meta-software-architecture — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
 - **rcsb-pdb-skill** — meta-molecular-discovery — `../../../atomic-skills/rcsb-pdb-skill/SKILL.md`
 - **react-and-nextjs-data-visualization** — meta-data-analytics, meta-frontend-web — `../../../atomic-skills/react-and-nextjs-data-visualization/SKILL.md`
 - **react-expert** — meta-frontend-web — `../../../atomic-skills/react-expert/SKILL.md`
@@ -525,6 +550,8 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **techwriter** — meta-software-architecture — `../../../atomic-skills/techwriter/SKILL.md`
 - **telegram-ai-bot-runtime** — meta-customer-communications — `../../../atomic-skills/telegram-ai-bot-runtime/SKILL.md`
 - **telegram-bot-test-automation** — meta-testing-quality — `../../../atomic-skills/telegram-bot-test-automation/SKILL.md`
+- **telegram-channel-access** — meta-customer-communications, meta-security-compliance — `../../../atomic-skills/telegram-channel-access/SKILL.md`
+- **telegram-channel-configure** — meta-customer-communications, meta-devops-cloud — `../../../atomic-skills/telegram-channel-configure/SKILL.md`
 - **telegram-mini-apps-specialist** — meta-customer-communications — `../../../atomic-skills/telegram-mini-apps-specialist/SKILL.md`
 - **telemetry** — meta-mobile-desktop — `../../../atomic-skills/telemetry/SKILL.md`
 - **temporal-cloud-setup** — meta-devops-cloud — `../../../atomic-skills/temporal-cloud-setup/SKILL.md`

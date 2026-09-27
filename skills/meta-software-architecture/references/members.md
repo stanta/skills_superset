@@ -1,10 +1,14 @@
 # Children of meta-software-architecture
 
-59 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+64 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **1c-enterprise-extension-development** — Production-oriented guidance for designing, implementing, reviewing, testing, packaging, upgrading, and operating 1C:Enterprise configuration extensions (.cfe), with an additional integ — `../../../atomic-skills/1c-enterprise-extension-development/SKILL.md`
+- **agent-extension-packaging** — Package agent extensions as discoverable cross-runtime skills, commands, tools and optional plugins while preserving portable core contracts. — `../../../atomic-skills/agent-extension-packaging/SKILL.md`
+- **agent-extension-settings** — Design portable configuration and local state for agent extensions with schema validation, safe defaults, secret isolation and clear precedence. — `../../../atomic-skills/agent-extension-settings/SKILL.md`
+- **agent-instructions-maintainer** — Audit and maintain CLAUDE.md, AGENTS.md, repository agent rules and equivalent instruction files for any coding agent without overwriting project intent. — `../../../atomic-skills/agent-instructions-maintainer/SKILL.md`
+- **agent-role-development** — Design bounded specialist agent roles and subagents with explicit delegation, tool permissions, outputs and host-neutral manifests. — `../../../atomic-skills/agent-role-development/SKILL.md`
 - **angular-architect** — Generates Angular 17+ standalone components, configures advanced routing with lazy loading and guards, implements NgRx state management, applies RxJS patterns, and optimizes bundle perf — `../../../atomic-skills/angular-architect/SKILL.md`
 - **architecture-designer** — Use when designing new high-level system architecture, reviewing existing designs, or making architectural decisions. Invoke to create architecture diagrams, write Architecture Decision — `../../../atomic-skills/architecture-designer/SKILL.md`
 - **blockchain-node-architect** — Blockchain node architecture, protocol-correct execution and consensus boundaries, P2P, state/storage, synchronization, reorg and validator safety — `../../../atomic-skills/blockchain-node-architect/SKILL.md`
@@ -34,6 +38,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **langfuse-skill-developer** — Create and manage Claude Code skills following Anthropic best practices. Use when creating new skills, modifying skill-rules.json, understanding trigger patterns, working with hooks, de — `../../../atomic-skills/langfuse-skill-developer/SKILL.md`
 - **legacy-modernizer** — Designs incremental migration strategies, identifies service boundaries, produces dependency maps and migration roadmaps, and generates API facade designs for aging codebases. Use when  — `../../../atomic-skills/legacy-modernizer/SKILL.md`
 - **mcp-developer** — Use when building, debugging, or extending MCP servers or clients that connect AI systems with external tools and data sources. Invoke to implement tool handlers, configure resource pro — `../../../atomic-skills/mcp-developer/SKILL.md`
+- **mcp-server-design-router** — Select and scaffold the right Model Context Protocol server deployment, tool-surface design and authentication flow across agent runtimes. — `../../../atomic-skills/mcp-server-design-router/SKILL.md`
 - **microservices-architect** — Designs distributed system architectures, decomposes monoliths into bounded-context services, recommends communication patterns, and produces service boundary diagrams and resilience st — `../../../atomic-skills/microservices-architect/SKILL.md`
 - **n8n-code-javascript** — Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, trou — `../../../atomic-skills/n8n-code-javascript/SKILL.md`
 - **n8n-code-python** — Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code — `../../../atomic-skills/n8n-code-python/SKILL.md`

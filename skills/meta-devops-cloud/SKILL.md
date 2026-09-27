@@ -2,6 +2,7 @@
 name: meta-devops-cloud
 description: >
   Use this normal Agent Skill first for deployment, cloud, CI/CD, infrastructure and observability. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray clusters and KubeRay deployment;  GitLab CI/CD, production monitoring, cloud deployment. Russian queries: GitLab CI; деплой; мониторинг GlitchTip. Also covers Rust Cargo CI, MSRV and Tokio runtime observability.
+  Additional scope: agent command automation, channel deployment and MCP bundle packaging.
 ---
 
 # meta-devops-cloud

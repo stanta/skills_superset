@@ -2,6 +2,7 @@
 name: meta-visual-design
 description: >
   Use this normal Agent Skill first for visual design, Figma, image editing, UI/UX and accessibility. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Figma design, image editing, design systems.
+  Additional scope: interactive explainer and configuration playgrounds.
 ---
 
 # meta-visual-design

@@ -2,6 +2,7 @@
 name: meta-frontend-web
 description: >
   Use this normal Agent Skill first for React, Vue, Angular, web UI and frontend performance. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: React TypeScript UI, frontend framework, web styling. Russian queries: React интерфейс; веб-приложения.
+  Additional scope: interactive MCP apps and portable visual playgrounds.
 ---
 
 # meta-frontend-web

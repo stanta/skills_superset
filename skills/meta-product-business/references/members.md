@@ -1,6 +1,6 @@
 # Children of meta-product-business
 
-20 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+21 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -21,6 +21,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **product-design-index** — Use when Product Design is explicitly invoked, or when the user's main goal is to explore a design, research UX, audit or critique a flow, faithfully clone a visual source, check a buil — `../../../atomic-skills/product-design-index/SKILL.md`
 - **product-owner** — Comprehensive product management guidance for planning, prioritizing, and growing digital products. Use when managing product backlog, conducting market research, defining product strat — `../../../atomic-skills/product-owner/SKILL.md`
 - **project-manager** — This skill should be used when managing IT/software projects, turning vague initiatives into measurable outcomes, creating project charters, roadmaps, milestones, iteration plans, work  — `../../../atomic-skills/project-manager/SKILL.md`
+- **project-status-artifact** — Generate evidence-linked project status artifacts with workstreams, decisions, risks and change-only refreshes in portable Markdown or HTML. — `../../../atomic-skills/project-status-artifact/SKILL.md`
 - **propagate** — Walk an upstream documentation change downstream — when a PRD, SRS, tech-design, or feature spec is edited, find every dependent document, identify which sections are now stale, and int — `../../../atomic-skills/propagate/SKILL.md`
 - **review** — Review spec-forge generated documents (SRS + tech-design + feature specs) for quality, completeness, and internal consistency. Finds issues like incomplete sections, contradictions, mis — `../../../atomic-skills/review/SKILL.md`
 - **the-fool** — Use when challenging ideas, plans, decisions, or proposals using structured critical reasoning. Invoke to play devil's advocate, run a pre-mortem, red team, or audit evidence and assump — `../../../atomic-skills/the-fool/SKILL.md`

@@ -1,6 +1,6 @@
 # Children of meta-office-documents
 
-17 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+18 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -17,6 +17,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **lecture-materials-improver** — This skill should be used when the user already has draft teaching materials and needs them reviewed, critiqued, restructured, and improved for clarity, pacing, engagement, and teachabi — `../../../atomic-skills/lecture-materials-improver/SKILL.md`
 - **lecture-pack-generator** — This skill should be used when the task is to create a complete ready-to-teach session package from scratch for any domain, including a lecture plan, slide outline, activities, checks f — `../../../atomic-skills/lecture-pack-generator/SKILL.md`
 - **practice-materials-generator** — This skill should be used when the task is to create teaching practice materials—concept checks, problems, mini-cases, quizzes, and answer keys—for any academic, technical, business, or — `../../../atomic-skills/practice-materials-generator/SKILL.md`
+- **project-status-artifact** — Generate evidence-linked project status artifacts with workstreams, decisions, risks and change-only refreshes in portable Markdown or HTML. — `../../../atomic-skills/project-status-artifact/SKILL.md`
 - **reports-pdfs-and-slide-automation** — Lay out and export data-rich reports and documents. Use when the user needs report structure, figure packaging, PDFs, PowerPoint or Google Slides automation, or programmatic insertion o — `../../../atomic-skills/reports-pdfs-and-slide-automation/SKILL.md`
 - **semester-module-planner** — This skill should be used when the task is to design a coherent multi-week module, syllabus, or learning arc for any subject, including weekly goals, session structure, activities, home — `../../../atomic-skills/semester-module-planner/SKILL.md`
 - **slide-writer-teaching** — This skill should be used when an existing lecture outline, plan, or draft needs to be turned into production-ready slide text, presenter notes, timing guidance, and visual suggestions  — `../../../atomic-skills/slide-writer-teaching/SKILL.md`
