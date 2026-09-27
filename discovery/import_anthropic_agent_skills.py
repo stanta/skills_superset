@@ -198,6 +198,18 @@ def reconcile_preexisting_taxonomy() -> dict:
             added.append(identity)
             current[identity] = desired
         elif current[identity] != desired:
+            previous = current[identity]
+            existing_owners = set(
+                previous.rsplit(" — ", 1)[0].split(" — ", 1)[1].split(", ")
+            )
+            expected_path = (
+                chr(96) + "../../../atomic-skills/"
+                + identity + "/SKILL.md" + chr(96)
+            )
+            if existing_owners == membership and previous.endswith(
+                " — " + expected_path
+            ):
+                continue  # Preserve existing owner order and metadata.
             modified.append(identity)
             current[identity] = desired
     registry.write_text(
