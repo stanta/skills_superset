@@ -39,6 +39,18 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m unittest discover -s discovery -p 'test_*.py' -v
+          python3 - <<'PY'
+          from pathlib import Path
+          from collections import defaultdict
+          owners = defaultdict(list)
+          for path in Path("skills").glob("meta-*/references/members.md"):
+              for line in path.read_text(encoding="utf-8").splitlines():
+                  if line.startswith("- **"):
+                      owners[line.split("**")[1]].append(path.parent.parent.name)
+          for name, meta in sorted(owners.items()):
+              if len(meta) > 2:
+                  print("META_CONFLICT", name, ", ".join(meta))
+          PY
           python3 discovery/validate_metaskills.py
 
       - name: Commit verified changes
