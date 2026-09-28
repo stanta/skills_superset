@@ -244,6 +244,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **github-pull-request-workflows** — meta-devops-cloud, meta-software-architecture — `../../../atomic-skills/github-pull-request-workflows/SKILL.md`
 - **gitlab-cicd-devsecops** — meta-devops-cloud, meta-security-compliance — `../../../atomic-skills/gitlab-cicd-devsecops/SKILL.md`
 - **gitlab-development** — meta-devops-cloud — `../../../atomic-skills/gitlab-development/SKILL.md`
+- **glove-embeddings** — meta-machine-learning — `../../../atomic-skills/glove-embeddings/SKILL.md`
 - **gnomad-graphql-skill** — meta-backend-services — `../../../atomic-skills/gnomad-graphql-skill/SKILL.md`
 - **golang-pro** — meta-software-architecture — `../../../atomic-skills/golang-pro/SKILL.md`
 - **google-colab-python** — meta-workplace-integrations, meta-software-architecture — `../../../atomic-skills/google-colab-python/SKILL.md`
