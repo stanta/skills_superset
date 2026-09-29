@@ -1,11 +1,12 @@
 # Children of meta-testing-quality
 
-35 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+36 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **agent-evals-lab** — This skill should be used when designing, implementing, or operationalizing evaluation suites for LLM agents, RAG flows, tool-using assistants, multilingual prompts, and release regress — `../../../atomic-skills/agent-evals-lab/SKILL.md`
 - **agent-skill-development** — Develop and evaluate reusable cross-agent Agent Skills using progressive disclosure, evidence-based triggers and baseline regression tests. — `../../../atomic-skills/agent-skill-development/SKILL.md`
+- **ai-agent-response-data-quality** — Verify high-stakes AI-agent/RAG answers claim by claim: authoritative provenance, deterministic calculations, freshness, missing-data clarification, safe abstention and release gates. — `../../../atomic-skills/ai-agent-response-data-quality/SKILL.md`
 - **analyze-data-quality** — Assess whether structured data, query results, dashboards, or analytical evidence are trustworthy enough to use. Use when the task is to check data quality, reconcile conflicting source — `../../../atomic-skills/analyze-data-quality/SKILL.md`
 - **android-emulator-qa** — Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture. — `../../../atomic-skills/android-emulator-qa/SKILL.md`
 - **build-run-debug** — Build, run, and debug macOS apps with shell-first Xcode and Swift workflows. Use when launching apps or diagnosing build, startup, or runtime failures. — `../../../atomic-skills/build-run-debug/SKILL.md`

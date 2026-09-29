@@ -1,6 +1,6 @@
 # Children of meta-agent-systems
 
-66 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+67 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -20,6 +20,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **agent-skill-development** — Develop and evaluate reusable cross-agent Agent Skills using progressive disclosure, evidence-based triggers and baseline regression tests. — `../../../atomic-skills/agent-skill-development/SKILL.md`
 - **agent-work-impact-report** — Measure agent-assisted development impact using consented local session metadata and version-control evidence without uploading raw transcripts. — `../../../atomic-skills/agent-work-impact-report/SKILL.md`
 - **ai-agent-control-plane-dashboard** — This skill should be used when designing, reviewing, or extending dashboards and operator consoles for AI agents, LLM applications, autonomous workflows, and multi-agent systems. Apply  — `../../../atomic-skills/ai-agent-control-plane-dashboard/SKILL.md`
+- **ai-agent-response-data-quality** — Verify high-stakes AI-agent/RAG answers claim by claim: authoritative provenance, deterministic calculations, freshness, missing-data clarification, safe abstention and release gates. — `../../../atomic-skills/ai-agent-response-data-quality/SKILL.md`
 - **ai-gateway** — Vercel AI Gateway expert guidance. Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API. — `../../../atomic-skills/ai-gateway/SKILL.md`
 - **ai-sdk** — Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, — `../../../atomic-skills/ai-sdk/SKILL.md`
 - **atlassian-mcp** — Integrates with Atlassian products to manage project tracking and documentation via MCP protocol. Use when querying Jira issues with JQL filters, creating and updating tickets with cust — `../../../atomic-skills/atlassian-mcp/SKILL.md`
