@@ -1,6 +1,6 @@
 # Children of meta-data-analytics
 
-43 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+44 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -25,6 +25,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **data-visualization** — Route web data visualization work. Use when the user needs chart choice, visual critique, dashboards, maps or geospatial views, Gantt timelines, UML/software diagrams, scrollytelling, r — `../../../atomic-skills/data-visualization/SKILL.md`
 - **gantt-chart-visualization** — Design, critique, route, and implement Gantt charts and schedule visualizations. Use when the user mentions Gantt charts, project schedules, roadmaps with task spans, milestones, depend — `../../../atomic-skills/gantt-chart-visualization/SKILL.md`
 - **geospatial-and-cartographic-visualization** — Design geospatial and cartographic visualizations. Use when the user needs help deciding whether to use a map, choosing projections or basemaps, building choropleths or symbol maps, or  — `../../../atomic-skills/geospatial-and-cartographic-visualization/SKILL.md`
+- **grammar-based-graph-compression** — Use when designing, implementing, evaluating, or researching repeated-subgraph graph grammar compression, RePair/gRePair, SL-HR/HR, SUBDUE/MDL, queryable grammar representations, or graph-symbol dictionaries. — `../../../atomic-skills/grammar-based-graph-compression/SKILL.md`
 - **grammar-of-graphics-and-declarative-visualization** — Build data visualizations with declarative grammars. Use when the user needs Vega-Lite, Vega, Observable Plot, or grammar-of-graphics reasoning, especially for tabular charts that do no — `../../../atomic-skills/grammar-of-graphics-and-declarative-visualization/SKILL.md`
 - **jupyter-notebooks** — Create, edit, or validate reproducible SQL or Python notebooks. Use for notebooks, SQL/Python scratchpads, reproducible exploration, audit trails, or runnable companions where the analy — `../../../atomic-skills/jupyter-notebooks/SKILL.md`
 - **kpi-reporting** — Prepare KPI readouts, scorecards, WBR/MBR/QBR updates, and executive summaries from quantitative business or product metrics; use when the task is to report status, compare against targ — `../../../atomic-skills/kpi-reporting/SKILL.md`
