@@ -21,6 +21,7 @@ Read:
 - [methods and formalisms](references/methods-and-formalisms.md) before choosing a method;
 - [engineering playbook](references/engineering-playbook.md) before implementation;
 - [evaluation protocol](references/evaluation-and-experiments.md) before claiming compression or discovered structure;
+- [SemMap implementation findings](references/semmap-implementation-findings.md) when building recursive exact dictionaries, transition codecs, or graphon/graphex projections;
 - [sources](references/sources.md) for evidence provenance.
 
 ## Non-negotiable distinctions
@@ -56,7 +57,7 @@ Treat edge direction, edge/relation label, node label policy, multiplicity, self
 L_{\mathrm{total}}=L(\mathcal G)+L(S\mid\mathcal G)+L(\text{ports})+L(\text{residuals}).
 \]
 Accept a family only when total description length decreases.
-7. **Verify reconstruction/query semantics.** Decode and compare a canonical graph digest for lossless mode. Benchmark required queries directly on the grammar if queryability is part of the goal.
+7. **Verify reconstruction/query semantics.** Decode and compare a canonical graph digest for lossless mode. For a recursive hierarchy, also verify the consolidated final-level-to-level-0 reverse decode; local transition round-trips alone are insufficient. Benchmark required queries directly on the grammar if queryability is part of the goal.
 
 ## Selection score
 
