@@ -1,0 +1,291 @@
+# Engineering playbook
+
+## 1. Define the graph contract first
+
+Record whether the input supports:
+
+- directed edges;
+- edge/relation labels;
+- node labels/types;
+- multiedges;
+- self-loops;
+- hyperedges;
+- weights;
+- attributes excluded from or included in exact reconstruction.
+
+Two graphs are "the same symbol" only relative to this contract.
+
+For knowledge graphs, relation direction and label usually belong to the terminal structure. Treating \`IsA\` and \`UsedFor\`, or incoming and outgoing edges, as interchangeable silently changes semantics.
+
+## 2. Core shape and interface
+
+Represent a candidate occurrence as:
+
+~~~text
+Occurrence
+  internal_graph
+  ordered_external_ports
+  port_relation_profile
+  consumed_edges
+  member_nodes
+~~~
+
+A reusable symbol can be:
+
+~~~text
+GraphSymbol
+  symbol_id
+  canonical_core
+  rank
+  ordered_port_schema
+  child_symbols
+  definition_cost_bits
+~~~
+
+If many occurrences share an internal topology but differ in their outer attachment pattern, consider:
+
+~~~text
+shape_id + interface_variant_id + bindings
+~~~
+
+rather than creating one fully distinct symbol per occurrence.
+
+## 3. Candidate discovery options
+
+### Exact local digrams
+
+Fast and RePair-like. Best when repetitions are literal and local.
+
+### Frequent/canonical motifs
+
+Enumerate bounded subgraphs, hash/canonicalize them, then count occurrences. More expressive, more expensive.
+
+### MDL-guided expansion
+
+Start small and extend promising motifs. Useful when frequency alone finds trivial edges/stars.
+
+### Approximate proposal space
+
+Use descriptors such as typed WL, graphlets, relation histograms, spectral features, embeddings, GW/FGW, or density clustering (including Wishart) to propose families.
+
+**Proposal is not identity.** For lossless grammar rules, validate exact core/interface equivalence or encode residuals.
+
+## 4. Canonicalization pipeline
+
+Use a cheap-to-expensive cascade:
+
+1. invariants: node/edge counts, degree/type histograms, rank;
+2. rooted/typed WL or canonical hash;
+3. exact canonical labeling / graph-isomorphism verification when required;
+4. canonical port ordering.
+
+WL is an excellent partition/filter but is not a complete graph-isomorphism test for arbitrary graphs.
+
+For very small motifs, exact canonical labeling is often cheap enough after bucketing.
+
+## 5. External ports
+
+A node is external when an occurrence has an edge/hyperedge connection to structure outside the consumed fragment.
+
+The port schema should encode, as needed:
+
+- port order;
+- node type;
+- allowed incoming/outgoing relation labels;
+- whether multiple ports may bind the same original node;
+- weight/multiplicity semantics.
+
+Rank explosion is a compression hazard. Track:
+
+\[
+\mathrm{rank}(T)=|\mathrm{ports}(T)|.
+\]
+
+Use a maximum-rank constraint only as an explicit compression/query trade-off, not as an arbitrary magic constant.
+
+## 6. Overlap selection
+
+If occurrences consume the same edge or an internal node that would be removed, they conflict.
+
+For pair-digram RePair, maximum non-overlap may map to a matching problem. For general motifs it resembles weighted set packing and is usually intractable at scale.
+
+Practical strategies:
+
+- deterministic greedy by gain;
+- gain per consumed edge/node;
+- local improvement / swap;
+- partition graph into independent regions;
+- approximate MWIS on the conflict graph for high-value candidates.
+
+Always log the selection heuristic because it changes the resulting grammar.
+
+## 7. Coding-aware gain
+
+Raw frequency is insufficient.
+
+For a candidate type \(T\) with selected occurrences \(O\), estimate:
+
+\[
+\mathrm{Gain}(T,O)=
+L_{\mathrm{raw}}(O)
+-
+\big[
+L_{\mathrm{rule}}(T)
++L_{\mathrm{references}}(O)
++L_{\mathrm{port\ bindings}}(O)
++L_{\mathrm{residuals}}(O)
+\big].
+\]
+
+Count the start graph, grammar dictionary, symbol IDs, ranks, port bindings, residual edits, relation labels, and any indexes required by the claimed query workload.
+
+A rule that appears only once should normally be inlined unless it provides query/semantic value that is explicitly part of the objective.
+
+## 8. Replacement and hierarchy
+
+Maintain an acyclic rule DAG:
+
+~~~text
+S
+ ├─ T17
+ │   ├─ T4
+ │   └─ terminals
+ └─ T9
+~~~
+
+Every new nonterminal may refer only to terminals and previously defined nonterminals, or otherwise preserve an explicit topological order.
+
+Store original membership separately if users need to map compressed symbols back to original concepts without full expansion.
+
+## 9. Incremental occurrence maintenance
+
+Avoid rescanning the entire graph after every replacement.
+
+When replacing occurrence \(o\):
+
+1. identify edges incident to its attachment ports;
+2. invalidate motif occurrences touching consumed/changed edges;
+3. introduce the nonterminal edge/node representation;
+4. enumerate only newly possible motifs in the affected neighborhood;
+5. update counts/priority queues.
+
+This local-update pattern is essential for RePair-like scalability.
+
+## 10. Approximate family + residual design
+
+For an approximate family:
+
+~~~text
+FamilySymbol
+  prototype / canonical medoid
+  allowed edit alphabet
+  interface schema
+Occurrence
+  family_id
+  port bindings
+  residual edit script
+~~~
+
+Possible residual operations:
+
+- add/remove internal edge;
+- relation-label substitution;
+- direction change;
+- node-type exception;
+- extra/missing port;
+- external-edge correction.
+
+Use a prefix-decodable or otherwise self-delimiting residual code. The family is beneficial only if prototype references plus residuals beat exact alternatives.
+
+## 11. Symbol coding
+
+After grammar discovery, encode symbol references by:
+
+- Huffman code for simple static frequency coding;
+- arithmetic/range coding for closer-to-entropy coding;
+- conditional coding \(P(T_j\mid T_i)\) for grammar-context streams if justified.
+
+Keep **grammar definition cost** separate from **symbol-stream entropy**. A shorter Huffman stream cannot rescue an overgrown dictionary.
+
+## 12. Direct queries on the grammar
+
+Before adding query indexes, classify the workload:
+
+- neighbor enumeration;
+- triple lookup;
+- reachability;
+- regular path query;
+- motif/pattern search;
+- original-node membership;
+- random access.
+
+Some SL-HR methods support reachability/traversal without full decompression; ITR targets neighborhood/triple access. Query-specific indexes add storage cost and must be included in the compression benchmark.
+
+## 13. Reproducibility manifest
+
+Store:
+
+~~~text
+input graph hash
+code commit
+graph semantics contract
+candidate method + parameters
+canonicalization method/version
+node/order seed
+overlap heuristic
+max rank
+pruning policy
+coding model
+query indexes
+lossless/lossy mode
+residual alphabet
+~~~
+
+For approximate/discovery pipelines also store random seeds and candidate sampling policy.
+
+## 14. Wishart-assisted dictionary discovery
+
+A safe integration is:
+
+\[
+G
+\to
+\text{local subgraphs}
+\to
+\phi(H)
+\to
+\text{Wishart modes}
+\to
+\text{candidate families}
+\to
+\text{canonical/residual symbols}
+\to
+\text{MDL selection}
+\to
+\text{recursive replacement}.
+\]
+
+Recommended data model:
+
+~~~text
+wishart_mode_id      # local proposal only
+shape_id             # persistent exact/reconstructible core
+variant_id           # interface/residual variant
+symbol_id            # grammar nonterminal
+occurrence_id
+~~~
+
+Run a full-graph census after discovery; do not estimate Huffman probabilities only from the Wishart candidate sample.
+
+## 15. Common implementation failures
+
+| Failure | Consequence | Fix |
+|---|---|---|
+| cluster ID used as persistent symbol | level-local IDs masquerade as grammar | canonical persistent \`symbol_id\` |
+| ignores external interface | decode/query corruption | explicit ranked ports |
+| counts all overlaps as usable | impossible replacement set | conflict-aware selection |
+| optimizes node reduction only | may increase bits | total-code MDL |
+| approximate family without residual | silent lossy compression | residual or label as lossy |
+| WL hash treated as proof of isomorphism | false symbol merging | exact verification after bucketing |
+| rule dictionary not charged | fake compression | include grammar/index cost |
+| only one node ordering/seed | unstable RePair result hidden | repeat orderings/seeds |
