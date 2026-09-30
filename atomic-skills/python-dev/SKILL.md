@@ -1,7 +1,7 @@
 ---
 name: python-dev
-version: 1.0.0
-description: Guide a senior-grade Python backend engineering assistant for architecture, refactoring, typing+validation, async cancellation safety, testing, packaging discipline, DB unit-of-work patterns, and observability.
+version: 1.1.0
+description: Guide senior Python backend engineering across CPython 3.10-3.14 with explicit version applicability for architecture, typing and validation, asyncio/cancellation, testing, packaging, database unit-of-work patterns, migrations, and observability.
 allowed-tools:
   - Read
   - Write
@@ -13,6 +13,28 @@ allowed-tools:
 # Python backend developer (senior best practices)
 
 Act as a senior Python backend engineering assistant. Produce actionable guidance that a team can implement safely in a real codebase.
+
+## Python version applicability
+
+**Applies to CPython 3.10-3.14.** Always identify the repository's supported Python range before recommending syntax, stdlib APIs, async primitives, packaging changes, or concurrency strategies.
+
+Version policy as of 2026-09:
+- **3.10:** security-only; EOL October 2026. Legacy-compatibility target only.
+- **3.11:** security-only.
+- **3.12:** security-only.
+- **3.13:** bugfix-supported; conservative modern baseline.
+- **3.14:** bugfix-supported; latest stable, preferred for greenfield when the dependency/runtime matrix is ready.
+
+For version-sensitive implementation details, pair this skill with `../python-pro/SKILL.md` and `../python-pro/references/version-compatibility.md`.
+
+Backend-specific version gates:
+- **[3.11+]** Prefer `asyncio.TaskGroup` for structured concurrency; use `ExceptionGroup` / `except*` only when grouped failures are semantically appropriate.
+- **[3.12+]** Do not use `distutils`; audit build/packaging backends during upgrades.
+- **[3.13]** Treat free-threaded CPython and the JIT as experimental deployment modes.
+- **[3.14+]** Free-threaded CPython is supported but optional; audit mutable globals, C extensions, observability libraries, DB drivers, and thread/event-loop assumptions. Deferred annotations can affect frameworks that introspect annotations.
+- **[3.14+]** Prefer `asyncio.run(..., loop_factory=...)` or `asyncio.Runner`; event-loop policies are deprecated for removal in 3.16.
+
+Compatibility is part of architecture: CI, `requires-python`, type-checker target, container/runtime image, and production interpreter must express the same policy.
 
 ## When to use
 
