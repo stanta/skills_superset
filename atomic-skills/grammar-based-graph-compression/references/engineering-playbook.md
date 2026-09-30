@@ -289,3 +289,34 @@ Run a full-graph census after discovery; do not estimate Huffman probabilities o
 | WL hash treated as proof of isomorphism | false symbol merging | exact verification after bucketing |
 | rule dictionary not charged | fake compression | include grammar/index cost |
 | only one node ordering/seed | unstable RePair result hidden | repeat orderings/seeds |
+
+
+## 16. Decoder-first recursive hierarchy
+
+For recursive coarsening, do not rely on the quotient graph alone. A practical exact design is:
+
+\[
+\text{final coarse graph}+\sum_s \text{reverse transition delta}_s.
+\]
+
+When aggregation is a simple sum, unchanged singleton-to-singleton edges can be inherited from the next coarser level. Store exact internal/port payload for every edge touching a contracted figure. Require an end-to-end reverse decode before publishing completion.
+
+Do not reuse this inheritance rule for mean-density or normalized aggregation without deriving and testing the inverse.
+
+## 17. Conservative incremental census
+
+If ego identity includes external boundary statistics, contraction can change a candidate even when the contracted node lies just outside the ego. For radius-r egos, invalidate at least the undirected radius-(r+1) neighborhood of changed nodes.
+
+Carry forward only already-exact matches outside the invalid region. Rescan all previous no-match centers because newly learned dictionary types can match them. Periodically force a full census and test incremental counts against it.
+
+## 18. Graphon/graphex projection from a compressed hierarchy
+
+Mass at coarse levels must represent level-0 mass, not one unit per macro node:
+
+\[
+\mu_s(u)=|\pi_s^{-1}(u)|/|V_0|.
+\]
+
+Keep the lossless grammar and the statistical graph model as separate projections of the same hierarchy. A finite relation-specific block intensity is a W-like empirical model, not automatically a complete graphex; state explicitly when S or I are not estimated.
+
+See [SemMap implementation findings](semmap-implementation-findings.md) for tested details.
