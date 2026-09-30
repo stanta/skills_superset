@@ -28,6 +28,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **agent-skill-development** — meta-agent-systems, meta-testing-quality — `../../../atomic-skills/agent-skill-development/SKILL.md`
 - **agent-work-impact-report** — meta-agent-systems, meta-data-analytics — `../../../atomic-skills/agent-work-impact-report/SKILL.md`
 - **ai-agent-control-plane-dashboard** — meta-agent-systems, meta-data-analytics — `../../../atomic-skills/ai-agent-control-plane-dashboard/SKILL.md`
+- **ai-agent-response-data-quality** — meta-agent-systems, meta-testing-quality — `../../../atomic-skills/ai-agent-response-data-quality/SKILL.md`
 - **ai-elements** — meta-customer-communications, meta-frontend-web — `../../../atomic-skills/ai-elements/SKILL.md`
 - **ai-gateway** — meta-agent-systems — `../../../atomic-skills/ai-gateway/SKILL.md`
 - **ai-generation-persistence** — meta-machine-learning — `../../../atomic-skills/ai-generation-persistence/SKILL.md`
