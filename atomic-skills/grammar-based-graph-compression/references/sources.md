@@ -16,10 +16,12 @@ Use primary papers first. Treat implementation and benchmark claims as dataset- 
 
 ## Compression-driven discovery / MDL
 
-4. Lawrence B. Holder, Diane J. Cook, Surnjani Djoko. **Substructure Discovery in the SUBDUE System.** AAAI Workshop / related SUBDUE literature. Project bibliography and historical materials: https://ailab.wsu.edu/subdue/  
-   SUBDUE literature is the basis for compression-guided substructure search, beam search, hierarchical replacement, and inexact matching.
+4. Diane J. Cook, Lawrence B. Holder. **Substructure Discovery Using Minimum Description Length and Background Knowledge.** *Journal of Artificial Intelligence Research* 1 (1994), 231–255. DOI: https://doi.org/10.1613/jair.43  
+   Open version: https://arxiv.org/abs/cs/9402102  
+   Primary evidence for MDL-based SUBDUE, recursive replacement/hierarchical description, and computationally bounded inexact matching.
 
-5. Ashwin Ketkar et al. **Subdue: Compression-Based Frequent Pattern Discovery.** OSDM 2005. PDF: https://ailab.wsu.edu/subdue/papers/KetkarOSDM05.pdf
+5. Nikhil Ketkar, Lawrence Holder, Diane Cook, R. Shah, J. Coble. **Subdue: Compression-Based Frequent Pattern Discovery in Graph Data.** OSDM 2005, 71–76. DOI: https://doi.org/10.1145/1133905.1133915  
+   PDF: https://ailab.wsu.edu/subdue/papers/KetkarOSDM05.pdf
 
 6. Esther Galbrun. **The minimum description length principle for pattern mining: a survey.** *Data Mining and Knowledge Discovery* 36 (2022). DOI: https://doi.org/10.1007/s10618-022-00846-z  
    Critical source on MDL pattern mining, including limitations of approximate SUBDUE-style error handling and comparison with graph-summary methods.
