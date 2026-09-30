@@ -50,6 +50,10 @@ For a request naming a particular original skill, use [the exact-name registry](
 
 For high-stakes factual, numeric or source-grounded agent output, use [ai-agent-response-data-quality](atomic-skills/ai-agent-response-data-quality/SKILL.md). It verifies atomic claims, source provenance and revisions, deterministic calculations, completeness and freshness; missing user inputs become resumable clarification requests rather than guesses. The skill is discoverable through `meta-agent-systems`, `meta-testing-quality` and `meta-data-analytics`; its `references/` contain the operational playbook, evaluation contract and researched sources.
 
+## Grammar-based graph compression
+
+For repeated-subgraph compression, graph grammars, gRePair/SL-HR, SUBDUE/MDL discovery, queryable compressed graphs, and approximate graph-symbol dictionaries, use [grammar-based-graph-compression](atomic-skills/grammar-based-graph-compression/SKILL.md). It is discoverable through `meta-data-analytics` and `meta-research-knowledge`; its references separate exact lossless grammar compression from graph grammar induction/generation and connect safely to the existing Wishart graph-compression workflow.
+
 ## Git and GitHub: task routing
 
 For everyday Git changes, read [git-core-workflows](atomic-skills/git-core-workflows/SKILL.md); for safe undo, reflog recovery and history incidents, read [git-history-recovery](atomic-skills/git-history-recovery/SKILL.md). GitHub contributions, PR reviews, CODEOWNERS and branch protection belong to [github-pull-request-workflows](atomic-skills/github-pull-request-workflows/SKILL.md); GitHub Actions, runner trust and release security belong to [github-actions-devsecops](atomic-skills/github-actions-devsecops/SKILL.md). These atomic skills are discoverable through `meta-devops-cloud`, `meta-software-architecture` and, for Actions security, `meta-security-compliance`. See the [Russian-language practical guide](docs/guides/git-github-best-practices.md) for a human checklist and command examples.
