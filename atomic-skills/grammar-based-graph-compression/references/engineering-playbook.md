@@ -357,3 +357,14 @@ At minimum report a compact exact non-grammar baseline using the same semantic c
 For a hierarchy archive, compare like with like. If the grammar archive stores level-0 memberships, the baseline bundle must also store those memberships. Keep older/legacy ratios for continuity, but label the compact binary ratio as the primary storage comparator for new claims.
 
 Report both legacy and compact-binary ratios. Only the compact exact baseline is suitable for a strong statement that the grammar itself beats a reasonable exact representation.
+
+
+## 18. Do not serialize fields already implied by grammar order
+
+After correctness is established, inspect high-frequency binary streams for fields that are already determined by the grammar and deterministic stream order. Repeating them per record can erase the compression gained by structural reuse.
+
+For example, if internal payload is emitted in occurrence order and then shape-edge order, the decoder already knows `occurrence_id` and `shape_edge_index`; store only the information that is not derivable, such as exact record identity and weight payload. Likewise, a contiguous occurrence stream can infer `occurrence_id`, and a shape rule can infer occurrence arity.
+
+Version every compact stream layout explicitly and retain a legacy decoder during format migration. Compression optimization must never weaken exact round-trip tests.
+
+Use measured per-entry compressed bytes to choose the next optimization. A synthetic repeated-motif graph is useful as a codec sanity benchmark: if an exact grammar cannot beat or approach a compact non-grammar baseline even under ideal repetition, optimize serialization before attributing poor compression to the dataset.
