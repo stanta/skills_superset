@@ -129,8 +129,7 @@ def validate() -> dict:
     if missing:
         raise AssertionError("Atomic skills without any meta: " +
                              repr(sorted(str(path) for path in missing)[:20]))
-    if any(len(groups) > 2 for groups in membership.values()):
-        raise AssertionError("More than two assigned meta-skills for an atomic skill")
+    overassigned = {\n        path.relative_to(ATOMIC.resolve()).as_posix(): sorted(groups)\n        for path, groups in membership.items()\n        if len(groups) > 2\n    }\n    if overassigned:\n        details = "; ".join(\n            f"{skill}: {\', \'.join(groups)}"\n            for skill, groups in sorted(overassigned.items())\n        )\n        raise AssertionError(\n            "More than two assigned meta-skills for an atomic skill: " + details\n        )
     registry = META / "meta-specialist-catalog" / "references" / "legacy-names.md"
     if not registry.is_file():
         raise AssertionError("Missing static direct-lookup registry")
