@@ -66,6 +66,10 @@ Select baselines by goal and graph type.
 - raw or canonical edge list + a general compressor such as zstd/gzip;
 - CSR/CSC plus integer compression where appropriate.
 
+### Representation-competitive exact baseline
+
+For new compression claims, also include a compact binary non-grammar baseline under the same fidelity contract: integer/varint endpoints and relation IDs, exact record ordering, exact binary64 weight bits when required, and the same decoder-required memberships/labels or adjacency fallback. A grammar archive that stores extra metadata must not be compared only against an edge-only baseline.
+
 ### Graph-specific compact representations
 
 For web/RDF/hypergraph workloads, include a maintained succinct/domain compressor if available.
