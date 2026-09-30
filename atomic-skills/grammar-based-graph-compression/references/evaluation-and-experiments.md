@@ -21,7 +21,8 @@ For exact mode:
 2. verify node/edge/relation counts;
 3. verify labels, direction, multiplicity, self-loops and weights covered by the contract;
 4. canonicalize both original and decoded graph or use a robust exact-equivalence test;
-5. verify original-to-expanded membership/bindings if exposed by the API.
+5. verify original-to-expanded membership/bindings if exposed by the API;
+6. for recursive compression, decode from the final start graph through every reverse transition to level 0 and compare the complete declared representation.
 
 \`decode(encode(G))\` must equal \(G\) under the declared graph semantics.
 
@@ -262,3 +263,21 @@ Stop recursive replacement when one of these holds:
 - resource limit reached.
 
 For research, log all rejected top candidates and why they failed; rejection statistics reveal whether the bottleneck is frequency, interface rank, overlap, or residual cost.
+
+
+## 13. Incremental-census equivalence
+
+When full-graph matching is accelerated by carrying unaffected occurrences between levels, add an explicit correctness experiment:
+
+- run a complete census;
+- rerun the same level with a subset of safe exact matches prefilled;
+- verify identical type-frequency counts and matched occurrence identities;
+- periodically compare production incremental runs with forced full rescans.
+
+Runtime improvement without census equivalence is not acceptable evidence.
+
+## 14. Multiscale graph-model reporting
+
+If graphon/graphex-style statistics are derived from the grammar hierarchy, report mass and block denominators explicitly. Use original-node mass for coarse symbols and distinguish a finite empirical block kernel from a fitted or limiting graphon/graphex.
+
+A complete compressor evaluation and a graph-model approximation evaluation are separate endpoints: exact decode error must be zero in lossless mode, while graph-model distortion may be nonzero and should be measured independently.
