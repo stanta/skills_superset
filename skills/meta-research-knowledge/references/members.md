@@ -1,6 +1,6 @@
 # Children of meta-research-knowledge
 
-17 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+18 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -8,6 +8,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **analyze** — Analyze a collection of documents to build a knowledge map, identify themes, find gaps, duplicates, conflicts, and staleness, then produce an organized analysis with improvement recomme — `../../../atomic-skills/analyze/SKILL.md`
 - **biorxiv-skill** — Submit compact bioRxiv and medRxiv API requests for details, publication-linkage, and DOI lookups. Use when a user wants concise preprint metadata summaries — `../../../atomic-skills/biorxiv-skill/SKILL.md`
 - **content-research-writer** — Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms yo — `../../../atomic-skills/content-research-writer/SKILL.md`
+- **grammar-based-graph-compression** — Use when researching or comparing graph grammar compression, gRePair/SL-HR, SUBDUE/MDL substructure discovery, queryable compressed graphs, graph grammar induction, or compression-based structural discovery. — `../../../atomic-skills/grammar-based-graph-compression/SKILL.md`
 - **knowledge-update** — Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start. — `../../../atomic-skills/knowledge-update/SKILL.md`
 - **lead-research-assistant** — Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, bus — `../../../atomic-skills/lead-research-assistant/SKILL.md`
 - **math-olympiad** — Solve and independently verify olympiad-level mathematics using rigorous proof search, counterexample testing and reproducible presentation. — `../../../atomic-skills/math-olympiad/SKILL.md`
