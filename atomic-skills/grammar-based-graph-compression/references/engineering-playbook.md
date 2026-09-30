@@ -320,3 +320,40 @@ Mass at coarse levels must represent level-0 mass, not one unit per macro node:
 Keep the lossless grammar and the statistical graph model as separate projections of the same hierarchy. A finite relation-specific block intensity is a W-like empirical model, not automatically a complete graphex; state explicitly when S or I are not estimated.
 
 See [SemMap implementation findings](semmap-implementation-findings.md) for tested details.
+
+
+## 16. Interface schema is not edge multiplicity
+
+ If exact external edge records are already stored as occurrence-level port bindings, do not repeat one identical PortSpec per external record in the reusable interface identity.
+
+Prefer:
+
+~~~text
+InterfaceVariant
+  unique allowed/local typed-directed ports
+
+Occurrence
+  one PortBinding per exact external edge record
+~~~
+
+Thus two occurrences can share one interface variant even when one has one `RelatedTo` edge through a port and another has several. Multiplicity, endpoints, weights and record identity live in the bindings.
+
+Making multiplicity part of the interface type fragments the dictionary, inflates variant metadata and lowers apparent symbol reuse without adding reconstruction information.
+
+Retain multiplicity in the variant only if the grammar semantics explicitly requires a fixed arity/count constraint that is not otherwise encoded.
+
+## 17. Compression baselines must be representation-competitive
+
+Do not claim grammar compression from a comparison against verbose JSON or a raw text edge list alone.
+
+At minimum report a compact exact non-grammar baseline using the same semantic contract:
+
+- integer/varint node and relation IDs;
+- exact record order or an explicit order code;
+- exact binary64 weight bits when bitwise floating-point fidelity is required;
+- the same membership/label payloads when the candidate archive stores them;
+- the same required adjacency fallback or other decoder-required metadata.
+
+For a hierarchy archive, compare like with like. If the grammar archive stores level-0 memberships, the baseline bundle must also store those memberships. Keep older/legacy ratios for continuity, but label the compact binary ratio as the primary storage comparator for new claims.
+
+Report both legacy and compact-binary ratios. Only the compact exact baseline is suitable for a strong statement that the grammar itself beats a reasonable exact representation.
