@@ -216,3 +216,33 @@ A notebook should expose one `CPU_WORKERS` budget, not separate unbounded
 `n_jobs` knobs. On interruption, RESUME must keep the same code/config/input
 lineage; changing worker count may be permitted only if the deterministic
 contract has been explicitly tested.
+
+
+## 13. Resume identity is part of the experiment contract
+
+A persisted recursive-compression checkpoint must not be resumed silently under
+a different code revision or scientific config. The checkpoint may contain
+dictionary state, accepted occurrences, level summaries, random/proposal state
+and serialization assumptions whose meaning changed between commits.
+
+Treat at least these as resume identity:
+
+- Git revision;
+- scientific config hash;
+- input hash;
+- selected device class when device-specific semantics matter.
+
+Execution knobs such as CPU worker count may also belong to the identity when
+determinism has not been proven across values. A safe Colab workflow should
+inspect the existing run manifest before invoking the CLI and fail early with
+both the checkpoint revision and the notebook revision.
+
+Do not "fix" a revision mismatch by editing the stored manifest. Use one of two
+clean paths:
+
+1. continue the old run with its original pinned revision and parameters; or
+2. start a new run name under the new implementation.
+
+If a migration across revisions is desired, implement and test an explicit
+checkpoint migration with a declared compatibility contract. Never treat it as
+ordinary RESUME.
