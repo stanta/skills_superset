@@ -167,3 +167,52 @@ Minimum behavioral coverage should include:
 A codec test that succeeds only because the whole graph is stored as residual
 does not demonstrate grammar compression; track internal/port/residual shares
 and actual archive bytes.
+
+
+## 12. Pipeline CPU-bound scan stages under one worker budget
+
+In recursive graph dictionaries, a full census may contain two different CPU
+bottlenecks:
+
+- sparse ego/subgraph extraction, often dominated by SciPy CSR slicing and BFS;
+- exact isomorphism/VF2 matching, which is GIL-heavy Python work.
+
+Do not assign `cpu_workers` independently to both stages. That creates nested
+oversubscription and can multiply process/thread counts and memory use.
+
+Use one explicit budget:
+
+[
+W = W_{mathrm{extract}} + W_{mathrm{match}}.
+]
+
+A practical initial split for mixed CSR/VF2 work is roughly one third to
+extraction and the remainder to spawned matching processes, with at least one
+worker in each stage when (W>1). Keep BLAS/OpenMP thread counts separately
+bounded, typically to one thread per worker in Colab.
+
+Pipeline the stages with bounded queues:
+
+[
+	ext{extract batch}_{i+1}
+parallel
+	ext{match batch}_{i}.
+]
+
+Important invariants:
+
+- spawn matching processes before starting extraction threads if CUDA has been
+  initialized in the parent;
+- workers receive only read-only dictionary snapshots;
+- persistent dictionary mutation remains in the parent;
+- consume results in original center order if candidate IDs/frequencies must
+  remain deterministic;
+- bound extraction prefetch and matching futures instead of eagerly scheduling
+  the whole 100k graph;
+- record the effective split and queue limits in run artifacts;
+- test serial and parallel census outputs for exact equality.
+
+A notebook should expose one `CPU_WORKERS` budget, not separate unbounded
+`n_jobs` knobs. On interruption, RESUME must keep the same code/config/input
+lineage; changing worker count may be permitted only if the deterministic
+contract has been explicitly tested.
