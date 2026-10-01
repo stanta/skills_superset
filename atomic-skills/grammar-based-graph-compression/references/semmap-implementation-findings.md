@@ -246,3 +246,48 @@ clean paths:
 If a migration across revisions is desired, implement and test an explicit
 checkpoint migration with a declared compatibility contract. Never treat it as
 ordinary RESUME.
+
+
+## 14. Separate relation-subset discovery from the lossless source graph
+
+For semantic graphs, testing whether one dominant relation (for example
+`RelatedTo`) carries most reusable topology requires two distinct ablations.
+
+1. **Relation-only source graph.** Remove all other relations from the source.
+   This tests the topology of that relation but changes the graph itself.
+2. **Relation-restricted grammar over the full source graph.** Discovery,
+   exact symbol identity and grammar-internal/port coding use only the selected
+   relation subset, while every excluded source relation is preserved exactly
+   as residual correction data.
+
+Do not implement the second experiment by filtering only the Wishart metric.
+The ego adjacency used for discovery must also be the selected relation view,
+otherwise exact graph-symbol identity still contains the excluded relation
+topology.
+
+For the lossless codec, excluded relation records must not silently become
+internal shape edges or interface ports. Route them directly to residual
+records, including excluded edges whose endpoints both lie inside the same
+accepted figure.
+
+A useful experimental decomposition is:
+
+[
+G = G_{mathrm{grammar},R} + R_{
+eg R},
+]
+
+where (R) is the selected relation set. Compare against the same compact
+exact binary baseline and report:
+
+- grammar-relation edge count;
+- excluded-relation residual edge count;
+- physical compression ratio;
+- residual byte share;
+- type reuse and dictionary growth;
+- slow-dynamics distortion separately.
+
+Also perform a retrospective codec-only ablation on already accepted
+occurrences before rerunning discovery. This distinguishes gains caused by
+less fragmented serialization from gains caused by finding a different set of
+symbols.
