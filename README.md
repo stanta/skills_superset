@@ -48,7 +48,11 @@ For a request naming a particular original skill, use [the exact-name registry](
 
 ## AI-agent answer data quality
 
-For high-stakes factual, numeric or source-grounded agent output, use [ai-agent-response-data-quality](atomic-skills/ai-agent-response-data-quality/SKILL.md). It verifies atomic claims, source provenance and revisions, deterministic calculations, completeness and freshness; missing user inputs become resumable clarification requests rather than guesses. The skill is discoverable through `meta-agent-systems`, `meta-testing-quality` and `meta-data-analytics`; its `references/` contain the operational playbook, evaluation contract and researched sources.
+For high-stakes factual, numeric or source-grounded agent output, use [ai-agent-response-data-quality](atomic-skills/ai-agent-response-data-quality/SKILL.md). It verifies atomic claims, source provenance and revisions, deterministic calculations, completeness and freshness; missing user inputs become resumable clarification requests rather than guesses. The skill is discoverable through `meta-agent-systems` and `meta-testing-quality`; its `references/` contain the operational playbook, evaluation contract and researched sources.
+
+## Grammar-based graph compression
+
+For repeated-subgraph compression, graph grammars, gRePair/SL-HR, SUBDUE/MDL discovery, queryable compressed graphs, and approximate graph-symbol dictionaries, use [grammar-based-graph-compression](atomic-skills/grammar-based-graph-compression/SKILL.md). It is discoverable through `meta-data-analytics` and `meta-research-knowledge`; its references separate exact lossless grammar compression from graph grammar induction/generation and connect safely to the existing Wishart graph-compression workflow.
 
 ## Git and GitHub: task routing
 

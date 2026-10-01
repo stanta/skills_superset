@@ -255,6 +255,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **google-sheets** — meta-office-documents, meta-workplace-integrations — `../../../atomic-skills/google-sheets/SKILL.md`
 - **google-slides** — meta-office-documents, meta-workplace-integrations — `../../../atomic-skills/google-slides/SKILL.md`
 - **gosh-development** — meta-web3-blockchain — `../../../atomic-skills/gosh-development/SKILL.md`
+- **grammar-based-graph-compression** — meta-data-analytics, meta-research-knowledge — `../../../atomic-skills/grammar-based-graph-compression/SKILL.md`
 - **grammar-of-graphics-and-declarative-visualization** — meta-data-analytics — `../../../atomic-skills/grammar-of-graphics-and-declarative-visualization/SKILL.md`
 - **graphql-architect** — meta-backend-services, meta-software-architecture — `../../../atomic-skills/graphql-architect/SKILL.md`
 - **gsap** — meta-frontend-web — `../../../atomic-skills/gsap/SKILL.md`

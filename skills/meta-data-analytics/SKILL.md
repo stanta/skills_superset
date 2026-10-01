@@ -1,7 +1,7 @@
 ---
 name: meta-data-analytics
 description: >
-  Use this normal Agent Skill first for analytics, visualization, data pipelines, SQL and quantitative work. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: SQL analytics, visual dashboard, data pipeline.
+  Use this normal Agent Skill first for analytics, visualization, data pipelines, SQL, graph/network analysis and quantitative work. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: SQL analytics, visual dashboard, data pipeline, graph compression.
   Additional scope: privacy-preserving agent session usage and impact analytics.
 ---
 
@@ -32,5 +32,6 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - SQL analytics: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - visual dashboard: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - data pipeline: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+- graph compression: select a matching Start skill from `references/members.md`; add research or validation Support only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
