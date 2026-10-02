@@ -716,3 +716,10 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **writing-skills** — meta-media-production — `../../../atomic-skills/writing-skills/SKILL.md`
 - **zoom-apps-sdk** — meta-customer-communications — `../../../atomic-skills/zoom-apps-sdk/SKILL.md`
 - **zotero** (Zotero) — meta-research-knowledge — `../../../atomic-skills/zotero/SKILL.md`
+- **auditing-lore-continuity** — meta-narrative-worldbuilding — `../../../atomic-skills/auditing-lore-continuity/SKILL.md`
+- **building-fiction-timelines** — meta-narrative-worldbuilding — `../../../atomic-skills/building-fiction-timelines/SKILL.md`
+- **building-storyworlds** — meta-narrative-worldbuilding — `../../../atomic-skills/building-storyworlds/SKILL.md`
+- **designing-character-systems** — meta-narrative-worldbuilding — `../../../atomic-skills/designing-character-systems/SKILL.md`
+- **governing-fiction-canon** — meta-narrative-worldbuilding — `../../../atomic-skills/governing-fiction-canon/SKILL.md`
+- **maintaining-story-bibles** — meta-narrative-worldbuilding — `../../../atomic-skills/maintaining-story-bibles/SKILL.md`
+- **planning-serialized-arcs** — meta-narrative-worldbuilding — `../../../atomic-skills/planning-serialized-arcs/SKILL.md`
