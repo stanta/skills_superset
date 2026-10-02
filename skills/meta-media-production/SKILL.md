@@ -26,6 +26,12 @@ If your file-search tool cannot filter to an exact file, restrict it to the pare
 
 Do not infer the full procedure from catalog excerpts, run scripts or MCP for discovery, or search all of `../../atomic-skills/` on the first level. Repeat the scoped file search only for selected children.
 
+## Cross-domain routing
+
+If the request is primarily about a fictional universe, worldbuilding, story bible, canon, lore, chronology, character systems, long-running arcs, retcons, or continuity, route that subtask to `../meta-narrative-worldbuilding/SKILL.md`. Use this media-production meta-skill for the separate execution layer: scripts, audio, video, editing, or production assets.
+
+For mixed requests such as “build a comic universe and then storyboard it,” decompose into narrative-system work first and media production second.
+
 ## Typical decomposition
 
 - video editing: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
