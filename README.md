@@ -35,6 +35,7 @@ For a request naming a particular original skill, use [the exact-name registry](
 - [`meta-research-knowledge`](skills/meta-research-knowledge/SKILL.md) — literature, citations and evidence synthesis.
 - [`meta-visual-design`](skills/meta-visual-design/SKILL.md) — Figma, UX, images and accessibility.
 - [`meta-media-production`](skills/meta-media-production/SKILL.md) — video, audio, writing and media creation.
+- [`meta-narrative-worldbuilding`](skills/meta-narrative-worldbuilding/SKILL.md) — fictional universes, worldbuilding, canon, chronology, character systems, serialized arcs and lore continuity.
 - [`meta-marketing-growth`](skills/meta-marketing-growth/SKILL.md) — SEO, marketing and growth.
 - [`meta-product-business`](skills/meta-product-business/SKILL.md) — product management, specifications and operations.
 - [`meta-finance-payments`](skills/meta-finance-payments/SKILL.md) — payments, budgeting and finance.
@@ -45,6 +46,10 @@ For a request naming a particular original skill, use [the exact-name registry](
 - [`meta-browser-automation`](skills/meta-browser-automation/SKILL.md) — browser navigation, testing and scraping.
 - [`meta-web3-blockchain`](skills/meta-web3-blockchain/SKILL.md) — blockchain nodes and validators, TON, smart contracts and Web3.
 - [`meta-specialist-catalog`](skills/meta-specialist-catalog/SKILL.md) — rare domains and exact lookup of an original skill.
+
+## Narrative worldbuilding and continuity
+
+For fictional universes, story/show bibles, canon governance, timelines, recurring character systems, long-running arcs, retcons and contradiction checks, use [meta-narrative-worldbuilding](skills/meta-narrative-worldbuilding/SKILL.md). It routes to seven focused atomic skills and separates narrative-system work from visual/media production. Research grounding and failure cases are summarized in [worldbuilding-canon-continuity-practices](docs/research/worldbuilding-canon-continuity-practices.md).
 
 ## AI-agent answer data quality
 

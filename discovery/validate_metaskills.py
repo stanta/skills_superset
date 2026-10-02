@@ -60,7 +60,7 @@ def validate() -> dict:
 
     public = sorted(META.rglob("SKILL.md"))
     atoms = sorted(ATOMIC.rglob("SKILL.md"))
-    if len(public) != 26 or not atoms:
+    if len(public) != 27 or not atoms:
         raise AssertionError("Missing first-level or atomic skills")
     if any(p.parent.parent != META or not p.parent.name.startswith("meta-")
            for p in public):
