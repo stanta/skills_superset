@@ -1,7 +1,7 @@
 ---
 name: meta-software-architecture
 description: >
-  Use this normal Agent Skill first for software design, distributed computing and systems architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray Core, distributed actors, Rust/DANMA shards;  software architecture, distributed systems design, distributed computation, code review, refactor plan.
+  Use this normal Agent Skill first for software design, distributed computing and systems architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray Core, distributed actors, Rust/DANMA shards, ScyllaDB/distributed-data architecture; software architecture, distributed systems design, distributed computation, code review, refactor plan.
   Additional scope: Git collaboration and GitHub pull request review; portable agent roles, extension packages, instructions and MCP server architecture.
 ---
 
@@ -30,6 +30,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 ## Typical decomposition
 
 - software architecture: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+- ScyllaDB-specific distributed storage architecture: select `scylladb-architect`; combine with `distributed-dbms-architect` only for DBMS-level consistency/transaction/replication comparisons.
 - code review: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - Git workflow, safe recovery and GitHub pull requests: select `git-core-workflows`, `git-history-recovery` or `github-pull-request-workflows` by subtask; use `code-review` for reviewing the diff.
 - refactor plan: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
