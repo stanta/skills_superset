@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-67 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+68 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -57,6 +57,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **requesting-code-review** — Use when completing tasks, implementing major features, or before merging to verify work meets requirements — `../../../atomic-skills/requesting-code-review/SKILL.md`
 - **rust-engineer** — Production Rust: ownership, Rust 2024, trait/API design, Tokio, FFI and profiling — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **salesforce-developer** — Writes and debugs Apex code, builds Lightning Web Components, optimizes SOQL queries, implements triggers, batch jobs, platform events, and integrations on the Salesforce platform. Use  — `../../../atomic-skills/salesforce-developer/SKILL.md`
+- **scylladb-architect** — ScyllaDB-specific distributed data architecture: query-first CQL modeling, tablets, replication/consistency, shard-aware clients, performance and reliability — `../../../atomic-skills/scylladb-architect/SKILL.md`
 - **secure-code-guardian** — Use when implementing authentication/authorization, securing user input, or preventing OWASP Top 10 vulnerabilities — including custom security implementations such as hashing passwords — `../../../atomic-skills/secure-code-guardian/SKILL.md`
 - **spec-miner** — Reverse-engineering specialist that extracts specifications from existing codebases. Use when working with legacy or undocumented systems, inherited projects, or old codebases with no d — `../../../atomic-skills/spec-miner/SKILL.md`
 - **sqlalchemy-alembic-expert** — This skill should be used when writing, reviewing, or refactoring SQLAlchemy ORM models, DAL/repository classes, async session configuration, connection pool tuning, or Alembic migratio — `../../../atomic-skills/sqlalchemy-alembic-expert/SKILL.md`
