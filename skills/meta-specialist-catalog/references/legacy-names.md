@@ -485,6 +485,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **scribe** — meta-specialist-catalog — `../../../atomic-skills/scribe/SKILL.md`
 - **scrna-seq-qc** — meta-genomics-omics — `../../../atomic-skills/scrna-seq-qc/SKILL.md`
 - **scrollytelling-and-parallax-data-visualization** — meta-data-analytics — `../../../atomic-skills/scrollytelling-and-parallax-data-visualization/SKILL.md`
+- **scylladb-architect** — meta-backend-services, meta-software-architecture — `../../../atomic-skills/scylladb-architect/SKILL.md`
 - **secure-code-guardian** — meta-security-compliance, meta-software-architecture — `../../../atomic-skills/secure-code-guardian/SKILL.md`
 - **security** — meta-security-compliance — `../../../atomic-skills/security/SKILL.md`
 - **security-diff-scan** — meta-security-compliance — `../../../atomic-skills/security-diff-scan/SKILL.md`
