@@ -2,7 +2,6 @@
 name: meta-finance-payments
 description: >
   Use this normal Agent Skill first for payments, accounting, invoicing, finance and budgets. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: payment flows, financial planning, billing.
-  Additional scope: Google Pay/GooglePay/GPay integration, wallet checkout, PSP tokenization, subscriptions/MIT and production readiness. Russian queries: интеграция Google Pay; платежи Google Pay.
 ---
 
 # meta-finance-payments
@@ -32,6 +31,5 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - payment flows: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - financial planning: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - billing: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
-- Google Pay integration: select `google-pay-integration` as Start; resolve platform/store-policy eligibility and PSP ownership before coding. Add processor-specific Support only after selecting the adapter. For Android/wrapper implementation, continue through `../meta-mobile-desktop/SKILL.md`; do not conflate Google Pay with Play Billing or Wallet passes.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.

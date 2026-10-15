@@ -1,6 +1,6 @@
 # Children of meta-finance-payments
 
-24 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+23 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -11,7 +11,6 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **earnings-preview** — Use when preparing full pre-earnings preview reports with executive summary, expectation bar, guidance credibility, KPI dashboard, scenarios, and call questions. Do not use after result — `../../../atomic-skills/earnings-preview/SKILL.md`
 - **event-driven-analyzer** — Use when analyzing dated public-equity event paths, probabilities, payoffs, and expected returns. Do not use for generic catalyst lists, risk sizing, hedges, capital structure, covenant — `../../../atomic-skills/event-driven-analyzer/SKILL.md`
 - **financials-normalizer** — Use when normalizing public-company financials from source materials. Do not use for private data rooms or non-financial cleanup. — `../../../atomic-skills/financials-normalizer/SKILL.md`
-- **google-pay-integration** — Integrate and optimize Google Pay across Web, Android and wrappers: PSP selection, Play Billing boundaries, secure payment lifecycle, MIT, testing and production approval. — `../../../atomic-skills/google-pay-integration/SKILL.md`
 - **initiating-coverage** — Use when building public-equity-investing initiating coverage reports. Do not use for trade pitches, memos, earnings notes, models, or tearsheets. — `../../../atomic-skills/initiating-coverage/SKILL.md`
 - **long-short-pitch** — Use when building PM-facing Public Equity Investing trade pitches, including sparse-context or partial-section requests. Do not use for formal memos; use memo-builder. — `../../../atomic-skills/long-short-pitch/SKILL.md`
 - **meeting-prep** — Use when creating Public Equity Investing meeting prep briefs. Do not use for private diligence, IB, FP&A, legal, or scheduling-only tasks. — `../../../atomic-skills/meeting-prep/SKILL.md`

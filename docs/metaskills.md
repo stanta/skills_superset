@@ -59,20 +59,3 @@ validator resolves **every** referenced child file from its containing
 catalog's directory and verifies the first-level visibility boundary.
 This is a filesystem-based semantic taxonomy, not a claim of measured
 token savings or perfect routing quality.
-
-## Google Pay integration routing
-
-For Google Pay, GooglePay, GPay or «интеграция Google Pay», start with
-[meta-finance-payments](../skills/meta-finance-payments/SKILL.md), or
-[meta-mobile-desktop](../skills/meta-mobile-desktop/SKILL.md) for an Android,
-Flutter, React Native or WebView entry point. Both catalogs route to
-[google-pay-integration](../atomic-skills/google-pay-integration/SKILL.md).
-
-The atomic skill contains a provider-neutral decision workflow, platform
-instructions, secure server payment lifecycle, recurring/deferred/reload
-payments, test/production gates, optimization, a dated primary-source ledger,
-configuration and plan templates, and agent evaluation cases. Load only the
-references needed for the selected surface and charge model. Google Pay is
-not a shortcut around store billing rules, a Wallet pass API or an India UPI
-integration. Project-specific settings belong in the consuming project's
-plan, never in this shared skill.
