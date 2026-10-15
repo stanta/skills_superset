@@ -1,0 +1,93 @@
+name: One-off Apple Pay navigation preparation
+on:
+  push:
+    branches: [codex/apple-pay-integration-20261015]
+    paths: [.github/workflows/apple-pay-skill-bootstrap.yml]
+permissions:
+  contents: write
+concurrency:
+  group: apple-pay-skill-navigation-bootstrap
+  cancel-in-progress: false
+jobs:
+  prepare:
+    if: github.repository == 'stanta/skills_superset' && github.ref == 'refs/heads/codex/apple-pay-integration-20261015'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+      - name: Preserve and extend static navigation
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          root = Path('.')
+          skill = 'apple-pay-integration'
+          owners = ('meta-finance-payments', 'meta-mobile-desktop')
+          desc = 'Plan, implement and review provider-neutral Apple Pay web/native payments, eligibility, merchant setup, recurring billing and reliable backend processing.'
+          target = '../../../atomic-skills/apple-pay-integration/SKILL.md'
+          def insert_entry(path, entry):
+              text = path.read_text(encoding='utf-8')
+              if '- **' + skill + '**' in text:
+                  raise RuntimeError('Already registered: ' + str(path))
+              lines = text.splitlines(keepends=True)
+              existing = [line for line in lines if line.startswith('- **')]
+              position = None
+              for i, line in enumerate(lines):
+                  match = re.match(r'- \*\*([^*]+)\*\*', line)
+                  if match and match.group(1) > skill:
+                      position = i
+                      break
+              if position is None:
+                  raise RuntimeError('No insertion anchor: ' + str(path))
+              lines.insert(position, entry + '\n')
+              new = ''.join(lines)
+              if path.name == 'members.md':
+                  count = sum(line.startswith('- **') for line in lines)
+                  new, changed = re.subn(r'^\d+ atomic skills\.', str(count) + ' atomic skills.', new, count=1, flags=re.M)
+                  assert changed == 1
+              assert all(line in new for line in existing)
+              path.write_text(new, encoding='utf-8')
+          for owner in owners:
+              folder = root / 'skills' / owner
+              insert_entry(folder / 'references/members.md', f'- **{skill}** — {desc} — `{target}`')
+              path = folder / 'SKILL.md'
+              text = path.read_text(encoding='utf-8')
+              addition = '  Apple Pay scope: web/native wallet integration, merchant validation, certificates, recurring payments and StoreKit eligibility. Russian queries: ApplePay; интеграция Apple Pay; платежи iOS.\n'
+              assert '\n---\n' in text and '## Apple Pay routing' not in text
+              text = text.replace('\n---\n', '\n' + addition + '---\n', 1)
+              section = '## Apple Pay routing\n\nFor Apple Pay integration, troubleshooting or optimization, read `../../atomic-skills/apple-pay-integration/SKILL.md`. Start with the product/channel/storefront eligibility gate, then select web or native setup and the actual processor adapter. Keep server-authoritative payments, recovery and verification in scope; do not confuse Apple Pay with StoreKit.\n\n'
+              assert '## Typical decomposition\n' in text
+              text = text.replace('## Typical decomposition\n', section + '## Typical decomposition\n', 1)
+              path.write_text(text, encoding='utf-8')
+          insert_entry(root / 'skills/meta-specialist-catalog/references/legacy-names.md', f'- **{skill}** — {", ".join(owners)} — `{target}`')
+          path = root / 'README.md'
+          text = path.read_text(encoding='utf-8')
+          section = '## Apple Pay integration\n\nFor provider-neutral Apple Pay web/native setup, eligibility, merchant validation, recurring payments, payment recovery and checkout optimization, use [apple-pay-integration](atomic-skills/apple-pay-integration/SKILL.md). It is discoverable through [meta-finance-payments](skills/meta-finance-payments/SKILL.md) and [meta-mobile-desktop](skills/meta-mobile-desktop/SKILL.md). The skill includes focused references, optional provider adapters, a plan/configuration template and evaluation cases without project-specific assumptions. See the [Russian-language research guide](docs/research/apple-pay-integration-practices.md).\n\n'
+          assert '## Compatibility and maintenance\n' in text and '## Apple Pay integration\n' not in text
+          path.write_text(text.replace('## Compatibility and maintenance\n', section + '## Compatibility and maintenance\n', 1), encoding='utf-8')
+          path = root / 'docs/metaskills.md'
+          text = path.read_text(encoding='utf-8')
+          assert '## Apple Pay routing example' not in text
+          text += '\n## Apple Pay routing example\n\nApple Pay requests route through `meta-finance-payments` or `meta-mobile-desktop`. Their static catalogs select [apple-pay-integration](../atomic-skills/apple-pay-integration/SKILL.md); the exact-name registry lists both owners. Read its eligibility gate before web/native setup, then only the relevant processor and verification references. This is one portable atomic skill with two domain memberships, not a project-specific payment recipe or a new first-level meta-skill.\n'
+          path.write_text(text, encoding='utf-8')
+          PY
+      - name: Validate complete repository navigation and skill package
+        run: |
+          python -m unittest discover -s discovery -p 'test_*.py' -v
+          python discovery/validate_metaskills.py
+          git diff --check
+      - name: Commit only navigation to the isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          remote_head="$(git ls-remote origin refs/heads/codex/apple-pay-integration-20261015 | cut -f1)"
+          test "$remote_head" = "$GITHUB_SHA"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md docs/metaskills.md skills/meta-finance-payments/SKILL.md skills/meta-finance-payments/references/members.md skills/meta-mobile-desktop/SKILL.md skills/meta-mobile-desktop/references/members.md skills/meta-specialist-catalog/references/legacy-names.md
+          git commit -m 'docs: route universal Apple Pay skill through meta catalogs and navigation'
+          git push origin HEAD:refs/heads/codex/apple-pay-integration-20261015

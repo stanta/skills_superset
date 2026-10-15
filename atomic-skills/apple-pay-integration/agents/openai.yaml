@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple Pay Integration"
+  short_description: "Provider-neutral Apple Pay planning, implementation and review"
+  default_prompt: "Use $apple-pay-integration to assess eligibility and plan or review a secure Apple Pay integration for the actual platform and payment provider."
