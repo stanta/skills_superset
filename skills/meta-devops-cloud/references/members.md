@@ -1,6 +1,6 @@
 # Children of meta-devops-cloud
 
-68 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+69 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -29,6 +29,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **github-pull-request-workflows** — Use when working with GitHub issues, pull requests, reviews, CODEOWNERS, branch rules and releases. — `../../../atomic-skills/github-pull-request-workflows/SKILL.md`
 - **gitlab-cicd-devsecops** — Design, implement, review, and harden GitLab CI/CD delivery systems, including .gitlab-ci.yml, CI/CD Components, runners, protected environments, deployment approvals, GitOps, OIDC, sec — `../../../atomic-skills/gitlab-cicd-devsecops/SKILL.md`
 - **gitlab-development** — This skill should be used when designing, implementing, reviewing, or refactoring GitLab CE/Self-Managed core or UX changes, especially merge-request governance, Gitaly boundaries, serv — `../../../atomic-skills/gitlab-development/SKILL.md`
+- **google-play-publishing** — Prepare, audit and optimize Google Play app/game releases across frameworks: account gates, signing, policy, tests, review, CI and recovery. — `../../../atomic-skills/google-play-publishing/SKILL.md`
 - **helm-release-engineering** — Build, validate, secure, release and roll back Helm charts on Kubernetes/OpenShift; versions, schemas, CRDs and GitOps ownership. — `../../../atomic-skills/helm-release-engineering/SKILL.md`
 - **imessage-channel-configure** — Set up an iMessage agent-channel bridge with secure host permissions and runtime-neutral operational checks. — `../../../atomic-skills/imessage-channel-configure/SKILL.md`
 - **kubernetes-specialist** — Use when deploying or managing Kubernetes workloads. Invoke to create deployment manifests, configure pod security policies, set up service accounts, define network isolation rules, deb — `../../../atomic-skills/kubernetes-specialist/SKILL.md`
