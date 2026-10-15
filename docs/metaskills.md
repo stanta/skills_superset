@@ -63,3 +63,20 @@ token savings or perfect routing quality.
 ## Apple Pay routing example
 
 Apple Pay requests route through `meta-finance-payments` or `meta-mobile-desktop`. Their static catalogs select [apple-pay-integration](../atomic-skills/apple-pay-integration/SKILL.md); the exact-name registry lists both owners. Read its eligibility gate before web/native setup, then only the relevant processor and verification references. This is one portable atomic skill with two domain memberships, not a project-specific payment recipe or a new first-level meta-skill.
+
+## Google Pay integration routing
+
+For Google Pay, GooglePay, GPay or «интеграция Google Pay», start with
+[meta-finance-payments](../skills/meta-finance-payments/SKILL.md), or
+[meta-mobile-desktop](../skills/meta-mobile-desktop/SKILL.md) for an Android,
+Flutter, React Native or WebView entry point. Both catalogs route to
+[google-pay-integration](../atomic-skills/google-pay-integration/SKILL.md).
+
+The atomic skill contains a provider-neutral decision workflow, platform
+instructions, secure server payment lifecycle, recurring/deferred/reload
+payments, test/production gates, optimization, a dated primary-source ledger,
+configuration and plan templates, and agent evaluation cases. Load only the
+references needed for the selected surface and charge model. Google Pay is
+not a shortcut around store billing rules, a Wallet pass API or an India UPI
+integration. Project-specific settings belong in the consuming project's
+plan, never in this shared skill.
