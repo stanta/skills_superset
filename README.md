@@ -63,6 +63,10 @@ For repeated-subgraph compression, graph grammars, gRePair/SL-HR, SUBDUE/MDL dis
 
 For everyday Git changes, read [git-core-workflows](atomic-skills/git-core-workflows/SKILL.md); for safe undo, reflog recovery and history incidents, read [git-history-recovery](atomic-skills/git-history-recovery/SKILL.md). GitHub contributions, PR reviews, CODEOWNERS and branch protection belong to [github-pull-request-workflows](atomic-skills/github-pull-request-workflows/SKILL.md); GitHub Actions, runner trust and release security belong to [github-actions-devsecops](atomic-skills/github-actions-devsecops/SKILL.md). These atomic skills are discoverable through `meta-devops-cloud`, `meta-software-architecture` and, for Actions security, `meta-security-compliance`. See the [Russian-language practical guide](docs/guides/git-github-best-practices.md) for a human checklist and command examples.
 
+## Google Play publishing
+
+For Android app/game release readiness, Play Console onboarding, signing, current policy gates, testing, review, CI and store optimization, use [google-play-publishing](atomic-skills/google-play-publishing/SKILL.md). It is framework- and project-neutral and is discoverable through `meta-mobile-desktop` and `meta-devops-cloud`. Health, AI, children, billing and restricted permissions are conditional modules, not assumptions about the product. See the [Russian practical guide](docs/guides/google-play-publishing.md) and the skill's dated source ledger; recheck volatile rules before submission.
+
 ## Compatibility and maintenance
 
 All original atomic skill bodies and bundled resources are preserved under `atomic-skills/`; their internal relative references remain valid. Old hardcoded `skills/<original-id>/...` file paths become `atomic-skills/<original-id>/...`. Preserving old paths while hiding them from directory scanners is not possible.

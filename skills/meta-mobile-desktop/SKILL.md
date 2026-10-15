@@ -3,6 +3,7 @@ name: meta-mobile-desktop
 description: >
   Use this normal Agent Skill first for iOS, Android, Flutter, native and desktop applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: iOS development, Android QA, desktop integration.
   Additional scope: Cardputer and M5Stack device development and onboarding.
+  Additional scope: Google Play app and game publication, release readiness, policy gates, Android signing, test tracks, submission automation and store optimization.
 ---
 
 # meta-mobile-desktop
@@ -28,6 +29,8 @@ If your file-search tool cannot filter to an exact file, restrict it to the pare
 Do not infer the full procedure from catalog excerpts, run scripts or MCP for discovery, or search all of `../../atomic-skills/` on the first level. Repeat the scoped file search only for selected children.
 
 ## Typical decomposition
+
+- Google Play publication or update: read `../../atomic-skills/google-play-publishing/SKILL.md` as Start; select framework, security, payment or performance support only when applicable. No particular product or stack is assumed.
 
 - iOS development: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - Android QA: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.

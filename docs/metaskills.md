@@ -59,3 +59,7 @@ validator resolves **every** referenced child file from its containing
 catalog's directory and verifies the first-level visibility boundary.
 This is a filesystem-based semantic taxonomy, not a claim of measured
 token savings or perfect routing quality.
+
+## Google Play release routing
+
+Google Play publishing and release automation route through `meta-mobile-desktop` and `meta-devops-cloud` to [google-play-publishing](../atomic-skills/google-play-publishing/SKILL.md). Both member catalogs and the exact-name registry contain the canonical atomic path. The skill is not tied to a product, framework, publisher account or country; it selects only applicable policy modules. Its source snapshot is dated and must be refreshed before a submission. The [practical guide](guides/google-play-publishing.md) is for human readers. Maintainer structural tests do not constitute behavioral evaluation or Play approval.
