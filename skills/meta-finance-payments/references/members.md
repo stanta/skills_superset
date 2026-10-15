@@ -1,9 +1,10 @@
 # Children of meta-finance-payments
 
-23 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+24 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
+- **apple-pay-integration** — Plan, implement and review provider-neutral Apple Pay web/native payments, eligibility, merchant setup, recurring billing and reliable backend processing. — `../../../atomic-skills/apple-pay-integration/SKILL.md`
 - **build-web-apps-stripe-best-practices** — Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury f — `../../../atomic-skills/build-web-apps-stripe-best-practices/SKILL.md`
 - **company-tearsheet** — Use when creating source-backed public issuer tearsheets. Do not use for private diligence, fund diligence, vendors, or market maps. — `../../../atomic-skills/company-tearsheet/SKILL.md`
 - **connect-recommend** — Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a marketplace, platform, multi-v — `../../../atomic-skills/connect-recommend/SKILL.md`

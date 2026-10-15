@@ -59,3 +59,7 @@ validator resolves **every** referenced child file from its containing
 catalog's directory and verifies the first-level visibility boundary.
 This is a filesystem-based semantic taxonomy, not a claim of measured
 token savings or perfect routing quality.
+
+## Apple Pay routing example
+
+Apple Pay requests route through `meta-finance-payments` or `meta-mobile-desktop`. Their static catalogs select [apple-pay-integration](../atomic-skills/apple-pay-integration/SKILL.md); the exact-name registry lists both owners. Read its eligibility gate before web/native setup, then only the relevant processor and verification references. This is one portable atomic skill with two domain memberships, not a project-specific payment recipe or a new first-level meta-skill.
