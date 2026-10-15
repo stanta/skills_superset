@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "mode": "research",
+  "status": "not_ready",
+  "source_revision": null,
+  "inspected_at": null,
+  "application": {
+    "package_id": null,
+    "framework": null,
+    "release_variant": null,
+    "first_publication": null,
+    "distribution": null,
+    "form_factors": [],
+    "markets": [],
+    "locales": [],
+    "account_type": null,
+    "account_created_at": null,
+    "monetization": [],
+    "audience": null
+  },
+  "policy_claims": [
+    {
+      "id": "target_api",
+      "source_id": "S01",
+      "source_url": "https://support.google.com/googleplay/android-developer/answer/11926878?hl=en",
+      "verified_at": null,
+      "effective_at": null,
+      "applicability": "unknown",
+      "observed_requirement": null,
+      "console_evidence": [],
+      "approved_exception": null
+    }
+  ],
+  "checks": [
+    {"id": "account_identity", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Legitimate publisher and all applicable account verifications evidenced"},
+    {"id": "app_registration", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Actual package registration and account standing checked"},
+    {"id": "policy_freshness", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Applicable current rules and effective dates verified; no assumed extensions"},
+    {"id": "artifact_signing_native", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Exact release artifact, version, signing, API and applicable ABI/page-size checks verified"},
+    {"id": "data_and_declarations", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Data inventory and applicable declarations/privacy/deletion behavior agree"},
+    {"id": "reviewer_access", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Clean-session reviewer journey reaches all reviewable features"},
+    {"id": "testing", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Required track eligibility and risk-based release-build test evidence recorded"},
+    {"id": "listing", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Truthful localized listing/assets and required links checked"},
+    {"id": "release_authority", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Exact package/version/track/markets and consequential actions approved"},
+    {"id": "monitoring_and_recovery", "status": "unknown", "owner": null, "evidence": [], "acceptance": "Owner, halt criteria, telemetry and forward-fix/compatibility plan documented"}
+  ],
+  "conditional_modules": [
+    {"id": "digital_billing", "applicability": "unknown", "reason": null, "evidence": []},
+    {"id": "account_deletion", "applicability": "unknown", "reason": null, "evidence": []},
+    {"id": "health_features", "applicability": "unknown", "reason": null, "evidence": []},
+    {"id": "ai_generated_content", "applicability": "unknown", "reason": null, "evidence": []},
+    {"id": "children_families", "applicability": "unknown", "reason": null, "evidence": []},
+    {"id": "ugc_social", "applicability": "unknown", "reason": null, "evidence": []},
+    {"id": "sensitive_permissions", "applicability": "unknown", "reason": null, "evidence": []},
+    {"id": "other_restricted_categories", "applicability": "unknown", "reason": null, "evidence": []}
+  ],
+  "artifact": {"path": null, "sha256": null, "version_code": null, "version_name": null, "build_commands": [], "tool_versions": {}, "upload_certificate_fingerprint": null, "play_app_signing_fingerprints": [], "test_evidence": []},
+  "blockers": [],
+  "approvals": {"identity_and_agreements": null, "declarations": null, "upload": null, "send_for_review": null, "publish": null},
+  "submission": {"track": null, "observed_state": "not_submitted", "checked_at": null, "evidence": []},
+  "monitoring": {"owner": null, "metrics": [], "minimum_evidence": null, "halt_criteria": [], "recovery_plan": null},
+  "usage_notes": [
+    "This is an unfilled template, not a passed audit or live console observation.",
+    "Use pass/fail/unknown/not_applicable for checks, with evidence and an explicit reason for not_applicable.",
+    "Unknown material applicability is a blocker; do not silently remove a gate.",
+    "Add actual feature-specific checks and source claims; this list is not exhaustive.",
+    "Store credential references only, never credentials or real user data.",
+    "Research and preparation do not authorize submission or publication."
+  ]
+}
