@@ -2,6 +2,7 @@
 name: meta-marketing-growth
 description: >
   Use this normal Agent Skill first for marketing, SEO, campaigns, sales and customer growth. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: SEO review, growth marketing, sales funnels.
+  App Store scope: App Store optimization (ASO), localized product pages, store conversion and truthful release metadata.
 ---
 
 # meta-marketing-growth
@@ -33,3 +34,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - sales funnels: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## Apple App Store publishing
+
+For ASO and App Store product-page work, follow `../../atomic-skills/apple-app-store-publishing/SKILL.md` through meta-mobile-desktop or meta-devops-cloud, then read its optimization reference. Add marketing specialists for campaign strategy; keep ranking claims and measured conversion separate. This is a cross-domain route, not a third catalog ownership assignment.

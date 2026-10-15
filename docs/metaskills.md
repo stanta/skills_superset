@@ -59,3 +59,7 @@ validator resolves **every** referenced child file from its containing
 catalog's directory and verifies the first-level visibility boundary.
 This is a filesystem-based semantic taxonomy, not a claim of measured
 token savings or perfect routing quality.
+
+## Apple App Store publishing route
+
+The project-neutral [apple-app-store-publishing](../atomic-skills/apple-app-store-publishing/SKILL.md) atomic skill belongs to meta-mobile-desktop and meta-devops-cloud. Their child catalogs and the exact-name registry include it. Meta-security-compliance and meta-marketing-growth provide cross-domain routing without additional membership. Read the skill's references selectively; no runtime script or proprietary agent host is required.
