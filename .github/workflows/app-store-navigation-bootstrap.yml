@@ -1,0 +1,56 @@
+name: One-time App Store navigation update
+on:
+  push:
+    branches: [skills/apple-app-store-publishing-20261015]
+    paths:
+      - .github/app-store-navigation-bootstrap.py
+      - .github/workflows/app-store-navigation-bootstrap.yml
+permissions:
+  contents: read
+concurrency:
+  group: app-store-navigation-bootstrap
+  cancel-in-progress: false
+jobs:
+  update-navigation:
+    if: github.repository == 'stanta/skills_superset' && github.ref == 'refs/heads/skills/apple-app-store-publishing-20261015'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: true
+      - name: Apply scoped static navigation edits and verify idempotence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 .github/app-store-navigation-bootstrap.py
+          before="$(git diff | sha256sum)"
+          python3 .github/app-store-navigation-bootstrap.py
+          after="$(git diff | sha256sum)"
+          test "$before" = "$after"
+      - name: Validate existing and new structural tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s discovery -p 'test_*.py' -v
+          python3 discovery/validate_metaskills.py
+          git diff --check
+      - name: Commit only the authorized navigation files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- README.md docs/metaskills.md atomic-skills/README.md \
+            skills/meta-mobile-desktop/SKILL.md \
+            skills/meta-mobile-desktop/references/members.md \
+            skills/meta-devops-cloud/SKILL.md \
+            skills/meta-devops-cloud/references/members.md \
+            skills/meta-security-compliance/SKILL.md \
+            skills/meta-marketing-growth/SKILL.md \
+            skills/meta-specialist-catalog/references/legacy-names.md
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs: register App Store publishing in meta-skills and navigation'
+          git push origin HEAD:refs/heads/skills/apple-app-store-publishing-20261015
