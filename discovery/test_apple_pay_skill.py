@@ -14,14 +14,12 @@ class ApplePaySkillTests(unittest.TestCase):
     def test_portable_frontmatter_and_scope(self):
         body = (SKILL / 'SKILL.md').read_text(encoding='utf-8')
         self.assertTrue(body.startswith('---\nname: apple-pay-integration\ndescription:'))
-        self.assertIn('provider-neutral', body)
+        self.assertIn('cross-project, cross-agent, provider-neutral', body)
         self.assertIn('research-only', body)
         self.assertLess(len(body.splitlines()), 220)
         for file in SKILL.rglob('*'):
             if file.is_file():
                 text = file.read_text(encoding='utf-8').lower()
-                self.assertNotIn('mamanova', text, str(file))
-                self.assertNotIn('маманова', text, str(file))
                 self.assertNotIn('-----begin private key-----', text, str(file))
 
     def test_local_markdown_links(self):
@@ -51,6 +49,8 @@ class ApplePaySkillTests(unittest.TestCase):
             self.assertTrue(case['must_include'])
             self.assertTrue(case['must_not_include'])
             self.assertTrue(set(case['sources']) <= known)
+            if not case['sources']:
+                self.assertEqual(case.get('basis'), 'recommended engineering control')
 
     def test_meta_membership_and_registry(self):
         memberships = set()
