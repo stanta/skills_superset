@@ -1,9 +1,10 @@
 # Children of meta-finance-payments
 
-23 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+25 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
+- **apple-pay-integration** — Plan, implement and review provider-neutral Apple Pay web/native payments, eligibility, merchant setup, recurring billing and reliable backend processing. — `../../../atomic-skills/apple-pay-integration/SKILL.md`
 - **build-web-apps-stripe-best-practices** — Guides Stripe integration decisions — API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury f — `../../../atomic-skills/build-web-apps-stripe-best-practices/SKILL.md`
 - **company-tearsheet** — Use when creating source-backed public issuer tearsheets. Do not use for private diligence, fund diligence, vendors, or market maps. — `../../../atomic-skills/company-tearsheet/SKILL.md`
 - **connect-recommend** — Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a marketplace, platform, multi-v — `../../../atomic-skills/connect-recommend/SKILL.md`
@@ -11,6 +12,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **earnings-preview** — Use when preparing full pre-earnings preview reports with executive summary, expectation bar, guidance credibility, KPI dashboard, scenarios, and call questions. Do not use after result — `../../../atomic-skills/earnings-preview/SKILL.md`
 - **event-driven-analyzer** — Use when analyzing dated public-equity event paths, probabilities, payoffs, and expected returns. Do not use for generic catalyst lists, risk sizing, hedges, capital structure, covenant — `../../../atomic-skills/event-driven-analyzer/SKILL.md`
 - **financials-normalizer** — Use when normalizing public-company financials from source materials. Do not use for private data rooms or non-financial cleanup. — `../../../atomic-skills/financials-normalizer/SKILL.md`
+- **google-pay-integration** — Integrate and optimize Google Pay across Web, Android and wrappers: PSP selection, Play Billing boundaries, secure payment lifecycle, MIT, testing and production approval. — `../../../atomic-skills/google-pay-integration/SKILL.md`
 - **initiating-coverage** — Use when building public-equity-investing initiating coverage reports. Do not use for trade pitches, memos, earnings notes, models, or tearsheets. — `../../../atomic-skills/initiating-coverage/SKILL.md`
 - **long-short-pitch** — Use when building PM-facing Public Equity Investing trade pitches, including sparse-context or partial-section requests. Do not use for formal memos; use memo-builder. — `../../../atomic-skills/long-short-pitch/SKILL.md`
 - **meeting-prep** — Use when creating Public Equity Investing meeting prep briefs. Do not use for private diligence, IB, FP&A, legal, or scheduling-only tasks. — `../../../atomic-skills/meeting-prep/SKILL.md`

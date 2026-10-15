@@ -3,6 +3,8 @@ name: meta-mobile-desktop
 description: >
   Use this normal Agent Skill first for iOS, Android, Flutter, native and desktop applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: iOS development, Android QA, desktop integration.
   Additional scope: Cardputer and M5Stack device development and onboarding.
+  Apple Pay scope: web/native wallet integration, merchant validation, certificates, recurring payments and StoreKit eligibility. Russian queries: ApplePay; интеграция Apple Pay; платежи iOS.
+  Google Pay scope: Android, Flutter, React Native and supported WebView integration, payment lifecycle and Google Play Billing boundaries. Russian queries: GooglePay; интеграция Google Pay.
 ---
 
 # meta-mobile-desktop
@@ -26,6 +28,14 @@ The short description in `references/members.md` is a navigation entry, **not** 
 If your file-search tool cannot filter to an exact file, restrict it to the parent directory of the listed `SKILL.md`, search for the filename `SKILL.md`, and open the exact match. A direct file-open/read tool pointed at the exact path also works. For more detailed instructions, use the same file-search/open tools **within the selected child's directory** to locate only its `references/` and other supporting files explicitly named by that `SKILL.md`.
 
 Do not infer the full procedure from catalog excerpts, run scripts or MCP for discovery, or search all of `../../atomic-skills/` on the first level. Repeat the scoped file search only for selected children.
+
+## Apple Pay routing
+
+For Apple Pay integration, troubleshooting or optimization, read `../../atomic-skills/apple-pay-integration/SKILL.md`. Start with the product/channel/storefront eligibility gate, then select web or native setup and the actual processor adapter. Keep server-authoritative payments, recovery and verification in scope; do not confuse Apple Pay with StoreKit.
+
+## Google Pay routing
+
+For Google Pay on Android or cross-platform wrappers, select `google-pay-integration` from the child catalog and read `../../atomic-skills/google-pay-integration/SKILL.md`, then use the matching native/framework skill as Support. Check digital-goods policy, release signing, runtime capabilities and interrupted-payment recovery; payment buttons and WebViews do not exempt an app from store billing rules. Use `../meta-finance-payments/SKILL.md` for processor-specific payment work.
 
 ## Typical decomposition
 

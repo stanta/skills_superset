@@ -1,12 +1,13 @@
 # Children of meta-mobile-desktop
 
-42 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+44 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **android-emulator-qa** — Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture. — `../../../atomic-skills/android-emulator-qa/SKILL.md`
 - **android-performance** — Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, gfxinfo frame data, dumpsys meminfo snapshots, Java heap du — `../../../atomic-skills/android-performance/SKILL.md`
 - **appkit-interop** — Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain. — `../../../atomic-skills/appkit-interop/SKILL.md`
+- **apple-pay-integration** — Plan, implement and review provider-neutral Apple Pay web/native payments, eligibility, merchant setup, recurring billing and reliable backend processing. — `../../../atomic-skills/apple-pay-integration/SKILL.md`
 - **cardputer-buddy** — Guide any coding agent through scoped Cardputer/M5Stack hardware development using detected toolchains and physical-device safety checks. — `../../../atomic-skills/cardputer-buddy/SKILL.md`
 - **codex-expo-run-actions** — Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run action — `../../../atomic-skills/codex-expo-run-actions/SKILL.md`
 - **connect-chatcut-desktop** — Install, open, connect, or repair ChatCut Desktop when the chatcut_desktop MCP tools are missing or unavailable. Do not use from a managed agent already running inside ChatCut Desktop,  — `../../../atomic-skills/connect-chatcut-desktop/SKILL.md`
@@ -19,6 +20,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **expo-ui-swift-ui** — '@expo/ui/swift-ui' package lets you use SwiftUI Views and modifiers in your app. — `../../../atomic-skills/expo-ui-swift-ui/SKILL.md`
 - **figma-swiftui** — SwiftUI ↔ Figma translation. Use whenever the user mentions Swift, SwiftUI, iOS, iPhone, or iPad — in EITHER direction — translating a Figma design into SwiftUI (design → code), or push — `../../../atomic-skills/figma-swiftui/SKILL.md`
 - **flutter-expert** — Use when building cross-platform applications with Flutter 3+ and Dart. Invoke for widget development, Riverpod/Bloc state management, GoRouter navigation, platform-specific implementat — `../../../atomic-skills/flutter-expert/SKILL.md`
+- **google-pay-integration** — Google Pay for Android, Flutter, React Native and supported WebViews; runtime readiness, Play Billing boundaries, lifecycle recovery, PSP processing and production approval. — `../../../atomic-skills/google-pay-integration/SKILL.md`
 - **ios-app-intents** — Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, or controls. — `../../../atomic-skills/ios-app-intents/SKILL.md`
 - **ios-debugger-agent** — Build, run, and debug iOS apps on Simulator with XcodeBuildMCP. Use when launching an app, inspecting simulator UI or logs, or diagnosing runtime behavior. — `../../../atomic-skills/ios-debugger-agent/SKILL.md`
 - **ios-ettrace-performance** — Capture and interpret iOS Simulator ETTrace profiles. Use when profiling launch or runtime latency, comparing traces, or finding CPU-heavy stacks. — `../../../atomic-skills/ios-ettrace-performance/SKILL.md`
