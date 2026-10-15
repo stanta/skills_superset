@@ -3,6 +3,7 @@ name: meta-mobile-desktop
 description: >
   Use this normal Agent Skill first for iOS, Android, Flutter, native and desktop applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: iOS development, Android QA, desktop integration.
   Additional scope: Cardputer and M5Stack device development and onboarding.
+  Apple Pay scope: web/native wallet integration, merchant validation, certificates, recurring payments and StoreKit eligibility. Russian queries: ApplePay; интеграция Apple Pay; платежи iOS.
 ---
 
 # meta-mobile-desktop
@@ -26,6 +27,10 @@ The short description in `references/members.md` is a navigation entry, **not** 
 If your file-search tool cannot filter to an exact file, restrict it to the parent directory of the listed `SKILL.md`, search for the filename `SKILL.md`, and open the exact match. A direct file-open/read tool pointed at the exact path also works. For more detailed instructions, use the same file-search/open tools **within the selected child's directory** to locate only its `references/` and other supporting files explicitly named by that `SKILL.md`.
 
 Do not infer the full procedure from catalog excerpts, run scripts or MCP for discovery, or search all of `../../atomic-skills/` on the first level. Repeat the scoped file search only for selected children.
+
+## Apple Pay routing
+
+For Apple Pay integration, troubleshooting or optimization, read `../../atomic-skills/apple-pay-integration/SKILL.md`. Start with the product/channel/storefront eligibility gate, then select web or native setup and the actual processor adapter. Keep server-authoritative payments, recovery and verification in scope; do not confuse Apple Pay with StoreKit.
 
 ## Typical decomposition
 
