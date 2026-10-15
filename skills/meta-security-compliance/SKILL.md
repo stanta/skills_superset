@@ -3,6 +3,7 @@ name: meta-security-compliance
 description: >
   Use this normal Agent Skill first for application security, authentication, vulnerability review and privacy. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: threat model, authentication, security audit. Also covers Rust unsafe, FFI, RustSec advisories and Cargo dependency policy.
   Additional scope: GitHub Actions supply-chain and workflow security; channel access policy, agent security orchestration and hook enforcement.
+  App Store scope: App Store privacy declarations, SDK manifests, tracking, account deletion and conditional store compliance.
 ---
 
 # meta-security-compliance
@@ -37,3 +38,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - Rust security or unsafe review: select `rust-engineer` for unsafe/FFI invariants and RustSec/Cargo dependency checks; add a threat-model or security-review specialist for the wider attack surface.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## Apple App Store publishing
+
+For App Store submission-specific policy gates, follow `../../atomic-skills/apple-app-store-publishing/SKILL.md` through meta-mobile-desktop or meta-devops-cloud. Add this domain's specialists for privacy or regulatory findings. This is a cross-domain route, not a third catalog ownership assignment.

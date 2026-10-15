@@ -3,6 +3,7 @@ name: meta-devops-cloud
 description: >
   Use this normal Agent Skill first for deployment, cloud, CI/CD, infrastructure and observability. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray clusters and KubeRay deployment;  GitLab CI/CD, production monitoring, cloud deployment. Russian queries: GitLab CI; деплой; мониторинг GlitchTip. Also covers Rust Cargo CI, MSRV and Tokio runtime observability.
   Additional scope: Git branching and safe history, GitHub pull requests and Actions security; agent command automation, channel deployment and MCP bundle packaging.
+  App Store scope: App Store release pipelines, signing, App Store Connect, TestFlight, staged updates and release evidence.
 ---
 
 # meta-devops-cloud
@@ -40,3 +41,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - Rust CI or runtime operations: select `rust-engineer` for Cargo gates, pinned toolchains, MSRV, performance and runtime shutdown; add a deployment/observability specialist when needed.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## Apple App Store publishing
+
+For Apple release automation, start with `../../atomic-skills/apple-app-store-publishing/SKILL.md`. Add CI/security or observability children only where needed. Separate build, upload, review and release states; preserve signing secrets and public-release authorization.

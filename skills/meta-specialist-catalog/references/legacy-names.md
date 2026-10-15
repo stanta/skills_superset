@@ -48,6 +48,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **angular-architect** — meta-frontend-web, meta-software-architecture — `../../../atomic-skills/angular-architect/SKILL.md`
 - **api-designer** — meta-backend-services — `../../../atomic-skills/api-designer/SKILL.md`
 - **appkit-interop** — meta-mobile-desktop — `../../../atomic-skills/appkit-interop/SKILL.md`
+- **apple-app-store-publishing** — meta-mobile-desktop, meta-devops-cloud — `../../../atomic-skills/apple-app-store-publishing/SKILL.md`
 - **architecture-designer** — meta-software-architecture — `../../../atomic-skills/architecture-designer/SKILL.md`
 - **artifacts-builder** — meta-frontend-web — `../../../atomic-skills/artifacts-builder/SKILL.md`
 - **assess-patch-risk** — meta-security-compliance — `../../../atomic-skills/assess-patch-risk/SKILL.md`

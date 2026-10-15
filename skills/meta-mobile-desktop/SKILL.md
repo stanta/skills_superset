@@ -3,6 +3,7 @@ name: meta-mobile-desktop
 description: >
   Use this normal Agent Skill first for iOS, Android, Flutter, native and desktop applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: iOS development, Android QA, desktop integration.
   Additional scope: Cardputer and M5Stack device development and onboarding.
+  App Store scope: App Store publication, AppleStore, TestFlight, review readiness and Apple-platform releases; публикация в App Store.
 ---
 
 # meta-mobile-desktop
@@ -34,3 +35,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - desktop integration: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## Apple App Store publishing
+
+Start with `../../atomic-skills/apple-app-store-publishing/SKILL.md` for App Store publication or rejection remediation. Add only the actual framework specialist for implementation. Use the skill's evidence and authority gates before upload, submission or public release.
