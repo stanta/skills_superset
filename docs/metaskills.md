@@ -63,3 +63,7 @@ token savings or perfect routing quality.
 ## Apple Pay routing example
 
 Apple Pay requests route through `meta-finance-payments` or `meta-mobile-desktop`. Their static catalogs select [apple-pay-integration](../atomic-skills/apple-pay-integration/SKILL.md); the exact-name registry lists both owners. Read its eligibility gate before web/native setup, then only the relevant processor and verification references. This is one portable atomic skill with two domain memberships, not a project-specific payment recipe or a new first-level meta-skill.
+
+## Google Play release routing
+
+Google Play publishing and release automation route through `meta-mobile-desktop` and `meta-devops-cloud` to [google-play-publishing](../atomic-skills/google-play-publishing/SKILL.md). Both member catalogs and the exact-name registry contain the canonical atomic path. The skill is not tied to a product, framework, publisher account or country; it selects only applicable policy modules. Its source snapshot is dated and must be refreshed before a submission. The [practical guide](guides/google-play-publishing.md) is for human readers. Maintainer structural tests do not constitute behavioral evaluation or Play approval.

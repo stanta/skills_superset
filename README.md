@@ -70,6 +70,10 @@ For everyday Git changes, read [git-core-workflows](atomic-skills/git-core-workf
 
 For provider-neutral Apple Pay web/native setup, eligibility, merchant validation, recurring payments, payment recovery and checkout optimization, use [apple-pay-integration](atomic-skills/apple-pay-integration/SKILL.md). It is discoverable through [meta-finance-payments](skills/meta-finance-payments/SKILL.md) and [meta-mobile-desktop](skills/meta-mobile-desktop/SKILL.md). The skill includes focused references, optional provider adapters, a plan/configuration template and evaluation cases without project-specific assumptions. See the [Russian-language research guide](docs/research/apple-pay-integration-practices.md).
 
+## Google Play publishing
+
+For Android app/game release readiness, Play Console onboarding, signing, current policy gates, testing, review, CI and store optimization, use [google-play-publishing](atomic-skills/google-play-publishing/SKILL.md). It is framework- and project-neutral and is discoverable through `meta-mobile-desktop` and `meta-devops-cloud`. Health, AI, children, billing and restricted permissions are conditional modules, not assumptions about the product. See the [Russian practical guide](docs/guides/google-play-publishing.md) and the skill's dated source ledger; recheck volatile rules before submission.
+
 ## Compatibility and maintenance
 
 All original atomic skill bodies and bundled resources are preserved under `atomic-skills/`; their internal relative references remain valid. Old hardcoded `skills/<original-id>/...` file paths become `atomic-skills/<original-id>/...`. Preserving old paths while hiding them from directory scanners is not possible.

@@ -3,6 +3,7 @@ name: meta-devops-cloud
 description: >
   Use this normal Agent Skill first for deployment, cloud, CI/CD, infrastructure and observability. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray clusters and KubeRay deployment;  GitLab CI/CD, production monitoring, cloud deployment. Russian queries: GitLab CI; деплой; мониторинг GlitchTip. Also covers Rust Cargo CI, MSRV and Tokio runtime observability.
   Additional scope: Git branching and safe history, GitHub pull requests and Actions security; agent command automation, channel deployment and MCP bundle packaging.
+  Additional scope: Google Play app and game publication, release readiness, policy gates, Android signing, test tracks, submission automation and store optimization.
 ---
 
 # meta-devops-cloud
@@ -28,6 +29,8 @@ If your file-search tool cannot filter to an exact file, restrict it to the pare
 Do not infer the full procedure from catalog excerpts, run scripts or MCP for discovery, or search all of `../../atomic-skills/` on the first level. Repeat the scoped file search only for selected children.
 
 ## Typical decomposition
+
+- Google Play publication or update: read `../../atomic-skills/google-play-publishing/SKILL.md` as Start; select framework, security, payment or performance support only when applicable. No particular product or stack is assumed.
 
 - Kubernetes/OpenShift/Helm/Lens: choose `kubernetes-specialist` for generic workload design; `openshift-operations` for SCC, Routes, Operators and cluster upgrades; `helm-release-engineering` for chart lifecycle and safe rollback; `lens-kubernetes-ide` for RBAC-aware interactive diagnosis. Combine only the children required by the subtask.
 

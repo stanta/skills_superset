@@ -4,6 +4,7 @@ description: >
   Use this normal Agent Skill first for iOS, Android, Flutter, native and desktop applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: iOS development, Android QA, desktop integration.
   Additional scope: Cardputer and M5Stack device development and onboarding.
   Apple Pay scope: web/native wallet integration, merchant validation, certificates, recurring payments and StoreKit eligibility. Russian queries: ApplePay; интеграция Apple Pay; платежи iOS.
+  Additional scope: Google Play app and game publication, release readiness, policy gates, Android signing, test tracks, submission automation and store optimization.
 ---
 
 # meta-mobile-desktop
@@ -33,6 +34,8 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 For Apple Pay integration, troubleshooting or optimization, read `../../atomic-skills/apple-pay-integration/SKILL.md`. Start with the product/channel/storefront eligibility gate, then select web or native setup and the actual processor adapter. Keep server-authoritative payments, recovery and verification in scope; do not confuse Apple Pay with StoreKit.
 
 ## Typical decomposition
+
+- Google Play publication or update: read `../../atomic-skills/google-play-publishing/SKILL.md` as Start; select framework, security, payment or performance support only when applicable. No particular product or stack is assumed.
 
 - iOS development: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - Android QA: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
