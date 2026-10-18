@@ -104,6 +104,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **chaos-engineer** — meta-devops-cloud — `../../../atomic-skills/chaos-engineer/SKILL.md`
 - **chat-sdk** — meta-customer-communications — `../../../atomic-skills/chat-sdk/SKILL.md`
 - **chatgpt-app-submission** — meta-agent-systems — `../../../atomic-skills/chatgpt-app-submission/SKILL.md`
+- **chatgpt-export-knowledge-engineering** — meta-agent-systems, meta-data-analytics — `../../../atomic-skills/chatgpt-export-knowledge-engineering/SKILL.md`
 - **chebi-skill** — meta-molecular-discovery — `../../../atomic-skills/chebi-skill/SKILL.md`
 - **chembl-skill** — meta-molecular-discovery — `../../../atomic-skills/chembl-skill/SKILL.md`
 - **choose-zoom-approach** — meta-customer-communications — `../../../atomic-skills/choose-zoom-approach/SKILL.md`

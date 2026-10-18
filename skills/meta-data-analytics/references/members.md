@@ -1,6 +1,6 @@
 # Children of meta-data-analytics
 
-42 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+44 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -12,6 +12,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **analyzing-wishart-graph-compression** — Анализирует результаты recursive Wishart graph coarsening / compression для SemanticMap/semgraphex: level_XXX, transition_XXX_YYY, hierarchy.json, dynamic_metrics.json, dynamic_vectors. — `../../../atomic-skills/analyzing-wishart-graph-compression/SKILL.md`
 - **build-dashboard** — Build source-backed dashboards for monitoring performance, exploring drivers, or acting on product and business metrics. Use when the task needs a dashboard, scorecard, or monitoring vi — `../../../atomic-skills/build-dashboard/SKILL.md`
 - **canvas2d-data-visualization** — Render data visualizations with Canvas2D. Use when the visualization needs high mark counts, fast redraws, immediate-mode rendering, custom hit testing, or a hybrid Canvas plus SVG or H — `../../../atomic-skills/canvas2d-data-visualization/SKILL.md`
+- **chatgpt-export-knowledge-engineering** — Inspect and normalize ChatGPT conversations.json/numbered ZIP shards into verified Markdown/JSONL with graph-aware branch selection, privacy-first search and analytics. — `../../../atomic-skills/chatgpt-export-knowledge-engineering/SKILL.md`
 - **create-data-context** — Create, update, inspect, or repair Data Analytics semantic layers. Use when the user asks to save data context or create a semantic layer that future Data Analytics work can inspect and — `../../../atomic-skills/create-data-context/SKILL.md`
 - **d3-data-visualization** — Build custom data visualizations with D3. Use when the user needs SVG or DOM-based charts, rich annotation, domain-native contextual backgrounds, data joins, custom scales or interactio — `../../../atomic-skills/d3-data-visualization/SKILL.md`
 - **dashboard-data-visualization** — This skill should be used when selecting, designing, implementing, or reviewing charts, KPI cards, tables, heatmaps, timelines, and visual encodings for dashboards. Apply it to match ch — `../../../atomic-skills/dashboard-data-visualization/SKILL.md`

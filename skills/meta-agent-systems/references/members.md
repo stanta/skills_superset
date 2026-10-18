@@ -1,6 +1,6 @@
 # Children of meta-agent-systems
 
-67 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+68 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -27,6 +27,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **building-ai-agent-on-cloudflare** — Builds AI agents on Cloudflare using the Agents SDK with state management, real-time WebSockets, scheduled tasks, tool integration, and chat capabilities. Generates production-ready age — `../../../atomic-skills/building-ai-agent-on-cloudflare/SKILL.md`
 - **building-mcp-server-on-cloudflare** — Builds remote MCP (Model Context Protocol) servers on Cloudflare Workers with tools, OAuth authentication, and production deployment. Generates server code, configures auth providers, a — `../../../atomic-skills/building-mcp-server-on-cloudflare/SKILL.md`
 - **chatgpt-app-submission** — Inspect a ChatGPT Apps MCP server codebase and generate chatgpt-app-submission.json with app info suggestions, tool hint justifications, test cases, and negative test cases, then report — `../../../atomic-skills/chatgpt-app-submission/SKILL.md`
+- **chatgpt-export-knowledge-engineering** — Parse user-authorized ChatGPT ZIP exports, reconstruct mapping/current_node branches, preserve multimodal gaps and source lineage, and build private searchable RAG knowledge. — `../../../atomic-skills/chatgpt-export-knowledge-engineering/SKILL.md`
 - **cloudflare-agents-sdk** — Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, or chat applic — `../../../atomic-skills/cloudflare-agents-sdk/SKILL.md`
 - **codex-expo-run-actions** — Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run action — `../../../atomic-skills/codex-expo-run-actions/SKILL.md`
 - **create-data-context** — Create, update, inspect, or repair Data Analytics semantic layers. Use when the user asks to save data context or create a semantic layer that future Data Analytics work can inspect and — `../../../atomic-skills/create-data-context/SKILL.md`
