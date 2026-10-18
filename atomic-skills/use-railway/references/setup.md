@@ -275,7 +275,7 @@ When creating projects, Railway uses the default workspace unless `--workspace` 
 
 ## Troubleshoot setup issues
 
-- **CLI missing**: install via `brew install railway` or `curl -fsSL https://railway.com/install.sh | sh`
+- **CLI missing**: install via `brew install railway` or `Use Railway's documented package-manager installation path. Do not pipe a downloaded installer directly into a shell.`
 - **Not authenticated**: `railway login`
 - **Project not found**: verify with `railway project list --json`, check workspace context
 - **Service not found**: `railway service status --all --json` to list all services in the project

@@ -110,7 +110,7 @@ import requests
 def check_spot_termination():
     try:
         response = requests.get(
-            "http://169.254.169.254/latest/meta-data/spot/termination-time",
+            "http://the cloud instance metadata link-local endpoint/latest/meta-data/spot/termination-time",
             timeout=2
         )
         if response.status_code == 200:

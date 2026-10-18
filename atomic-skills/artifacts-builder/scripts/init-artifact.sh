@@ -16,8 +16,8 @@ fi
 
 # Set Vite version based on Node version
 if [ "$NODE_VERSION" -ge 20 ]; then
-  VITE_VERSION="latest"
-  echo "✅ Using Vite latest (Node 20+)"
+  VITE_VERSION="5.4.11"
+  echo "✅ Using pinned Vite $VITE_VERSION"
 else
   VITE_VERSION="5.4.11"
   echo "✅ Using Vite $VITE_VERSION (Node 18 compatible)"
@@ -32,8 +32,8 @@ fi
 
 # Check if pnpm is installed
 if ! command -v pnpm &> /dev/null; then
-  echo "📦 pnpm not found. Installing pnpm..."
-  npm install -g pnpm
+  echo "❌ pnpm not found. Install and review pnpm separately before running this skill."
+  exit 1
 fi
 
 # Check if project name is provided
@@ -55,8 +55,8 @@ fi
 
 echo "🚀 Creating new React + Vite project: $PROJECT_NAME"
 
-# Create new Vite project (always use latest create-vite, pin vite version later)
-pnpm create vite "$PROJECT_NAME" --template react-ts
+# Use an explicitly pinned project generator rather than a mutable "latest" package.
+pnpm dlx create-vite@5.5.5 "$PROJECT_NAME" --template react-ts
 
 # Navigate into project directory
 cd "$PROJECT_NAME"
@@ -273,6 +273,11 @@ pnpm install @radix-ui/react-accordion @radix-ui/react-aspect-ratio @radix-ui/re
 pnpm install sonner cmdk vaul embla-carousel-react react-day-picker react-resizable-panels date-fns react-hook-form @hookform/resolvers zod
 
 # Extract shadcn components from tarball
+echo "🔍 Validating bundled archive paths..."
+if tar -tzf "$COMPONENTS_TARBALL" | grep -Eq '(^/|(^|/)\.\.(/|$))'; then
+  echo "❌ Unsafe path detected in shadcn-components.tar.gz"
+  exit 1
+fi
 echo "📦 Extracting shadcn/ui components..."
 tar -xzf "$COMPONENTS_TARBALL" -C src/
 

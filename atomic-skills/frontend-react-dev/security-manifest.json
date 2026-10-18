@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "risk_tier": "S2",
+  "capabilities": {
+    "filesystem_read": [
+      "workspace/**"
+    ],
+    "filesystem_write": [
+      "workspace/**"
+    ],
+    "network_hosts": [
+      "task-required hosts only"
+    ],
+    "shell_commands": [
+      "task-scoped development commands"
+    ],
+    "tools": [],
+    "requires_human_approval": [
+      "credential access",
+      "external publication",
+      "production mutation",
+      "destructive operation"
+    ]
+  },
+  "prohibited": [
+    "unscoped_secret_read",
+    "unapproved_production_mutation",
+    "persistence",
+    "security_boundary_bypass"
+  ],
+  "notes": "Conservative baseline generated during repository-wide security inventory. Capabilities are upper bounds, not grants. Narrow after manual attestation; harness/platform policy remains authoritative."
+}

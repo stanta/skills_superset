@@ -12,19 +12,19 @@ metadata:
 
 # Vercel Deploy
 
-Deploy any project to Vercel instantly. No authentication required.
+Deploy projects to Vercel through a claimable external deployment service. Because deployment uploads project source outside the local environment, obtain explicit user approval immediately before the upload.
 
 ## How It Works
 
 1. Packages your project into a tarball (excludes `node_modules` and `.git`)
 2. Auto-detects framework from `package.json`
-3. Uploads to deployment service
+3. After explicit user approval, uploads the project source bundle to the external deployment service
 4. Returns **Preview URL** (live site) and **Claim URL** (transfer to your Vercel account)
 
 ## Usage
 
 ```bash
-bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh [path]
+VERCEL_DEPLOY_APPROVED_EXTERNAL_UPLOAD=1 bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh [path]
 ```
 
 **Arguments:**

@@ -19,6 +19,7 @@ import socket
 import time
 import sys
 import argparse
+import shlex
 
 def is_server_ready(port, timeout=30):
     """Wait for server to be ready by polling the port."""
@@ -56,19 +57,23 @@ def main():
 
     servers = []
     for cmd, port in zip(args.servers, args.ports):
-        servers.append({'cmd': cmd, 'port': port})
+        # Reject shell metacharacters: server commands are executed as argv, never via a shell.
+        # This prevents untrusted prompt/content from turning --server into arbitrary shell syntax.
+        if any(token in cmd for token in ('&&', '||', ';', '|', '>', '<', '$(', '`')):
+            raise ValueError(f"Unsafe shell syntax in --server: {cmd!r}. Pass a direct executable command instead.")
+        servers.append({'cmd': shlex.split(cmd), 'display': cmd, 'port': port})
 
     server_processes = []
 
     try:
         # Start all servers
         for i, server in enumerate(servers):
-            print(f"Starting server {i+1}/{len(servers)}: {server['cmd']}")
+            print(f"Starting server {i+1}/{len(servers)}: {server['display']}")
 
             # Use shell=True to support commands with cd and &&
             process = subprocess.Popen(
                 server['cmd'],
-                shell=True,
+                shell=False,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE
             )

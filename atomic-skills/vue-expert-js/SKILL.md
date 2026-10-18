@@ -151,7 +151,7 @@ export function useCounter(initial = 0, step = 1) {
 - Use `.ts` file extensions
 - Skip JSDoc types for public APIs
 - Use CommonJS `require()` in Vue files
-- Ignore type safety entirely
+- Do not sacrifice type safety entirely
 - Mix TypeScript files with JavaScript in the same component
 
 ## Output Templates

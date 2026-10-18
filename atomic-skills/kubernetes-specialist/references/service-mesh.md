@@ -6,7 +6,7 @@
 
 ```bash
 # Install Istio CLI
-curl -L https://istio.io/downloadIstio | sh -
+Download the Istio release artifact from the official release page, verify its checksum/provenance, then install from the verified local artifact. -
 export PATH=$PWD/istio-*/bin:$PATH
 
 # Install Istio with default profile
@@ -319,7 +319,7 @@ spec:
 
 ```bash
 # Install Linkerd CLI
-curl --proto '=https' --tlsv1.2 -sSfL https://run.linkerd.io/install | sh
+Download the Linkerd installer from the official release, verify its checksum/provenance, inspect it, then execute the verified local artifact.
 export PATH=$HOME/.linkerd2/bin:$PATH
 
 # Validate cluster

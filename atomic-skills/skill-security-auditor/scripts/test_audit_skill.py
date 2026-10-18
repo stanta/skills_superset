@@ -3,10 +3,12 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 MODULE_PATH = Path(__file__).with_name("audit_skill.py")
 spec = importlib.util.spec_from_file_location("audit_skill", MODULE_PATH)
@@ -33,6 +35,33 @@ class SkillAuditTests(unittest.TestCase):
             d = self.make_skill(Path(td))
             findings = audit.scan_skill(d, self.rules)
             self.assertFalse(any(audit.SEVERITY_RANK[f.severity] >= audit.SEVERITY_RANK["high"] for f in findings))
+
+    def test_changed_packages_include_both_roots_and_nested_atomic_skills(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            expected = [root / "skills" / "meta-demo",
+                        root / "atomic-skills" / "group" / "nested"]
+            for directory in expected:
+                directory.mkdir(parents=True)
+                (directory / "SKILL.md").write_text("safe\n", encoding="utf-8")
+            changed = ("skills/meta-demo/SKILL.md\0"
+                       "atomic-skills/group/nested/SKILL.md\0"
+                       "atomic-skills/group/nested/references/read me.md\0")
+            result = subprocess.CompletedProcess([], 0, stdout=changed)
+            with patch.object(audit.subprocess, "run", return_value=result) as run:
+                self.assertEqual(audit.git_changed_skill_dirs(root, "base", "head"), sorted(expected))
+            command = run.call_args.args[0]
+            self.assertIn("-z", command)
+            self.assertEqual(command[-3:], ["--", "skills", "atomic-skills"])
+
+    def test_changed_packages_ignore_deleted_packages_and_non_skill_directories(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "atomic-skills" / "group").mkdir(parents=True)
+            result = subprocess.CompletedProcess(
+                [], 0, stdout="atomic-skills/gone/SKILL.md\0atomic-skills/group/README.md\0")
+            with patch.object(audit.subprocess, "run", return_value=result):
+                self.assertEqual(audit.git_changed_skill_dirs(root, "base", "head"), [])
 
     def test_crlf_frontmatter_is_valid(self):
         with tempfile.TemporaryDirectory() as td:

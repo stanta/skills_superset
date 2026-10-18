@@ -331,17 +331,24 @@ def scan_skill(skill_dir: Path, rules: list[dict]) -> list[Finding]:
     return findings
 
 def git_changed_skill_dirs(repo_root: Path, base: str, head: str) -> list[Path]:
-    cmd = ["git", "-C", str(repo_root), "diff", "--name-only", "--diff-filter=ACMR", base, head, "--", "skills"]
+    cmd = ["git", "-C", str(repo_root), "diff", "--name-only", "--diff-filter=ACMR", "-z",
+           base, head, "--", "skills", "atomic-skills"]
     try:
         proc = subprocess.run(cmd, check=True, capture_output=True, text=True)
     except (OSError, subprocess.CalledProcessError) as exc:
         raise SystemExit(f"Unable to determine changed skills with git: {exc}")
-    names: set[str] = set()
-    for raw in proc.stdout.splitlines():
-        parts = Path(raw.strip()).parts
-        if len(parts) >= 2 and parts[0] == "skills":
-            names.add(parts[1])
-    return [repo_root / "skills" / name for name in sorted(names) if (repo_root / "skills" / name).is_dir()]
+    names: set[Path] = set()
+    for raw in proc.stdout.split("\0"):
+        parts = Path(raw).parts
+        if len(parts) >= 3 and parts[0] in {"skills", "atomic-skills"}:
+            # Atomic catalogs may contain nested packages. Select the nearest
+            # enclosing skill, not an intermediate grouping directory.
+            for depth in range(len(parts) - 1, 1, -1):
+                candidate = repo_root.joinpath(*parts[:depth])
+                if (candidate / "SKILL.md").is_file():
+                    names.add(candidate)
+                    break
+    return sorted(names)
 
 def relative_findings(findings: Iterable[Finding], root: Path) -> list[Finding]:
     out: list[Finding] = []

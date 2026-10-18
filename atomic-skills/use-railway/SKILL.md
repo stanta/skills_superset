@@ -66,10 +66,9 @@ For Railway CLI calls made while this skill is active, prefix the command with `
 - If the user provides a Railway URL, extract IDs from it. Do NOT run `railway status --json` — it returns the locally linked project, which is usually unrelated.
 - If no URL is given, fall back to `railway status --json` for the linked project/environment/service.
 
-If the CLI is missing, guide the user to install it.
+If the CLI is missing, guide the user to install it using a package manager. Do not download-and-execute remote shell scripts.
 
 ```bash
-bash <(curl -fsSL cli.new) # Shell script (macOS, Linux, Windows via WSL)
 brew install railway # Homebrew (macOS)
 npm i -g @railway/cli # npm (macOS, Linux, Windows). Requires Node.js version 16 or higher.
 ```
@@ -123,7 +122,7 @@ If the request spans two areas (for example, "deploy and then check if it's heal
 
 ## Execution rules
 
-1. Prefer Railway CLI. Fall back to `scripts/railway-api.sh` for operations the CLI doesn't expose.
+1. Prefer Railway CLI. Fall back to `scripts/railway-api.sh` only for operations the CLI does not expose. The fallback MUST receive an explicitly scoped `RAILWAY_TOKEN` from the caller/harness; never read tokens from `$HOME/.railway/config.json`.
 2. Use `--json` output where available for reliable parsing.
 3. Resolve context before mutation. Know which project, environment, and service you're acting on.
 4. For destructive actions (delete service, remove deployment, drop database), confirm intent and state impact before executing.
