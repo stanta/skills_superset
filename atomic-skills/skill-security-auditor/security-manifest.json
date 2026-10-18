@@ -2,7 +2,7 @@
   "version": 1,
   "risk_tier": "S1",
   "capabilities": {
-    "filesystem_read": ["skills/**", ".github/workflows/**"],
+    "filesystem_read": ["skills/**", "atomic-skills/**", ".github/workflows/**"],
     "filesystem_write": ["security-report.json"],
     "network_hosts": [],
     "shell_commands": ["git", "python3"],

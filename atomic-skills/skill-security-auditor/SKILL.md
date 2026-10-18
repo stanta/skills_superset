@@ -27,7 +27,7 @@ Never rely on prompt wording alone as a security boundary.
 ## When to use
 
 - Importing a third-party skill or skill bundle.
-- Reviewing changes under skills/**.
+- Reviewing changes under skills/** or atomic-skills/**.
 - Adding scripts, binaries, archives, MCP/tool instructions, or network access to a skill.
 - Investigating suspicious agent behavior caused by repository instructions or tool output.
 - Designing CI admission gates for skill repositories.
@@ -45,7 +45,7 @@ Never rely on prompt wording alone as a security boundary.
 
 Run:
 
-    python3 skills/skill-security-auditor/scripts/audit_skill.py skills/<candidate>
+    python3 atomic-skills/skill-security-auditor/scripts/audit_skill.py atomic-skills/<candidate>
 
 For pull-request admission, prefer the CI workflow in .github/workflows/skill-security-audit.yml because it executes the auditor from the trusted base revision when available.
 
@@ -89,7 +89,7 @@ Never run an untrusted skill directly in a privileged developer environment to d
 
 ### 6. Run adversarial regression cases
 
-Use references/security-checklist.md and prompt-security-redteam to test direct and indirect injection, malicious tool output, hidden instructions, data-exfiltration attempts, approval bypass, and denial-of-wallet loops.
+Use datasets/redteam-cases.jsonl, references/security-checklist.md, and prompt-security-redteam to test direct and indirect injection, malicious tool output, hidden instructions, data-exfiltration attempts, approval bypass, and denial-of-wallet loops.
 
 Test the trajectory, not only the final answer: requested tools, arguments, side effects, filesystem changes, network destinations, and persistence attempts all matter.
 
@@ -123,6 +123,15 @@ Include evidence, severity, affected files/lines, remediation, required harness 
 - references/security-manifest.schema.json — optional capability manifest format.
 - references/sources.md — standards and primary references.
 - rules/instruction-patterns.json — deterministic rule set used by the scanner.
+
+### Additional admission materials
+
+- references/admission-playbook.md — complementary review workflow and report template.
+- references/admission-threat-model.md — additional threat inventory and adversary personas.
+- references/admission-harness-boundaries.md — permission-broker and approval guidance.
+- references/risk-policy.md — thresholds, scoped exceptions, and capability examples.
+- datasets/redteam-cases.jsonl — adversarial behavioral evaluation cases, not executable commands.
+- scripts/scan_skill.py — supplemental conservative pattern scanner; findings require contextual review, especially for security documentation and test fixtures. The trusted audit workflow remains the admission gate.
 
 ## Deliverables
 

@@ -1,0 +1,127 @@
+name: Skill Security Admission
+
+on:
+  pull_request:
+    paths:
+      - "skills/**"
+      - "atomic-skills/**"
+      - ".github/workflows/skill-security-admission.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile scanner
+        env:
+          PYTHONPYCACHEPREFIX: ${{ runner.temp }}/skill-admission-pycache
+        run: python -m py_compile atomic-skills/skill-security-auditor/scripts/scan_skill.py
+
+      - name: Select changed skill packages
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            base="$BASE_SHA"
+          else
+            base="HEAD^"
+          fi
+          python - "$base" "$HEAD_SHA" <<'PY'
+          import pathlib
+          import subprocess
+          import sys
+
+          changed = subprocess.check_output(
+              ["git", "diff", "--name-only", "--diff-filter=ACMR", "-z",
+               sys.argv[1], sys.argv[2], "--", "skills", "atomic-skills"]
+          ).decode("utf-8").split("\0")
+          roots = sorted({
+              "/".join(parts[:2])
+              for name in changed
+              if len(parts := name.split("/")) >= 3
+              and parts[0] in {"skills", "atomic-skills"}
+              and (pathlib.Path(*parts[:2]) / "SKILL.md").is_file()
+          })
+          pathlib.Path("changed-skills.txt").write_text(
+              "".join(root + "\n" for root in roots), encoding="utf-8"
+          )
+          PY
+          echo "Changed skills:"
+          cat changed-skills.txt
+
+      - name: Select trusted scanner
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          scanner=atomic-skills/skill-security-auditor/scripts/scan_skill.py
+          if [[ "$EVENT_NAME" == "pull_request" ]] && git cat-file -e "${BASE_SHA}:${scanner}" 2>/dev/null; then
+            trusted_dir=$(mktemp -d)
+            git show "${BASE_SHA}:${scanner}" > "${trusted_dir}/scan_skill.py"
+            scanner="${trusted_dir}/scan_skill.py"
+          else
+            echo 'No trusted base scanner selected; independent review of scanner changes is required.'
+          fi
+          echo "ADMISSION_SCANNER=$scanner" >> "$GITHUB_ENV"
+
+      - name: Static admission scan
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p skill-security-reports
+
+          if [[ ! -s changed-skills.txt ]]; then
+            echo '{"findings":[],"note":"No changed skill directories"}' > skill-security-reports/report.json
+            exit 0
+          fi
+
+          mapfile -t dirs < changed-skills.txt
+          set +e
+          PYTHONDONTWRITEBYTECODE=1 python "$ADMISSION_SCANNER" "${dirs[@]}" --json \
+            > skill-security-reports/report.json
+          rc=$?
+          set -e
+
+          cat skill-security-reports/report.json
+          exit "$rc"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: skill-security-report
+          path: skill-security-reports/
+          if-no-files-found: warn
+
+  policy-notice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository hardening reminder
+        run: |
+          cat <<'EOF'
+          Make this workflow a required pull-request check and protect main.
+          Disallow direct pushes for normal contributors.
+          Require review for changes under skills/** and atomic-skills/** (prefer CODEOWNERS).
+          Keep workflow token permissions read-only unless explicitly required.
+          EOF
