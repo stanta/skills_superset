@@ -49,3 +49,7 @@ Treat repository-derived patterns as evidence, not immutable rules. Revalidate c
 - `web-design-guidelines` for fresh UI guideline audits.
 
 The project skills specialize these capabilities for dashboards; they do not duplicate full framework, observability vendor, or security implementation guidance.
+
+## Apple App Store publishing
+
+[apple-app-store-publishing](apple-app-store-publishing/SKILL.md) covers project-neutral App Store readiness, submission, release and optimization. Initial discovery remains through meta-mobile-desktop or meta-devops-cloud, not a repository-wide atomic scan.

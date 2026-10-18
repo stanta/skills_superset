@@ -1,11 +1,12 @@
 # Children of meta-devops-cloud
 
-69 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+70 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **agent-automation-recommender** — Analyze any agent-enabled repository and recommend compatible skills, subagents, lifecycle hooks, MCP tools and CI automations with measurable benefits. — `../../../atomic-skills/agent-automation-recommender/SKILL.md`
 - **agent-command-development** — Create portable agent commands and task entrypoints with validated arguments, explicit side effects and adapters for slash-command-capable hosts. — `../../../atomic-skills/agent-command-development/SKILL.md`
+- **apple-app-store-publishing** — Universal Apple App Store readiness, signing, privacy, payments, TestFlight, review, release and optimization across native and cross-platform projects. — `../../../atomic-skills/apple-app-store-publishing/SKILL.md`
 - **bootstrap** — Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking — `../../../atomic-skills/bootstrap/SKILL.md`
 - **builds** — Diagnose and fix failing CircleCI builds quickly and safely. Use when users ask to investigate failed CircleCI jobs, triage flaky pipelines, identify root causes from logs, and implemen — `../../../atomic-skills/builds/SKILL.md`
 - **cdn-caching** — Debug Vercel CDN caching — cache hit rate, stale content, revalidation behavior, ISR + PPR, per-request cache reasons (cacheReason), and costs. — `../../../atomic-skills/cdn-caching/SKILL.md`

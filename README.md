@@ -542,3 +542,7 @@ For a complete orientation, read these files in sequence:
 7. [docs/research/code-level-antipatterns-report.md](docs/research/code-level-antipatterns-report.md)
 
 This sequence provides context first, usage second, and deeper quality guidance last.
+
+## Apple App Store publishing
+
+For App Store publication (including AppleStore queries), TestFlight, review readiness, signing/privacy/payment gates, release operations and ASO, use [apple-app-store-publishing](atomic-skills/apple-app-store-publishing/SKILL.md). It is project- and framework-neutral, with reusable agent/reviewer templates, a dated primary-source ledger and evaluation cases. Discover it through [meta-mobile-desktop](skills/meta-mobile-desktop/SKILL.md) or [meta-devops-cloud](skills/meta-devops-cloud/SKILL.md); security and marketing meta-skills provide cross-domain routes.

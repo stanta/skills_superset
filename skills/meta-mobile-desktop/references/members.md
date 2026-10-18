@@ -1,12 +1,13 @@
 # Children of meta-mobile-desktop
 
-44 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+45 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **android-emulator-qa** — Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture. — `../../../atomic-skills/android-emulator-qa/SKILL.md`
 - **android-performance** — Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, gfxinfo frame data, dumpsys meminfo snapshots, Java heap du — `../../../atomic-skills/android-performance/SKILL.md`
 - **appkit-interop** — Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain. — `../../../atomic-skills/appkit-interop/SKILL.md`
+- **apple-app-store-publishing** — Universal Apple App Store readiness, signing, privacy, payments, TestFlight, review, release and optimization across native and cross-platform projects. — `../../../atomic-skills/apple-app-store-publishing/SKILL.md`
 - **apple-pay-integration** — Plan, implement and review provider-neutral Apple Pay web/native payments, eligibility, merchant setup, recurring billing and reliable backend processing. — `../../../atomic-skills/apple-pay-integration/SKILL.md`
 - **cardputer-buddy** — Guide any coding agent through scoped Cardputer/M5Stack hardware development using detected toolchains and physical-device safety checks. — `../../../atomic-skills/cardputer-buddy/SKILL.md`
 - **codex-expo-run-actions** — Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run action — `../../../atomic-skills/codex-expo-run-actions/SKILL.md`

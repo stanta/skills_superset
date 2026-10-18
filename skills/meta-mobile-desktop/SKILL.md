@@ -5,6 +5,7 @@ description: >
   Additional scope: Cardputer and M5Stack device development and onboarding.
   Apple Pay scope: web/native wallet integration, merchant validation, certificates, recurring payments and StoreKit eligibility. Russian queries: ApplePay; интеграция Apple Pay; платежи iOS.
   Additional scope: Google Play app and game publication, release readiness, policy gates, Android signing, test tracks, submission automation and store optimization.
+  App Store scope: App Store publication, AppleStore, TestFlight, review readiness and Apple-platform releases; публикация в App Store.
 ---
 
 # meta-mobile-desktop
@@ -42,3 +43,7 @@ For Apple Pay integration, troubleshooting or optimization, read `../../atomic-s
 - desktop integration: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## Apple App Store publishing
+
+Start with `../../atomic-skills/apple-app-store-publishing/SKILL.md` for App Store publication or rejection remediation. Add only the actual framework specialist for implementation. Use the skill's evidence and authority gates before upload, submission or public release.

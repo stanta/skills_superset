@@ -67,3 +67,7 @@ Apple Pay requests route through `meta-finance-payments` or `meta-mobile-desktop
 ## Google Play release routing
 
 Google Play publishing and release automation route through `meta-mobile-desktop` and `meta-devops-cloud` to [google-play-publishing](../atomic-skills/google-play-publishing/SKILL.md). Both member catalogs and the exact-name registry contain the canonical atomic path. The skill is not tied to a product, framework, publisher account or country; it selects only applicable policy modules. Its source snapshot is dated and must be refreshed before a submission. The [practical guide](guides/google-play-publishing.md) is for human readers. Maintainer structural tests do not constitute behavioral evaluation or Play approval.
+
+## Apple App Store publishing route
+
+The project-neutral [apple-app-store-publishing](../atomic-skills/apple-app-store-publishing/SKILL.md) atomic skill belongs to meta-mobile-desktop and meta-devops-cloud. Their child catalogs and the exact-name registry include it. Meta-security-compliance and meta-marketing-growth provide cross-domain routing without additional membership. Read the skill's references selectively; no runtime script or proprietary agent host is required.
