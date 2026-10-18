@@ -51,6 +51,9 @@ For a request naming a particular original skill, use [the exact-name registry](
 
 For fictional universes, story/show bibles, canon governance, timelines, recurring character systems, long-running arcs, retcons and contradiction checks, use [meta-narrative-worldbuilding](skills/meta-narrative-worldbuilding/SKILL.md). It routes to seven focused atomic skills and separates narrative-system work from visual/media production. Research grounding and failure cases are summarized in [worldbuilding-canon-continuity-practices](docs/research/worldbuilding-canon-continuity-practices.md).
 
+## ChatGPT history exports and personal knowledge bases
+
+For privacy-first processing of ChatGPT account data-export ZIPs, numbered `conversations.json` shards, edited/regenerated message branches, media pointers, Markdown/JSONL conversion, and provenance-aware RAG, use [chatgpt-export-knowledge-engineering](atomic-skills/chatgpt-export-knowledge-engineering/SKILL.md). It ships a dependency-free local Python converter, synthetic tests, data-loss and privacy guards, and operational references. Discover it through `meta-agent-systems` or `meta-data-analytics`.
 ## AI-agent answer data quality
 
 For high-stakes factual, numeric or source-grounded agent output, use [ai-agent-response-data-quality](atomic-skills/ai-agent-response-data-quality/SKILL.md). It verifies atomic claims, source provenance and revisions, deterministic calculations, completeness and freshness; missing user inputs become resumable clarification requests rather than guesses. The skill is discoverable through `meta-agent-systems` and `meta-testing-quality`; its `references/` contain the operational playbook, evaluation contract and researched sources.
