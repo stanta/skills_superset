@@ -71,3 +71,20 @@ Google Play publishing and release automation route through `meta-mobile-desktop
 ## Apple App Store publishing route
 
 The project-neutral [apple-app-store-publishing](../atomic-skills/apple-app-store-publishing/SKILL.md) atomic skill belongs to meta-mobile-desktop and meta-devops-cloud. Their child catalogs and the exact-name registry include it. Meta-security-compliance and meta-marketing-growth provide cross-domain routing without additional membership. Read the skill's references selectively; no runtime script or proprietary agent host is required.
+
+## Google Pay integration routing
+
+For Google Pay, GooglePay, GPay or «интеграция Google Pay», start with
+[meta-finance-payments](../skills/meta-finance-payments/SKILL.md), or
+[meta-mobile-desktop](../skills/meta-mobile-desktop/SKILL.md) for an Android,
+Flutter, React Native or WebView entry point. Both catalogs route to
+[google-pay-integration](../atomic-skills/google-pay-integration/SKILL.md).
+
+The atomic skill contains a provider-neutral decision workflow, platform
+instructions, secure server payment lifecycle, recurring/deferred/reload
+payments, test/production gates, optimization, a dated primary-source ledger,
+configuration and plan templates, and agent evaluation cases. Load only the
+references needed for the selected surface and charge model. Google Pay is
+not a shortcut around store billing rules, a Wallet pass API or an India UPI
+integration. Project-specific settings belong in the consuming project's
+plan, never in this shared skill.

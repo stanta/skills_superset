@@ -6,6 +6,7 @@ description: >
   Apple Pay scope: web/native wallet integration, merchant validation, certificates, recurring payments and StoreKit eligibility. Russian queries: ApplePay; интеграция Apple Pay; платежи iOS.
   Additional scope: Google Play app and game publication, release readiness, policy gates, Android signing, test tracks, submission automation and store optimization.
   App Store scope: App Store publication, AppleStore, TestFlight, review readiness and Apple-platform releases; публикация в App Store.
+  Google Pay scope: Android, Flutter, React Native and supported WebView integration, payment lifecycle and Google Play Billing boundaries. Russian queries: GooglePay; интеграция Google Pay.
 ---
 
 # meta-mobile-desktop
@@ -33,6 +34,10 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 ## Apple Pay routing
 
 For Apple Pay integration, troubleshooting or optimization, read `../../atomic-skills/apple-pay-integration/SKILL.md`. Start with the product/channel/storefront eligibility gate, then select web or native setup and the actual processor adapter. Keep server-authoritative payments, recovery and verification in scope; do not confuse Apple Pay with StoreKit.
+
+## Google Pay routing
+
+For Google Pay on Android or cross-platform wrappers, select `google-pay-integration` from the child catalog and read `../../atomic-skills/google-pay-integration/SKILL.md`, then use the matching native/framework skill as Support. Check digital-goods policy, release signing, runtime capabilities and interrupted-payment recovery; payment buttons and WebViews do not exempt an app from store billing rules. Use `../meta-finance-payments/SKILL.md` for processor-specific payment work.
 
 ## Typical decomposition
 

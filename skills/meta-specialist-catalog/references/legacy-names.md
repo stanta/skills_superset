@@ -255,6 +255,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **google-docs** — meta-workplace-integrations — `../../../atomic-skills/google-docs/SKILL.md`
 - **google-drive** — meta-workplace-integrations — `../../../atomic-skills/google-drive/SKILL.md`
 - **google-drive-comments** — meta-workplace-integrations — `../../../atomic-skills/google-drive-comments/SKILL.md`
+- **google-pay-integration** — meta-finance-payments, meta-mobile-desktop — `../../../atomic-skills/google-pay-integration/SKILL.md`
 - **google-play-publishing** — meta-devops-cloud, meta-mobile-desktop — `../../../atomic-skills/google-play-publishing/SKILL.md`
 - **google-sheets** — meta-office-documents, meta-workplace-integrations — `../../../atomic-skills/google-sheets/SKILL.md`
 - **google-slides** — meta-office-documents, meta-workplace-integrations — `../../../atomic-skills/google-slides/SKILL.md`

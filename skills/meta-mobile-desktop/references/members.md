@@ -1,6 +1,6 @@
 # Children of meta-mobile-desktop
 
-45 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+46 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -21,6 +21,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **expo-ui-swift-ui** — '@expo/ui/swift-ui' package lets you use SwiftUI Views and modifiers in your app. — `../../../atomic-skills/expo-ui-swift-ui/SKILL.md`
 - **figma-swiftui** — SwiftUI ↔ Figma translation. Use whenever the user mentions Swift, SwiftUI, iOS, iPhone, or iPad — in EITHER direction — translating a Figma design into SwiftUI (design → code), or push — `../../../atomic-skills/figma-swiftui/SKILL.md`
 - **flutter-expert** — Use when building cross-platform applications with Flutter 3+ and Dart. Invoke for widget development, Riverpod/Bloc state management, GoRouter navigation, platform-specific implementat — `../../../atomic-skills/flutter-expert/SKILL.md`
+- **google-pay-integration** — Google Pay for Android, Flutter, React Native and supported WebViews; runtime readiness, Play Billing boundaries, lifecycle recovery, PSP processing and production approval. — `../../../atomic-skills/google-pay-integration/SKILL.md`
 - **google-play-publishing** — Prepare, audit and optimize Google Play app/game releases across frameworks: account gates, signing, policy, tests, review, CI and recovery. — `../../../atomic-skills/google-play-publishing/SKILL.md`
 - **ios-app-intents** — Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, or controls. — `../../../atomic-skills/ios-app-intents/SKILL.md`
 - **ios-debugger-agent** — Build, run, and debug iOS apps on Simulator with XcodeBuildMCP. Use when launching an app, inspecting simulator UI or logs, or diagnosing runtime behavior. — `../../../atomic-skills/ios-debugger-agent/SKILL.md`
