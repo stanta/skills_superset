@@ -5,6 +5,7 @@ description: >
   Additional scope: Git branching and safe history, GitHub pull requests and Actions security; agent command automation, channel deployment and MCP bundle packaging.
   Additional scope: Google Play app and game publication, release readiness, policy gates, Android signing, test tracks, submission automation and store optimization.
   App Store scope: App Store release pipelines, signing, App Store Connect, TestFlight, staged updates and release evidence.
+  Cleanup scope: obsolete feature flags, unused dependencies and code/configuration bloat; удаление устаревшего кода.
 ---
 
 # meta-devops-cloud
@@ -31,6 +32,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 
 ## Typical decomposition
 
+- obsolete code, expired feature flags or dependency/configuration bloat: read `../../atomic-skills/remove-obsolete-code/SKILL.md`; establish usage, rollout and rollback constraints before removing anything.
 - Google Play publication or update: read `../../atomic-skills/google-play-publishing/SKILL.md` as Start; select framework, security, payment or performance support only when applicable. No particular product or stack is assumed.
 
 - Kubernetes/OpenShift/Helm/Lens: choose `kubernetes-specialist` for generic workload design; `openshift-operations` for SCC, Routes, Operators and cluster upgrades; `helm-release-engineering` for chart lifecycle and safe rollback; `lens-kubernetes-ide` for RBAC-aware interactive diagnosis. Combine only the children required by the subtask.

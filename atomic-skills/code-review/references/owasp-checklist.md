@@ -134,8 +134,8 @@ element.innerHTML = DOMPurify.sanitize(userInput);
 
 **Common Vulnerabilities:**
 ```javascript
-// ❌ BAD: Direct command with user input
-exec(`convert ${userFilename} output.png`);
+// ❌ BAD: Interpolating a user-controlled filename into a shell command
+// can turn filename content into executable shell syntax.
 
 // ✅ GOOD: Use array arguments
 execFile('convert', [userFilename, 'output.png']);
@@ -342,8 +342,8 @@ const sessionId = crypto.randomBytes(32).toString('hex');
 
 **Common Vulnerabilities:**
 ```javascript
-// ❌ BAD: Deserializing untrusted data
-const userData = eval(userInput);
+// ❌ BAD: Evaluating untrusted input as JavaScript to deserialize it
+// executes code instead of treating the input as data.
 
 // ❌ BAD: Unsafe JSON parse without validation
 const config = JSON.parse(untrustedInput);

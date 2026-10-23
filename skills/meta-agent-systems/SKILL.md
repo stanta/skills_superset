@@ -3,6 +3,7 @@ name: meta-agent-systems
 description: >
   Use this normal Agent Skill first for LLM agents, context, MCP, prompting and agent orchestration. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: agent memory and context, agent skill routing, MCP tool orchestration. Russian queries: LLM агенты; маршрутизация скиллов; оптимизация контекста.
   Additional scope: portable agent skills, runtime adapters, MCP apps, lifecycle hooks, subagents, instruction files and session telemetry.
+  Cross-domain scope: AI-generated or multiagent overengineering and code bloat; раздувание кода ИИ-агентами.
 ---
 
 # meta-agent-systems
@@ -29,6 +30,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 
 ## Typical decomposition
 
+- AI-generated or multiagent overengineering/code bloat: open `../meta-software-architecture/SKILL.md`, then select `design-minimal-architecture`, `simplify-code-structure`, `remove-obsolete-code` or `review-change-complexity` by the required result. Load only the selected child for the current subtask; use agent orchestration skills only when coordination itself needs changing.
 - agent memory and context: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - agent skill routing: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - MCP tool orchestration: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.

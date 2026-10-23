@@ -60,6 +60,26 @@ catalog's directory and verifies the first-level visibility boundary.
 This is a filesystem-based semantic taxonomy, not a claim of measured
 token savings or perfect routing quality.
 
+## Software simplicity routing
+
+Overengineering, architecture/code bloat, Lean, KISS, YAGNI, AHA,
+«оверинжиниринг» and «раздувание кода» route through
+[meta-software-architecture](../skills/meta-software-architecture/SKILL.md).
+Select by deliverable rather than loading the complete set:
+
+| Deliverable | Atomic skill | Owning meta-skills |
+| --- | --- | --- |
+| Minimal adequate architecture | [design-minimal-architecture](../atomic-skills/design-minimal-architecture/SKILL.md) | meta-software-architecture, meta-backend-services |
+| Behavior-preserving structural simplification | [simplify-code-structure](../atomic-skills/simplify-code-structure/SKILL.md) | meta-software-architecture, meta-backend-services |
+| Evidence-based obsolete-code removal | [remove-obsolete-code](../atomic-skills/remove-obsolete-code/SKILL.md) | meta-software-architecture, meta-devops-cloud |
+| Independent complexity review | [review-change-complexity](../atomic-skills/review-change-complexity/SKILL.md) | meta-software-architecture, meta-testing-quality |
+
+The corresponding member catalogs and exact-name registry contain all four
+canonical paths. `meta-agent-systems` links to the architecture route for
+AI-generated and multiagent bloat without adding a third membership. General
+architecture design, antipattern audits and code review retain their existing
+scope and hand off only when focused simplification work is requested.
+
 ## Apple Pay routing example
 
 Apple Pay requests route through `meta-finance-payments` or `meta-mobile-desktop`. Their static catalogs select [apple-pay-integration](../atomic-skills/apple-pay-integration/SKILL.md); the exact-name registry lists both owners. Read its eligibility gate before web/native setup, then only the relevant processor and verification references. This is one portable atomic skill with two domain memberships, not a project-specific payment recipe or a new first-level meta-skill.

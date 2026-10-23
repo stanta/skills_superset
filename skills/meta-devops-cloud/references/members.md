@@ -1,6 +1,6 @@
 # Children of meta-devops-cloud
 
-70 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+71 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -45,6 +45,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **openshift-operations** — Operate OpenShift projects, SCC/restricted-v2, Routes, Operators, upgrades and OpenShift-specific Helm deployment. — `../../../atomic-skills/openshift-operations/SKILL.md`
 - **physical-ai-infrastructure-setup-and-resilient-scaling** — Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kub — `../../../atomic-skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md`
 - **ray-distributed-computing** — Designs and operates Ray Core tasks, actors, ObjectRefs, placement groups, bounded scheduling, fault tolerance, Ray Data/Train/Tune/Serve, KubeRay and hybrid Rust/DANMA sharded compute. — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
+- **remove-obsolete-code** — Remove obsolete code, expired feature flags, unused dependencies and configuration with consumer evidence and rollback constraints; раздувание кода. — `../../../atomic-skills/remove-obsolete-code/SKILL.md`
 - **sentry** — Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bu — `../../../atomic-skills/sentry/SKILL.md`
 - **sentry-glitchtip-observability** — Integrate, configure, review, and operate Sentry or GlitchTip application observability using Sentry-compatible SDKs, including error tracking, performance tracing, logs, releases and d — `../../../atomic-skills/sentry-glitchtip-observability/SKILL.md`
 - **share** — Share a runnable prototype using the user's preferred deployment tool. — `../../../atomic-skills/share/SKILL.md`

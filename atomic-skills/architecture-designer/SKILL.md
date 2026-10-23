@@ -36,6 +36,11 @@ You are a principal architect with 15+ years of experience designing scalable, d
 - Use [`prd-developer`](../prd-developer/SKILL.md) when the primary deliverable is a product-facing requirements document that defines user value, scope, and product behavior.
 - Use [`trd-developer`](../trd-developer/SKILL.md) when the primary deliverable is a technical requirements artifact specifying constraints, interfaces, data contracts, non-functional requirements, and verification logic.
 
+## Simplicity handoffs
+
+- Use [design-minimal-architecture](../design-minimal-architecture/SKILL.md) for a focused YAGNI/Lean comparison of the smallest adequate design and the cost of additional services, frameworks or dependencies.
+- Use [simplify-code-structure](../simplify-code-structure/SKILL.md) when the requested result is behavior-preserving simplification of existing code; use [review-change-complexity](../review-change-complexity/SKILL.md) for an independent review of a proposed diff.
+
 ## Core Workflow
 
 1. **Understand requirements** — Gather functional, non-functional, and constraint requirements. _Verify full requirements coverage before proceeding._

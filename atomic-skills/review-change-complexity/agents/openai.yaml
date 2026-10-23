@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Change Complexity"
+  short_description: "Review diffs for unnecessary complexity and scope growth"
+  default_prompt: "Use $review-change-complexity to assess this change for overengineering, unnecessary additions, and preservation of required behavior."

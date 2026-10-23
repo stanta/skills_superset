@@ -3,6 +3,7 @@ name: meta-testing-quality
 description: >
   Use this normal Agent Skill first for testing, QA, agent evaluations, debugging and regression verification. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: unit testing, E2E QA, agent evaluation. Also covers Rust Cargo test, Clippy, Miri and fuzzing.
   Additional scope: agent skill evaluations and formal proof verification.
+  Complexity scope: independent PR/diff review for overengineering, bloat, speculative abstractions and scope growth; ревью сложности, оверинжиниринг.
 ---
 
 # meta-testing-quality
@@ -29,6 +30,7 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 
 ## Typical decomposition
 
+- independent complexity or scope review of a human- or AI-written diff: read `../../atomic-skills/review-change-complexity/SKILL.md`; route implementation of simplification through `../meta-software-architecture/SKILL.md`.
 - unit testing: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - E2E QA: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - agent evaluation: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.

@@ -2,6 +2,7 @@
 name: meta-backend-services
 description: >
   Use this normal Agent Skill first for backend APIs, databases, cache, data services and server applications. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: REST and GraphQL APIs, database queries, ScyllaDB architecture/operations, server integration. Also covers Rust/Tokio services, WebSocket backpressure and graceful shutdown.
+  Simplicity scope: backend overengineering, YAGNI/AHA, modular monolith decisions, abstraction and layer bloat; упрощение бэкенда, раздувание архитектуры.
 ---
 
 # meta-backend-services
@@ -28,6 +29,8 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 
 ## Typical decomposition
 
+- backend architecture with minimal operational complexity: read `../../atomic-skills/design-minimal-architecture/SKILL.md`; add a database or API specialist only for an applicable constraint.
+- behavior-preserving simplification of backend layers or abstractions: read `../../atomic-skills/simplify-code-structure/SKILL.md`; route obsolete-code deletion or independent complexity review through `../meta-software-architecture/SKILL.md`.
 - REST and GraphQL APIs: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - database queries: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - ScyllaDB schema, tablets, consistency, drivers, compaction or cluster operations: select `scylladb-architect`; add `distributed-dbms-architect` only when broader DBMS trade-offs or correctness protocols are part of the task.

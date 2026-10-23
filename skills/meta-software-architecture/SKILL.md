@@ -3,6 +3,7 @@ name: meta-software-architecture
 description: >
   Use this normal Agent Skill first for software design, distributed computing and systems architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray Core, distributed actors, Rust/DANMA shards, ScyllaDB/distributed-data architecture; software architecture, distributed systems design, distributed computation, code review, refactor plan.
   Additional scope: Git collaboration and GitHub pull request review; portable agent roles, extension packages, instructions and MCP server architecture.
+  Simplicity scope: Lean, KISS, YAGNI, AHA, overengineering, architecture/code bloat, obsolete-code removal and complexity review; оверинжиниринг, раздувание кода, упрощение архитектуры.
 ---
 
 # meta-software-architecture
@@ -29,6 +30,10 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 
 ## Typical decomposition
 
+- minimal adequate architecture or speculative service/framework expansion: read `../../atomic-skills/design-minimal-architecture/SKILL.md` as Start.
+- simplify abstractions, layers or module boundaries with behavior preserved: read `../../atomic-skills/simplify-code-structure/SKILL.md` as Start.
+- obsolete code, expired feature flags or unused dependencies: read `../../atomic-skills/remove-obsolete-code/SKILL.md` as Start; establish consumer evidence before deletion.
+- review a diff for overengineering, code bloat or scope growth: read `../../atomic-skills/review-change-complexity/SKILL.md` as Start or Check; use the broader code-review skill when other review dimensions are requested.
 - software architecture: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - ScyllaDB-specific distributed storage architecture: select `scylladb-architect`; combine with `distributed-dbms-architect` only for DBMS-level consistency/transaction/replication comparisons.
 - code review: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
