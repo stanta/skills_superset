@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Minimal Architecture"
+  short_description: "Choose the simplest architecture that meets real needs"
+  default_prompt: "Use $design-minimal-architecture to choose the simplest architecture that meets the current requirements and define when to revisit it."

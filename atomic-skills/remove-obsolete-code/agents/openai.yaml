@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remove Obsolete Code"
+  short_description: "Remove obsolete code with evidence and behavior checks"
+  default_prompt: "Use $remove-obsolete-code to identify and safely remove obsolete code, flags, or dependencies from this repository."

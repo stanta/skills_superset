@@ -1,0 +1,4 @@
+interface:
+  display_name: "Simplify Code Structure"
+  short_description: "Reduce structural complexity while preserving behavior"
+  default_prompt: "Use $simplify-code-structure to simplify these abstractions and module boundaries while preserving the required observable behavior."

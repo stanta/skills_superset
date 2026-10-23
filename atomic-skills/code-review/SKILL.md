@@ -7,6 +7,10 @@ description: Comprehensive code review for pull requests and commits. Reviews co
 
 Provide thorough, constructive code reviews that ensure quality, security, and alignment with requirements.
 
+## Complexity-focused review
+
+Use [review-change-complexity](../review-change-complexity/SKILL.md) for a focused review of overengineering, speculative abstractions, code bloat or scope growth. If the user requests implementation of the findings, hand off to [simplify-code-structure](../simplify-code-structure/SKILL.md) or [remove-obsolete-code](../remove-obsolete-code/SKILL.md) as appropriate; review findings alone do not authorize unrelated changes.
+
 ## Review Process Overview
 
 Every code review follows this structured approach:

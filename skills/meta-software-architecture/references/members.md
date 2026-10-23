@@ -1,6 +1,6 @@
 # Children of meta-software-architecture
 
-68 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+72 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -21,6 +21,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **code-reviewer** — Analyzes code diffs and files to identify bugs, security vulnerabilities (SQL injection, XSS, insecure deserialization), code smells, N+1 queries, naming issues, and architectural conce — `../../../atomic-skills/code-reviewer/SKILL.md`
 - **cpp-pro** — Writes, optimizes, and debugs C++ applications using modern C++20/23 features, template metaprogramming, and high-performance systems techniques. Use when building or refactoring C++ co — `../../../atomic-skills/cpp-pro/SKILL.md`
 - **csharp-developer** — Use when building C# applications with .NET 8+, ASP.NET Core APIs, or Blazor web apps. Builds REST APIs using minimal or controller-based routing, configures database access with Entity — `../../../atomic-skills/csharp-developer/SKILL.md`
+- **design-minimal-architecture** — Choose minimal adequate architecture with Lean/KISS/YAGNI, current requirements and explicit costs for added services or frameworks; оверинжиниринг. — `../../../atomic-skills/design-minimal-architecture/SKILL.md`
 - **detect-architecture-antipatterns** — This skill should be used when auditing an existing system for software architecture anti-patterns, including Big Ball of Mud, God Object, Lava Flow, Distributed Monolith, Shared Databa — `../../../atomic-skills/detect-architecture-antipatterns/SKILL.md`
 - **detect-code-development-antipatterns** — This skill should be used when auditing a software project for code-level development anti-patterns across frontend, backend, databases, testing, and DevOps/CI/CD. Use when reviewing im — `../../../atomic-skills/detect-code-development-antipatterns/SKILL.md`
 - **distributed-computing-architecture** — Designs and reviews distributed computation: consistency, consensus, partitioning, scheduling, messaging, gossip, asynchronous graphs, and fault-tolerant recovery. Use for distributed systems design and correctness. — `../../../atomic-skills/distributed-computing-architecture/SKILL.md`
@@ -54,11 +55,14 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **rag-architect** — Designs and implements production-grade RAG systems by chunking documents, generating embeddings, configuring vector stores, building hybrid search pipelines, applying reranking, and ev — `../../../atomic-skills/rag-architect/SKILL.md`
 - **ray-distributed-computing** — Designs and operates Ray Core tasks, actors, ObjectRefs, placement groups, bounded scheduling, fault tolerance, Ray Data/Train/Tune/Serve, KubeRay and hybrid Rust/DANMA sharded compute. — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
 - **receiving-code-review** — Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, n — `../../../atomic-skills/receiving-code-review/SKILL.md`
+- **remove-obsolete-code** — Remove obsolete code, expired feature flags, unused dependencies and configuration with consumer evidence and rollback constraints; раздувание кода. — `../../../atomic-skills/remove-obsolete-code/SKILL.md`
 - **requesting-code-review** — Use when completing tasks, implementing major features, or before merging to verify work meets requirements — `../../../atomic-skills/requesting-code-review/SKILL.md`
+- **review-change-complexity** — Independently review a diff for overengineering, code bloat, speculative abstractions and scope growth; ревью сложности. — `../../../atomic-skills/review-change-complexity/SKILL.md`
 - **rust-engineer** — Production Rust: ownership, Rust 2024, trait/API design, Tokio, FFI and profiling — `../../../atomic-skills/rust-engineer/SKILL.md`
 - **salesforce-developer** — Writes and debugs Apex code, builds Lightning Web Components, optimizes SOQL queries, implements triggers, batch jobs, platform events, and integrations on the Salesforce platform. Use  — `../../../atomic-skills/salesforce-developer/SKILL.md`
 - **scylladb-architect** — ScyllaDB-specific distributed data architecture: query-first CQL modeling, tablets, replication/consistency, shard-aware clients, performance and reliability — `../../../atomic-skills/scylladb-architect/SKILL.md`
 - **secure-code-guardian** — Use when implementing authentication/authorization, securing user input, or preventing OWASP Top 10 vulnerabilities — including custom security implementations such as hashing passwords — `../../../atomic-skills/secure-code-guardian/SKILL.md`
+- **simplify-code-structure** — Simplify existing abstractions, layers and module boundaries using AHA, semantic DRY and deep modules while preserving behavior; упрощение кода. — `../../../atomic-skills/simplify-code-structure/SKILL.md`
 - **spec-miner** — Reverse-engineering specialist that extracts specifications from existing codebases. Use when working with legacy or undocumented systems, inherited projects, or old codebases with no d — `../../../atomic-skills/spec-miner/SKILL.md`
 - **sqlalchemy-alembic-expert** — This skill should be used when writing, reviewing, or refactoring SQLAlchemy ORM models, DAL/repository classes, async session configuration, connection pool tuning, or Alembic migratio — `../../../atomic-skills/sqlalchemy-alembic-expert/SKILL.md`
 - **swiftui-view-refactor** — Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership. — `../../../atomic-skills/swiftui-view-refactor/SKILL.md`

@@ -42,6 +42,10 @@ Evaluate at least the following categories unless the task scope explicitly excl
 | Golden Hammer                            | Tooling or architecture used by habit despite mismatch with actual requirements                                 |
 | Analysis Paralysis / Design by Committee | Decision stagnation visible in ADR gaps, contradictory docs, or excessive design churn without delivery         |
 
+## Remediation handoffs
+
+After identifying an evidence-backed finding, use [simplify-code-structure](../simplify-code-structure/SKILL.md) for behavior-preserving restructuring or [remove-obsolete-code](../remove-obsolete-code/SKILL.md) for deletion with consumer evidence. Use [design-minimal-architecture](../design-minimal-architecture/SKILL.md) when choosing a smaller adequate target architecture. These focused workflows complement the audit; they do not make every smell a mandate to rewrite or delete.
+
 ## Core workflow
 
 ### 1. Define scope and unit of analysis

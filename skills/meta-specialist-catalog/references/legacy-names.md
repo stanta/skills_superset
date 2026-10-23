@@ -158,6 +158,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **define-security-policy** — meta-security-compliance — `../../../atomic-skills/define-security-policy/SKILL.md`
 - **deployments-cicd** — meta-devops-cloud — `../../../atomic-skills/deployments-cicd/SKILL.md`
 - **design-kpis** — meta-visual-design — `../../../atomic-skills/design-kpis/SKILL.md`
+- **design-minimal-architecture** — meta-backend-services, meta-software-architecture — `../../../atomic-skills/design-minimal-architecture/SKILL.md`
 - **design-qa** — meta-visual-design, meta-testing-quality — `../../../atomic-skills/design-qa/SKILL.md`
 - **detect-architecture-antipatterns** — meta-software-architecture — `../../../atomic-skills/detect-architecture-antipatterns/SKILL.md`
 - **detect-code-development-antipatterns** — meta-software-architecture — `../../../atomic-skills/detect-code-development-antipatterns/SKILL.md`
@@ -468,11 +469,13 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **remotion-saas** — meta-media-production — `../../../atomic-skills/remotion-saas/SKILL.md`
 - **remotion-studio** — meta-media-production — `../../../atomic-skills/remotion-studio/SKILL.md`
 - **remotion-upgrade** — meta-media-production — `../../../atomic-skills/remotion-upgrade/SKILL.md`
+- **remove-obsolete-code** — meta-devops-cloud, meta-software-architecture — `../../../atomic-skills/remove-obsolete-code/SKILL.md`
 - **reports-pdfs-and-slide-automation** — meta-office-documents — `../../../atomic-skills/reports-pdfs-and-slide-automation/SKILL.md`
 - **requesting-code-review** — meta-software-architecture — `../../../atomic-skills/requesting-code-review/SKILL.md`
 - **research** — meta-research-knowledge — `../../../atomic-skills/research/SKILL.md`
 - **research-router-skill** — meta-research-knowledge, meta-genomics-omics — `../../../atomic-skills/research-router-skill/SKILL.md`
 - **review** — meta-product-business — `../../../atomic-skills/review/SKILL.md`
+- **review-change-complexity** — meta-software-architecture, meta-testing-quality — `../../../atomic-skills/review-change-complexity/SKILL.md`
 - **rhea-skill** — meta-molecular-discovery — `../../../atomic-skills/rhea-skill/SKILL.md`
 - **rivet-sdk** — meta-specialist-catalog — `../../../atomic-skills/rivet-sdk/SKILL.md`
 - **rlm-roec-context-reasoning** — meta-agent-systems, meta-research-knowledge — `../../../atomic-skills/rlm-roec-context-reasoning/SKILL.md`
@@ -527,6 +530,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **shopify-use-shopify-cli** — meta-commerce-platforms — `../../../atomic-skills/shopify-use-shopify-cli/SKILL.md`
 - **sign-in-with-vercel** — meta-devops-cloud — `../../../atomic-skills/sign-in-with-vercel/SKILL.md`
 - **signing-entitlements** — meta-mobile-desktop — `../../../atomic-skills/signing-entitlements/SKILL.md`
+- **simplify-code-structure** — meta-backend-services, meta-software-architecture — `../../../atomic-skills/simplify-code-structure/SKILL.md`
 - **skill-creator** — meta-agent-systems — `../../../atomic-skills/skill-creator/SKILL.md`
 - **skill-security-auditor** — meta-security-compliance — `../../../atomic-skills/skill-security-auditor/SKILL.md`
 - **slide-writer-teaching** — meta-office-documents — `../../../atomic-skills/slide-writer-teaching/SKILL.md`

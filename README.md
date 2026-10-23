@@ -47,6 +47,19 @@ For a request naming a particular original skill, use [the exact-name registry](
 - [`meta-web3-blockchain`](skills/meta-web3-blockchain/SKILL.md) — blockchain nodes and validators, TON, smart contracts and Web3.
 - [`meta-specialist-catalog`](skills/meta-specialist-catalog/SKILL.md) — rare domains and exact lookup of an original skill.
 
+## Software simplicity and code debloating
+
+For Lean/KISS/YAGNI, AHA, overengineering, architecture/code bloat, «оверинжиниринг» or «раздувание кода», start with [meta-software-architecture](skills/meta-software-architecture/SKILL.md). Select the atomic skill by the required result; load 1–3 children for the current subtask.
+
+| Required result | Atomic skill |
+| --- | --- |
+| Choose the smallest architecture that meets current requirements | [design-minimal-architecture](atomic-skills/design-minimal-architecture/SKILL.md) |
+| Simplify existing abstractions and module boundaries while preserving behavior | [simplify-code-structure](atomic-skills/simplify-code-structure/SKILL.md) |
+| Remove obsolete code, feature flags and dependencies with consumer evidence | [remove-obsolete-code](atomic-skills/remove-obsolete-code/SKILL.md) |
+| Independently review a diff for unnecessary complexity and scope growth | [review-change-complexity](atomic-skills/review-change-complexity/SKILL.md) |
+
+Backend design/refactoring, DevOps cleanup and QA review also route through their existing meta-skills. [meta-agent-systems](skills/meta-agent-systems/SKILL.md) provides a cross-domain route for AI-generated and multiagent code bloat. These are focused execution workflows alongside the existing general architecture and code-review skills.
+
 ## Narrative worldbuilding and continuity
 
 For fictional universes, story/show bibles, canon governance, timelines, recurring character systems, long-running arcs, retcons and contradiction checks, use [meta-narrative-worldbuilding](skills/meta-narrative-worldbuilding/SKILL.md). It routes to seven focused atomic skills and separates narrative-system work from visual/media production. Research grounding and failure cases are summarized in [worldbuilding-canon-continuity-practices](docs/research/worldbuilding-canon-continuity-practices.md).
