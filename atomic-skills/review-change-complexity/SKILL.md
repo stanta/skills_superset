@@ -19,6 +19,24 @@ Prefer a bounded useful improvement over a demand for perfect design.
 - Keep review read-only by default. If the user also requested fixes, perform authorized bounded fixes and re-review without adding a new permission gate.
 - Keep complexity findings separate from general bug/security findings and from merge or deployment authorization.
 
+## Risk-first triage
+
+Prioritize correctness, security/data integrity, behavior under expected load,
+meaningful verification, required performance, then avoidable complexity. Rank by
+actual impact: a critical latency requirement or security issue is not made less
+important by its position in a checklist. Fewer lines never offset a broken contract.
+
+Read connected callers and dependencies, including unchanged files. Establish the
+real deployment/load from repository evidence; state assumptions when it is unknown.
+Check relevant concurrency, shared-state, transaction and resource-limit risks before
+praising a simpler implementation. For example, replacing a shared quota with a local
+dictionary breaks a multi-worker contract even if the diff removes many lines.
+
+Keep this triage proportional to the changed boundary, not a mandatory whole-repo
+security audit. Surface discovered correctness/security blockers before complexity
+suggestions, and hand off to [code-review](../code-review/SKILL.md) when broader review
+is needed. A focused simplicity verdict is not a release authorization.
+
 ## 1. Recover the real requirement
 
 Identify the user-visible change, current constraints and acceptance criteria.
@@ -69,6 +87,13 @@ Offer the simplest viable alternative, including a local simplification or keepi
 Explain its trade-offs and whether later adoption of the larger mechanism would actually be expensive.
 Keep known compatibility, recovery, security and data guarantees intact in the alternative.
 Use [review-patterns.md](references/review-patterns.md) for ambiguous cases and examples.
+Use the [solution ladder](../design-minimal-architecture/references/solution-ladder.md)
+when the alternative depends on finding an existing or native capability.
+
+For a documented temporary compromise, inspect its limit and revisit condition using
+[shortcut-ledger.md](../remove-obsolete-code/references/shortcut-ledger.md).
+A justified choice still within its limit is not automatically a finding. A reached
+trigger, missing evidence or present safety violation must not be excused by a comment.
 
 ## 5. Check scope and verification integrity
 
@@ -89,6 +114,12 @@ For each material finding, provide:
 2. Observable evidence and the maintenance or correctness consequence.
 3. Counter-evidence considered and confidence or unresolved facts.
 4. A smaller viable change and the verification needed for it.
+
+Explain what the code does, a concrete input/change/load scenario that causes the
+problem, the smallest sufficient correction and the consequence of leaving it.
+Re-check that the caller or dependency actually exists. Distinguish established
+findings from explicit unresolved risks; do not invent a reproduction or demand a
+harmful exploit to report a supported security concern. Avoid taste-only objections.
 
 Use the project's severity convention; otherwise distinguish:
 
@@ -119,4 +150,5 @@ Track review time, change radius, rework and regressions when data exists; do no
 - Use [design-minimal-architecture](../design-minimal-architecture/SKILL.md) when the task needs an architectural decision before implementation.
 - Use [code-review](../code-review/SKILL.md) for broader correctness, security and project-convention review when needed.
 - Use [sources.md](references/sources.md) to distinguish research support from practitioner heuristics.
+- Risk-first triage adapts [Ponytail review](https://github.com/DietrichGebert/ponytail/blob/09c434ab73ca43761c5d8b0c5d341926c2fba710/skills/ponytail-review/SKILL.md), reviewed 2026-10-26; it does not replace the existing scope and safety boundaries.
 - Read only the reference or adjacent skill needed for the present uncertainty; do not bulk-load the suite.

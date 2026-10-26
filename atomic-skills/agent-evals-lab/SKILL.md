@@ -16,6 +16,7 @@ Design evaluation suites that make AI behavior measurable before and after promp
 - Build regression gates for multilingual output quality.
 - Convert production incidents into repeatable eval cases.
 - Compare candidate prompts or models before deployment.
+- Compare coding-agent skills or simplicity policies against the same agent without the target skill and the current released version.
 
 ## Core workflow
 
@@ -27,6 +28,7 @@ Design evaluation suites that make AI behavior measurable before and after promp
 - Health-safety behavior
 - Multilingual consistency
 - Structured JSON extraction
+- Coding-agent completeness, correctness, complexity and execution cost
 
 ### 2. Build a layered dataset portfolio
 
@@ -51,6 +53,24 @@ Design evaluation suites that make AI behavior measurable before and after promp
 
 - Promote every confirmed production failure into a regression candidate.
 - Version datasets alongside prompt and model changes.
+
+## Comparative coding-skill trials
+
+For coding-agent skill or anti-bloat changes, use the
+[comparison protocol](references/skill-comparison.md) and its
+[case specifications](references/simplicity-cases.json). Reuse an existing runner;
+these references do not install one or grant execution, network or write permissions.
+
+Compare baseline/current/candidate under identical pinned tasks, settings and permitted
+tools. Verify actual skill loading, isolate sessions, interleave repeated runs and
+retain failures/timeouts. Gate correctness, safety and completeness before comparing
+size, cost or speed. Use hidden behavioral checks and validated evaluators, with
+held-out cases and uncertainty reporting rather than anecdotal savings claims.
+
+Keep the reporting states explicit: specified, structurally validated, smoke-tested
+or behaviorally benchmarked. Case definitions and passing repository CI are not model
+trials. Respect the existing manifest and host policy; when execution is unavailable,
+provide the plan and unrun checks without asserting behavioral results.
 
 ## Recommended eval categories for this repository
 
