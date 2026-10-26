@@ -19,6 +19,20 @@ Optimize for fewer concepts and supported paths, not a deleted-line target.
 - Preserve unrelated work. Do not infer permission to purge production data, drop schemas or retire external contracts from a request to clean code.
 - Defer uncertain candidates while completing independently safe work; ask only for missing facts that block a necessary decision.
 
+## Temporary compromise inventory
+
+For a shortcut/debt inventory, follow [shortcut-ledger.md](references/shortcut-ledger.md)
+as a read-only operation unless changes are requested. Extract each significant
+limit, observable revisit condition and upgrade path; classify it as within limit,
+trigger reached, unknown/no-trigger or resolved using current evidence.
+A documented compromise is neither automatically obsolete nor automatically safe.
+A reached trigger may require a live-code upgrade, not deletion. Preserve all
+present security, data and recovery requirements regardless of comments.
+
+During authorized cleanup, reconcile resolved markers and linked decision records
+only when their old limit is actually gone. Do not create a parallel debt tracker,
+invent thresholds or scan the entire repository on every small removal.
+
 ## 1. Bound the change
 
 Identify the target feature, symbol, package or obsolete path and its replacement.

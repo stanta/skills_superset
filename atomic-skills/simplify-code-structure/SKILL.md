@@ -61,6 +61,15 @@ compatibility, and performance when they are part of the current requirements.
 Do not classify a parameter, conditional, single implementation, or repeated
 fragment as a defect by itself. Read its actual callers and reasons to change.
 
+## Reuse before replacing
+
+Apply the [solution ladder](../design-minimal-architecture/references/solution-ladder.md)
+to the proposed replacement before writing a helper or adding a dependency. Search
+for a suitable project component, built-in/platform feature and installed capability;
+stop when the complete preserved contract is met. Keep useful existing boundaries
+and include callers outside the diff, fixtures, config and dynamic registrations.
+Do not replace a mature required dependency with homemade code just to reduce size.
+
 ## Select the smallest useful transformation
 
 ### Apply AHA and semantic DRY
@@ -109,6 +118,11 @@ fragment as a defect by itself. Read its actual callers and reasons to change.
    helpers, new dependencies, and abandoned intermediate scaffolding.
 6. Stop when the identified difficulty is resolved. Leave unrelated cleanup and
    speculative redesign outside the change.
+
+When a bounded compromise is deliberately retained, document its actual limit,
+observable revisit condition and upgrade path using the
+[shortcut ledger](../remove-obsolete-code/references/shortcut-ledger.md).
+Do not defer a present safety or correctness requirement as future cleanup.
 
 ## Report the result
 

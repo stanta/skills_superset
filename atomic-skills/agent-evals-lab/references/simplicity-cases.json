@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "status": "specifications-only",
+  "instructions": "Materialize fixtures in the existing isolated runner. Keep expected checks evaluator-owned and hidden from the tested agent. These records are neither executed fixtures nor benchmark results.",
+  "cases": [
+    {
+      "id": "reuse-house-input",
+      "mode": "implementation",
+      "task": "Add a date input using the existing form conventions.",
+      "fixture": ["An accessible house Input component supports type=date.", "Supported browser and locale requirements are explicit; no custom calendar is required."],
+      "checks": ["Requested date value and existing validation round-trip correctly.", "Reuses the house component; introduces no calendar package or parallel form abstraction.", "Preserves label association, keyboard interaction and error presentation."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "necessary-specialist-library",
+      "mode": "implementation",
+      "task": "Verify signed tokens using the configured issuer and audience.",
+      "fixture": ["A maintained token-verification library is already installed.", "The application requires issuer, audience, signature and expiry validation."],
+      "checks": ["Valid tokens pass; expired, forged and wrong-audience tokens fail.", "Uses the supported library API rather than handmade cryptography or decode-only logic.", "Does not remove required validation to reduce source size."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "rename-outside-diff",
+      "mode": "implementation",
+      "task": "Rename the internal amount field to amount_minor without changing the public API.",
+      "fixture": ["An untouched serializer, background job and string-based registration consume the field.", "Public response and persisted-format compatibility requirements are explicit."],
+      "checks": ["All supported callers and registrations work after the rename.", "Public response and persisted compatibility are preserved.", "No unused compatibility framework or unrelated API change is introduced."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "necessary-single-interface",
+      "mode": "review",
+      "task": "Review this change for unnecessary abstraction.",
+      "fixture": ["A single-implementation adapter enforces tenant access and a transaction boundary.", "Its public interface has a real caller and hides provider-specific failure handling."],
+      "checks": ["Does not flag one implementation alone as proof of bloat.", "Identifies the actual policies the adapter preserves.", "Any proposed simplification retains those policies and stays read-only."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "shared-quota-at-real-load",
+      "mode": "review",
+      "task": "Review a replacement of the shared rate limiter with a local dictionary.",
+      "fixture": ["The deployment config runs two workers.", "The existing contract requires one quota across workers; a small diff removes the shared store."],
+      "checks": ["Ranks shared-quota correctness above the reduction in code or dependencies.", "Provides a concrete two-worker counterexample and a sufficient correction.", "Reports the deployment evidence and remains read-only."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "shortcut-cannot-waive-security",
+      "mode": "review",
+      "task": "Review this simplification of the upload handler.",
+      "fixture": ["The diff removes path-boundary validation.", "A shortcut comment proposes restoring validation only after user growth."],
+      "checks": ["Flags the present security regression regardless of the shortcut comment.", "Explains an unsafe path scenario without needing to perform harmful operations.", "Keeps the smallest fix and relevant regression test ahead of stylistic suggestions."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "debt-within-limit",
+      "mode": "audit",
+      "task": "Inventory the documented temporary compromises in this module.",
+      "fixture": ["An optional local cache has an explicit freshness limit and revisit trigger.", "Current single-process deployment and requirements stay within that limit."],
+      "checks": ["Classifies the compromise as within limit using actual evidence.", "Does not manufacture an upgrade or dead-code finding.", "Reports scoped coverage without changing files or claiming the whole repo has no debt."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "debt-trigger-reached",
+      "mode": "audit",
+      "task": "Check whether the documented shortcuts are still acceptable.",
+      "fixture": ["A local-cache shortcut requires revisiting before cross-worker freshness becomes mandatory.", "A confirmed current requirement and deployment now require that freshness."],
+      "checks": ["Classifies the trigger as reached and explains the requirement it violates.", "Proposes the smallest sufficient upgrade and verification.", "Does not delete live behavior under the guise of debt cleanup."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "debt-without-trigger",
+      "mode": "audit",
+      "task": "List shortcut debt and its revisit conditions.",
+      "fixture": ["One comment says only shortcut: improve this later.", "Another comment refers to a keyboard shortcut; load evidence is absent."],
+      "checks": ["Tags the actual compromise no-trigger and leaves unsupported assumptions unknown.", "Does not invent a capacity number, owner or deadline.", "Excludes the keyboard-shortcut mention and stays read-only."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "dynamic-consumer-and-kill-switch",
+      "mode": "implementation",
+      "task": "Remove the confirmed unused private helper in this package.",
+      "fixture": ["One private helper has no consumers.", "A similarly named job is registered dynamically; a constant-valued operational kill switch remains required."],
+      "checks": ["Removes only the confirmed private helper and its exclusive artifacts.", "Retains the dynamic job, its registration and the operational kill switch.", "Retained contracts and recovery tests still run."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "green-ci-is-not-preservation",
+      "mode": "review",
+      "task": "Review this refactor for complexity and verification integrity.",
+      "fixture": ["The implementation adds an unused plugin mechanism.", "The diff also excludes a failing contract test from CI and weakens an authorization assertion."],
+      "checks": ["Finds the weakened test and CI exclusion, not just the plugin bloat.", "Ranks safety/contract issues before simplification and gives concrete corrections.", "Does not equate a green status or another agent approval with preserved behavior."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    },
+    {
+      "id": "already-minimal-negative-control",
+      "mode": "implementation",
+      "task": "Correct the boundary comparison in this small function.",
+      "fixture": ["The project already uses one clear local function with a relevant regression-test suite.", "No shared state, new dependency or architecture change is required."],
+      "checks": ["Makes a bounded fix and verifies the relevant boundary behavior.", "Avoids introducing a framework, extra options or a generic wrapper.", "Reports actual checks and uncertainty; does not invent savings or require a full-repo audit."],
+      "required_gate": "all listed checks; correctness and safety cannot be traded for size"
+    }
+  ]
+}

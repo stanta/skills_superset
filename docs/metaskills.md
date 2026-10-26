@@ -80,6 +80,26 @@ AI-generated and multiagent bloat without adding a third membership. General
 architecture design, antipattern audits and code review retain their existing
 scope and hand off only when focused simplification work is requested.
 
+### Ponytail-inspired methods (2026-10-26)
+
+The methods extend existing skills; there is no new always-on persona, hook,
+agent host requirement or first-level skill. Open the selected child first,
+then only the reference needed for the current decision:
+
+| Task | Canonical procedure |
+| --- | --- |
+| Choose the first complete sufficient solution | `design-minimal-architecture` or `simplify-code-structure`, using the shared [solution ladder](../atomic-skills/design-minimal-architecture/references/solution-ladder.md) |
+| Review simplicity without trading away correctness | `review-change-complexity`, starting with its risk-first triage and connected consumers |
+| Record or inventory temporary compromises | `remove-obsolete-code`, using the [shortcut ledger](../atomic-skills/remove-obsolete-code/references/shortcut-ledger.md); an inventory does not authorize deletion |
+| Measure whether a coding skill helps | [agent-evals-lab](../atomic-skills/agent-evals-lab/SKILL.md), using the [comparison protocol](../atomic-skills/agent-evals-lab/references/skill-comparison.md) and [case specifications](../atomic-skills/agent-evals-lab/references/simplicity-cases.json) |
+
+Comparative trials route through `meta-agent-systems` or `meta-testing-quality`.
+[agent-skill-development](../atomic-skills/agent-skill-development/SKILL.md) links
+to the same protocol rather than duplicating it. Atomic names and memberships
+are unchanged, so the existing exact-name registry remains authoritative.
+Case specifications and structural validation are not executed model trials;
+report unrun evaluations instead of inheriting Ponytail's performance numbers.
+
 ## Apple Pay routing example
 
 Apple Pay requests route through `meta-finance-payments` or `meta-mobile-desktop`. Their static catalogs select [apple-pay-integration](../atomic-skills/apple-pay-integration/SKILL.md); the exact-name registry lists both owners. Read its eligibility gate before web/native setup, then only the relevant processor and verification references. This is one portable atomic skill with two domain memberships, not a project-specific payment recipe or a new first-level meta-skill.

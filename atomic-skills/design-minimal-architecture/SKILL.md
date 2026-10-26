@@ -44,6 +44,20 @@ verification. Do not treat this skill as permission to deploy or delete data.
 - Avoid inferring a need for distributed services from code size, imagined
   future popularity, or the number of agents available to write code.
 
+## Run the solution ladder
+
+Before adding a capability, follow the [executable ladder](references/solution-ladder.md):
+avoid unnecessary work, reuse the project, check built-ins, reuse installed
+capabilities, keep simple logic direct, then add the minimum missing implementation.
+Stop at the first option that meets the complete current contract. Identify affected
+callers, tests, fixtures, configuration and public/persisted formats before choosing.
+Record a meaningful choice with its evidence and any exception, not a line-count quota.
+
+For a material temporary compromise, record its limit, observable revisit condition
+and upgrade path using the [shortcut ledger](../remove-obsolete-code/references/shortcut-ledger.md).
+A compromise already outside its limit cannot be deferred as future work. Do not
+introduce a new ledger process for ordinary permanent simple decisions.
+
 ## Compare the sufficient alternatives
 
 Compare the simplest feasible option with the proposed additional machinery.
