@@ -1,12 +1,13 @@
 # Children of meta-testing-quality
 
-37 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+42 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **agent-evals-lab** — This skill should be used when designing, implementing, or operationalizing evaluation suites for LLM agents, RAG flows, tool-using assistants, multilingual prompts, and release regress — `../../../atomic-skills/agent-evals-lab/SKILL.md`
 - **agent-skill-development** — Develop and evaluate reusable cross-agent Agent Skills using progressive disclosure, evidence-based triggers and baseline regression tests. — `../../../atomic-skills/agent-skill-development/SKILL.md`
 - **ai-agent-response-data-quality** — Verify high-stakes AI-agent/RAG answers claim by claim: authoritative provenance, deterministic calculations, freshness, missing-data clarification, safe abstention and release gates. — `../../../atomic-skills/ai-agent-response-data-quality/SKILL.md`
+- **ai-regression-gate** — Deterministically check quality, safety, provenance, cost and latency before independent release authorization. — `../../../atomic-skills/ai-regression-gate/SKILL.md`
 - **analyze-data-quality** — Assess whether structured data, query results, dashboards, or analytical evidence are trustworthy enough to use. Use when the task is to check data quality, reconcile conflicting source — `../../../atomic-skills/analyze-data-quality/SKILL.md`
 - **android-emulator-qa** — Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture. — `../../../atomic-skills/android-emulator-qa/SKILL.md`
 - **build-run-debug** — Build, run, and debug macOS apps with shell-first Xcode and Swift workflows. Use when launching apps or diagnosing build, startup, or runtime failures. — `../../../atomic-skills/build-run-debug/SKILL.md`
@@ -19,12 +20,15 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **frontend-testing-debugging** — Use when testing, debugging, or making targeted improvements to rendered frontend apps through the Build Web Apps or web dev plugin: local dev servers, UI regressions, interaction bugs, — `../../../atomic-skills/frontend-testing-debugging/SKILL.md`
 - **game-playtest** — Run browser-game playtests and frontend QA. Use when the user asks for smoke tests, screenshot-based verification, browser automation, HUD or overlay review, or structured issue-finding — `../../../atomic-skills/game-playtest/SKILL.md`
 - **investigation-mode** — Orchestrated debugging coordinator. Triggers on frustration signals (stuck, hung, broken, waiting) and systematically triages: runtime logs → workflow status → browser verify → deploy/e — `../../../atomic-skills/investigation-mode/SKILL.md`
+- **llm-eval-engineer** — Build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting. — `../../../atomic-skills/llm-eval-engineer/SKILL.md`
 - **math-olympiad** — Solve and independently verify olympiad-level mathematics using rigorous proof search, counterexample testing and reproducible presentation. — `../../../atomic-skills/math-olympiad/SKILL.md`
 - **n8n-validation-expert** — Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding v — `../../../atomic-skills/n8n-validation-expert/SKILL.md`
+- **phoenix-evals-experiments** — Build Phoenix evaluation datasets, annotations, and reproducible experiments for agent and RAG quality. — `../../../atomic-skills/phoenix-evals-experiments/SKILL.md`
 - **playwright-expert** — Use when writing E2E tests with Playwright, setting up test infrastructure, or debugging flaky browser tests. Invoke to write test scripts, create page objects, configure test fixtures, — `../../../atomic-skills/playwright-expert/SKILL.md`
 - **playwright-skill** — Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, — `../../../atomic-skills/playwright-skill/SKILL.md`
 - **plugin-eval** — Help engineers evaluate a local skill or plugin, explain why it scored that way, show what to fix first, measure real token usage, benchmark starter scenarios, or decide what to run nex — `../../../atomic-skills/plugin-eval/SKILL.md`
 - **review-change-complexity** — Independently review a diff for overengineering, code bloat, speculative abstractions and scope growth; ревью сложности. — `../../../atomic-skills/review-change-complexity/SKILL.md`
+- **self-refinement** — Use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs. — `../../../atomic-skills/self-refinement/SKILL.md`
 - **systematic-debugging** — Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes — `../../../atomic-skills/systematic-debugging/SKILL.md`
 - **telegram-bot-test-automation** — This skill should be used when designing, implementing, reviewing, or operating automated test environments for Python Telegram bots, especially pytest-based unit, integration, and end- — `../../../atomic-skills/telegram-bot-test-automation/SKILL.md`
 - **test-cases-generation** — Generates structured test case sets with multi-dimensional coverage from project code analysis or specification documents. This skill activates when the user asks to write test cases, g — `../../../atomic-skills/test-cases-generation/SKILL.md`
@@ -34,6 +38,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **test-triage** — Triage macOS tests across Xcode and SwiftPM. Use when narrowing failures, explaining assertions or crashes, or separating setup from regressions. — `../../../atomic-skills/test-triage/SKILL.md`
 - **tester-ai** — This skill should be used when the task is to design, audit, or operationalize testing for AI applications such as chatbots, RAG systems, tool-using agents, autonomous loops, or multi-a — `../../../atomic-skills/tester-ai/SKILL.md`
 - **testing-data-visualizations** — Test data visualizations and dashboards. Use when the user needs chart or diagram test strategy, screenshot or image diff testing, visual regression, mocked or synthetic chart data, com — `../../../atomic-skills/testing-data-visualizations/SKILL.md`
+- **tool-use-optimizer** — Evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters. — `../../../atomic-skills/tool-use-optimizer/SKILL.md`
 - **twilio-debugging-observability** — Debug Twilio integrations and set up production observability. Covers the Console Debugger, Monitor Alerts API, Event Streams for error log streaming, status callback tracking, common e — `../../../atomic-skills/twilio-debugging-observability/SKILL.md`
 - **twilio-verify-send-otp** — Send and verify one-time passcodes (OTPs) via Twilio Verify over SMS, RCS, voice, email, or WhatsApp. Covers creating a Verify Service, sending tokens, checking submitted codes, automat — `../../../atomic-skills/twilio-verify-send-otp/SKILL.md`
 - **validation** — Use when Codex is already in the validation phase of a security scan or the user explicitly asks to determine whether one or more candidate security findings are valid. Do not use as th — `../../../atomic-skills/validation/SKILL.md`

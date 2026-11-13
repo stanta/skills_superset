@@ -1,0 +1,4 @@
+interface:
+  display_name: "Long Context Research"
+  short_description: "Research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthe"
+  default_prompt: "Apply long-context-research with independent evidence and bounded execution."

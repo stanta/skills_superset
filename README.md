@@ -47,6 +47,25 @@ For a request naming a particular original skill, use [the exact-name registry](
 - [`meta-web3-blockchain`](skills/meta-web3-blockchain/SKILL.md) — blockchain nodes and validators, TON, smart contracts and Web3.
 - [`meta-specialist-catalog`](skills/meta-specialist-catalog/SKILL.md) — rare domains and exact lookup of an original skill.
 
+## DSPy-derived AI engineering skills
+
+Twelve portable skills for typed LLM contracts, evaluation, prompt/demo optimization, bounded refinement, RLM research, RAG/tool use, staged reasoning, cost comparisons, architecture experiments and independent regression gating. Start at [the guide](docs/guides/dspy-agent-skills.md) or choose a relevant meta-skill; direct lookup remains available in the [exact-name registry](skills/meta-specialist-catalog/references/legacy-names.md).
+
+- [`task-contract-designer`](atomic-skills/task-contract-designer/SKILL.md) — Convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures.
+- [`llm-eval-engineer`](atomic-skills/llm-eval-engineer/SKILL.md) — Build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting.
+- [`prompt-optimizer`](atomic-skills/prompt-optimizer/SKILL.md) — Optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2.
+- [`few-shot-learning`](atomic-skills/few-shot-learning/SKILL.md) — Choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights.
+- [`self-refinement`](atomic-skills/self-refinement/SKILL.md) — Use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs.
+- [`long-context-research`](atomic-skills/long-context-research/SKILL.md) — Research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis.
+- [`rag-optimizer`](atomic-skills/rag-optimizer/SKILL.md) — Improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics.
+- [`tool-use-optimizer`](atomic-skills/tool-use-optimizer/SKILL.md) — Evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters.
+- [`multi-step-reasoning`](atomic-skills/multi-step-reasoning/SKILL.md) — Build a small typed multi-stage DSPy program with verifiable intermediate artifacts.
+- [`model-cost-optimizer`](atomic-skills/model-cost-optimizer/SKILL.md) — Choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost.
+- [`agent-architecture-evolver`](atomic-skills/agent-architecture-evolver/SKILL.md) — Experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review.
+- [`ai-regression-gate`](atomic-skills/ai-regression-gate/SKILL.md) — Deterministically check quality, safety, provenance, cost and latency before independent release authorization.
+
+These are original DSPy-informed workflows, not official DSPy skills or measured performance claims.
+
 ## Software simplicity and code debloating
 
 For Lean/KISS/YAGNI, AHA, overengineering, architecture/code bloat, «оверинжиниринг» or «раздувание кода», start with [meta-software-architecture](skills/meta-software-architecture/SKILL.md). Select the atomic skill by the required result; load 1–3 children for the current subtask.

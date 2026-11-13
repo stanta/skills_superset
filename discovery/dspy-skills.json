@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "source": "DSPy-derived original workflows",
+  "reviewed_at": "2026-11-13",
+  "skills": [
+    {
+      "id": "task-contract-designer",
+      "title": "Task Contract Designer",
+      "description": "Convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "mechanism": "Signature, InputField, OutputField"
+    },
+    {
+      "id": "llm-eval-engineer",
+      "title": "LLM Evaluation Engineer",
+      "description": "Build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting.",
+      "owners": [
+        "meta-machine-learning",
+        "meta-testing-quality"
+      ],
+      "mechanism": "Example, Evaluate"
+    },
+    {
+      "id": "prompt-optimizer",
+      "title": "Prompt Optimizer",
+      "description": "Optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-machine-learning"
+      ],
+      "mechanism": "GEPA, MIPROv2"
+    },
+    {
+      "id": "few-shot-learning",
+      "title": "Few-Shot Learning",
+      "description": "Choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-machine-learning"
+      ],
+      "mechanism": "LabeledFewShot, BootstrapFewShot"
+    },
+    {
+      "id": "self-refinement",
+      "title": "Self Refinement",
+      "description": "Use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-testing-quality"
+      ],
+      "mechanism": "BestOfN, Refine"
+    },
+    {
+      "id": "long-context-research",
+      "title": "Long Context Research",
+      "description": "Research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-research-knowledge"
+      ],
+      "mechanism": "RLM"
+    },
+    {
+      "id": "rag-optimizer",
+      "title": "RAG Optimizer",
+      "description": "Improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-machine-learning"
+      ],
+      "mechanism": "Module composition, Evaluate, GEPA"
+    },
+    {
+      "id": "tool-use-optimizer",
+      "title": "Tool Use Optimizer",
+      "description": "Evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-testing-quality"
+      ],
+      "mechanism": "ReAct, Tool, MCP"
+    },
+    {
+      "id": "multi-step-reasoning",
+      "title": "Multi-Step Reasoning",
+      "description": "Build a small typed multi-stage DSPy program with verifiable intermediate artifacts.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "mechanism": "Module, Predict, ChainOfThought"
+    },
+    {
+      "id": "model-cost-optimizer",
+      "title": "Model Cost Optimizer",
+      "description": "Choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-machine-learning"
+      ],
+      "mechanism": "LM, Evaluate, Optimizers"
+    },
+    {
+      "id": "agent-architecture-evolver",
+      "title": "Agent Architecture Evolver",
+      "description": "Experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review.",
+      "owners": [
+        "meta-agent-systems",
+        "meta-software-architecture"
+      ],
+      "mechanism": "Flex, GEPA"
+    },
+    {
+      "id": "ai-regression-gate",
+      "title": "AI Regression Gate",
+      "description": "Deterministically check quality, safety, provenance, cost and latency before independent release authorization.",
+      "owners": [
+        "meta-devops-cloud",
+        "meta-testing-quality"
+      ],
+      "mechanism": "Evaluate, versioned artifacts"
+    }
+  ]
+}

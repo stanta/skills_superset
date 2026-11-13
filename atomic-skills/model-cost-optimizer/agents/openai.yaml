@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Cost Optimizer"
+  short_description: "Choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecy"
+  default_prompt: "Apply model-cost-optimizer with independent evidence and bounded execution."

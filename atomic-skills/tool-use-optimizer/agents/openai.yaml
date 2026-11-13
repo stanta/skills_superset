@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tool Use Optimizer"
+  short_description: "Evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters."
+  default_prompt: "Apply tool-use-optimizer with independent evidence and bounded execution."

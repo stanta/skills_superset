@@ -1,11 +1,12 @@
 # Children of meta-devops-cloud
 
-71 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+74 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **agent-automation-recommender** — Analyze any agent-enabled repository and recommend compatible skills, subagents, lifecycle hooks, MCP tools and CI automations with measurable benefits. — `../../../atomic-skills/agent-automation-recommender/SKILL.md`
 - **agent-command-development** — Create portable agent commands and task entrypoints with validated arguments, explicit side effects and adapters for slash-command-capable hosts. — `../../../atomic-skills/agent-command-development/SKILL.md`
+- **ai-regression-gate** — Deterministically check quality, safety, provenance, cost and latency before independent release authorization. — `../../../atomic-skills/ai-regression-gate/SKILL.md`
 - **apple-app-store-publishing** — Universal Apple App Store readiness, signing, privacy, payments, TestFlight, review, release and optimization across native and cross-platform projects. — `../../../atomic-skills/apple-app-store-publishing/SKILL.md`
 - **bootstrap** — Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking — `../../../atomic-skills/bootstrap/SKILL.md`
 - **builds** — Diagnose and fix failing CircleCI builds quickly and safely. Use when users ask to investigate failed CircleCI jobs, triage flaky pipelines, identify root causes from logs, and implemen — `../../../atomic-skills/builds/SKILL.md`
@@ -43,6 +44,8 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **nextjs15-vercel-ai-sdk** — This skill should be used when building Next.js 15 App Router applications with Vercel AI SDK, React Server Components, Server Actions, TanStack Query, Tailwind CSS, shadcn/ui (Radix UI — `../../../atomic-skills/nextjs15-vercel-ai-sdk/SKILL.md`
 - **observability** — Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and m — `../../../atomic-skills/observability/SKILL.md`
 - **openshift-operations** — Operate OpenShift projects, SCC/restricted-v2, Routes, Operators, upgrades and OpenShift-specific Helm deployment. — `../../../atomic-skills/openshift-operations/SKILL.md`
+- **phoenix-langsmith-migration** — Assess reversible LangSmith-to-Phoenix observability migration with an OpenTelemetry pilot. — `../../../atomic-skills/phoenix-langsmith-migration/SKILL.md`
+- **phoenix-tracing** — Add or debug Arize Phoenix LLM tracing via OpenInference/OTLP with protected traces. — `../../../atomic-skills/phoenix-tracing/SKILL.md`
 - **physical-ai-infrastructure-setup-and-resilient-scaling** — Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kub — `../../../atomic-skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md`
 - **ray-distributed-computing** — Designs and operates Ray Core tasks, actors, ObjectRefs, placement groups, bounded scheduling, fault tolerance, Ray Data/Train/Tune/Serve, KubeRay and hybrid Rust/DANMA sharded compute. — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
 - **remove-obsolete-code** — Remove obsolete code, expired feature flags, unused dependencies and configuration with consumer evidence and rollback constraints; раздувание кода. — `../../../atomic-skills/remove-obsolete-code/SKILL.md`

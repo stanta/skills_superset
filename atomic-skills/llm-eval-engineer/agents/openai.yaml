@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Evaluation Engineer"
+  short_description: "Build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware "
+  default_prompt: "Apply llm-eval-engineer with independent evidence and bounded execution."

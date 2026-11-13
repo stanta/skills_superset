@@ -1,0 +1,4 @@
+interface:
+  display_name: "Few-Shot Learning"
+  short_description: "Choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights."
+  default_prompt: "Apply few-shot-learning with independent evidence and bounded execution."

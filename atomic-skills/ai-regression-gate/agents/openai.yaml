@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Regression Gate"
+  short_description: "Deterministically check quality, safety, provenance, cost and latency before independent release authorization."
+  default_prompt: "Apply ai-regression-gate with independent evidence and bounded execution."

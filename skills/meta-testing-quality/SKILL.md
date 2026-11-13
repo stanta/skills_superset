@@ -1,6 +1,7 @@
 ---
 name: meta-testing-quality
 description: >
+  DSPy optimization scope: llm-eval-engineer, self-refinement, tool-use-optimizer, ai-regression-gate.
   Use this normal Agent Skill first for testing, QA, agent evaluations, debugging and regression verification. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: unit testing, E2E QA, agent evaluation. Also covers Rust Cargo test, Clippy, Miri and fuzzing.
   Additional scope: agent skill evaluations and formal proof verification.
   Complexity scope: independent PR/diff review for overengineering, bloat, speculative abstractions and scope growth; ревью сложности, оверинжиниринг.
@@ -41,3 +42,12 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - Rust verification: select `rust-engineer` for Cargo test/Clippy, feature matrices, property tests and optional Miri/fuzzing; add the general verification skill for release evidence.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## DSPy-derived skill routes
+
+Use the existing file-search tool on the exact path from the child catalog; for these requests select the relevant skill and read its full body. Do not load every DSPy-derived skill at once.
+
+- **llm-eval-engineer** — Build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting. Read `../../atomic-skills/llm-eval-engineer/SKILL.md`.
+- **self-refinement** — Use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs. Read `../../atomic-skills/self-refinement/SKILL.md`.
+- **tool-use-optimizer** — Evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters. Read `../../atomic-skills/tool-use-optimizer/SKILL.md`.
+- **ai-regression-gate** — Deterministically check quality, safety, provenance, cost and latency before independent release authorization. Read `../../atomic-skills/ai-regression-gate/SKILL.md`.

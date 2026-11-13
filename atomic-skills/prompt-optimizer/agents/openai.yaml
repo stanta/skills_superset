@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Optimizer"
+  short_description: "Optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2."
+  default_prompt: "Apply prompt-optimizer with independent evidence and bounded execution."

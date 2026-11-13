@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-Step Reasoning"
+  short_description: "Build a small typed multi-stage DSPy program with verifiable intermediate artifacts."
+  default_prompt: "Apply multi-step-reasoning with independent evidence and bounded execution."

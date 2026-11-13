@@ -128,3 +128,7 @@ references needed for the selected surface and charge model. Google Pay is
 not a shortcut around store billing rules, a Wallet pass API or an India UPI
 integration. Project-specific settings belong in the consuming project's
 plan, never in this shared skill.
+
+## DSPy-derived LLM optimization skills
+
+The repository includes [12 DSPy-inspired Agent Skills](guides/dspy-agent-skills.md). Discover them through `meta-agent-systems`, `meta-machine-learning`, `meta-testing-quality`, `meta-software-architecture`, `meta-research-knowledge` or `meta-devops-cloud` and their normal `references/members.md` catalogs. Each child remains in `../atomic-skills/`; no new first-level meta-skill or agent-time loader is required.
