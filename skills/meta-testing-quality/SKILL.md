@@ -5,6 +5,7 @@ description: >
   Additional scope: agent skill evaluations and formal proof verification.
   Complexity scope: independent PR/diff review for overengineering, bloat, speculative abstractions and scope growth; ревью сложности, оверинжиниринг.
   Focused methods: risk-first review, baseline/current/candidate A/B trials, hidden behavioral checks, completeness and failure accounting; сравнительные испытания скиллов.
+  DSPy-inspired scope: task-level LLM metrics, leakage-safe datasets, Evaluate adapters and independent AI regression gates; оценка качества LLM и контроль регрессий.
 ---
 
 # meta-testing-quality
@@ -39,5 +40,8 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - agent evaluation: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 - Rust verification: select `rust-engineer` for Cargo test/Clippy, feature matrices, property tests and optional Miri/fuzzing; add the general verification skill for release evidence.
+- build a task-level LLM evaluation: select `llm-eval-engineer` for split integrity, calibrated metrics and reproducible baseline/candidate measurements; use `agent-evals-lab` for broader agent evaluation operations.
+- assess an already evaluated prompt/model/tool/pipeline candidate: select `ai-regression-gate`. Critical failures outrank averages; missing or incompatible evidence blocks automatic promotion. An evaluation verdict is separate from release authorization.
+- improve the measured candidate: route through `../meta-agent-systems/SKILL.md` to the relevant optimizer, keeping the test set and gate outside its editable surface.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.

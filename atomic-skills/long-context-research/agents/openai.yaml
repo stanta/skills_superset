@@ -1,0 +1,4 @@
+interface:
+  display_name: "Long-Context Research"
+  short_description: "Bounded corpus research with traceable evidence"
+  default_prompt: "Use $long-context-research to investigate this corpus selectively, preserve source provenance and report coverage gaps."

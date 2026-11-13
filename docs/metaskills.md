@@ -128,3 +128,35 @@ references needed for the selected surface and charge model. Google Pay is
 not a shortcut around store billing rules, a Wallet pass API or an India UPI
 integration. Project-specific settings belong in the consuming project's
 plan, never in this shared skill.
+
+## DSPy-inspired AI engineering route
+
+All 12 DSPy-inspired atomic skills route through
+[meta-agent-systems](../skills/meta-agent-systems/SKILL.md). Select by the
+required artifact: `task-contract-designer`, `llm-eval-engineer`,
+`prompt-optimizer`, `few-shot-learning`, `self-refinement`,
+`long-context-research`, `rag-optimizer`, `tool-use-optimizer`,
+`multi-step-reasoning`, `model-cost-optimizer`, `agent-architecture-evolver`
+or `ai-regression-gate`. Read the selected child in full, then only its
+needed playbook; do not load the entire suite.
+
+Secondary memberships preserve the two-domain limit:
+
+| Meta-skill | Additional child routes |
+| --- | --- |
+| [meta-machine-learning](../skills/meta-machine-learning/SKILL.md) | prompt-optimizer, few-shot-learning, model-cost-optimizer, agent-architecture-evolver |
+| [meta-testing-quality](../skills/meta-testing-quality/SKILL.md) | llm-eval-engineer, ai-regression-gate |
+| [meta-research-knowledge](../skills/meta-research-knowledge/SKILL.md) | long-context-research, rag-optimizer |
+
+The lifecycle is contract → baseline evaluation → one targeted optimization
+→ independent regression gate. Existing general prompting, RAG architecture,
+agent evaluation and recursive-context skills retain their broader roles.
+DSPy is an optional implementation, not a discovery dependency; experimental
+RLM/Flex execution requires version checks and an approved sandbox.
+
+The [practical guide and complete catalog](guides/dspy-agent-skills.md)
+explain boundaries and handoffs. Each package includes instructions,
+references, optional host metadata and three behavioral case specifications.
+The 36 cases are not claimed model results. CI validates their structure,
+links and memberships without making paid model calls. Evaluation outcomes
+do not replace independent production authorization.

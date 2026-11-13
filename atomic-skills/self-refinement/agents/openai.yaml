@@ -1,0 +1,4 @@
+interface:
+  display_name: "Self-Refinement"
+  short_description: "Bounded candidate selection and evidence-based repair"
+  default_prompt: "Use $self-refinement to improve this result within a fixed attempt budget using independent checks and no repeated side effects."

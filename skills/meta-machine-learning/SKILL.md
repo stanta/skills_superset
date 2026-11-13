@@ -2,6 +2,7 @@
 name: meta-machine-learning
 description: >
   Use this normal Agent Skill first for machine learning, embeddings, model inference and generative AI. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray Data/Train/Tune/Serve and distributed ML;  train models, vector embeddings, ML inference.
+  DSPy-inspired scope: GEPA/MIPROv2 prompt optimization, BootstrapFewShot demonstrations, quality-constrained model cost comparisons and experimental Flex architecture search; оптимизация промптов, few-shot и стоимости моделей.
 ---
 
 # meta-machine-learning
@@ -31,5 +32,9 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - train models: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - vector embeddings: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - ML inference: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+- optimize instructions and demonstrations against a fixed metric: select `prompt-optimizer`; for demonstration-only curation select `few-shot-learning`. In-context examples are not model-weight training.
+- reduce measured cost without sacrificing required quality: select `model-cost-optimizer`; verify current prices and evaluate the entire fallback path.
+- experimentally change an LLM module's code structure: select `agent-architecture-evolver` only with a frozen evaluator, bounded edit surface and approved isolated execution. Flex support is version-sensitive; no automatic production promotion.
+- missing task metrics or release evidence: route through `../meta-testing-quality/SKILL.md` for `llm-eval-engineer` or `ai-regression-gate` rather than optimizing against an invented score.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.

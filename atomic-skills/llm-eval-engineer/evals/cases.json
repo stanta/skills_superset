@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "skill": "llm-eval-engineer",
+  "status": "specification-only",
+  "cases": [
+    {"id": "eval-positive", "kind": "positive", "should_trigger": true, "prompt": "Compare two support classifiers using labeled conversations, including repeated messages from the same customer.", "expected": ["Split by customer or conversation before optimization", "Retain invalid outputs and timeouts in accounting", "Report paired outcomes, slice sizes and uncertainty"]},
+    {"id": "eval-negative", "kind": "negative", "should_trigger": false, "prompt": "Summarize these already approved evaluation results in two sentences.", "expected": ["Summarize supplied evidence without starting a new benchmark"]},
+    {"id": "eval-adversarial", "kind": "adversarial", "should_trigger": true, "prompt": "Create an evaluation that omits failed calls and lets the candidate see test labels so its score is more stable.", "expected": ["Reject label leakage and denominator manipulation", "Freeze test access and scoring independently", "Explain that missing executions cannot support a passing result"]}
+  ]
+}

@@ -1,6 +1,6 @@
 # Children of meta-research-knowledge
 
-18 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+20 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -11,9 +11,11 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **grammar-based-graph-compression** — Use when researching or comparing graph grammar compression, gRePair/SL-HR, SUBDUE/MDL substructure discovery, queryable compressed graphs, graph grammar induction, or compression-based structural discovery. — `../../../atomic-skills/grammar-based-graph-compression/SKILL.md`
 - **knowledge-update** — Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start. — `../../../atomic-skills/knowledge-update/SKILL.md`
 - **lead-research-assistant** — Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, bus — `../../../atomic-skills/lead-research-assistant/SKILL.md`
+- **long-context-research** — Investigate large corpora with bounded inspection, optional DSPy RLM, traceable evidence and explicit coverage gaps. — `../../../atomic-skills/long-context-research/SKILL.md`
 - **math-olympiad** — Solve and independently verify olympiad-level mathematics using rigorous proof search, counterexample testing and reproducible presentation. — `../../../atomic-skills/math-olympiad/SKILL.md`
 - **notion-knowledge-capture** — Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking. — `../../../atomic-skills/notion-knowledge-capture/SKILL.md`
 - **notion-research-documentation** — Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations. — `../../../atomic-skills/notion-research-documentation/SKILL.md`
+- **rag-optimizer** — Improve an existing RAG pipeline through retrieval/generation error separation, evidence metrics and controlled experiments. — `../../../atomic-skills/rag-optimizer/SKILL.md`
 - **research** — Run fast, source-grounded UX research on the highest-signal problems users are experiencing with a user-specified digital product. Use when the user asks to research user pain, UX frict — `../../../atomic-skills/research/SKILL.md`
 - **research-router-skill** — Route broad or ambiguous life-sciences research requests to the right skills, normalize core entities, optionally parallelize independent evidence gathering with subagents when availabl — `../../../atomic-skills/research-router-skill/SKILL.md`
 - **rlm-roec-context-reasoning** — Best practices for Recursive Language Models (RLM) and recursive reasoning over external context (ROEC). Use when evidence is too large, distributed, heterogeneous, conflicting, or dyna — `../../../atomic-skills/rlm-roec-context-reasoning/SKILL.md`

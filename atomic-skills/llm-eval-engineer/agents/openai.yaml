@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Evaluation Engineer"
+  short_description: "Leakage-safe datasets and reproducible LLM evaluation"
+  default_prompt: "Use $llm-eval-engineer to design or run a bounded baseline/candidate evaluation with explicit metrics and evidence gaps."

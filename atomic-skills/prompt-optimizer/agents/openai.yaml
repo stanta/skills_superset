@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Optimizer"
+  short_description: "Metric-driven, budgeted prompt and demo optimization"
+  default_prompt: "Use $prompt-optimizer to improve this module on training and validation data while preserving the evaluator, holdout and safety boundaries."

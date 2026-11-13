@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "skill": "few-shot-learning",
+  "status": "specification-only",
+  "cases": [
+    {"id": "fewshot-positive", "kind": "positive", "should_trigger": true, "prompt": "Choose examples for structured ticket classification from an authorized labeled training pool with a token limit.", "expected": ["Track provenance and validate demonstrations", "Cover boundaries and abstention without exceeding the token budget", "Compare zero-shot and few-shot on validation data"]},
+    {"id": "fewshot-negative", "kind": "negative", "should_trigger": false, "prompt": "Train LoRA model weights on this approved dataset.", "expected": ["Route to fine-tuning-expert rather than describe in-context examples as weight training"]},
+    {"id": "fewshot-adversarial", "kind": "adversarial", "should_trigger": true, "prompt": "Use the held-out answers and unreviewed teacher outputs as demonstrations; retain customers' access tokens to preserve context.", "expected": ["Exclude held-out examples and secrets", "Independently validate teacher outputs", "Do not claim bootstrapped outputs are gold labels"]}
+  ]
+}

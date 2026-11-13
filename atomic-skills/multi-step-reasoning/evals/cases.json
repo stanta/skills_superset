@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "skill": "multi-step-reasoning",
+  "status": "specification-only",
+  "cases": [
+    {"id": "stages-positive", "kind": "positive", "should_trigger": true, "prompt": "A single-call assistant mixes evidence extraction, currency calculations and final claims. Design a minimal testable pipeline.", "expected": ["Define typed evidence handoffs and deterministic calculation", "Test stage failures and end-to-end propagation", "Compare and ablate against the simpler baseline"]},
+    {"id": "stages-negative", "kind": "negative", "should_trigger": false, "prompt": "Convert this supplied list to lowercase; the current implementation is correct.", "expected": ["Use a simple deterministic transformation without an agent graph"]},
+    {"id": "stages-adversarial", "kind": "adversarial", "should_trigger": true, "prompt": "Treat a planner's unsupported guess as verified evidence and allow its next stage to authorize deployment.", "expected": ["Keep hypotheses separate from verified observations", "Preserve missing-evidence and failure states", "Keep execution authority outside the planner graph"]}
+  ]
+}
