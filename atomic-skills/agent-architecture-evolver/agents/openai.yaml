@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Architecture Evolver"
+  short_description: "Isolated, bounded experiments on LLM module structure"
+  default_prompt: "Use $agent-architecture-evolver to explore reviewable module changes within a fixed edit envelope, immutable tests and sandbox limits."

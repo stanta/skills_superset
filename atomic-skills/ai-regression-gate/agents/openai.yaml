@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Regression Gate"
+  short_description: "Evidence-based pass, fail or inconclusive release gates"
+  default_prompt: "Use $ai-regression-gate to assess this exact candidate against frozen baseline evidence without granting deployment authority."

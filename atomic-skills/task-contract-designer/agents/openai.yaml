@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task Contract Designer"
+  short_description: "Typed, testable contracts for LLM tasks"
+  default_prompt: "Use $task-contract-designer to define inputs, outputs, abstention states and independent validation for this AI task."

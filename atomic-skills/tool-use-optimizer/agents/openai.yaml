@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tool-Use Optimizer"
+  short_description: "Improve tool selection without expanding authority"
+  default_prompt: "Use $tool-use-optimizer to evaluate tool trajectories in a sandbox or mocks, improve selection and arguments, and preserve authorization."

@@ -5,6 +5,7 @@ description: >
   Additional scope: portable agent skills, runtime adapters, MCP apps, lifecycle hooks, subagents, instruction files and session telemetry.
   Cross-domain scope: AI-generated or multiagent overengineering and code bloat; раздувание кода ИИ-агентами.
   Evaluation scope: baseline/current/candidate coding-skill comparisons, Ponytail-inspired comparative trials, actual skill-loading evidence; сравнительные испытания скиллов.
+  DSPy-inspired workflows: typed task contracts, LLM evaluation, GEPA/MIPROv2 prompt optimization, few-shot demonstrations, bounded refinement, RLM research, RAG and tool-use optimization, staged reasoning, model cost, experimental Flex architecture search and independent regression gates; оптимизация промптов и качества ИИ.
 ---
 
 # meta-agent-systems
@@ -37,5 +38,26 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - agent memory and context: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - agent skill routing: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - MCP tool orchestration: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+
+## DSPy-inspired task routing
+
+Select by the required artifact; do not load the complete suite. Search the named child in `references/members.md`, then read its full skill.
+
+| Required result | Child skill |
+| --- | --- |
+| Typed input/output contract and abstention rules | `task-contract-designer` |
+| Frozen datasets, metrics and baseline comparison | `llm-eval-engineer` |
+| Persistent instruction/demo improvement | `prompt-optimizer` |
+| Verified in-context demonstration set | `few-shot-learning` |
+| Bounded repair or selection of one result | `self-refinement` |
+| Source-grounded investigation of a large corpus | `long-context-research` |
+| Measured improvement of an existing RAG pipeline | `rag-optimizer` |
+| Better tool selection, arguments and recovery | `tool-use-optimizer` |
+| Minimal typed stages and evidence handoffs | `multi-step-reasoning` |
+| Lower total task cost under quality constraints | `model-cost-optimizer` |
+| Isolated experimental code-level module search | `agent-architecture-evolver` |
+| Independent pass/fail/inconclusive promotion evidence | `ai-regression-gate` |
+
+A typical lifecycle is contract → evaluation → one targeted optimization → regression gate. DSPy is optional; no library installation or paid experiment is implied by discovery. Existing `prompt-engineer`, `rag-architect`, `agent-evals-lab` and `rlm-roec-context-reasoning` retain their broader roles. A passing evaluation does not grant deployment authority.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.

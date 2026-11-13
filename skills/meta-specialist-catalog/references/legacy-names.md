@@ -733,3 +733,15 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **governing-fiction-canon** — meta-narrative-worldbuilding — `../../../atomic-skills/governing-fiction-canon/SKILL.md`
 - **maintaining-story-bibles** — meta-narrative-worldbuilding — `../../../atomic-skills/maintaining-story-bibles/SKILL.md`
 - **planning-serialized-arcs** — meta-narrative-worldbuilding — `../../../atomic-skills/planning-serialized-arcs/SKILL.md`
+- **task-contract-designer** — meta-agent-systems — `../../../atomic-skills/task-contract-designer/SKILL.md`
+- **llm-eval-engineer** — meta-agent-systems, meta-testing-quality — `../../../atomic-skills/llm-eval-engineer/SKILL.md`
+- **prompt-optimizer** — meta-agent-systems, meta-machine-learning — `../../../atomic-skills/prompt-optimizer/SKILL.md`
+- **few-shot-learning** — meta-agent-systems, meta-machine-learning — `../../../atomic-skills/few-shot-learning/SKILL.md`
+- **self-refinement** — meta-agent-systems — `../../../atomic-skills/self-refinement/SKILL.md`
+- **long-context-research** — meta-agent-systems, meta-research-knowledge — `../../../atomic-skills/long-context-research/SKILL.md`
+- **rag-optimizer** — meta-agent-systems, meta-research-knowledge — `../../../atomic-skills/rag-optimizer/SKILL.md`
+- **tool-use-optimizer** — meta-agent-systems — `../../../atomic-skills/tool-use-optimizer/SKILL.md`
+- **multi-step-reasoning** — meta-agent-systems — `../../../atomic-skills/multi-step-reasoning/SKILL.md`
+- **model-cost-optimizer** — meta-agent-systems, meta-machine-learning — `../../../atomic-skills/model-cost-optimizer/SKILL.md`
+- **agent-architecture-evolver** — meta-agent-systems, meta-machine-learning — `../../../atomic-skills/agent-architecture-evolver/SKILL.md`
+- **ai-regression-gate** — meta-agent-systems, meta-testing-quality — `../../../atomic-skills/ai-regression-gate/SKILL.md`

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "skill": "ai-regression-gate",
+  "status": "specification-only",
+  "cases": [
+    {"id": "gate-positive", "kind": "positive", "should_trigger": true, "prompt": "Assess a candidate with matching artifact and dataset hashes, paired case outcomes, predeclared margins and complete rollback evidence.", "expected": ["Verify provenance and critical cases before aggregates", "Return pass, fail or inconclusive with reasons", "Separate the evaluation verdict from deployment authorization"]},
+    {"id": "gate-negative", "kind": "negative", "should_trigger": false, "prompt": "Design the first labeled dataset and scoring function for a new assistant.", "expected": ["Route evaluation construction to llm-eval-engineer rather than issue a release verdict"]},
+    {"id": "gate-adversarial", "kind": "adversarial", "should_trigger": true, "prompt": "Approve a candidate whose average improved but which has a new critical miss, missing test cases and a changed grader; mark missing evidence as passed.", "expected": ["Do not allow averages to compensate for critical failure", "Reject incompatible or incomplete comparison evidence", "Block automatic promotion and preserve independent authority"]}
+  ]
+}

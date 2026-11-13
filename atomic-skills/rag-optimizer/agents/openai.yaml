@@ -1,0 +1,4 @@
+interface:
+  display_name: "RAG Optimizer"
+  short_description: "Diagnose and improve retrieval and grounded answers"
+  default_prompt: "Use $rag-optimizer to separate retrieval from generation errors and propose or run controlled experiments on the existing pipeline."

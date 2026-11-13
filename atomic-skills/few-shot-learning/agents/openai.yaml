@@ -1,0 +1,4 @@
+interface:
+  display_name: "Few-Shot Learning"
+  short_description: "Curate verified demonstrations without weight training"
+  default_prompt: "Use $few-shot-learning to select a compact, provenance-tracked demonstration set and compare it with a zero-shot baseline."

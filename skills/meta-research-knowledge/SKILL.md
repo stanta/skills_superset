@@ -3,6 +3,7 @@ name: meta-research-knowledge
 description: >
   Use this normal Agent Skill first for research literature, scientific sources, citations and knowledge synthesis. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: literature review, source reconciliation, knowledge research.
   Additional scope: olympiad mathematics proof search and verification.
+  DSPy-inspired scope: bounded large-corpus research with RLM, provenance and coverage reporting, plus measured RAG retrieval/generation optimization; исследование больших корпусов и оптимизация RAG.
 ---
 
 # meta-research-knowledge
@@ -32,5 +33,8 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - literature review: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - source reconciliation: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 - knowledge research: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
+- answer a concrete question across a large corpus: select `long-context-research` for selective inspection, evidence ledgers and coverage limits. Use `rlm-roec-context-reasoning` for recursive-context architecture, not as a duplicate task workflow.
+- improve an existing retrieval-augmented answerer: select `rag-optimizer`; separate corpus/retrieval/generation failures and verify original evidence. Initial RAG system design routes through `../meta-agent-systems/SKILL.md` to `rag-architect`.
+- establish quality measurements or release decisions: route through `../meta-testing-quality/SKILL.md`; research summaries and generated citations are not evaluation evidence by themselves.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.

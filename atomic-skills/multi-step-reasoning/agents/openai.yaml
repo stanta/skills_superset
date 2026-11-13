@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-Step Reasoning"
+  short_description: "Minimal typed stages with verifiable evidence handoffs"
+  default_prompt: "Use $multi-step-reasoning to design the smallest useful staged program and compare it with a single-call baseline."

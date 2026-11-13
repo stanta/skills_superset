@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Cost Optimizer"
+  short_description: "Reduce cost per accepted task under quality constraints"
+  default_prompt: "Use $model-cost-optimizer to compare allowed models and configurations using current prices, full task costs and frozen quality gates."
