@@ -1,6 +1,6 @@
 ---
 name: long-context-research
-description: "Use when research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis."
+description: "Use this skill to research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Research large document corpora with RLM-style programmatic exploration, bounded
 
 ## When to use
 
-Use when research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

@@ -1,6 +1,6 @@
 ---
 name: agent-architecture-evolver
-description: "Use when experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review."
+description: "Use this skill to experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Experiment with program structure using DSPy Flex/GEPA under isolated code execu
 
 ## When to use
 
-Use when experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

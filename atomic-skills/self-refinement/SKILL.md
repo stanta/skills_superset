@@ -1,6 +1,6 @@
 ---
 name: self-refinement
-description: "Use when use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs."
+description: "Use this skill to use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Use bounded candidate search and feedback-based correction (BestOfN, Refine) for
 
 ## When to use
 
-Use when use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

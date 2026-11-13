@@ -1,6 +1,6 @@
 ---
 name: ai-regression-gate
-description: "Use when deterministically check quality, safety, provenance, cost and latency before independent release authorization."
+description: "Use this skill to deterministically check quality, safety, provenance, cost and latency before independent release authorization."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Deterministically check quality, safety, provenance, cost and latency before ind
 
 ## When to use
 
-Use when deterministically check quality, safety, provenance, cost and latency before independent release authorization. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to deterministically check quality, safety, provenance, cost and latency before independent release authorization. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

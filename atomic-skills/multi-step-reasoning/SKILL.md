@@ -1,6 +1,6 @@
 ---
 name: multi-step-reasoning
-description: "Use when build a small typed multi-stage DSPy program with verifiable intermediate artifacts."
+description: "Use this skill to build a small typed multi-stage DSPy program with verifiable intermediate artifacts."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Build a small typed multi-stage DSPy program with verifiable intermediate artifa
 
 ## When to use
 
-Use when build a small typed multi-stage DSPy program with verifiable intermediate artifacts. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to build a small typed multi-stage DSPy program with verifiable intermediate artifacts. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

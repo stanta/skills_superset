@@ -1,6 +1,6 @@
 ---
 name: prompt-optimizer
-description: "Use when optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2."
+description: "Use this skill to optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Optimize a measured LLM task's instructions and demonstrations offline with GEPA
 
 ## When to use
 
-Use when optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

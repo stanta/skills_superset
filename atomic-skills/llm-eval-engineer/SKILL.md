@@ -1,6 +1,6 @@
 ---
 name: llm-eval-engineer
-description: "Use when build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting."
+description: "Use this skill to build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Build reproducible LLM and agent evaluations with leakage-resistant datasets, sl
 
 ## When to use
 
-Use when build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

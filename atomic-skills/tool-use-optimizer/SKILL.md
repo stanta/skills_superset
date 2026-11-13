@@ -1,6 +1,6 @@
 ---
 name: tool-use-optimizer
-description: "Use when evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters."
+description: "Use this skill to evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Evaluate agent tool selection, argument construction and bounded recovery with R
 
 ## When to use
 
-Use when evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

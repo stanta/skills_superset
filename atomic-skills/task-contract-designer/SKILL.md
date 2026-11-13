@@ -1,6 +1,6 @@
 ---
 name: task-contract-designer
-description: "Use when convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures."
+description: "Use this skill to convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Convert ambiguous LLM work into typed inputs, outputs, invariants and measurable
 
 ## When to use
 
-Use when convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

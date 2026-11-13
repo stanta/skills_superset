@@ -1,6 +1,6 @@
 ---
 name: rag-optimizer
-description: "Use when improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics."
+description: "Use this skill to improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Improve retrieval-augmented generation with separate retrieval, grounding, answe
 
 ## When to use
 
-Use when improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

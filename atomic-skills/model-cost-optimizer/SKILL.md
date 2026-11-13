@@ -1,6 +1,6 @@
 ---
 name: model-cost-optimizer
-description: "Use when choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost."
+description: "Use this skill to choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Choose model routing and optimizer configurations that meet measured quality/saf
 
 ## When to use
 
-Use when choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 

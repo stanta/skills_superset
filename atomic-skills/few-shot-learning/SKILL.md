@@ -1,6 +1,6 @@
 ---
 name: few-shot-learning
-description: "Use when choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights."
+description: "Use this skill to choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights."
 metadata:
   provenance: original-dspy-derived-workflow
   reviewed: "2026-11-13"
@@ -13,7 +13,7 @@ Choose and validate demonstrations with LabeledFewShot and BootstrapFewShot with
 
 ## When to use
 
-Use when choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
+Use this skill to choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights. Start from an explicit task contract, not from the assumption that optimizing an LLM is necessary.
 
 ## Inputs and prerequisites
 
