@@ -416,6 +416,9 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **payments** — meta-finance-payments — `../../../atomic-skills/payments/SKILL.md`
 - **pharmgkb-skill** — meta-molecular-discovery — `../../../atomic-skills/pharmgkb-skill/SKILL.md`
 - **phaser-2d-game** — meta-frontend-web — `../../../atomic-skills/phaser-2d-game/SKILL.md`
+- **phoenix-evals-experiments** — meta-agent-systems, meta-testing-quality — `../../../atomic-skills/phoenix-evals-experiments/SKILL.md`
+- **phoenix-langsmith-migration** — meta-agent-systems, meta-devops-cloud — `../../../atomic-skills/phoenix-langsmith-migration/SKILL.md`
+- **phoenix-tracing** — meta-agent-systems, meta-devops-cloud — `../../../atomic-skills/phoenix-tracing/SKILL.md`
 - **phone** (build-zoom-phone-integration) — meta-customer-communications — `../../../atomic-skills/phone/SKILL.md`
 - **php-pro** — meta-software-architecture — `../../../atomic-skills/php-pro/SKILL.md`
 - **physical-ai-infrastructure-setup-and-resilient-scaling** — meta-devops-cloud — `../../../atomic-skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md`

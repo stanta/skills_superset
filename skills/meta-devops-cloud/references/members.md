@@ -1,6 +1,6 @@
 # Children of meta-devops-cloud
 
-72 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+74 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -44,6 +44,8 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **nextjs15-vercel-ai-sdk** — This skill should be used when building Next.js 15 App Router applications with Vercel AI SDK, React Server Components, Server Actions, TanStack Query, Tailwind CSS, shadcn/ui (Radix UI — `../../../atomic-skills/nextjs15-vercel-ai-sdk/SKILL.md`
 - **observability** — Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and m — `../../../atomic-skills/observability/SKILL.md`
 - **openshift-operations** — Operate OpenShift projects, SCC/restricted-v2, Routes, Operators, upgrades and OpenShift-specific Helm deployment. — `../../../atomic-skills/openshift-operations/SKILL.md`
+- **phoenix-langsmith-migration** — Assess reversible LangSmith-to-Phoenix observability migration with an OpenTelemetry pilot. — `../../../atomic-skills/phoenix-langsmith-migration/SKILL.md`
+- **phoenix-tracing** — Add or debug Arize Phoenix LLM tracing via OpenInference/OTLP with protected traces. — `../../../atomic-skills/phoenix-tracing/SKILL.md`
 - **physical-ai-infrastructure-setup-and-resilient-scaling** — Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kub — `../../../atomic-skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md`
 - **ray-distributed-computing** — Designs and operates Ray Core tasks, actors, ObjectRefs, placement groups, bounded scheduling, fault tolerance, Ray Data/Train/Tune/Serve, KubeRay and hybrid Rust/DANMA sharded compute. — `../../../atomic-skills/ray-distributed-computing/SKILL.md`
 - **remove-obsolete-code** — Remove obsolete code, expired feature flags, unused dependencies and configuration with consumer evidence and rollback constraints; раздувание кода. — `../../../atomic-skills/remove-obsolete-code/SKILL.md`

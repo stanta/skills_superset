@@ -1,6 +1,6 @@
 # Children of meta-testing-quality
 
-41 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+42 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -23,6 +23,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **llm-eval-engineer** — Build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting. — `../../../atomic-skills/llm-eval-engineer/SKILL.md`
 - **math-olympiad** — Solve and independently verify olympiad-level mathematics using rigorous proof search, counterexample testing and reproducible presentation. — `../../../atomic-skills/math-olympiad/SKILL.md`
 - **n8n-validation-expert** — Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding v — `../../../atomic-skills/n8n-validation-expert/SKILL.md`
+- **phoenix-evals-experiments** — Build Phoenix evaluation datasets, annotations, and reproducible experiments for agent and RAG quality. — `../../../atomic-skills/phoenix-evals-experiments/SKILL.md`
 - **playwright-expert** — Use when writing E2E tests with Playwright, setting up test infrastructure, or debugging flaky browser tests. Invoke to write test scripts, create page objects, configure test fixtures, — `../../../atomic-skills/playwright-expert/SKILL.md`
 - **playwright-skill** — Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, — `../../../atomic-skills/playwright-skill/SKILL.md`
 - **plugin-eval** — Help engineers evaluate a local skill or plugin, explain why it scored that way, show what to fix first, measure real token usage, benchmark starter scenarios, or decide what to run nex — `../../../atomic-skills/plugin-eval/SKILL.md`

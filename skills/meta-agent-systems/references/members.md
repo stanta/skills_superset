@@ -1,6 +1,6 @@
 # Children of meta-agent-systems
 
-78 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+81 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
@@ -61,6 +61,9 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **nvidia-skill-finder** — Use for NVIDIA-related requests where an NVIDIA skill might help, even if the user did not ask for a skill. Trigger on NVIDIA products, hardware, software, SDKs, GPUs, Jetson/JetPack/L4 — `../../../atomic-skills/nvidia-skill-finder/SKILL.md`
 - **openai-developers-agents-sdk** — Build, run, deploy, and evaluate OpenAI Agents SDK apps from Codex. Use when the user asks to create or adapt an Agents SDK app, build from a prompt or Codex thread, prepare a runnable  — `../../../atomic-skills/openai-developers-agents-sdk/SKILL.md`
 - **opencode-expert** — This skill should be used when configuring, operating, extending, or troubleshooting the OpenCode AI coding agent (sst/opencode) — including opencode.json / opencode.jsonc project and g — `../../../atomic-skills/opencode-expert/SKILL.md`
+- **phoenix-evals-experiments** — Build Phoenix evaluation datasets, annotations, and reproducible experiments for agent and RAG quality. — `../../../atomic-skills/phoenix-evals-experiments/SKILL.md`
+- **phoenix-langsmith-migration** — Assess reversible LangSmith-to-Phoenix observability migration with an OpenTelemetry pilot. — `../../../atomic-skills/phoenix-langsmith-migration/SKILL.md`
+- **phoenix-tracing** — Add or debug Arize Phoenix LLM tracing via OpenInference/OTLP with protected traces. — `../../../atomic-skills/phoenix-tracing/SKILL.md`
 - **product-design-user-context** — Load or manage Product Design's saved user context. Use when the user asks to set up Product Design, get started, onboard, save product or design sources, see what Product Design rememb — `../../../atomic-skills/product-design-user-context/SKILL.md`
 - **prompt-engineer** — Writes, refactors, and evaluates prompts for LLMs — generating optimized prompt templates, structured output schemas, evaluation rubrics, and test suites. Use when designing prompts for — `../../../atomic-skills/prompt-engineer/SKILL.md`
 - **prompt-optimizer** — Optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2. — `../../../atomic-skills/prompt-optimizer/SKILL.md`
