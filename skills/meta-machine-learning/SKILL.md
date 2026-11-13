@@ -1,6 +1,7 @@
 ---
 name: meta-machine-learning
 description: >
+  DSPy optimization scope: llm-eval-engineer, prompt-optimizer, few-shot-learning, rag-optimizer, model-cost-optimizer.
   Use this normal Agent Skill first for machine learning, embeddings, model inference and generative AI. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray Data/Train/Tune/Serve and distributed ML;  train models, vector embeddings, ML inference.
 ---
 
@@ -33,3 +34,13 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - ML inference: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## DSPy-derived skill routes
+
+Use the existing file-search tool on the exact path from the child catalog; for these requests select the relevant skill and read its full body. Do not load every DSPy-derived skill at once.
+
+- **llm-eval-engineer** — Build reproducible LLM and agent evaluations with leakage-resistant datasets, slices, metrics and confidence-aware reporting. Read `../../atomic-skills/llm-eval-engineer/SKILL.md`.
+- **prompt-optimizer** — Optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2. Read `../../atomic-skills/prompt-optimizer/SKILL.md`.
+- **few-shot-learning** — Choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights. Read `../../atomic-skills/few-shot-learning/SKILL.md`.
+- **rag-optimizer** — Improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics. Read `../../atomic-skills/rag-optimizer/SKILL.md`.
+- **model-cost-optimizer** — Choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost. Read `../../atomic-skills/model-cost-optimizer/SKILL.md`.

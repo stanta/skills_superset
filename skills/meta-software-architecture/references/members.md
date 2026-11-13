@@ -1,10 +1,11 @@
 # Children of meta-software-architecture
 
-72 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+75 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
 - **1c-enterprise-extension-development** — Production-oriented guidance for designing, implementing, reviewing, testing, packaging, upgrading, and operating 1C:Enterprise configuration extensions (.cfe), with an additional integ — `../../../atomic-skills/1c-enterprise-extension-development/SKILL.md`
+- **agent-architecture-evolver** — Experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review. — `../../../atomic-skills/agent-architecture-evolver/SKILL.md`
 - **agent-extension-packaging** — Package agent extensions as discoverable cross-runtime skills, commands, tools and optional plugins while preserving portable core contracts. — `../../../atomic-skills/agent-extension-packaging/SKILL.md`
 - **agent-extension-settings** — Design portable configuration and local state for agent extensions with schema validation, safe defaults, secret isolation and clear precedence. — `../../../atomic-skills/agent-extension-settings/SKILL.md`
 - **agent-instructions-maintainer** — Audit and maintain CLAUDE.md, AGENTS.md, repository agent rules and equivalent instruction files for any coding agent without overwriting project intent. — `../../../atomic-skills/agent-instructions-maintainer/SKILL.md`
@@ -44,6 +45,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **mcp-developer** — Use when building, debugging, or extending MCP servers or clients that connect AI systems with external tools and data sources. Invoke to implement tool handlers, configure resource pro — `../../../atomic-skills/mcp-developer/SKILL.md`
 - **mcp-server-design-router** — Select and scaffold the right Model Context Protocol server deployment, tool-surface design and authentication flow across agent runtimes. — `../../../atomic-skills/mcp-server-design-router/SKILL.md`
 - **microservices-architect** — Designs distributed system architectures, decomposes monoliths into bounded-context services, recommends communication patterns, and produces service boundary diagrams and resilience st — `../../../atomic-skills/microservices-architect/SKILL.md`
+- **multi-step-reasoning** — Build a small typed multi-stage DSPy program with verifiable intermediate artifacts. — `../../../atomic-skills/multi-step-reasoning/SKILL.md`
 - **n8n-code-javascript** — Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, trou — `../../../atomic-skills/n8n-code-javascript/SKILL.md`
 - **n8n-code-python** — Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code — `../../../atomic-skills/n8n-code-python/SKILL.md`
 - **nextjs-developer** — Use when building Next.js 14+ applications with App Router, server components, or server actions. Invoke to configure route handlers, implement middleware, set up API routes, add stream — `../../../atomic-skills/nextjs-developer/SKILL.md`
@@ -66,6 +68,7 @@ Each entry is **original skill ID** — when to use — exact SKILL.md path **re
 - **spec-miner** — Reverse-engineering specialist that extracts specifications from existing codebases. Use when working with legacy or undocumented systems, inherited projects, or old codebases with no d — `../../../atomic-skills/spec-miner/SKILL.md`
 - **sqlalchemy-alembic-expert** — This skill should be used when writing, reviewing, or refactoring SQLAlchemy ORM models, DAL/repository classes, async session configuration, connection pool tuning, or Alembic migratio — `../../../atomic-skills/sqlalchemy-alembic-expert/SKILL.md`
 - **swiftui-view-refactor** — Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership. — `../../../atomic-skills/swiftui-view-refactor/SKILL.md`
+- **task-contract-designer** — Convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures. — `../../../atomic-skills/task-contract-designer/SKILL.md`
 - **techwriter** — Write and maintain technical documentation (guides, API references, tutorials, release notes) with clear structure, accurate details, and a reader-focused style. — `../../../atomic-skills/techwriter/SKILL.md`
 - **trd-developer** — This skill should be used when drafting, reviewing, restructuring, or quality-checking Technical Requirements Documents (TRDs) for software delivery initiatives, especially when the wor — `../../../atomic-skills/trd-developer/SKILL.md`
 - **twilio-agent-augmentation-architect** — Planning skill for augmenting human agents with real-time AI intelligence. Qualifies the developer's use case across coaching, compliance, QA, and routing to recommend the right Convers — `../../../atomic-skills/twilio-agent-augmentation-architect/SKILL.md`

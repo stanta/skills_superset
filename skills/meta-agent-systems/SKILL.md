@@ -1,6 +1,7 @@
 ---
 name: meta-agent-systems
 description: >
+  DSPy optimization scope: task-contract-designer, prompt-optimizer, few-shot-learning, self-refinement, long-context-research, rag-optimizer, tool-use-optimizer, multi-step-reasoning, model-cost-optimizer, agent-architecture-evolver.
   Use this normal Agent Skill first for LLM agents, context, MCP, prompting and agent orchestration. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: agent memory and context, agent skill routing, MCP tool orchestration. Russian queries: LLM агенты; маршрутизация скиллов; оптимизация контекста.
   Additional scope: portable agent skills, runtime adapters, MCP apps, lifecycle hooks, subagents, instruction files and session telemetry.
   Cross-domain scope: AI-generated or multiagent overengineering and code bloat; раздувание кода ИИ-агентами.
@@ -39,3 +40,18 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - MCP tool orchestration: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## DSPy-derived skill routes
+
+Use the existing file-search tool on the exact path from the child catalog; for these requests select the relevant skill and read its full body. Do not load every DSPy-derived skill at once.
+
+- **task-contract-designer** — Convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures. Read `../../atomic-skills/task-contract-designer/SKILL.md`.
+- **prompt-optimizer** — Optimize a measured LLM task's instructions and demonstrations offline with GEPA or MIPROv2. Read `../../atomic-skills/prompt-optimizer/SKILL.md`.
+- **few-shot-learning** — Choose and validate demonstrations with LabeledFewShot and BootstrapFewShot without changing model weights. Read `../../atomic-skills/few-shot-learning/SKILL.md`.
+- **self-refinement** — Use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs. Read `../../atomic-skills/self-refinement/SKILL.md`.
+- **long-context-research** — Research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis. Read `../../atomic-skills/long-context-research/SKILL.md`.
+- **rag-optimizer** — Improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics. Read `../../atomic-skills/rag-optimizer/SKILL.md`.
+- **tool-use-optimizer** — Evaluate agent tool selection, argument construction and bounded recovery with ReAct or approved MCP adapters. Read `../../atomic-skills/tool-use-optimizer/SKILL.md`.
+- **multi-step-reasoning** — Build a small typed multi-stage DSPy program with verifiable intermediate artifacts. Read `../../atomic-skills/multi-step-reasoning/SKILL.md`.
+- **model-cost-optimizer** — Choose model routing and optimizer configurations that meet measured quality/safety floors at lower complete lifecycle cost. Read `../../atomic-skills/model-cost-optimizer/SKILL.md`.
+- **agent-architecture-evolver** — Experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review. Read `../../atomic-skills/agent-architecture-evolver/SKILL.md`.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task Contract Designer"
+  short_description: "Convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy s"
+  default_prompt: "Apply task-contract-designer with independent evidence and bounded execution."

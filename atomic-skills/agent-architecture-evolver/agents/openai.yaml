@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Architecture Evolver"
+  short_description: "Experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review."
+  default_prompt: "Apply agent-architecture-evolver with independent evidence and bounded execution."

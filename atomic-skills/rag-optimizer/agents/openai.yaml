@@ -1,0 +1,4 @@
+interface:
+  display_name: "RAG Optimizer"
+  short_description: "Improve retrieval-augmented generation with separate retrieval, grounding, answer-quality and efficiency metrics."
+  default_prompt: "Apply rag-optimizer with independent evidence and bounded execution."

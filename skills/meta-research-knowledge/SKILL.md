@@ -1,6 +1,7 @@
 ---
 name: meta-research-knowledge
 description: >
+  DSPy optimization scope: long-context-research.
   Use this normal Agent Skill first for research literature, scientific sources, citations and knowledge synthesis. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: literature review, source reconciliation, knowledge research.
   Additional scope: olympiad mathematics proof search and verification.
 ---
@@ -34,3 +35,9 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - knowledge research: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## DSPy-derived skill routes
+
+Use the existing file-search tool on the exact path from the child catalog; for these requests select the relevant skill and read its full body. Do not load every DSPy-derived skill at once.
+
+- **long-context-research** — Research large document corpora with RLM-style programmatic exploration, bounded subcalls and source-located synthesis. Read `../../atomic-skills/long-context-research/SKILL.md`.

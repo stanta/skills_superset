@@ -1,6 +1,7 @@
 ---
 name: meta-devops-cloud
 description: >
+  DSPy optimization scope: ai-regression-gate.
   Use this normal Agent Skill first for deployment, cloud, CI/CD, infrastructure and observability. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray clusters and KubeRay deployment;  GitLab CI/CD, production monitoring, cloud deployment. Russian queries: GitLab CI; деплой; мониторинг GlitchTip. Also covers Rust Cargo CI, MSRV and Tokio runtime observability.
   Additional scope: Git branching and safe history, GitHub pull requests and Actions security; agent command automation, channel deployment and MCP bundle packaging.
   Additional scope: Google Play app and game publication, release readiness, policy gates, Android signing, test tracks, submission automation and store optimization.
@@ -50,3 +51,9 @@ Catalog: [references/members.md](references/members.md). Resolve paths listed th
 ## Apple App Store publishing
 
 For Apple release automation, start with `../../atomic-skills/apple-app-store-publishing/SKILL.md`. Add CI/security or observability children only where needed. Separate build, upload, review and release states; preserve signing secrets and public-release authorization.
+
+## DSPy-derived skill routes
+
+Use the existing file-search tool on the exact path from the child catalog; for these requests select the relevant skill and read its full body. Do not load every DSPy-derived skill at once.
+
+- **ai-regression-gate** — Deterministically check quality, safety, provenance, cost and latency before independent release authorization. Read `../../atomic-skills/ai-regression-gate/SKILL.md`.

@@ -1,6 +1,7 @@
 ---
 name: meta-software-architecture
 description: >
+  DSPy optimization scope: task-contract-designer, multi-step-reasoning, agent-architecture-evolver.
   Use this normal Agent Skill first for software design, distributed computing and systems architecture, programming, code review and refactoring. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: Ray Core, distributed actors, Rust/DANMA shards, ScyllaDB/distributed-data architecture; software architecture, distributed systems design, distributed computation, code review, refactor plan.
   Additional scope: Git collaboration and GitHub pull request review; portable agent roles, extension packages, instructions and MCP server architecture.
   Simplicity scope: Lean, KISS, YAGNI, AHA, overengineering, architecture/code bloat, obsolete-code removal and complexity review; оверинжиниринг, раздувание кода, упрощение архитектуры.
@@ -46,3 +47,11 @@ Do not infer the full procedure from catalog excerpts, run scripts or MCP for di
 - refactor plan: select a matching Start skill from `references/members.md`; add Support or Check only if the task requires it.
 
 Catalog: [references/members.md](references/members.md). Resolve paths listed there from the catalog's directory (`../../../atomic-skills/`), not from the repository root.
+
+## DSPy-derived skill routes
+
+Use the existing file-search tool on the exact path from the child catalog; for these requests select the relevant skill and read its full body. Do not load every DSPy-derived skill at once.
+
+- **task-contract-designer** — Convert ambiguous LLM work into typed inputs, outputs, invariants and measurable evidence requirements using DSPy signatures. Read `../../atomic-skills/task-contract-designer/SKILL.md`.
+- **multi-step-reasoning** — Build a small typed multi-stage DSPy program with verifiable intermediate artifacts. Read `../../atomic-skills/multi-step-reasoning/SKILL.md`.
+- **agent-architecture-evolver** — Experiment with program structure using DSPy Flex/GEPA under isolated code execution and independent review. Read `../../atomic-skills/agent-architecture-evolver/SKILL.md`.

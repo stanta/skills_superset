@@ -1,0 +1,4 @@
+interface:
+  display_name: "Self Refinement"
+  short_description: "Use bounded candidate search and feedback-based correction (BestOfN, Refine) for verifiable outputs."
+  default_prompt: "Apply self-refinement with independent evidence and bounded execution."
