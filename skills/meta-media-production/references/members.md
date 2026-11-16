@@ -1,9 +1,10 @@
 # Children of meta-media-production
 
-26 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
+27 atomic skills. Search **in this Markdown file** for the required topic or name; no script is involved.
 
 Each entry is **original skill ID** — when to use — exact SKILL.md path **relative to this `references/` directory** (three levels up to the atomic skill root).
 
+- **catch-attention** — Create, rewrite or audit screenplays and video scripts for audience attention: hooks, curiosity, empathy, conflict, pacing, visual storytelling and honest payoffs; 70 techniques with examples. Удержание внимания, сценарист, интрига, сопереживание. — `../../../atomic-skills/catch-attention/SKILL.md`
 - **faceless-channel** — Use only when the user asks to produce a finished multi-scene narrator-led video and explicitly requests a faceless channel, YouTube automation, narrated explainer/story/education, docu — `../../../atomic-skills/faceless-channel/SKILL.md`
 - **intake** — Use when Creative Production is explicitly invoked or mentioned without a concrete request, when the user asks what Creative Production can do, or when the user wants help getting start — `../../../atomic-skills/intake/SKILL.md`
 - **remotion-best-practices** — Router for all Remotion skills — `../../../atomic-skills/remotion-best-practices/SKILL.md`

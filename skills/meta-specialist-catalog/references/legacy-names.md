@@ -101,6 +101,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **canvas2d-data-visualization** — meta-data-analytics — `../../../atomic-skills/canvas2d-data-visualization/SKILL.md`
 - **cardputer-buddy** — meta-mobile-desktop — `../../../atomic-skills/cardputer-buddy/SKILL.md`
 - **catalyst-calendar** — meta-workplace-integrations — `../../../atomic-skills/catalyst-calendar/SKILL.md`
+- **catch-attention** — meta-media-production — `../../../atomic-skills/catch-attention/SKILL.md`
 - **cbioportal-skill** — meta-clinical-health — `../../../atomic-skills/cbioportal-skill/SKILL.md`
 - **cdn-caching** — meta-devops-cloud — `../../../atomic-skills/cdn-caching/SKILL.md`
 - **cellxgene-skill** — meta-genomics-omics — `../../../atomic-skills/cellxgene-skill/SKILL.md`
