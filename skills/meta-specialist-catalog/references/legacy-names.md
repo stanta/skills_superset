@@ -4,6 +4,9 @@ If the caller names an existing ordinary skill, find its exact name or ID here w
 
 Each entry is **original skill ID** (frontmatter `name` if different) — owning meta-skill(s) — exact atomic SKILL.md path, resolved relative to this `skills/meta-specialist-catalog/references/` directory.
 
+«Волшебный сказочник» is the display name of `magical-storyteller`.
+
+- **magical-storyteller** — meta-narrative-worldbuilding, meta-media-production — `../../../atomic-skills/magical-storyteller/SKILL.md`
 - **1c-enterprise-extension-development** — meta-software-architecture — `../../../atomic-skills/1c-enterprise-extension-development/SKILL.md`
 - **accessibility-and-inclusive-visualization** — meta-data-analytics, meta-visual-design — `../../../atomic-skills/accessibility-and-inclusive-visualization/SKILL.md`
 - **adobe-batch-edit-photos** — meta-visual-design — `../../../atomic-skills/adobe-batch-edit-photos/SKILL.md`

@@ -1,12 +1,14 @@
 ---
 name: meta-narrative-worldbuilding
 description: >
-  Use this normal Agent Skill first for fictional universes, worldbuilding, story bibles, canon, lore, chronology, character systems, serialized arcs, retcons, continuity, shared universes, comics, television series, sagas, games, and long-running narrative franchises.
+  Use this normal Agent Skill first for fictional universes, worldbuilding, story bibles, canon, lore, chronology, character systems, serialized arcs, retcons, continuity, shared universes, comics, television series, sagas, games, and long-running narrative franchises. Also route fairy tales, Propp morphology, magical storyteller and «волшебный сказочник».
 ---
 
 # meta-narrative-worldbuilding
 
 This is a first-level navigation skill. No CLI, scripts, MCP, or custom loader is required.
+
+For creating, analyzing, repairing or adapting a fairy tale (including «волшебный сказочник»), select **magical-storyteller** from `references/members.md`, then read `../../atomic-skills/magical-storyteller/SKILL.md`. Keep morphology, character psychology and attention techniques distinct; do not force every story through all 31 functions. The optional `catch-attention` companion is not a prerequisite.
 
 **Relative-path rule:** From the directory containing this `SKILL.md`, the atomic skill root is `../../atomic-skills/`. The catalog `references/members.md` is one directory deeper; its atomic paths therefore start with `../../../atomic-skills/`. Always resolve paths from the location of the file that contains them.
 

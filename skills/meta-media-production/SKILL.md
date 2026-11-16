@@ -1,12 +1,14 @@
 ---
 name: meta-media-production
 description: >
-  Use this normal Agent Skill first for video, audio, writing, voice and media production. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: video editing, voiceovers, content creation.
+  Use this normal Agent Skill first for video, audio, writing, voice and media production. Decompose the request and select concrete atomic skills using ordinary file search and its child catalog. Typical requests: video editing, voiceovers, content creation. Also route fairy tales, Propp morphology, magical storyteller and «волшебный сказочник».
 ---
 
 # meta-media-production
 
 This is a first-level navigation skill. No CLI, scripts, MCP, or custom loader is required.
+
+For creating, analyzing, repairing or adapting a fairy tale (including «волшебный сказочник»), select **magical-storyteller** from `references/members.md`, then read `../../atomic-skills/magical-storyteller/SKILL.md`. Keep morphology, character psychology and attention techniques distinct; do not force every story through all 31 functions. The optional `catch-attention` companion is not a prerequisite.
 
 **Relative-path rule:** From the directory containing this `SKILL.md`, the atomic skill root is `../../atomic-skills/`. The catalog `references/members.md` is one directory deeper; its atomic paths therefore start with `../../../atomic-skills/`. Always resolve paths from the location of the file that contains them.
 
