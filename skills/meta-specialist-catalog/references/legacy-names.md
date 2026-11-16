@@ -155,7 +155,7 @@ Each entry is **original skill ID** (frontmatter `name` if different) — owning
 - **dcf-model-builder** — meta-machine-learning — `../../../atomic-skills/dcf-model-builder/SKILL.md`
 - **debug-zoom** — meta-testing-quality, meta-customer-communications — `../../../atomic-skills/debug-zoom/SKILL.md`
 - **debug-zoom-integration** — meta-customer-communications, meta-testing-quality — `../../../atomic-skills/debug-zoom-integration/SKILL.md`
-- **debugging-wizard** — meta-software-architecture — `../../../atomic-skills/debugging-wizard/SKILL.md`
+- **debugging-wizard** — meta-testing-quality — `../../../atomic-skills/debugging-wizard/SKILL.md`
 - **decompose** — meta-product-business — `../../../atomic-skills/decompose/SKILL.md`
 - **deep-security-scan** — meta-security-compliance — `../../../atomic-skills/deep-security-scan/SKILL.md`
 - **define-security-policy** — meta-security-compliance — `../../../atomic-skills/define-security-policy/SKILL.md`
