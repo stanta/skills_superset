@@ -1,0 +1,170 @@
+{
+  "mode": "create",
+  "logline": "Ника хочет зажечь маяк, но ей придётся признать, что волшебной нитью нельзя пользоваться в одиночку.",
+  "audience": "Общесемейная сказка без графического насилия",
+  "assumptions": [
+    "Формат — короткая самостоятельная сказка."
+  ],
+  "characters": [
+    {
+      "id": "nika",
+      "name": "Ника",
+      "roles": [
+        "hero"
+      ],
+      "goal": "Добраться до маяка и зажечь огонь."
+    },
+    {
+      "id": "ropemaker",
+      "name": "Канатчик",
+      "roles": [
+        "donor"
+      ],
+      "goal": "Вытащить корзину и дать средство для пути."
+    },
+    {
+      "id": "tasya",
+      "name": "Тася",
+      "roles": [
+        "helper"
+      ],
+      "goal": "Помочь Нике добраться до маяка."
+    }
+  ],
+  "moves": [
+    {
+      "id": "M1",
+      "trigger": "lack",
+      "problem": "На переправе нет огня, а путь к маяку скрыт туманом.",
+      "resolution": "Маяк зажжён совместным действием."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "story_order": 1,
+      "presentation_order": 1,
+      "move_id": "M1",
+      "function_ids": [
+        "F08"
+      ],
+      "summary": "Нужен огонь для переправы.",
+      "caused_by": [],
+      "change": "Появилась цель.",
+      "basis": "Авторский план; не анализ исторического текста.",
+      "confidence": "not_applicable"
+    },
+    {
+      "id": "S2",
+      "story_order": 2,
+      "presentation_order": 2,
+      "move_id": "M1",
+      "function_ids": [
+        "F10",
+        "F11"
+      ],
+      "summary": "Ника отправляется в путь.",
+      "caused_by": [
+        "S1"
+      ],
+      "change": "Намерение стало действием.",
+      "basis": "Авторский план; не анализ исторического текста.",
+      "confidence": "not_applicable"
+    },
+    {
+      "id": "S3",
+      "story_order": 3,
+      "presentation_order": 3,
+      "move_id": "M1",
+      "function_ids": [
+        "F12",
+        "F13"
+      ],
+      "summary": "Ника помогает канатчику с корзиной.",
+      "caused_by": [
+        "S2"
+      ],
+      "change": "Она остановилась ради другого человека.",
+      "basis": "Авторский план; не анализ исторического текста.",
+      "confidence": "not_applicable"
+    },
+    {
+      "id": "S4",
+      "story_order": 4,
+      "presentation_order": 4,
+      "move_id": "M1",
+      "function_ids": [
+        "F14"
+      ],
+      "summary": "Канатчик передаёт нить и объясняет ограничение.",
+      "caused_by": [
+        "S3"
+      ],
+      "change": "Появилось средство с условием совместного использования.",
+      "basis": "Авторский план; не анализ исторического текста.",
+      "confidence": "not_applicable"
+    },
+    {
+      "id": "S5",
+      "story_order": 5,
+      "presentation_order": 5,
+      "move_id": "M1",
+      "function_ids": [
+        "F15"
+      ],
+      "summary": "Ника просит Тасю помочь; нить ведёт их к маяку.",
+      "caused_by": [
+        "S4"
+      ],
+      "change": "Сотрудничество сделало цель достижимой.",
+      "basis": "Авторский план; не анализ исторического текста.",
+      "confidence": "not_applicable"
+    },
+    {
+      "id": "S6",
+      "story_order": 6,
+      "presentation_order": 6,
+      "move_id": "M1",
+      "function_ids": [
+        "F19"
+      ],
+      "summary": "Вместе они зажигают маяк.",
+      "caused_by": [
+        "S5"
+      ],
+      "change": "Переправа получила огонь.",
+      "basis": "Авторский план; не анализ исторического текста.",
+      "confidence": "not_applicable"
+    },
+    {
+      "id": "S7",
+      "story_order": 7,
+      "presentation_order": 7,
+      "move_id": "M1",
+      "function_ids": [
+        "F20"
+      ],
+      "summary": "Они возвращаются; Ника называет результат общим.",
+      "caused_by": [
+        "S6"
+      ],
+      "change": "Герой признаёт вклад другого.",
+      "basis": "Авторский план; не анализ исторического текста.",
+      "confidence": "not_applicable"
+    }
+  ],
+  "open_loops": [
+    {
+      "question": "Как найти путь к маяку?",
+      "introduced_in": "S1",
+      "resolved_in": "S5",
+      "intentional_open": false
+    },
+    {
+      "question": "Зажгут ли огонь для лодочника?",
+      "introduced_in": "S1",
+      "resolved_in": "S6",
+      "intentional_open": false
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 # Children of meta-narrative-worldbuilding
 
-7 atomic skills. Search in this Markdown file for the needed narrative task or exact skill name.
+8 atomic skills. Search in this Markdown file for the needed narrative task or exact skill name.
 
 Each path is relative to this `references/` directory.
 
+- **magical-storyteller** — Волшебный сказочник: create, analyze, repair or adapt fairy tales with Propp morphology, character choices and attention techniques — `../../../atomic-skills/magical-storyteller/SKILL.md`
 - **building-storyworlds** — create or deepen fictional worlds, rules, societies, institutions, mythology, power systems and conflict-generating constraints — `../../../atomic-skills/building-storyworlds/SKILL.md`
 - **maintaining-story-bibles** — create and maintain living universe/show/story bibles and writers-room sources of truth — `../../../atomic-skills/maintaining-story-bibles/SKILL.md`
 - **governing-fiction-canon** — define canon states, authority, provenance, retcons, reboots, alternate continuities and change approval — `../../../atomic-skills/governing-fiction-canon/SKILL.md`

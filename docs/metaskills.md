@@ -1,5 +1,9 @@
 # Meta-skills: plain-search-compatible two-level discovery
 
+## Fairy-tale storytelling and Propp morphology
+
+[Волшебный сказочник / magical-storyteller](../atomic-skills/magical-storyteller/SKILL.md) is a portable atomic skill for creating, analyzing, repairing and adapting fairy tales. It belongs to `meta-narrative-worldbuilding` and `meta-media-production`; both child catalogs and the exact-name registry contain its canonical path. No new first-level meta-skill or agent-time script is added. Load its references selectively. `catch-attention` is optional; a local attention module remains available without it.
+
 ## Agent runtime (no scripts and no MCP required)
 
 Only `skills/meta-*/SKILL.md` are visible to first-level skill discovery.

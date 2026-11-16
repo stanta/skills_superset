@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Magical Storyteller — plan 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mode",
+    "logline",
+    "audience",
+    "assumptions",
+    "characters",
+    "moves",
+    "scenes",
+    "open_loops"
+  ],
+  "properties": {
+    "mode": {
+      "enum": [
+        "create",
+        "analyze",
+        "repair",
+        "adapt"
+      ]
+    },
+    "logline": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "roles",
+          "goal"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "hero",
+                "villain",
+                "donor",
+                "helper",
+                "dispatcher",
+                "sought_person_and_father",
+                "false_hero"
+              ]
+            }
+          },
+          "goal": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "moves": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "trigger",
+          "problem",
+          "resolution"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "trigger": {
+            "enum": [
+              "harm",
+              "lack"
+            ]
+          },
+          "problem": {
+            "type": "string"
+          },
+          "resolution": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "story_order",
+          "presentation_order",
+          "move_id",
+          "function_ids",
+          "summary",
+          "caused_by",
+          "change",
+          "basis",
+          "confidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "story_order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "presentation_order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "move_id": {
+            "type": "string"
+          },
+          "function_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "F01",
+                "F02",
+                "F03",
+                "F04",
+                "F05",
+                "F06",
+                "F07",
+                "F08",
+                "F09",
+                "F10",
+                "F11",
+                "F12",
+                "F13",
+                "F14",
+                "F15",
+                "F16",
+                "F17",
+                "F18",
+                "F19",
+                "F20",
+                "F21",
+                "F22",
+                "F23",
+                "F24",
+                "F25",
+                "F26",
+                "F27",
+                "F28",
+                "F29",
+                "F30",
+                "F31"
+              ]
+            }
+          },
+          "summary": {
+            "type": "string"
+          },
+          "caused_by": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "change": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Textual evidence for analysis; planning rationale for creation."
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "not_applicable"
+            ]
+          }
+        }
+      }
+    },
+    "open_loops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "question",
+          "introduced_in",
+          "resolved_in",
+          "intentional_open"
+        ],
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "introduced_in": {
+            "type": "string"
+          },
+          "resolved_in": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "intentional_open": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

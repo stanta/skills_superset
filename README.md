@@ -81,7 +81,9 @@ Backend design/refactoring, DevOps cleanup and QA review also route through thei
 
 ## Narrative worldbuilding and continuity
 
-For fictional universes, story/show bibles, canon governance, timelines, recurring character systems, long-running arcs, retcons and contradiction checks, use [meta-narrative-worldbuilding](skills/meta-narrative-worldbuilding/SKILL.md). It routes to seven focused atomic skills and separates narrative-system work from visual/media production. Research grounding and failure cases are summarized in [worldbuilding-canon-continuity-practices](docs/research/worldbuilding-canon-continuity-practices.md).
+For fictional universes, story/show bibles, canon governance, timelines, recurring character systems, long-running arcs, retcons and contradiction checks, use [meta-narrative-worldbuilding](skills/meta-narrative-worldbuilding/SKILL.md). It routes to eight focused atomic skills and separates narrative-system work from visual/media production. Research grounding and failure cases are summarized in [worldbuilding-canon-continuity-practices](docs/research/worldbuilding-canon-continuity-practices.md).
+
+For fairy-tale creation, Propp morphology, structural analysis, story repair and modern adaptations, use [Волшебный сказочник / magical-storyteller](atomic-skills/magical-storyteller/SKILL.md). It combines narrative morphology, character choices and an independent attention layer; `catch-attention` is optional. The skill also belongs to [meta-media-production](skills/meta-media-production/SKILL.md).
 
 ## ChatGPT history exports and personal knowledge bases
 
