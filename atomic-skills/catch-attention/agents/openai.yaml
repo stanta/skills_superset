@@ -1,0 +1,4 @@
+interface:
+  display_name: "Catch Attention — сценарист"
+  short_description: "70 приёмов внимания: сценарий, разбор и честная отдача"
+  default_prompt: "Примени catch-attention к сценарию: определи контракт внимания, выбери подходящие приёмы и проверь закрытие обещаний."
