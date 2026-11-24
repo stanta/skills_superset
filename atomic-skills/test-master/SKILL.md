@@ -83,7 +83,7 @@ Load detailed guidance based on context:
 - Run tests in CI/CD; document and remediate coverage gaps
 - When using AI to generate tests: enumerate use cases _before_ writing any code (see `references/sdd-ai-workflow.md`)
 - For each test case, state which specific bug it would catch if the business logic broke; discard the test case if no bug can be named
-- Provide one project-specific test as a few-shot style example in every AI test-generation prompt
+- Use a project-specific example when needed to establish conventions; avoid repeating it if context already establishes style
 
 **MUST NOT**
 

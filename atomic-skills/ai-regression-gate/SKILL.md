@@ -31,7 +31,7 @@ Use this skill to deterministically check quality, safety, provenance, cost and 
 
 ## Deliverables
 
-Machine-readable release evidence and independent deterministic gate decision.
+Machine-readable release evidence and independent deterministic gate decision. Use the [shared agent-test record](../agent-evals-lab/references/agent-test-contract.md) to classify incomplete, blocked, infrastructure and grader errors without silently excluding attempts.
 
 ## Acceptance checks
 

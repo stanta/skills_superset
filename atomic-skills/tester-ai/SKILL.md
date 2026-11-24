@@ -66,12 +66,7 @@ For each risk, define:
 
 Default to the lowest test level that can provide confidence.
 
-Recommended effort distribution for AI applications:
-
-- 60-70% fast unit, schema, policy, and contract checks.
-- 20-30% integration tests across model, tools, memory, and orchestration.
-- 5-10% end-to-end scenarios in realistic environments.
-- Separate adversarial and red-team track on release cadence, nightly cadence, or both.
+Illustrative **starting mix, not a fixed quota**: prefer inexpensive unit/schema/policy checks, add integration checks for stateful dependencies, and keep a thin set of realistic E2E journeys. Adjust effort to documented risks and use a separate periodic adversarial track.
 
 Apply the same logic as the classical test pyramid and testing trophy, but insert an eval layer:
 
@@ -99,6 +94,8 @@ For agentic systems, each test case should capture both final outcome and allowe
 - Metrics and pass rule.
 - Number of reruns for stochastic aggregation.
 
+Use [the shared evaluation case/run contract](../agent-evals-lab/references/agent-test-contract.md) to record expected outcome, permitted actions, resulting state, versions and evidence. Require exact ordering only where mandated by the business contract.
+
 ### 5. Choose scoring methods deliberately
 
 Combine three scoring classes:
@@ -113,6 +110,7 @@ Never rely on LLM-as-a-judge as the only signal for a release gate.
 
 Specify:
 
+- Distinct results for `pass`, `fail`, `blocked`, `timeout`, `infrastructure_error`, `grader_error` and `not_run`; missing evidence must never count as a pass.
 - Flakiness policy for stochastic failures.
 - Retry policy with explicit cap.
 - Quarantine process for unstable cases.

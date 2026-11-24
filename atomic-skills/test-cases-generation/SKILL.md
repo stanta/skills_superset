@@ -87,7 +87,7 @@ The skill analyzes the project to discover additional dimensions. Examples:
 | Data Pipeline | Data Volume | Empty / Small / Large / Malformed |
 | SDK / Client | Connection State | Connected / Disconnected / Reconnecting |
 
-Auto-detected dimensions are presented to the user for confirmation before generating cases.
+Select the relevant dimensions from repository evidence and record assumptions; request confirmation only if a material requirement prevents a correct oracle.
 
 ### Combination Testing
 

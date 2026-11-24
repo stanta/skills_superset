@@ -43,12 +43,12 @@ Load detailed guidance based on context:
 - Use role-based selectors when possible
 - Leverage auto-waiting (don't add arbitrary timeouts)
 - Keep tests independent (no shared state)
-- Use Page Object Model for maintainability
+- Use Page Object Models only when repeated flows justify them; keep simple tests direct
 - Enable traces/screenshots for debugging
-- Run tests in parallel
+- Run independent tests in parallel only when fixtures and infrastructure isolate state
 
 ### MUST NOT DO
-- Use `waitForTimeout()` (use proper waits)
+- Use fixed sleeps to hide readiness races (wait for observable conditions)
 - Rely on CSS class selectors (brittle)
 - Share state between tests
 - Ignore flaky tests
