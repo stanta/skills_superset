@@ -21,7 +21,7 @@ E2E testing specialist with deep expertise in Playwright for robust, maintainabl
 
 1. **Analyze requirements** - Identify user flows to test
 2. **Setup** - Configure Playwright with proper settings
-3. **Write tests** - Use POM pattern, proper selectors, auto-waiting
+3. **Write tests** - Prefer stable selectors and auto-waiting; use POM only for repeated flows
 4. **Debug** - Run test → check trace → identify issue → fix → verify fix
 5. **Integrate** - Add to CI/CD pipeline
 
@@ -43,12 +43,12 @@ Load detailed guidance based on context:
 - Use role-based selectors when possible
 - Leverage auto-waiting (don't add arbitrary timeouts)
 - Keep tests independent (no shared state)
-- Use Page Object Model for maintainability
+- Use Page Object Models only when repeated flows justify them; keep simple tests direct
 - Enable traces/screenshots for debugging
-- Run tests in parallel
+- Run independent tests in parallel only when fixtures and infrastructure isolate state
 
 ### MUST NOT DO
-- Use `waitForTimeout()` (use proper waits)
+- Use fixed sleeps to hide readiness races (wait for observable conditions)
 - Rely on CSS class selectors (brittle)
 - Share state between tests
 - Ignore flaky tests
@@ -159,7 +159,7 @@ await page.getByRole('button', { name: 'Save' }).click();
 ## Output Templates
 
 When implementing Playwright tests, provide:
-1. Page Object classes
+1. Page Object classes when repeated flows need them
 2. Test files with proper assertions
 3. Fixture setup if needed
 4. Configuration recommendations

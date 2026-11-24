@@ -8,7 +8,7 @@
 
 Classical TDD requires a human to write a failing test, observe the failure, then implement. AI agents skip this cycle: given "write tests for `UserService`", an agent infers the implementation and the assertion from the same context — producing tests that **cannot fail** because the expectation is derived from the same model as the code. This is **reward hacking**: the goal "green tests" is achieved without testing anything meaningful.
 
-SDD (Spec-Driven Development) breaks the reward surface by assigning **different goals to different phases**. An agent optimising for Phase 1 (enumerate scenarios) cannot simultaneously optimise for Phase 3 (green code), because Phase 1 explicitly forbids writing code.
+SDD (Spec-Driven Development) reduces one reward-hacking opportunity by assigning **different goals to different phases**. It still requires independent expected outcomes and a validated evaluator. An agent optimising for Phase 1 (enumerate scenarios) cannot simultaneously optimise for Phase 3 (green code), because Phase 1 explicitly forbids writing code.
 
 ---
 
@@ -33,9 +33,9 @@ For each scenario provide:
 Do NOT write any code yet.
 ```
 
-**What you get:** 15–25 scenarios.
+**Expected size:** As many scenarios as the risk and actual behavior require; avoid filler.
 
-**Human checkpoint:** Review the list before proceeding.
+**Human checkpoint:** Seek review when requirements, expected results or safety constraints are uncertain; otherwise record assumptions and continue.
 
 - Are all boundary values covered (min, max, min−1, max+1)?
 - Are all error paths enumerated (null, empty, negative, overflow)?
@@ -104,7 +104,7 @@ Without constraint #1, an AI agent will silently change `expect(result).toBe(90)
 When generating or editing tests:
 - Never modify assertions, expected values, or fixtures to achieve a passing test.
 - If a test fails, output a discrepancy report: expected [X], got [Y], possible root cause.
-- Do not create new tests not present in the approved test-case list.
+- New discovered risks may justify additional tests: update and review their acceptance cases first; never secretly weaken an existing assertion to get green.
 ```
 
 ---
@@ -145,7 +145,7 @@ Check: expected value, type, error message string (if testing throws), and any s
 
 > If you change `>` to `>=` (or `<` to `<=`, or `===` to `!==`) in the implementation, does the test fail?
 
-A test that remains green after an off-by-one mutation is providing false confidence. Fix: tighten the assertion or add a boundary test case.
+A surviving mutation may reveal a missing boundary case, an invalid mutation, or equivalent behavior. Classify it before tightening assertions.
 
 **Quick mutation checklist:**
 
@@ -153,7 +153,7 @@ A test that remains green after an off-by-one mutation is providing false confid
 [ ] Flip one comparison operator in the service → does the test turn red?
 [ ] Remove the discount calculation entirely → does the test turn red?
 [ ] Return a hardcoded value → does the test turn red?
-If any answer is NO → the test has no diagnostic value; revise it.
+If a mutation survives, first decide whether it is applicable and behavior-changing; only then improve the relevant test.
 ```
 
 ---
@@ -169,7 +169,7 @@ Never modify assertions or test data to pass tests. If a test fails, report the 
 ### Standard (for a full SDD session)
 
 ```
-We are following Spec-Driven Development. Phases are sequential; do not advance until approved.
+We are following Spec-Driven Development. Keep phases traceable; request approval only for material uncertainty or high-risk contract decisions.
 Phase 1: enumerate use cases (positive, negative, boundary). No code.
 Phase 2: write Given/When/Then test cases. For each, name the specific bug it catches. No code.
 Phase 3: write test code exactly matching Phase 2. Never alter assertions. Report failures.
@@ -233,13 +233,13 @@ If a test fails, output: TEST DISCREPANCY — [test name]: expected [value], rec
 
 ## Why This Works
 
-SDD eliminates reward hacking by giving the AI **a different objective at each phase**:
+SDD **reduces** the risk of reward hacking by separating objectives; it does not guarantee independent or correct test oracles:
 
 - Phase 1 goal: completeness of scenario list
 - Phase 2 goal: quality of bug-catching articulation
 - Phase 3 goal: code that matches the approved spec
 - Phase 4 goal: mechanical verification of test strength
 
-No single phase has "green tests" as its goal. An agent cannot optimise for green tests without first satisfying the earlier phases — which are reviewed by a human.
+No single phase has "green tests" as its goal. An agent can still bias expectations or weaken acceptance criteria. Ground oracles in independently reviewed requirements and evaluator-owned hidden checks.
 
-The token cost is 3–5× higher than "write tests" in a single prompt. The review cost is 5–10× lower, and the result does not need to be discarded.
+The process can increase planning and token cost. Measure success, review effort and regression risk in controlled trials before claiming an efficiency improvement.

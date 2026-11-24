@@ -31,7 +31,7 @@ Use this skill to build reproducible LLM and agent evaluations with leakage-resi
 
 ## Deliverables
 
-Evaluation contract, datasets, metrics, reproducible run configuration, baseline report.
+Evaluation contract, datasets, metrics, reproducible run configuration, baseline report. Use [the shared case/run record](../agent-evals-lab/references/agent-test-contract.md) to distinguish agent outcomes, action traces, evidence and execution failures.
 
 ## Acceptance checks
 

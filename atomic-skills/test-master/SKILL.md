@@ -50,7 +50,7 @@ describe("calculateDiscount", () => {
 
 Apply the same structure for pytest (`def test_…`, `assert result == expected`) and other frameworks.
 
-> **AI Prompting Tip:** When generating tests with an AI assistant, paste one test from your own codebase as a style example in every prompt. Few-shot examples override abstract instructions and produce significantly better adherence to project conventions than any amount of descriptive guidance alone.
+> **AI Prompting Tip:** Inspect existing tests for project conventions. Include a concise example only when it adds information absent from the context; do not repeat it automatically.
 
 ## Reference Guide
 
@@ -83,7 +83,7 @@ Load detailed guidance based on context:
 - Run tests in CI/CD; document and remediate coverage gaps
 - When using AI to generate tests: enumerate use cases _before_ writing any code (see `references/sdd-ai-workflow.md`)
 - For each test case, state which specific bug it would catch if the business logic broke; discard the test case if no bug can be named
-- Provide one project-specific test as a few-shot style example in every AI test-generation prompt
+- Use a project-specific example when needed to establish conventions; avoid repeating it if context already establishes style
 
 **MUST NOT**
 
@@ -93,7 +93,7 @@ Load detailed guidance based on context:
 - Ignore flaky tests — quarantine and fix them; don't just re-run until green
 - Test implementation details (internal method calls) — test observable behaviour
 - Modify assertions, expected values, or test fixtures to make a failing test pass — report the discrepancy between actual output and the test-case spec instead
-- Ask AI to "write tests" without first agreeing on use cases and test cases; always prompt for scenarios first, code last
+- Implement test code without first identifying concrete scenarios and assertions; request clarification only if an essential expected behavior is unknown
 
 ## Output Templates
 

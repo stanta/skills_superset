@@ -92,8 +92,8 @@ await page.waitForURL(/dashboard/);
 // Wait for response
 await page.waitForResponse(r => r.url().includes('/api/data'));
 
-// Wait for load state
-await page.waitForLoadState('networkidle');
+// Wait for a relevant app state instead of global network silence
+await page.getByRole('heading', { name: 'Dashboard' }).waitFor();
 
 // AVOID arbitrary waits
 await page.waitForTimeout(3000); // ❌ BAD
@@ -104,7 +104,8 @@ await page.waitForTimeout(3000); // ❌ BAD
 ```typescript
 // playwright.config.ts
 export default defineConfig({
-  retries: process.env.CI ? 2 : 0,
+  // Set this through the project's vetted CI configuration.
+  retries: 2,
 
   // Retry only specific tests
   expect: {

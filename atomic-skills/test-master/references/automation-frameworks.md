@@ -113,15 +113,12 @@ async function retryWithBackoff<T>(fn: () => Promise<T>, retries = 3): Promise<T
 ```typescript
 // playwright.config.ts
 export default defineConfig({
-  workers: process.env.CI ? 8 : 4,
+  // Tune worker count and retry policy to the runner's capacity.
+  workers: 4,
   fullyParallel: true,
-  retries: process.env.CI ? 2 : 0,
-  
-  // Shard tests across multiple machines
-  shard: process.env.SHARD ? {
-    current: parseInt(process.env.SHARD_INDEX),
-    total: parseInt(process.env.SHARD_TOTAL),
-  } : undefined,
+  retries: 2,
+  // For CI sharding use Playwright's --shard index/total CLI option
+  // with validated values from the CI matrix, not an environment dump.
 });
 ```
 

@@ -5,7 +5,7 @@ description: Use to build Phoenix datasets, annotations and reproducible experim
 
 # Phoenix Evals and Experiments
 
-Reuse [Agent Evals Lab](../agent-evals-lab/SKILL.md) for evaluation design; Phoenix is the execution and comparison environment, not the source of truth for business rules.
+Reuse [Agent Evals Lab](../agent-evals-lab/SKILL.md) for evaluation design and its [shared case/run contract](../agent-evals-lab/references/agent-test-contract.md) for evidence; Phoenix is an execution and comparison environment, not the source of truth for business rules.
 
 ## Workflow
 1. Establish an explicit failure taxonomy and quality measures before creating judges. Separate schema/JSON validity, entity matching, tool selection, evidence grounding, unsupported claims, completeness, latency and cost.
