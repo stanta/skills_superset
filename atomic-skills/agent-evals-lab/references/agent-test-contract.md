@@ -1,33 +1,39 @@
-# Shared AI-agent test case and run contract (v1)
+# Shared AI-agent test case and run contract (v2)
 
-One source of truth for `tester-ai`, `agent-evals-lab`, `verification` and skill comparisons. This is a **portable record contract**, not a new runner or a substitute for real agent execution. Use the host's existing test framework and keep business-oracle rules independent of the agent under test.
+This is the portable contract used by `tester-ai`, `agent-evals-lab`, `verification` and skill comparisons, **not** a model runner or proof of deployment readiness.
 
-## Case (versioned and frozen before execution)
+## Case: evaluator-owned, versioned and frozen before execution
 
-- `id`: stable case identifier; `kind`: `positive`, `negative`, `chaos` or `adversarial`.
-- `requirement` and `initial_state`: externally reviewed expected behavior and starting state (or a versioned fixture reference).
-- `allowed_actions`, `forbidden_actions` and `required_actions`: tool/action names; use action-specific argument assertions in an evaluator when permissions depend on arguments.
-- `action_limits`: map of sensitive action names to maximum allowed call counts.
-- `expected_final` and `expected_state`: observable outcome and side-effect state; do not require an identical trajectory unless a mandatory ordering/approval constraint demands it.
-- `max_actions` and `budget`: predeclared call, latency or cost bounds appropriate to the case.
-- `dataset_version` and `split`: immutable dataset revision and `development` / `holdout` membership; keep holdout hidden from the candidate agent.
+- `id`, `requirement`, `initial_state`, `dataset_version`: nonblank identifiers and a referenced initial-state fixture.
+- `kind`: `positive`, `negative`, `chaos` or `adversarial`; `split`: `development` or `holdout`.
+- `allowed_actions`, `forbidden_actions`, `required_actions`: lists of tool names. A required action must be allowed. Specific authorization of arguments can use optional `argument_rules`: `{"tool.name":{"argument":["approved-value"]}}`. Only equality against listed scalar values is built in; use a separately reviewed check for complex authorization rules.
+- `action_limits`: optional maximum invocation count per tool; `max_actions`: maximum total action count.
+- `budget`: only `max_tool_calls` (count), `max_elapsed_ms` (milliseconds), and `max_cost` (same monetary unit as `usage.cost`). If a configured cost/time metric is unavailable or unverifiable, return `insufficient_evidence`, never `pass`. Record currency/price basis in the surrounding experiment manifest.
+- `expected_final`, `expected_state`: externally reviewed desired output and externally observed state. Explicit `null` is valid; omission is not.
+- Optional `effect_policy`: `{"action":"report.export","baseline_effect_ids":["already-committed-id"],"max_new_effects":0}`. The action may be forbidden: this can catch a hidden external side effect even if the agent trace omits that call.
 
-## Run (one record for **every** attempt)
+## Run: record every attempt
 
-`case_id`, `arm` (`baseline` / `current` / `candidate` or explicitly `synthetic`), `attempt`, `status`, `final`, `resulting_state`, `actions`, `evidence_refs`, `versions` and `usage`. `actions` are ordered objects with `name` and optional sanitized `args` and `effect_id`. Retain failures, refusals, empty outputs and timeouts.
+Required identity: `case_id`, `arm` (`baseline`, `current`, `candidate`, or explicitly `synthetic`), positive integer `attempt`, `status`, `versions`, `evidence_refs`, `actions`, `usage`. Values are sanitized and provenance is retained. Version fields `model`, `agent`, `skill`, `prompt`, `tool`, `dataset`, `evaluator` must be nonblank for an evaluable run; archived unknown values may be null but then **cannot pass** the gate.
 
-Valid statuses: `pass`, `fail`, `blocked`, `timeout`, `infrastructure_error`, `grader_error`, `not_run`. A reported `pass` is **not authoritative**: independent deterministic assertions must also pass. Missing cases, versions, required evidence or partial results cannot authorize a release. Distinguish evaluator failure from agent failure and keep both visible.
+`actions` is an ordered list of `{"name":..., "args":..., "effect_id":...}` records. `usage.tool_calls` equals the observed action count; optional `elapsed_ms` and `cost` are nonnegative numeric values (nullable only if no corresponding budget applies). A completed `pass` run must explicitly include `final` and `resulting_state`; failed/blocked runs may not have completed outputs.
 
-`versions` must identify the actual model, agent runtime, skill revision, prompt/program, tool contract, dataset and evaluator. Unknown values are `null` with an explanation, never fabricated identifiers. `usage` records tool calls, elapsed time and available token/cost figures (nullable). Redact private data, secrets and raw customer files from evidence.
+Valid statuses: `pass`, `fail`, `blocked`, `timeout`, `infrastructure_error`, `grader_error`, `not_run`. For incomplete infrastructure, timeout, blocker or grader failures return `insufficient_evidence` without fabricating missing final outcomes; a recorded forbidden action or exceeded hard limit is still `fail`. An ordinary `fail` is not a success.
 
-## Pilot and reporting
+## Independent observation (separate input to the evaluator)
 
-The dependency-free pilot lives in `discovery/agent_eval_pilot.py` and `discovery/test_agent_eval_pilot.py`, using `discovery/fixtures/agent-eval-pilot.json`. Execute:
+A completed successful run additionally requires **evaluator-owned** `observed` with `{"state":..., "evidence_ref":"...", "effects":[...]}`. `effects` is required for cases with `effect_policy` and contains unique `{"action":...,"effect_id":...}` records from an independently read side-effect ledger. The evaluator compares effect IDs before and after, not merely call counts. A repeated idempotent API call producing no new effect ID may be correct; a new effect after an already committed export is not.
+
+The caller must obtain observations independently (e.g. read-only database state or isolated service ledger); **do not copy them from the agent's claimed `resulting_state`**. The standalone oracle cannot authenticate a fabricated evidence reference and does not verify an external system itself. Synthetic observations in the fixtures are only evaluator regression assets.
+
+## Verification levels
+
+The lightweight pilot consists of `discovery/agent_eval_pilot.py`, `discovery/test_agent_eval_pilot.py`, and the two `discovery/fixtures/agent-eval-*.json` files. Run:
 
 ```bash
 python -m unittest discover -s discovery -p 'test_*.py' -v
 ```
 
-It deliberately includes known-good and seeded-bad **synthetic trace replays** for positive, negative, interruption/recovery and prompt-injection cases. This verifies that the evaluator rejects wrong tool choices, duplicate effects and bad outcomes; it does **not** show a real model or skill is better.
+It uses **synthetic** good and seeded-bad traces across positive, negative, interruption/recovery and adversarial cases. These verify oracle sensitivity and malformed-input behavior, not model or skill effectiveness. The fixture's `holdout` labels are synthetic examples, not a sealed real-world evaluation set.
 
-For behavioral comparisons use [skill-comparison.md](skill-comparison.md): frozen baseline/current/candidate, matching permissions/settings, isolated sessions, randomized/interleaved runs, hidden held-out checks, all attempts retained, critical correctness/security gates before efficiency comparisons. Claim a gain only after a real controlled agent runner executes these arms and the independent evaluator has passed its own seeded-positive/negative checks.
+For actual improvement claims, follow [skill-comparison.md](skill-comparison.md): baseline/current/candidate, pinned tasks and settings, verified skill loading, isolated repeated sessions, evaluator-owned hidden checks, all failures counted, security/completeness gates ahead of cost/latency. Report `specified`, `structurally validated`, `smoke-tested` or `behaviorally benchmarked` accurately.

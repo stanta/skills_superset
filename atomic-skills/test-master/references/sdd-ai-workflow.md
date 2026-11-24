@@ -33,9 +33,9 @@ For each scenario provide:
 Do NOT write any code yet.
 ```
 
-**What you get:** 15–25 scenarios.
+**Expected size:** As many scenarios as the risk and actual behavior require; avoid filler.
 
-**Human checkpoint:** Review the list before proceeding.
+**Human checkpoint:** Seek review when requirements, expected results or safety constraints are uncertain; otherwise record assumptions and continue.
 
 - Are all boundary values covered (min, max, min−1, max+1)?
 - Are all error paths enumerated (null, empty, negative, overflow)?
@@ -145,7 +145,7 @@ Check: expected value, type, error message string (if testing throws), and any s
 
 > If you change `>` to `>=` (or `<` to `<=`, or `===` to `!==`) in the implementation, does the test fail?
 
-A test that remains green after an off-by-one mutation is providing false confidence. Fix: tighten the assertion or add a boundary test case.
+A surviving mutation may reveal a missing boundary case, an invalid mutation, or equivalent behavior. Classify it before tightening assertions.
 
 **Quick mutation checklist:**
 
@@ -153,7 +153,7 @@ A test that remains green after an off-by-one mutation is providing false confid
 [ ] Flip one comparison operator in the service → does the test turn red?
 [ ] Remove the discount calculation entirely → does the test turn red?
 [ ] Return a hardcoded value → does the test turn red?
-If any answer is NO → the test has no diagnostic value; revise it.
+If a mutation survives, first decide whether it is applicable and behavior-changing; only then improve the relevant test.
 ```
 
 ---
@@ -169,7 +169,7 @@ Never modify assertions or test data to pass tests. If a test fails, report the 
 ### Standard (for a full SDD session)
 
 ```
-We are following Spec-Driven Development. Phases are sequential; do not advance until approved.
+We are following Spec-Driven Development. Keep phases traceable; request approval only for material uncertainty or high-risk contract decisions.
 Phase 1: enumerate use cases (positive, negative, boundary). No code.
 Phase 2: write Given/When/Then test cases. For each, name the specific bug it catches. No code.
 Phase 3: write test code exactly matching Phase 2. Never alter assertions. Report failures.

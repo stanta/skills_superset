@@ -50,7 +50,7 @@ describe("calculateDiscount", () => {
 
 Apply the same structure for pytest (`def test_…`, `assert result == expected`) and other frameworks.
 
-> **AI Prompting Tip:** When generating tests with an AI assistant, paste one test from your own codebase as a style example in every prompt. A project-specific example can help align generated tests with local conventions; measure its benefit rather than assuming it always helps.
+> **AI Prompting Tip:** Inspect existing tests for project conventions. Include a concise example only when it adds information absent from the context; do not repeat it automatically.
 
 ## Reference Guide
 

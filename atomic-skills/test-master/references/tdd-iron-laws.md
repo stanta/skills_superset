@@ -4,9 +4,9 @@
 
 ## The Fundamental Principle
 
-> **NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST.**
+> **For new behavior, establish a failing test before implementing whenever practical.**
 
-This is non-negotiable. If you wrote production code before writing a failing test, delete it and start over. No exceptions.
+Do not delete existing code or user changes because tests were written later. Add characterization or regression tests to protect working behavior; mark any missing RED evidence explicitly.
 
 ---
 
@@ -16,10 +16,12 @@ This is non-negotiable. If you wrote production code before writing a failing te
 
 > "You shall not write any production code unless it is to make a failing test pass."
 
-Every line of production code must have a corresponding test that:
-1. Was written first
-2. Was observed to fail
-3. Now passes because of that code
+For new behavior, prefer a focused test that:
+1. Defines an externally grounded expected result
+2. Fails for the intended behavioral reason
+3. Passes after the minimal fix
+
+For legacy or already-written code, preserve work and add meaningful verification instead of restarting implementation.
 
 ### Iron Law 2: Proof Through Observation
 
@@ -31,13 +33,13 @@ Mandatory verification steps:
 - Verify the failure message is meaningful
 - Only then implement the fix
 
-A test you've never seen fail proves nothing.
+A test not observed failing may still protect existing behavior; challenge its diagnostic strength with a targeted fault, mutation or prior-revision comparison when safe.
 
 ### Iron Law 3: The Final Rule
 
 > "Production code exists → A test exists that failed first. Otherwise → It's not TDD."
 
-There is no middle ground. Code written without a prior failing test is not test-driven development, regardless of how many tests exist afterward.
+If production code came first, state that test-first evidence is absent. This does not justify discarding work; use characterization/regression checks and report remaining gaps.
 
 ---
 
@@ -102,7 +104,7 @@ These thoughts indicate you're about to violate TDD:
 | "I can manually test this quickly" | Manual testing doesn't prevent regression |
 | "I'll write tests after to save time" | You'll skip edge cases and test implementation |
 | "This is too simple to need a test" | Simple code changes; tests document expectations |
-| "I've already written the code, I can't delete it now" | Sunk cost fallacy; delete it |
+| "The existing code predates tests" | Preserve it; document current behavior and add regression checks |
 | "I know this works, I've done it before" | Your memory isn't documentation |
 | "We're in a hurry" | Technical debt costs more than TDD |
 
@@ -162,12 +164,12 @@ function sum(numbers: number[]): number {
 
 Before claiming any code is complete:
 
-- [ ] Every production function has corresponding tests
-- [ ] Each test was written before its implementation
-- [ ] Each test was observed to fail first
-- [ ] Tests verify behavior, not implementation
-- [ ] Refactoring kept all tests green
-- [ ] No production code exists without a test
+- [ ] Changed behavior has proportionate tests grounded in requirements
+- [ ] RED evidence was captured for new work, or its absence documented for existing code
+- [ ] Tests assert observable behavior and relevant effects, not only mocks
+- [ ] No user or legacy work was deleted to manufacture RED
+- [ ] Refactoring retained relevant regression coverage
+- [ ] Unexecuted checks and limitations were reported
 
 ---
 
