@@ -5,13 +5,14 @@
 ```typescript
 // playwright.config.ts
 import { defineConfig, devices } from '@playwright/test';
+import { env } from 'node:process'; // Access only named, approved variables
 
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  forbidOnly: !!env.CI,
+  retries: env.CI ? 2 : 0,
+  workers: env.CI ? 1 : undefined,
   reporter: [
     ['html'],
     ['json', { outputFile: 'results.json' }],
@@ -52,7 +53,7 @@ export default defineConfig({
   webServer: {
     command: 'npm run dev',
     url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: !env.CI,
     timeout: 120000,
   },
 });
@@ -110,9 +111,10 @@ projects: [
 
 ```typescript
 // playwright.config.ts
+import { env } from 'node:process';
 export default defineConfig({
   use: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseURL: env.BASE_URL || 'http://localhost:3000',
   },
 });
 

@@ -104,7 +104,8 @@ await page.waitForTimeout(3000); // ❌ BAD
 ```typescript
 // playwright.config.ts
 export default defineConfig({
-  retries: process.env.CI ? 2 : 0,
+  // Set this through the project's vetted CI configuration.
+  retries: 2,
 
   // Retry only specific tests
   expect: {

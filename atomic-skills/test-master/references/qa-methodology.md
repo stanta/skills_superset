@@ -222,7 +222,7 @@ const feedbackCycle = {
 
 ### Environment Strategy
 ```markdown
-| Env | Purpose | Data | Refresh | Access |
+| Stage | Purpose | Data | Refresh | Access |
 |-----|---------|------|---------|--------|
 | Dev | Development | Synthetic | On-demand | All |
 | Test | QA testing | Test data | Daily | QA |

@@ -42,13 +42,20 @@ class AgentEvalPilotTests(unittest.TestCase):
                 broken.pop(key)
                 self.assertNotEqual(evaluate(case, broken)[0], "pass")
 
+    def test_malformed_inputs_fail_closed(self):
+        case = self.cases["api-only-preview"]
+        run = next(r for r in self.data["runs"] if r["case_id"] == case["id"] and r["expected_pass"])
+        for field, value in (("budget", []), ("allowed_actions", None),
+                             ("action_limits", {"api.submit": "bad"})):
+            with self.subTest(field=field):
+                self.assertEqual(evaluate({**case, field: value}, run)[0], "insufficient_evidence")
+        self.assertEqual(evaluate(case, {**run, "status": {}})[0], "insufficient_evidence")
+
     def test_skill_links_and_safety_guards(self):
         paths = [
-            "atomic-skills/test-driven-development/SKILL.md",
             "atomic-skills/verification/SKILL.md",
             "atomic-skills/agent-evals-lab/SKILL.md",
             "atomic-skills/tester-ai/SKILL.md",
-            "atomic-skills/webapp-testing/SKILL.md",
             "atomic-skills/plugin-eval/SKILL.md",
         ]
         contract = ROOT / "atomic-skills/agent-evals-lab/references/agent-test-contract.md"
@@ -57,9 +64,9 @@ class AgentEvalPilotTests(unittest.TestCase):
             text = (ROOT / path).read_text(encoding="utf-8")
             with self.subTest(path=path):
                 self.assertIn("agent-test-contract.md", text)
-        tdd = (ROOT / paths[0]).read_text(encoding="utf-8")
+        tdd = (ROOT / "atomic-skills/test-driven-development/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Never delete existing code", tdd)
-        web = (ROOT / paths[4]).read_text(encoding="utf-8")
+        web = (ROOT / "atomic-skills/webapp-testing/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Do not require `networkidle`", web)
         self.assertNotIn("The token cost is 3–5×", (ROOT / "atomic-skills/test-master/references/sdd-ai-workflow.md").read_text(encoding="utf-8"))
 

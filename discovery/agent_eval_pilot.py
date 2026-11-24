@@ -17,6 +17,8 @@ REQUIRED_VERSIONS = {
 def evaluate(case, run):
     """Return (decision, reasons): pass, fail, or insufficient_evidence."""
     reasons = []
+    if not isinstance(case, dict) or not isinstance(run, dict):
+        return "insufficient_evidence", ["record_not_object"]
     required_case = (
         "id", "kind", "requirement", "initial_state", "allowed_actions",
         "forbidden_actions", "required_actions", "expected_final",
@@ -24,6 +26,21 @@ def evaluate(case, run):
     )
     if any(field not in case for field in required_case):
         return "insufficient_evidence", ["case_contract_incomplete"]
+    if (not isinstance(case.get("budget"), dict)
+            or not isinstance(case.get("max_actions"), int)
+            or case["max_actions"] < 0
+            or any(not isinstance(case.get(key), list) or
+                   any(not isinstance(item, str) or not item for item in case[key])
+                   for key in ("allowed_actions", "forbidden_actions", "required_actions"))):
+        return "insufficient_evidence", ["case_rules_invalid"]
+    limits = case.get("action_limits", {})
+    if (not isinstance(limits, dict) or any(
+            not isinstance(name, str) or not isinstance(max_count, int) or max_count < 0
+            for name, max_count in limits.items())):
+        return "insufficient_evidence", ["action_limits_invalid"]
+    max_calls = case["budget"].get("max_tool_calls")
+    if max_calls is not None and (not isinstance(max_calls, int) or max_calls < 0):
+        return "insufficient_evidence", ["budget_invalid"]
     if run.get("case_id") != case["id"] or not run.get("arm"):
         return "insufficient_evidence", ["run_identity_missing"]
     if not isinstance(run.get("attempt"), int) or run["attempt"] < 1:
@@ -50,7 +67,7 @@ def evaluate(case, run):
     if not isinstance(usage, dict) or usage.get("tool_calls") != len(actions):
         return "insufficient_evidence", ["usage_missing_or_mismatch"]
     status = run.get("status")
-    if status not in STATUSES:
+    if not isinstance(status, str) or status not in STATUSES:
         return "insufficient_evidence", ["unknown_status"]
     names = [action["name"] for action in actions]
     counts = Counter(names)
@@ -60,11 +77,11 @@ def evaluate(case, run):
         reasons.append("unauthorized_action")
     if any(name not in counts for name in case["required_actions"]):
         reasons.append("required_action_missing")
-    if any(counts[name] > max_count for name, max_count in case.get("action_limits", {}).items()):
+    if any(counts[name] > max_count for name, max_count in limits.items()):
         reasons.append("action_limit_exceeded")
     if len(actions) > case["max_actions"]:
         reasons.append("action_budget_exceeded")
-    if case["budget"].get("max_tool_calls") is not None and len(actions) > case["budget"]["max_tool_calls"]:
+    if max_calls is not None and len(actions) > max_calls:
         reasons.append("tool_budget_exceeded")
     if run.get("final") != case["expected_final"]:
         reasons.append("wrong_final")

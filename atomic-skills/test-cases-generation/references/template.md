@@ -179,7 +179,7 @@ Units with dependencies or interaction relationships:
 |-------|--------|-------|------------|---------------|-------|-----------------|-------------|----------|------------|------------|
 | TC-[MOD]-050 | [Module] | [action] without credentials is denied | L2, Security | **Auth/Env**: No credentials | 1. [Attempt action without auth — no token / no API key / no login]<br/>2. Execute | **Output**: [Access denied — 401 / permission error / exit 1] | Should NOT return data or perform action | P0 | [...] | [Status] |
 | TC-[MOD]-051 | [Module] | [action] with insufficient permissions is denied | L2, Security | **Auth/Env**: Low-privilege user/role | 1. [Attempt privileged action with low-privilege credentials]<br/>2. Execute | **Output**: [Forbidden — 403 / permission error] | Should NOT perform the privileged action | P0 | [...] | [Status] |
-| TC-[MOD]-052 | [Module] | Injection attempt is rejected | L3, Security | **Auth/Env**: Valid credentials | 1. [Inject malicious input — SQL: `"'; DROP TABLE x; --"` / CLI: `"; rm -rf /"` / XSS: `"<script>alert(1)</script>"`]<br/>2. Execute | **Output**: [Validation error or sanitized output]<br/>**State After**: No damage to any resource | Should NOT execute injected payload | P0 | [...] | [Status] |
+| TC-[MOD]-052 | [Module] | Injection attempt is rejected | L3, Security | **Auth/Env**: Valid credentials | 1. [Inject malicious input — SQL: `"'; DROP TABLE x; --"` / CLI: `"; echo simulated-injection"` / XSS: `"<script>alert(1)</script>"`]<br/>2. Execute | **Output**: [Validation error or sanitized output]<br/>**State After**: No damage to any resource | Should NOT execute injected payload | P0 | [...] | [Status] |
 
 ### 4.6 Performance
 

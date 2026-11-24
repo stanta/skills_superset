@@ -107,7 +107,7 @@ vi.mock('ToolCatalog', () => ({
   discoverAndCacheTools: vi.fn().mockResolvedValue(undefined)
 }));
 
-// ✅ Mock only the slow server startup; the config write stays real
+// ✅ Mock slow initialization only; retain real configuration persistence
 vi.mock('MCPServerManager');
 ```
 
