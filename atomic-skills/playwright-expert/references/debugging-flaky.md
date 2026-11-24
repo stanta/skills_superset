@@ -92,8 +92,8 @@ await page.waitForURL(/dashboard/);
 // Wait for response
 await page.waitForResponse(r => r.url().includes('/api/data'));
 
-// Wait for load state
-await page.waitForLoadState('networkidle');
+// Wait for a relevant app state instead of global network silence
+await page.getByRole('heading', { name: 'Dashboard' }).waitFor();
 
 // AVOID arbitrary waits
 await page.waitForTimeout(3000); // ❌ BAD

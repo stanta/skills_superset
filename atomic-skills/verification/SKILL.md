@@ -3,9 +3,6 @@ name: verification
 description: "Evidence-based verification of actual API, MCP, CLI, job or browser journeys with dependent-failure isolation."
 metadata:
   priority: 7
-  docs:
-    - "https://vercel.com/docs/projects/project-configuration"
-  sitemap: "https://vercel.com/sitemap/docs.xml"
   pathPatterns: []
   bashPatterns:
     - '\bnext\s+dev\b'

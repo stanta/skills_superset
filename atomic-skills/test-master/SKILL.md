@@ -50,7 +50,7 @@ describe("calculateDiscount", () => {
 
 Apply the same structure for pytest (`def test_…`, `assert result == expected`) and other frameworks.
 
-> **AI Prompting Tip:** When generating tests with an AI assistant, paste one test from your own codebase as a style example in every prompt. Few-shot examples override abstract instructions and produce significantly better adherence to project conventions than any amount of descriptive guidance alone.
+> **AI Prompting Tip:** When generating tests with an AI assistant, paste one test from your own codebase as a style example in every prompt. A project-specific example can help align generated tests with local conventions; measure its benefit rather than assuming it always helps.
 
 ## Reference Guide
 
@@ -93,7 +93,7 @@ Load detailed guidance based on context:
 - Ignore flaky tests — quarantine and fix them; don't just re-run until green
 - Test implementation details (internal method calls) — test observable behaviour
 - Modify assertions, expected values, or test fixtures to make a failing test pass — report the discrepancy between actual output and the test-case spec instead
-- Ask AI to "write tests" without first agreeing on use cases and test cases; always prompt for scenarios first, code last
+- Implement test code without first identifying concrete scenarios and assertions; request clarification only if an essential expected behavior is unknown
 
 ## Output Templates
 
